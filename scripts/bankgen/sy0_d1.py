@@ -1,0 +1,228 @@
+from common import item
+
+P = "sy0"
+Q = []
+
+def add(*args):
+    Q.append(item(P, *args))
+
+add(1, "1.1", "easy",
+    "A firewall drops traffic that is not on an allow list. A camera records the lobby but does not stop anyone. A restore from backup brings a server back after ransomware. Which pairing of control types is accurate?",
+    ["Firewall preventive, camera detective, backup restore corrective",
+     "Firewall detective, camera corrective, restore preventive",
+     "All three are deterrent because they scare attackers",
+     "The camera is a managerial control because a person might watch it later"],
+    0,
+    "A preventive control stops the unwanted action. The firewall does that by dropping traffic. A detective control finds that something happened. The camera records it. A corrective control returns the system toward a working state. Restoring the backup does that. Deterrent controls try to discourage, such as a warning sign. They do not have to be the thing that actually stops, records, or repairs.",
+    ["The firewall blocks, the camera records, and the restore repairs. That is preventive, detective, and corrective.",
+     "Those labels are swapped. A firewall that drops packets is not merely watching, and a restore does not prevent the next attack by itself.",
+     "A deterrent tries to discourage. These three controls block, record, or repair. They are not all signs.",
+     "A camera is a technical or physical detective control. Calling it managerial confuses who wrote the policy with the device that records."])
+
+add(2, "1.1", "medium",
+    "A legacy application cannot be patched this quarter. Leadership accepts that and requires extra logging, a tighter firewall around that host, and a weekly review of its accounts until the replacement is ready. What kind of control is the extra logging and the tighter firewall, relative to the missing patch?",
+    ["Compensating", "Directive only, because a memo was written", "The same thing as the missing patch", "Deterrent, because attackers will see the logs"],
+    0,
+    "A compensating control is an alternative that reduces risk when the preferred control is not available. The patch is the preferred fix. Until it exists, the firewall and the logging carry that risk. A directive control tells people what they must do, such as a policy. It is not the substitute technical control. Attackers do not have to see the logs for the logs to matter.",
+    ["Compensating is the substitute you use while the real fix is unavailable. The firewall and the review are standing in for the patch.",
+     "A directive is the instruction. The firewall rule is not just a memo.",
+     "The patch is still missing. These controls do not apply it.",
+     "Deterrence depends on the attacker noticing a warning. Quiet logging is detective, and here it is part of the compensation."])
+
+add(3, "1.1", "medium",
+    "Which two items are managerial controls rather than technical devices? (Choose two.)",
+    ["A written acceptable-use policy", "A risk assessment that leadership uses to accept or fund a control", "A host firewall", "A badge reader on the closet door"],
+    [0, 1],
+    "Managerial controls are the decisions and the paperwork that direct the program: policies, risk assessments, and security governance. A host firewall is technical. A badge reader is physical. The policy may require the firewall, but the policy itself is managerial.",
+    ["An acceptable-use policy is a managerial directive. It tells people the rules.",
+     "A risk assessment is a management process. It decides which risks are accepted or funded.",
+     "A host firewall is a technical control running on a computer.",
+     "A badge reader is a physical control on a door. It is not the risk assessment."])
+
+add(4, "1.1", "easy",
+    "A sign on a fence says the area is under video surveillance and trespassers will be prosecuted. The sign does not lock the gate. What is the sign's primary control type?",
+    ["Deterrent", "Corrective", "Compensating for a missing firewall", "A cryptographic control"],
+    0,
+    "A deterrent control tries to convince someone not to try. The sign is there to be seen. It does not repair damage, replace a firewall, or encrypt anything. If the camera behind the sign records an incident, that camera is the detective control. The sign is the warning.",
+    ["The sign is deterrent. Its job is to discourage the attempt.",
+     "Corrective controls repair after an incident. A sign does not restore a system.",
+     "Nothing in the story says the sign replaces a firewall. It is a physical warning.",
+     "Cryptography hides or verifies data. A painted warning is not a cipher."])
+
+add(5, "1.1", "hard",
+    "An organization classifies controls as technical, managerial, operational, or physical. A security guard who checks badges at the lobby and a procedure the guard follows are easy to mix up. Which statement keeps them straight?",
+    ["The guard performing the check is operational. The written procedure is managerial. The locked door is physical",
+     "The guard is technical because the badge is electronic",
+     "The written procedure is physical because it is printed",
+     "All three are operational because people are involved somewhere"],
+    0,
+    "Operational controls are the things people do day to day, such as a guard checking badges. Managerial controls are the policies and procedures that direct that work. Physical controls are barriers and devices in the building, such as the lock. A badge being electronic does not make the guard a firewall. Paper does not make a procedure physical.",
+    ["People, paper, and the door are three different categories. The guard is operational, the procedure is managerial, and the lock is physical.",
+     "The electronics in the badge do not turn the guard into a technical control. The guard is a person doing a job.",
+     "Printing a procedure does not make it a physical barrier. The category is about the kind of control, not the paper.",
+     "People touch almost every control eventually. That does not collapse the four categories into one."])
+
+add(6, "1.2", "easy",
+    "A file is encrypted so only the intended recipients can read it. A separate hash is published so recipients can tell whether the file changed. A signature on that hash lets them show who sent it. Which leg of the CIA triad does the encryption protect, and which does the hash protect?",
+    ["Encryption protects confidentiality. The hash protects integrity",
+     "Encryption protects availability. The hash protects confidentiality",
+     "Both protect only availability",
+     "The hash encrypts the file, so the encryption is unnecessary"],
+    0,
+    "Confidentiality means the wrong people cannot read the data. Encryption does that. Integrity means the data has not been altered. A hash that no longer matches shows the change. The signature adds authentication and non-repudiation. Availability is whether the file is there when needed. A hash is not encryption, and encryption is not what proves the bytes are unchanged.",
+    ["Encryption hides the contents. A matching hash shows the contents were not modified. That is confidentiality and integrity.",
+     "Availability is uptime and access. Hiding the file and checking a hash are not availability controls.",
+     "Availability is the third leg. These two tools are not both aimed at it.",
+     "A hash is a one-way fingerprint. It does not hide the file, so the encryption still has a job."])
+
+add(7, "1.2", "medium",
+    "A user denies sending a financial approval. The message has a digital signature that validates with that user's private-key counterpart, the public key in the company directory. What security goal does a valid signature support here?",
+    ["Non-repudiation", "Confidentiality of a message that was sent in the clear", "Availability of the mail server", "Physical safety of the building"],
+    0,
+    "Non-repudiation means the sender cannot credibly deny the action. A digital signature is created with the sender's private key, so a check with the matching public key ties the message to that key. If the message itself was not encrypted, the signature does not provide confidentiality. It also does not keep the mail server up or lock the lobby.",
+    ["A valid signature is how you argue the holder of that private key approved the message. That is non-repudiation.",
+     "A signature is not encryption. A clear-text message stays readable even when the signature checks out.",
+     "The mail server's uptime is availability. A signature does not create it.",
+     "Physical safety is guards, doors, and fire systems. A signature is a cryptographic record."])
+
+add(8, "1.2", "medium",
+    "A company still trusts every laptop once it is on the office Wi-Fi. The new design authenticates every request, uses the user's role and device health, and assumes an attacker may already be inside. What is that design called?",
+    ["Zero trust", "A single flat VLAN with implicit trust", "Security through obscurity", "A cold site"],
+    0,
+    "Zero trust does not treat the network location as a credential. Each request is authenticated and authorized, often with device posture and least privilege, and the design assumes breach. A flat trusted LAN is the old assumption. Obscurity hides details and hopes. A cold site is an empty recovery location.",
+    ["Zero trust is verify every request and do not trust the subnet. That matches the new design.",
+     "A flat VLAN that trusts the laptop because it associated is the model zero trust is replacing.",
+     "Obscurity is hiding names or ports. It is not continuous verification.",
+     "A cold site is a recovery facility with space and power, not an access model."])
+
+add(9, "1.2", "hard",
+    "A gap analysis compares the written security policy with the controls that are actually running. The policy requires full-disk encryption on every laptop. Inventory shows a third of the laptops are not encrypted. What is the gap, and what is it not?",
+    ["The gap is the difference between the required encryption and the laptops that do not have it. It is not, by itself, the project plan that closes it",
+     "The gap is a type of malware",
+     "A gap analysis replaces the need for the policy",
+     "The unencrypted laptops are compliant because they can still boot"],
+    0,
+    "A gap analysis shows where the current state misses the desired state. Here the desired state is encryption on every laptop and the current state is one third missing. The analysis does not implement the encryption and it does not cancel the policy. Booting is not compliance with an encryption requirement.",
+    ["The gap is the missing encryption. Closing it is a later project: buy the licenses, deploy, and verify.",
+     "Malware is hostile software. A gap is a missing control, not an infection.",
+     "The policy is the target. The analysis measures distance from it. You still need the policy.",
+     "A laptop that boots without encryption fails the requirement. Compliance is the encryption, not the boot."])
+
+add(10, "1.2", "medium",
+    "A file named 'passwords.xlsx' is left on a file share that no real user should open. Any access creates a high-severity alert. The file contains no real passwords. What is it?",
+    ["A honeyfile, a deception control", "A backup of the password vault", "The authoritative credential store", "A business continuity plan"],
+    0,
+    "A honeyfile is a decoy. Touching it is a signal because legitimate work never needs it. A honeytoken is a fake credential or record used the same way. It is not a backup and it must not hold real secrets. A business continuity plan is the document for keeping operations going.",
+    ["The fake file exists to be tripped. That is a honeyfile, and the alert is the point.",
+     "A backup of real passwords would be a highly sensitive file, not a decoy you hope an attacker opens.",
+     "The real credential store should be protected and used. This file is the opposite: unused and fake.",
+     "A continuity plan describes recovery. It is not a tripwire file."])
+
+add(11, "1.2", "easy",
+    "Which pair is a physical preventive control and a physical detective control, in that order?",
+    ["Bollards, then a camera that records the driveway", "A camera, then a bollard", "An acceptable-use policy, then a firewall", "A backup, then a hash"],
+    0,
+    "Bollards stop a vehicle before it reaches the door. That is physical and preventive. A camera records what happened. That is physical and detective. Reversing them swaps the jobs. A policy and a firewall are not both physical. A backup and a hash are data controls.",
+    ["Bollards prevent the impact. The camera detects and records. The order in the question matches.",
+     "The camera does not stop the vehicle, and the bollard does not record. That order is backwards.",
+     "A policy is managerial and a firewall is technical. Neither is the bollard-and-camera pair.",
+     "Backups and hashes protect data. They are not driveway controls."])
+
+add(12, "1.3", "medium",
+    "A firewall change is scheduled for Friday at 5 p.m. The request lists the new rule and the engineer, and it says nothing about how to undo the rule if branch offices lose access. What is missing from the change?",
+    ["A backout plan", "A longer outage with no owner", "Permission to skip testing because it is Friday", "A decision to make the change in production first and the lab never"],
+    0,
+    "Change management wants a way back. The backout plan is how you restore the last known-good rules if the new rule black-holes the branches. Doing it untested in production, on a Friday, with no undo, is how a small change becomes a weekend outage. The missing piece the stem points at is the backout.",
+    ["Write the backout before the window. If the branches go dark, the old rules go back in.",
+     "A longer outage is not a control. The change needs an owner and an undo, not more downtime.",
+     "Friday is a reason to be more careful, not a reason to skip the test.",
+     "Production-first with no lab is the risk. The request still needs a tested backout."])
+
+add(13, "1.3", "easy",
+    "A new payroll application will not work until its servers are added to a firewall allow list and the service accounts are created. The change ticket covers the app install and not those dependencies. Users will call the app 'down' if they are forgotten. What should the impact analysis include?",
+    ["The firewall allow list and the service accounts, because the install alone will not make the app reachable or able to log in",
+     "Only the color of the application's icon",
+     "A decision to disable logging during the change",
+     "Nothing, because impact analysis is optional for security devices"],
+    0,
+    "Impact analysis asks what else has to change and who is affected. A new app often needs firewall entries, DNS, and accounts. Leave those out and the change looks successful on the server and fails for users. The icon is not a dependency. Disabling logging hides the outcome. Security devices are part of the analysis, not exempt from it.",
+    ["The allow list and the accounts are security-relevant dependencies. They belong in the impact analysis and the implementation plan.",
+     "Icon color does not determine whether the app can authenticate or pass the firewall.",
+     "Turning off logs removes the record of whether the change worked and whether it was abused.",
+     "Firewalls and accounts are exactly the security impact. The analysis is not optional there."])
+
+add(14, "1.3", "medium",
+    "Maintenance on the VPN concentrator will drop remote users for twenty minutes. The change is approved. Which scheduling choice best limits the security and business impact?",
+    ["A published maintenance window outside peak logon times, with users told in advance",
+     "An unannounced change at 9 a.m. Monday",
+     "Repeating the outage every hour until someone complains",
+     "Disabling MFA permanently so the outage feels shorter"],
+    0,
+    "A maintenance window is the agreed time when disruption is acceptable, and notice lets people plan. Monday morning is when remote users need the VPN most. Repeating the outage multiplies the impact. Removing MFA to 'help' replaces a short outage with a standing hole.",
+    ["Tell people and pick a quiet window. That is how a necessary outage stays a planned one.",
+     "9 a.m. Monday maximizes the number of users who lose access without warning.",
+     "Repeated outages are not a window. They are an ongoing incident.",
+     "MFA is not the cause of the maintenance. Turning it off is a new risk, not a schedule."])
+
+add(15, "1.3", "hard",
+    "After an emergency change, the engineer who made it is the only person who knows the new rule, and the ticket was never opened. The next week that engineer is out and the rule causes an outage. Which change-management failure is this?",
+    ["No documentation and no ownership the rest of the team can use. Emergency changes still need a record and a review",
+     "The failure is that the emergency was allowed to exist",
+     "Change management forbids emergency work even when the business is down",
+     "The outage proves the original rule should have stayed undocumented"],
+    0,
+    "Emergency changes happen. The control is to make them, then document, review, and either keep them or back them out. A rule that lives only in one person's memory cannot be fixed by anyone else. The existence of an emergency is not the failure. Leaving it unrecorded is.",
+    ["Write it down and review it after the emergency. Ownership has to survive vacation.",
+     "Emergencies are part of operations. The process exists so they do not become invisible permanent changes.",
+     "Change management includes an emergency path. It does not pretend outages can wait for a monthly meeting.",
+     "An undocumented rule is why the next person could not fix the outage. More secrecy is not the lesson."])
+
+add(16, "1.4", "easy",
+    "A team needs to encrypt large disk volumes quickly and will share one secret key among the servers that must read those volumes. Which type of cryptography fits the bulk encryption?",
+    ["Symmetric encryption, such as AES", "A hash used as if it were reversible", "Steganography", "A digital signature, which hides the payload"],
+    0,
+    "Symmetric encryption uses the same key to encrypt and decrypt and is the practical choice for bulk data. AES is the common algorithm. A hash is one-way and cannot be decrypted. Steganography hides that a message exists. A signature proves origin and integrity. It does not hide the file.",
+    ["One shared secret and fast bulk encryption is symmetric cryptography. AES is the usual algorithm.",
+     "A hash cannot be turned back into the plaintext. It is the wrong tool for 'read the volume later.'",
+     "Steganography conceals a message inside something else. It is not how you encrypt a disk for servers that must read it.",
+     "A signature does not provide confidentiality. The payload can still be read."])
+
+add(17, "1.4", "medium",
+    "Users authenticate with passwords that are stored as hashes. An attacker steals the hash database. The hashes were computed with a unique random value added to each password before hashing. What is that value, and what attack does it slow?",
+    ["A salt. It stops identical passwords from producing identical hashes and defeats precomputed rainbow tables of unsalted hashes",
+     "A public key. It makes every password hash the same",
+     "A salt, which means the attacker can decrypt the hash back to the password",
+     "The user's username, which is secret"],
+    0,
+    "A salt is a unique value stored with the hash and mixed into the password before hashing. Two users with the same password get different hashes, and a table built for unsalted passwords does not match. The salt is not a decryption key. Hashing is one-way. The username is often not secret and is not the salt.",
+    ["The salt is why stolen hashes are not a simple dictionary lookup against a precomputed table of common passwords.",
+     "A public key is an asymmetric encryption key. It is not the per-password value in a hash database, and it would not make every hash identical if used as a salt.",
+     "Nothing decrypts a proper password hash. The salt does not turn the hash into encryption.",
+     "Usernames are identifiers, often visible. They are not the random salt."])
+
+add(18, "1.4", "hard",
+    "A certificate for www.example.com is revoked on Monday. Clients that only download a certificate revocation list once a week still trust the certificate on Wednesday. A different design has the web server attach a fresh, signed status response so clients do not each query the authority. Which two ideas are those? (Choose two.)",
+    ["A CRL can be stale between downloads", "OCSP stapling lets the server present a recent status", "A CRL is real-time for every client with no delay", "Stapling means the certificate can never be revoked"],
+    [0, 1],
+    "A CRL is a published list. If clients cache it for a week, a Monday revocation is invisible until the next download. OCSP asks about one certificate. Stapling means the server periodically gets a signed OCSP response and hands it to clients with the handshake, so they see fresh status without a separate lookup. Stapling does not make revocation impossible. A CRL is not instantly known to every client.",
+    ["The week-long cache is the stale-CRL problem. Wednesday's clients are trusting Monday's list.",
+     "Stapling is the server attaching a recent signed status. Clients do not all have to call the responder themselves.",
+     "A CRL is only as fresh as the last download. It is not a real-time push to every client.",
+     "Stapling delivers revocation status. It does not disable revocation."])
+
+add(19, "1.4", "hard",
+    "A laptop uses a TPM so the full-disk encryption key is released only when the boot measurements match. The company also has a network HSM that stores keys for many servers and never releases the private key to those servers. Which statement is accurate?",
+    ["The TPM is bound to that laptop. The HSM is a shared, hardened key store for many systems",
+     "A TPM and an HSM are the same chip on the laptop motherboard",
+     "An HSM is appropriate for one laptop and a TPM is the shared data-center key store",
+     "Neither device can support disk encryption or TLS keys"],
+    0,
+    "A TPM is a small secure module on a platform. BitLocker and measured boot use it so the key stays with that device. An HSM is a dedicated appliance or service used when many systems need high-assurance key operations, often without the private key ever leaving the HSM. Swapping the two descriptions reverses the products. Both exist specifically to protect keys.",
+    ["The laptop TPM is local. The HSM is the shared vault. That is the useful distinction.",
+     "They are different products. A TPM is not a network HSM.",
+     "The HSM is the shared store. The TPM is the one in the laptop. This choice reverses them.",
+     "Disk encryption and TLS are common reasons to use a TPM or an HSM. They are built for keys."])
+
+if __name__ == "__main__":
+    from common import dump
+    dump("sy0-701", {"q-d1.json": Q})
