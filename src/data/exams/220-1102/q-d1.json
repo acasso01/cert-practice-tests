@@ -1,0 +1,941 @@
+[
+  {
+    "id": "c2-001",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A small office wants laptops that can join the company domain, host Remote Desktop, and use BitLocker. The quote they received is for Windows 10 Home. What is the edition problem?",
+    "choices": [
+      "Home cannot join a domain, host RDP, or use BitLocker. They need Pro or higher",
+      "Home is the only edition that can join a domain",
+      "BitLocker is included in Home and missing from Pro",
+      "RDP hosting is a Home-only feature"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Windows 10 Home is the consumer edition. Domain join, incoming Remote Desktop, BitLocker, and the Local Group Policy Editor are Pro, Enterprise, or Pro for Workstations features. Buying Home and hoping those appear later wastes the rollout. The upgrade path is to Pro, which can be done without a clean install if they buy the right license.",
+    "choiceNotes": [
+      "Home lacks domain join, incoming RDP, and BitLocker. Pro is the edition that matches the quote's requirements.",
+      "Home is the edition that cannot join a domain. The statement is backwards.",
+      "BitLocker starts at Pro. Home does not include it.",
+      "Home can be an RDP client. It cannot host an incoming Remote Desktop session."
+    ]
+  },
+  {
+    "id": "c2-002",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A technician on Windows 10 Home tries to run gpedit.msc and the console is not there. A coworker says to download a copy from a random forum. What is the right response?",
+    "choices": [
+      "Home does not include the Local Group Policy Editor. Use Pro, or configure the available Settings, instead of a forum download",
+      "gpedit.msc is missing because the disk is FAT32, so convert to ext4",
+      "The editor is present and the technician typed the wrong name, gpupdate",
+      "Home includes gpedit and the Start menu search is the only problem"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "gpedit.msc ships with Pro and Enterprise, not Home. A forum package that 'adds' it is untrusted software and is not the supported way to get policy. If the company needs Group Policy, the computer needs an edition that includes it. gpupdate refreshes policy. It is not the editor.",
+    "choiceNotes": [
+      "Do not install a mystery copy of the editor. The edition is the reason it is absent.",
+      "The file system is not why gpedit is missing, and ext4 is not a Windows system volume.",
+      "gpupdate applies policy. It does not open the editor, and the editor is not installed on Home.",
+      "Search is not hiding it. Home does not contain that console."
+    ]
+  },
+  {
+    "id": "c2-003",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user needs to keep installed applications and files while moving from an older Windows 10 build to a current one. They are afraid a reinstall will wipe the desk. Which installation type matches the request?",
+    "choices": [
+      "An in-place upgrade",
+      "A clean install",
+      "A format of the system volume before setup",
+      "A deletion of the user profile first"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An in-place upgrade replaces the Windows version and keeps apps, files, and settings when the path is supported. A clean install and a format start over. Deleting the profile throws away the user's configuration. You still take a backup before the upgrade, because 'keeps your files' is not a substitute for a copy you can restore.",
+    "choiceNotes": [
+      "The in-place upgrade is the keep-everything path. Back up first, then run it.",
+      "A clean install does not keep applications. It is the opposite of the request.",
+      "Formatting the volume erases the files the user wants to keep.",
+      "Deleting the profile removes the user's settings and can remove local data. It is not an upgrade."
+    ]
+  },
+  {
+    "id": "c2-004",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Which Windows 10 edition difference is real when a machine needs more than 128 GB of RAM and must join a domain?",
+    "choices": [
+      "Home is capped at 128 GB and cannot join a domain. Pro supports far more RAM and can join",
+      "Home supports 2 TB and domain join, and Pro does not",
+      "No 64-bit edition can exceed 16 GB",
+      "RAM limits are identical across Home and Pro"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Windows 10 Home x64 supports up to 128 GB of RAM and cannot join a domain. Windows 10 Pro x64 supports up to 2 TB and can join a domain. A workstation that needs both the domain and a large memory configuration is not a Home machine. The 16 GB figure is an old 32-bit-era ceiling, not the 64-bit Pro limit.",
+    "choiceNotes": [
+      "Home's 128 GB ceiling and the missing domain join are both real. Pro is the edition that clears both requirements.",
+      "Home does not support 2 TB or a domain. That description swaps the editions.",
+      "64-bit Windows is how you get past the old 4 GB and 16 GB conversations. Pro goes far beyond 16 GB.",
+      "The limits are not the same. Home stops at 128 GB. Pro does not."
+    ]
+  },
+  {
+    "id": "c2-005",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A PC can reach a file server by IP address and cannot map it by name. The technician wants a command that asks DNS about the name. Which command is that?",
+    "choices": [
+      "nslookup",
+      "chkdsk",
+      "diskpart",
+      "gpupdate"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "nslookup queries DNS and shows the answer a server returns. That is the tool when the IP path works and the name does not. chkdsk checks a file system. diskpart edits disks. gpupdate refreshes Group Policy. None of those resolve a name.",
+    "choiceNotes": [
+      "nslookup is the DNS query tool. Use it against the configured server and compare the address you already pinged.",
+      "chkdsk looks for file-system problems. It does not query DNS.",
+      "diskpart partitions disks. It is a dangerous tool to open for a name-resolution symptom.",
+      "gpupdate applies policy. It does not look up a host name."
+    ]
+  },
+  {
+    "id": "c2-006",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Windows system files are damaged and sfc /scannow reports that it repaired them. The command had to be run from an elevated prompt. What did sfc actually do?",
+    "choices": [
+      "It scanned protected system files and replaced the bad copies from the component store",
+      "It repartitioned the disk",
+      "It changed the user's password",
+      "It flushed the DNS cache only"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "System File Checker compares protected Windows files with known-good copies and repairs what it can. It needs an elevated command prompt. It does not partition the disk, reset a password, or act as ipconfig /flushdns. If it cannot repair a file, the component store itself may need attention, but the command in the question already reported a successful repair.",
+    "choiceNotes": [
+      "That is SFC's job: check protected files and restore good copies. Elevation is required.",
+      "diskpart and Disk Management partition disks. sfc does not.",
+      "net user is the password and account command. sfc does not touch accounts.",
+      "ipconfig /flushdns clears the resolver cache. sfc is a file repair."
+    ]
+  },
+  {
+    "id": "c2-007",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A technician needs to copy a large folder tree across a flaky WAN and wants retries and a log, not the old single-file copy command. Which command is built for that?",
+    "choices": [
+      "robocopy",
+      "diskpart",
+      "hostname",
+      "winver"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "robocopy is the robust tree copy. It can retry, log, and copy permissions and directories. copy is for simpler file copies. xcopy is the older tree copy. diskpart edits partitions and can wipe a disk. hostname prints the computer name. winver shows the Windows version. None of those copy a tree with retries.",
+    "choiceNotes": [
+      "robocopy is the tool for a large, retrying folder copy. It is the right command for a flaky link.",
+      "diskpart manages disks. Using it here risks a wipe, and it does not copy the tree.",
+      "hostname prints a name. It does not move files.",
+      "winver opens the version dialog. It is not a copy tool."
+    ]
+  },
+  {
+    "id": "c2-008",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 2,
+    "stem": "A domain PC has not picked up a new Group Policy. The technician wants the policy applied now and then wants to see what applied. Which two commands, in spirit, do those jobs? (Choose two.)",
+    "choices": [
+      "gpupdate",
+      "gpresult",
+      "format",
+      "shutdown /s"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "gpupdate, often with /force, reapplies Group Policy immediately. gpresult, often with /r, reports what policy actually applied to the user or the computer. format erases a volume. shutdown /s turns the PC off. Neither one reads or applies policy.",
+    "choiceNotes": [
+      "gpupdate is the apply-now command. Use it after you know the policy is supposed to be there.",
+      "gpresult shows the resulting set of policy. It is how you confirm the update landed.",
+      "format wipes a file system. It is not a policy tool and it destroys data.",
+      "shutdown /s powers the computer off. It does not display policy."
+    ]
+  },
+  {
+    "id": "c2-009",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A volume is corrupt and Windows will not complete a repair while the volume is in use. The technician plans chkdsk /f on the next boot. What will that switch do, and what should happen first?",
+    "choices": [
+      "It fixes file-system errors. Back up what you can, because a repair can make a bad situation final",
+      "It only prints the volume label and changes nothing",
+      "It encrypts the volume with BitLocker",
+      "It maps a network drive"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "chkdsk /f repairs file-system errors. On a busy system volume it schedules itself for the next restart. Take a backup or copy off important files first, because a repair of a badly damaged volume can lose the remaining structure. It does not encrypt, map a drive, or stop at a label. /r would also scan for bad sectors and takes longer.",
+    "choiceNotes": [
+      "Fix the file system, and protect the data first. That is the honest use of chkdsk /f.",
+      "A read-only look is not /f. The f switch is the repair.",
+      "BitLocker is a different feature. chkdsk does not turn it on.",
+      "net use maps a network drive. chkdsk does not map drives or encrypt anything."
+    ]
+  },
+  {
+    "id": "c2-010",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "From the Windows Recovery Environment command prompt, a technician needs to see the disks and delete the partitions on the correct one before a clean install. The disk numbers are not obvious. Which tool, used carefully, is that?",
+    "choices": [
+      "diskpart",
+      "nslookup",
+      "gpresult",
+      "hostname"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "diskpart can list disks, select one, and clean it. The danger is selecting the wrong number and wiping the data disk or the USB installer. list disk, confirm the size, then select. nslookup is DNS. gpresult is policy. hostname prints a name. None of those delete partitions.",
+    "choiceNotes": [
+      "diskpart is the recovery-environment partition tool. Confirm the disk size before any clean command.",
+      "nslookup queries DNS. It cannot see a partition table.",
+      "gpresult reports policy. It does not edit disks.",
+      "hostname prints the computer name. It does not list disks."
+    ]
+  },
+  {
+    "id": "c2-011",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Windows 10 PC is slow to the desktop, and Task Manager's Startup tab shows a chat client with high impact that the user does not need. Where should it be disabled?",
+    "choices": [
+      "Task Manager, Startup tab",
+      "The printer queue",
+      "Disk Defragmenter",
+      "Credential Manager only"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "On Windows 10 the startup list lives in Task Manager. msconfig's Startup tab redirects there. Disable the chat client, restart, and see whether the desktop is faster. Do not disable security software just because it has a startup entry. The print queue, defrag, and Credential Manager do not manage startup apps.",
+    "choiceNotes": [
+      "Task Manager is the Windows 10 place to disable a startup program. That is the high-impact chat client.",
+      "The queue holds print jobs. It does not start chat at logon.",
+      "Defrag optimizes a spinning disk. It does not list startup apps.",
+      "Credential Manager stores secrets. It is not the startup list."
+    ]
+  },
+  {
+    "id": "c2-012",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An application crashes, and the user can tell you the minute it happened. The technician wants the Windows log that records application errors. Which console is that?",
+    "choices": [
+      "Event Viewer",
+      "Device Manager",
+      "Disk Management",
+      "Certificate Manager"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Event Viewer holds the Application, Security, and System logs. An application crash lands in the Application log, often with a faulting module name. Device Manager is for drivers and hardware. Disk Management partitions disks. Certificate Manager stores certificates. Open Event Viewer first and filter around the time the user named.",
+    "choiceNotes": [
+      "Event Viewer is the log console. The Application log is the one for this crash.",
+      "Device Manager shows hardware status. It does not store the application's fault.",
+      "Disk Management shows volumes. It is not an event log.",
+      "Certificate Manager is for certs. It does not record an application crash."
+    ]
+  },
+  {
+    "id": "c2-013",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A technician needs a boot that loads only basic devices so a bad third-party driver can be ruled out. msconfig is open. Which choice is the diagnostic boot?",
+    "choices": [
+      "Selective or diagnostic startup in System Configuration",
+      "Event Viewer's application log",
+      "Formatting the drive from Disk Management",
+      "Enabling BitLocker in the same click"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "System Configuration, msconfig, can do a diagnostic startup that loads basic devices and services. If the PC is stable that way, a third-party driver or service is a strong suspect, and you re-enable them in groups. Event Viewer reads logs. Formatting erases the disk. BitLocker encrypts it. Neither one is a diagnostic boot.",
+    "choiceNotes": [
+      "msconfig's diagnostic startup is the minimal boot. Use it to separate Windows itself from the extra drivers.",
+      "Event Viewer records history. It does not change the next boot.",
+      "Formatting destroys the installation you are trying to diagnose.",
+      "BitLocker is encryption. Turning it on is not a troubleshooting boot."
+    ]
+  },
+  {
+    "id": "c2-014",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user wants the BIOS version, the amount of RAM, and the model of the PC without opening the case. Which Windows tool gives that inventory?",
+    "choices": [
+      "msinfo32",
+      "notepad",
+      "winver, which only shows the Windows version",
+      "magnifier"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "System Information, msinfo32, lists the BIOS or firmware version, the memory, the model, and a great deal more. winver shows the Windows version and build, which is useful and narrower. Notepad and Magnifier do not inventory hardware.",
+    "choiceNotes": [
+      "msinfo32 is the inventory. The BIOS version and the RAM are both there.",
+      "Notepad edits text. It does not query the firmware.",
+      "winver is the version dialog. It will not tell you the BIOS or the RAM size.",
+      "Magnifier is an accessibility tool. It does not list hardware."
+    ]
+  },
+  {
+    "id": "c2-015",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A domain workstation should get a mapped drive at logon from a script the company already stores in the netlogon share. The drive does not appear. Which Group Policy or profile feature is the usual place that script is assigned?",
+    "choices": [
+      "A logon script applied by Group Policy or the user profile",
+      "The screen saver timeout",
+      "The mouse pointer scheme",
+      "The default printer's color profile"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Logon scripts run when the user signs in, and in a domain they are commonly assigned by Group Policy. If the drive is missing, check that the script is assigned, that the user can read the share, and that a conflicting map is not failing silently. Run gpresult to see whether the policy hit this user. A screensaver, a pointer, and a color profile do not map drives.",
+    "choiceNotes": [
+      "The logon script is the feature that maps the drive at sign-in. Confirm the assignment and that this user received the policy.",
+      "The screensaver locks the console. It does not connect a drive letter.",
+      "The pointer scheme is cosmetic. It does not run netlogon scripts.",
+      "A color profile controls color. It does not map \\\\server\\share."
+    ]
+  },
+  {
+    "id": "c2-016",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user downloaded invoice.pdf.exe and thought it was a PDF. File Explorer was hiding extensions. Where do you turn extensions on?",
+    "choices": [
+      "File Explorer Options, View, and clear 'Hide extensions for known file types'",
+      "The mouse control panel",
+      "The sound mixer",
+      "Indexing Options, by deleting the index"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Hidden extensions are how a double extension tricks people. File Explorer Options, on the View tab, has the checkbox. Showing extensions is a basic hygiene step and belongs in the user conversation too. The mouse panel, the mixer, and the search index do not reveal a .exe.",
+    "choiceNotes": [
+      "That View checkbox is the switch. Turn it off so .pdf.exe is obvious.",
+      "The mouse settings do not control file names.",
+      "The mixer selects playback devices. It does not show extensions.",
+      "Rebuilding the index does not unhide extensions."
+    ]
+  },
+  {
+    "id": "c2-017",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A laptop on battery is set to do nothing when the lid closes, and it cooks in a bag. The user wants the lid to sleep the PC. Where is that setting?",
+    "choices": [
+      "Power Options, Choose what closing the lid does",
+      "Device Manager, under mice",
+      "Credential Manager",
+      "Programs and Features"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Power Options contains the lid, sleep, and button behavior, including different actions on battery and on AC. Set the lid to sleep. Device Manager is for drivers. Credential Manager stores passwords. Programs and Features uninstalls software. None of those define the lid.",
+    "choiceNotes": [
+      "The lid action is a Power Options setting. Change it from do nothing to sleep.",
+      "Mice and the trackpad are not the lid policy.",
+      "Stored credentials do not change power behavior.",
+      "Uninstalling a program does not define what the lid does."
+    ]
+  },
+  {
+    "id": "c2-018",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "SMB1 is enabled on a Windows 10 PC because an ancient scanner required it years ago. The scanner is gone. Why should SMB1 be turned off, and where can that Windows feature be changed?",
+    "choices": [
+      "SMB1 is an old, unsafe protocol. Turn the feature off under Programs and Features, Turn Windows features on or off",
+      "SMB1 is required for BitLocker",
+      "SMB1 is the only way any current Windows shares files",
+      "Turning it off deletes the user's documents"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SMB1 has long-standing security weaknesses and is how some worms move. Current Windows sharing uses SMB2 or SMB3. The feature checkbox is under Turn Windows features on or off. Disabling SMB1 does not remove documents and has nothing to do with BitLocker. If something still needs SMB1, that device is the thing to replace.",
+    "choiceNotes": [
+      "Disable the old protocol now that the scanner is gone. The Windows Features dialog is the Control Panel path.",
+      "BitLocker encrypts volumes. It does not depend on SMB1.",
+      "Modern Windows shares files over newer SMB. SMB1 is the compatibility leftover.",
+      "The feature is a protocol, not the document folder. Turning it off does not erase files."
+    ]
+  },
+  {
+    "id": "c2-019",
+    "domain": "1",
+    "objective": "1.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A laptop is set as a metered connection because it uses a phone hotspot. Large Windows updates never download, and the user thinks updates are broken. What is the setting doing?",
+    "choices": [
+      "A metered connection defers large downloads on purpose. Unmeter it on unlimited Wi-Fi",
+      "Metered means the disk is full",
+      "Metered disables the keyboard",
+      "Metered turns off the firewall permanently"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Windows treats a metered network as expensive and holds back big updates and some sync. That is correct on a hotspot and surprising if the user later joins unlimited Wi-Fi and leaves the flag set. Turn the metered flag off on the unlimited network. It is not a full disk, a dead keyboard, or a firewall change.",
+    "choiceNotes": [
+      "The metered flag is why the big downloads wait. Clear it when the connection is not actually metered.",
+      "A full disk is a storage problem. Metered is a network cost flag.",
+      "The keyboard is not controlled by the metered-connection switch.",
+      "The firewall stays available. Metered is about download behavior."
+    ]
+  },
+  {
+    "id": "c2-020",
+    "domain": "1",
+    "objective": "1.5",
+    "difficulty": "medium",
+    "select": 2,
+    "stem": "A user wants a USB drive to stop being offered as a backup target every time it is inserted, and they also want the auto-run behavior that launches programs from media disabled. Which two ideas apply? (Choose two.)",
+    "choices": [
+      "Turn off AutoPlay for removable drives",
+      "Disable AutoRun so inserted media does not launch a program",
+      "Enable SMB1",
+      "Share the drive as Everyone Full Control"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "AutoPlay is the prompt that asks what to do with a new drive. AutoRun is the older behavior that can start a program from the media. Both are worth turning off on a managed PC so a stray USB does not run something. SMB1 and an open share make the PC less safe. They do not answer the prompt problem.",
+    "choiceNotes": [
+      "AutoPlay is the popup. Turn it off if the user does not want the prompt.",
+      "AutoRun is the launch behavior. Disabling it is the security half of the same request.",
+      "SMB1 is an obsolete file-sharing protocol. It does not control AutoPlay.",
+      "An open share exposes files. It does not suppress the insertion prompt."
+    ]
+  },
+  {
+    "id": "c2-021",
+    "domain": "1",
+    "objective": "1.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A Windows laptop on the office Wi-Fi cannot see the file server or the printer, and Network and Sharing Center says the profile is Public. The same laptop works when it is docked on Ethernet with a Private profile. What should change on the Wi-Fi?",
+    "choices": [
+      "Set the office Wi-Fi profile to Private so discovery and sharing are allowed",
+      "Set it to Public, which is already the problem",
+      "Disable the firewall entirely",
+      "Give the laptop a 169.254 address on purpose"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A Public profile hides the PC and blocks discovery and sharing. That is correct at a cafe and wrong on the office LAN. Switch the office Wi-Fi to Private. Do not solve it by disabling the firewall, and do not assign APIPA. A cafe network should stay Public.",
+    "choiceNotes": [
+      "Private is the trusted-network profile. The office Wi-Fi was mislabeled as Public.",
+      "Public is the current, overly locked profile. Setting it again changes nothing.",
+      "Turning the firewall off removes protection the profile system was built to keep.",
+      "169.254 means DHCP failed. It is not a sharing profile."
+    ]
+  },
+  {
+    "id": "c2-022",
+    "domain": "1",
+    "objective": "1.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A PC can ping the default gateway and cannot open any website. Other PCs work. The browser proxy is set to a server that was retired last year. What is the fault?",
+    "choices": [
+      "A stale proxy setting. Ping does not use the proxy, so ping still works",
+      "The gateway, because ping failed",
+      "A bad monitor cable",
+      "The print spooler"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Applications that honor the proxy send web traffic to that host. Ping does not, so the gateway test stays green while the browser is dead. Clear the retired proxy or point it at the current one. The gateway, the monitor, and the spooler are not in that path.",
+    "choiceNotes": [
+      "The proxy is the split between ping and the browser. Update or remove it.",
+      "Ping to the gateway succeeded. The gateway is not the broken piece.",
+      "A monitor cable carries video. It does not sit between the browser and a proxy server.",
+      "The spooler queues prints. It does not sit between the browser and the web."
+    ]
+  },
+  {
+    "id": "c2-023",
+    "domain": "1",
+    "objective": "1.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user needs the S: drive to point at \\\\files\\projects every time they sign in. Which command creates that mapping?",
+    "choices": [
+      "net use S: \\\\files\\projects",
+      "ipconfig /flushdns",
+      "chkdsk S:",
+      "hostname"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "net use maps a drive letter to a UNC path. With the right persistence switch it survives a logoff. ipconfig /flushdns clears the name cache. chkdsk checks a local volume and should not be aimed at a share as if it were a format. hostname prints the PC name.",
+    "choiceNotes": [
+      "net use is the mapping command. S: becomes the projects share.",
+      "Flushing DNS does not connect a drive letter.",
+      "chkdsk is a disk repair. It is the wrong tool for a UNC map and can be destructive on a local disk.",
+      "hostname only prints the computer name. It does not map a drive letter to a share."
+    ]
+  },
+  {
+    "id": "c2-024",
+    "domain": "1",
+    "objective": "1.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A user can open a folder from the local console but gets Access Denied over the network. NTFS permissions for the user are Modify. The share permission is Read for Everyone, and the user is not in a group with more share access. Why is the network access read-only or denied beyond the share?",
+    "choices": [
+      "The effective permission is the more restrictive of the share and NTFS results. The share is holding them down",
+      "NTFS is ignored on the network, so Modify should have been enough and the share cannot matter",
+      "Share permissions do not exist on Windows",
+      "The console and the network always use identical permissions"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Over the network, Windows evaluates the share permission and the NTFS permission and keeps the more restrictive result. Modify on NTFS cannot expand a Read share. Locally, the share permission does not apply, which is why the console works. Grant the needed share permission, or everyone gets stuck at the share ceiling.",
+    "choiceNotes": [
+      "The share's Read ceiling wins against NTFS Modify for network clients. Raise the share permission if they should change files.",
+      "NTFS is not ignored. It still applies, and so does the share. The stricter one remains.",
+      "Share permissions are real. They are the reason this console-versus-network split exists.",
+      "Local access skips the share check. That is why the two paths are not identical."
+    ]
+  },
+  {
+    "id": "c2-025",
+    "domain": "1",
+    "objective": "1.7",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A 64-bit Windows 10 PC must run a 32-bit accounting app, and a different app is 64-bit only. Which statement is true?",
+    "choices": [
+      "64-bit Windows can run the 32-bit app. A 32-bit Windows install could not run the 64-bit-only app",
+      "64-bit Windows cannot run any 32-bit app",
+      "32-bit Windows can run 64-bit apps if you add RAM",
+      "Both apps require a 32-bit OS"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A 64-bit operating system runs 64-bit apps and, through the compatibility layer, 32-bit apps. Those 32-bit apps usually install under Program Files (x86). A 32-bit operating system cannot run a 64-bit binary no matter how much RAM you add. This PC is 64-bit, so both apps fit. A 32-bit OS would only fit the accounting app.",
+    "choiceNotes": [
+      "The 64-bit PC can run both. The 32-bit app lands in Program Files (x86).",
+      "64-bit Windows is specifically able to run 32-bit applications. That choice is the reverse of the truth.",
+      "RAM does not turn a 32-bit OS into a 64-bit OS. The 64-bit app will not start.",
+      "The 64-bit-only app will not run on a 32-bit OS. Both do not require 32-bit Windows."
+    ]
+  },
+  {
+    "id": "c2-026",
+    "domain": "1",
+    "objective": "1.7",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Windows setup does not list the NVMe drive because the storage driver is not in the image. The vendor supplied a driver folder on a USB stick. What should the technician do at the disk screen?",
+    "choices": [
+      "Load the third-party storage driver from the USB stick",
+      "Conclude the drive is dead without trying the driver",
+      "Format the USB stick",
+      "Disable Secure Boot and also throw away the driver"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The disk screen has a Load driver option for exactly this case. Point it at the vendor folder and the drive appears. A missing driver is not a dead disk. Formatting the stick that holds the driver destroys the fix. Secure Boot is a separate question and is not solved by deleting the driver.",
+    "choiceNotes": [
+      "Load the driver. The drive is invisible to setup until the controller can be talked to.",
+      "Do not condemn the disk while the driver is sitting on the USB stick.",
+      "Formatting the stick erases the driver you were about to load.",
+      "Secure Boot is not the reason a vendor mass-storage driver is missing from the image."
+    ]
+  },
+  {
+    "id": "c2-027",
+    "domain": "1",
+    "objective": "1.7",
+    "difficulty": "medium",
+    "select": 2,
+    "stem": "An application requires 16 GB of RAM, a 64-bit OS, and a GPU with 4 GB of VRAM. The PC has 8 GB of RAM, a 64-bit OS, and integrated graphics that share system memory. Which requirements fail? (Choose two.)",
+    "choices": [
+      "The RAM requirement",
+      "The dedicated graphics memory requirement",
+      "The 64-bit OS requirement",
+      "The need for any CPU at all"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "The OS architecture matches. The memory does not: 8 GB is half of 16 GB. Integrated graphics that borrow system RAM are not a GPU with 4 GB of its own VRAM. Adding RAM helps the first gap and does not create a dedicated graphics card. The PC obviously has a CPU.",
+    "choiceNotes": [
+      "8 GB does not meet 16 GB. The application will be starved or will refuse to install.",
+      "Shared system memory is not 4 GB of dedicated VRAM. The graphics requirement fails.",
+      "The OS is already 64-bit. That requirement is met.",
+      "Every PC in this story has a CPU. The failed items are RAM and graphics."
+    ]
+  },
+  {
+    "id": "c2-028",
+    "domain": "1",
+    "objective": "1.8",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A removable drive must be readable and writable on both Windows and macOS and must hold a single 8 GB file. Which file system fits?",
+    "choices": [
+      "exFAT",
+      "FAT32",
+      "ext4 as a native Windows boot volume",
+      "APFS as the only file system Windows will write"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "exFAT handles large files and is the exchange format both operating systems write. FAT32 stops near 4 GB per file, so the 8 GB file will not copy. ext4 is Linux. APFS is Apple. Windows does not use either as its everyday writable exchange.",
+    "choiceNotes": [
+      "exFAT is the cross-platform choice for a file this large.",
+      "FAT32's per-file limit is about 4 GB. An 8 GB file does not fit.",
+      "ext4 is not a native Windows boot or exchange file system.",
+      "APFS is the Apple file system. Stock Windows will not use it as the writable format for this drive."
+    ]
+  },
+  {
+    "id": "c2-029",
+    "domain": "1",
+    "objective": "1.8",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A clinic still runs an application on an operating system the vendor stopped patching two years ago. New malware signatures do not exist for it. What lifecycle problem is this?",
+    "choices": [
+      "The OS is end of life, so it should be isolated or replaced rather than left on the open network",
+      "End of life means the vendor just started mainstream support",
+      "End of life only applies to hardware, never to an OS",
+      "An unpatched OS is safer because attackers ignore old software"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "End of life means no more security fixes. An OS in that state does not belong on the general network. Isolate it, or move the application. Attackers do not ignore old software. They keep exploits that still work. Hardware has a lifecycle too, and so does the OS.",
+    "choiceNotes": [
+      "No patches means replace it or wall it off. Leaving it on the flat network is the risk.",
+      "End of life is the end of fixes, not the start of support.",
+      "Operating systems go end of life. Windows versions do it on a published schedule.",
+      "Old, unpatched software is a favorite target, not an invisible one."
+    ]
+  },
+  {
+    "id": "c2-030",
+    "domain": "1",
+    "objective": "1.8",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A technician is matching each operating system with the file system it normally uses for its own disk. Which pairing of an OS and a typical file system is accurate?",
+    "choices": [
+      "Windows and NTFS, Linux and ext4, macOS and APFS",
+      "Windows boots from ext4 by default",
+      "macOS uses NTFS as its required system volume",
+      "Linux requires FAT32 for every system disk"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "NTFS is the Windows system file system. ext4 is the common Linux one. APFS is the current Apple file system. Windows does not boot from ext4. macOS can read NTFS and does not install onto it as its own system disk. Linux can mount FAT32 and does not need it for the system disk.",
+    "choiceNotes": [
+      "Those three pairs are the everyday mapping. Use them when a question asks which file system belongs to which OS.",
+      "ext4 is not the Windows system file system. Windows setup will not treat it as a native boot volume.",
+      "APFS, not NTFS, is the macOS system file system.",
+      "FAT32 is an exchange and legacy format. A Linux system disk is normally ext4 or a cousin."
+    ]
+  },
+  {
+    "id": "c2-031",
+    "domain": "1",
+    "objective": "1.9",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Setup shows a 4 TB disk as unusable space beyond 2 TB. The firmware is UEFI. The disk was initialized as MBR during an experiment. What should the technician change before installing?",
+    "choices": [
+      "Use GPT, which UEFI can boot and which can address the whole disk",
+      "Stay on MBR, because UEFI cannot boot GPT",
+      "Format the disk FAT12",
+      "Install a 32-bit OS so the extra space appears"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "GPT is the partition style for large disks and for UEFI boot. MBR is stuck near 2 TB and four primary partitions. The firmware in this story can boot GPT. FAT12 is a floppy-era file system. A 32-bit OS makes large-memory and modern-driver problems worse and does not fix the partition table.",
+    "choiceNotes": [
+      "GPT plus UEFI is the combination that uses the whole 4 TB disk and boots from it.",
+      "UEFI boots GPT. That choice has the firmware relationship backwards.",
+      "FAT12 cannot hold Windows and is not a partition style.",
+      "A 32-bit OS does not extend an MBR disk past 2 TB."
+    ]
+  },
+  {
+    "id": "c2-032",
+    "domain": "1",
+    "objective": "1.9",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician is about to upgrade a production PC in place. The user has years of files and no backup. What should happen before setup runs?",
+    "choices": [
+      "Back up the user data and confirm the backup can be read",
+      "Delete the backup to save space",
+      "Skip the backup because in-place upgrades cannot fail",
+      "Format the disk first so the upgrade is faster"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An in-place upgrade usually keeps files, and 'usually' is not a restore plan. Copy the data, and open a file from the copy so you know it is real. Deleting backups and formatting are how you turn a routine upgrade into data loss. Upgrades fail often enough that the backup is part of the procedure.",
+    "choiceNotes": [
+      "Take the backup and test it. Then run the upgrade.",
+      "Deleting the only copy is the opposite of preparation.",
+      "Upgrades fail. A backup is how you survive the failure.",
+      "Formatting first is a clean install, and it destroys the files the upgrade was supposed to keep."
+    ]
+  },
+  {
+    "id": "c2-033",
+    "domain": "1",
+    "objective": "1.9",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A fleet of identical classroom PCs must get the same Windows image, applications, and settings. Doing it by hand on each PC takes all week. Which deployment method fits?",
+    "choices": [
+      "Image deployment",
+      "A unique manual clean install with no image",
+      "Typing every setting while the class watches",
+      "A PRL update"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An image captures a prepared PC and deploys that same configuration to the fleet. It is the method for identical classrooms. Hand installs drift. A PRL update is a legacy phone roaming list and has nothing to do with Windows deployment. After imaging, you still handle the unique name and the license activation.",
+    "choiceNotes": [
+      "Imaging is how one known-good setup becomes fifty identical PCs.",
+      "A hand clean install is the slow method the question is trying to leave behind.",
+      "Clicking every setting by hand is how the week disappears and the PCs end up different.",
+      "A PRL is a CDMA phone list. It does not deploy Windows."
+    ]
+  },
+  {
+    "id": "c2-034",
+    "domain": "1",
+    "objective": "1.10",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Mac user deleted a file yesterday and wants it back from the backup that runs to an external disk every hour. Which Apple feature is that backup?",
+    "choices": [
+      "Time Machine",
+      "Spotlight",
+      "Keychain",
+      "Mission Control"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Time Machine is the macOS backup. It keeps hourly snapshots on the backup disk so yesterday's file can be restored. Spotlight searches. Keychain stores passwords. Mission Control shows desktops and windows. None of those are the backup.",
+    "choiceNotes": [
+      "Time Machine is the restore path. Enter it and pull the file from yesterday's snapshot.",
+      "Spotlight finds files that are still on the disk. It does not bring back a deleted one from a backup.",
+      "Keychain holds credentials. It is not a file backup.",
+      "Mission Control manages spaces. It does not store hourly copies."
+    ]
+  },
+  {
+    "id": "c2-035",
+    "domain": "1",
+    "objective": "1.10",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A Mac application is frozen and the rest of the system still responds. The user has not restarted. What is the first Apple-specific way to quit that one app?",
+    "choices": [
+      "Force Quit from the Apple menu, or Command-Option-Escape",
+      "Reinstall macOS before trying anything else",
+      "Degauss the display",
+      "Format the Time Machine disk"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Force Quit ends the stuck app without rebooting the Mac. Command-Option-Escape opens the same dialog. Reinstalling the OS is a last resort. Degaussing is for ancient CRT monitors. Formatting the backup disk destroys the safety net and does not unstick the app.",
+    "choiceNotes": [
+      "Force Quit is the targeted first step. Restart only if the whole Mac is stuck.",
+      "Reinstalling macOS to close one app is an enormous overreaction.",
+      "Degaussing does not apply to a modern Mac display and does not quit an app.",
+      "The Time Machine disk is the backup. Formatting it does not close the frozen app."
+    ]
+  },
+  {
+    "id": "c2-036",
+    "domain": "1",
+    "objective": "1.10",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user forgot the Wi-Fi password that the Mac had saved, and the router was reset. Where does macOS keep that saved password?",
+    "choices": [
+      "Keychain Access",
+      "Disk Utility",
+      "The Dock",
+      "Finder's trash"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Keychain Access stores passwords, certificates, and keys, including saved Wi-Fi passwords. You can show the password if you can authenticate as the user. Disk Utility repairs disks. The Dock launches apps. The trash holds deleted files. None of those are the password store.",
+    "choiceNotes": [
+      "Keychain is the password database. That is where the saved Wi-Fi secret lives.",
+      "Disk Utility is for volumes and images. It does not reveal a Wi-Fi password.",
+      "The Dock is a launcher. It does not store the network key.",
+      "The trash is deleted items. It is not the key store."
+    ]
+  },
+  {
+    "id": "c2-037",
+    "domain": "1",
+    "objective": "1.11",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Linux script fails with Permission denied. ls -l shows -rw-r--r-- on the script, owned by the user who is trying to run it. What is missing?",
+    "choices": [
+      "The execute bit. chmod u+x or chmod 755 adds it",
+      "The read bit, which is already present",
+      "A Windows drive letter",
+      "The file must be renamed to .exe"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "On Linux the execute permission is separate from read. -rw-r--r-- can be read and not run. chmod u+x adds execute for the owner. 755 is rwxr-xr-x. The read bit is already there. Linux does not use Windows drive letters or .exe to decide whether a script runs. The shell also needs a shebang or you invoke it with bash.",
+    "choiceNotes": [
+      "Add execute. The mode bits are why the shell refused to run a file the user can already read.",
+      "Read is the r in -rw-. The missing flag is x.",
+      "Linux paths do not use C:. A drive letter will not chmod the file.",
+      "Extensions do not grant execute permission on Linux. The mode bit does."
+    ]
+  },
+  {
+    "id": "c2-038",
+    "domain": "1",
+    "objective": "1.11",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A Debian-family Linux PC cannot find a package that the vendor says is in the repositories. The PC has not refreshed its package lists in months. What should run before the install?",
+    "choices": [
+      "apt-get update, then the install",
+      "A Windows gpupdate",
+      "diskpart",
+      "The macOS Time Machine installer"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "apt-get update refreshes the package indexes. apt-get install then uses those indexes. On a stale machine the package looks missing until the update runs. gpupdate is Windows policy. diskpart is a Windows disk tool. Time Machine is macOS. Red Hat systems use dnf or yum instead of apt.",
+    "choiceNotes": [
+      "Update the lists, then install. The package can be in the repo and still invisible to a stale index.",
+      "gpupdate does not exist as the Linux package-index refresh.",
+      "diskpart does not manage apt repositories.",
+      "Time Machine will not refresh a Debian package list."
+    ]
+  },
+  {
+    "id": "c2-039",
+    "domain": "1",
+    "objective": "1.11",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A Linux server must share a folder so Windows users can map it like any other file share. Which service is the usual answer?",
+    "choices": [
+      "Samba",
+      "The ext4 journal by itself",
+      "cron with no network",
+      "A local chmod and nothing on the network"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Samba implements SMB on Linux so Windows can map the share. The ext4 journal is local file-system bookkeeping and does not speak SMB. cron schedules tasks. chmod fixes local permissions and does not open a network share. You still set the share permissions and the firewall.",
+    "choiceNotes": [
+      "Samba is the SMB server. Windows maps it with a UNC path like any other share.",
+      "The journal keeps the local file system consistent. It is not a network protocol.",
+      "cron runs programs on a schedule. It does not serve files to Windows.",
+      "chmod changes local mode bits. Without Samba or another server, Windows has nothing to map."
+    ]
+  }
+]

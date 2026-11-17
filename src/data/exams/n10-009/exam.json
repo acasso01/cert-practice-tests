@@ -1,0 +1,75 @@
+{
+  "id": "n10-009",
+  "code": "N10-009",
+  "name": "Network+",
+  "title": "CompTIA Network+",
+  "summary": "Routing, switching, wireless, services, security, and the seven-step troubleshooting method. The published pass mark is 720.",
+  "minutes": 90,
+  "examQuestions": 90,
+  "passScaled": 720,
+  "studyUrl": "https://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-training-course/",
+  "studyLabel": "Professor Messer's free N10-009 course",
+  "accent": "#d6f25c",
+  "domains": [
+    {
+      "id": "1",
+      "name": "Networking Concepts",
+      "weight": 23,
+      "objectives": [
+        { "id": "1.1", "name": "OSI model" },
+        { "id": "1.2", "name": "Network appliances and applications" },
+        { "id": "1.3", "name": "Cloud concepts" },
+        { "id": "1.4", "name": "Ports, protocols, and traffic" },
+        { "id": "1.5", "name": "Transmission media and transceivers" },
+        { "id": "1.6", "name": "Topologies and architectures" },
+        { "id": "1.7", "name": "IPv4 addressing" },
+        { "id": "1.8", "name": "Modern network environments" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Network Implementation",
+      "weight": 20,
+      "objectives": [
+        { "id": "2.1", "name": "Routing technologies" },
+        { "id": "2.2", "name": "Switching technologies" },
+        { "id": "2.3", "name": "Wireless devices" },
+        { "id": "2.4", "name": "Physical installations" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Network Operations",
+      "weight": 19,
+      "objectives": [
+        { "id": "3.1", "name": "Organizational processes" },
+        { "id": "3.2", "name": "Network monitoring" },
+        { "id": "3.3", "name": "Disaster recovery" },
+        { "id": "3.4", "name": "IPv4 and IPv6 network services" },
+        { "id": "3.5", "name": "Access and management" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Network Security",
+      "weight": 14,
+      "objectives": [
+        { "id": "4.1", "name": "Security concepts" },
+        { "id": "4.2", "name": "Network attacks" },
+        { "id": "4.3", "name": "Security features and defense" }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Network Troubleshooting",
+      "weight": 24,
+      "objectives": [
+        { "id": "5.1", "name": "Troubleshooting methodology" },
+        { "id": "5.2", "name": "Cabling and physical interfaces" },
+        { "id": "5.3", "name": "Network service issues" },
+        { "id": "5.4", "name": "Performance issues" },
+        { "id": "5.5", "name": "Tools and protocols" }
+      ]
+    }
+  ]
+}

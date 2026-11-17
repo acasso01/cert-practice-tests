@@ -1,0 +1,389 @@
+from common import item
+
+P = "n10"
+
+Q = []
+
+Q.append(item(P, 1, "1.1", "medium",
+    "A switch port connected to a workstation shows a rising CRC error counter, and the workstation's transfer speed collapses whenever it sends a large file. The IP address, mask, and gateway are correct. Which OSI layer is the best place to start looking?",
+    ["Layer 4, because CRC is a TCP checksum", "Layer 2, because CRC protects an Ethernet frame", "Layer 3, because CRC is checked by the router hop count", "Layer 7, because the file-sharing application calculated the CRC"],
+    1,
+    "Ethernet frames carry a frame check sequence so the receiver can detect a damaged frame. When that check fails, the interface counts a CRC error. That is a data-link problem, usually a bad cable, a bad termination, interference, or a duplex mismatch. The IP configuration working normally is a hint that the routing configuration is not the first suspect.",
+    ["TCP checks its own segments, but a switch interface CRC counter is counting damaged Ethernet frames, not TCP checksum failures.",
+     "The frame check sequence lives with the Ethernet frame, which is a Layer 2 unit. A rising CRC counter points at the link, the NIC, or duplex.",
+     "TTL and routing decisions are Layer 3. A router does not increment a switch-port CRC counter when a route is wrong.",
+     "The application may have its own checks, but the counter named in the symptom is on the switch interface and is about frames."]))
+
+Q.append(item(P, 2, "1.1", "easy",
+    "A technician is explaining why a router can move traffic between the office VLAN and the guest VLAN, while a basic Layer 2 switch with no VLAN routing cannot. Which OSI layer is the router using to make that forwarding decision?",
+    ["Layer 1, because the router repeats the electrical signal", "Layer 2, because the router forwards solely by MAC address", "Layer 3, because the router forwards packets by IP address", "Layer 4, because the router picks a destination port number and ignores the IP"],
+    2,
+    "A router looks at the destination IP address and the routing table, then forwards the packet toward the next hop. That is the network layer. A basic switch learns MAC addresses and stays inside one broadcast domain per VLAN. It does not route between those VLANs unless it also has a Layer 3 capability.",
+    ["Layer 1 is bits on the wire. A hub or repeater works there. A router is not just amplifying the signal.",
+     "MAC forwarding is what a switch does. A router rewrites the Layer 2 header as it sends the packet out a different network.",
+     "IP addressing and routing are Layer 3. That is how traffic leaves one VLAN and reaches another.",
+     "Port numbers belong to TCP and UDP at Layer 4. A router can filter on them, but the forwarding decision between subnets is based on IP."]))
+
+Q.append(item(P, 3, "1.1", "medium",
+    "Two servers can ping each other, but a client cannot open a web page on one of them. A capture shows the TCP handshake to port 443 never completes, while ICMP echo replies succeed. Which OSI layer is the failure sitting in?",
+    ["Layer 1, because ping proves the cable is unplugged", "Layer 2, because ICMP failure is the only Layer 2 test", "Layer 3, because a successful ping means IP routing is broken", "Layer 4, because the TCP session to that port is failing while IP works"],
+    3,
+    "Ping uses ICMP, which tests whether IP packets can make the round trip. That part works, so the cable, the MAC path, and the route are good enough for IP. The web page needs a TCP connection to port 443. When that handshake fails, the problem is at the transport layer or in a filter that is dropping that transport traffic. It is not a reason to replace the cable first.",
+    ["Ping succeeded, so the link is up. Layer 1 is not the broken piece in this symptom.",
+     "ICMP is not a Layer 2 protocol, and in this scenario ICMP is working. The failing piece is the TCP session.",
+     "A successful ping is evidence that Layer 3 forwarding works. It does not prove the opposite.",
+     "TCP is Layer 4. Port 443 never completing a handshake, while IP still works, puts the fault at the transport layer or a device filtering that port."]))
+
+Q.append(item(P, 4, "1.1", "medium",
+    "A training document maps protocol jobs to OSI layers. One line says this layer translates between data formats, handles encryption and compression of the payload, and is where ASCII and JPEG are often used as examples. Which layer is that describing?",
+    ["Session", "Transport", "Presentation", "Application"],
+    2,
+    "On the OSI model, the presentation layer is the one associated with how data is represented: format translation, compression, and encryption. Application-layer protocols such as HTTP sit above it and are what the user and the program actually speak. The session layer is about setting up and tearing down a dialog, and the transport layer is about reliable or best-effort delivery between ports.",
+    ["The session layer starts, maintains, and ends a conversation. It is not the layer used to describe file formats such as JPEG.",
+     "The transport layer segments data and uses port numbers. Encryption as a formatting function is not its textbook job.",
+     "Presentation is the layer CompTIA associates with data format, compression, and encryption.",
+     "The application layer is the protocol the program uses, such as HTTP or DNS. The format-translation role described here is presentation."]))
+
+Q.append(item(P, 5, "1.1", "easy",
+    "An old closet still has a hub feeding four computers. Every frame that arrives on one port is repeated out the other ports, and the device does not learn MAC addresses. At which OSI layer is that hub operating?",
+    ["Layer 1", "Layer 2", "Layer 3", "Layer 4"],
+    0,
+    "A hub is a multiport repeater. It regenerates the electrical signal and sends it out every other port. It has no MAC address table, so it is not making a data-link forwarding decision. That places it at the physical layer. A switch, by contrast, reads the frame and forwards by MAC address.",
+    ["A hub repeats bits. It does not inspect a frame or a packet, so it is a Layer 1 device.",
+     "Layer 2 forwarding is what a switch does with a MAC table. A hub has no such table.",
+     "Layer 3 devices forward by IP address. A hub does not have a routing table.",
+     "Layer 4 devices understand ports. A hub does not look at TCP or UDP at all."]))
+
+Q.append(item(P, 6, "1.2", "medium",
+    "A security appliance receives a copy of traffic from a switch mirror port. It emails an alert when it sees a signature match, but it cannot stop the original packet because that packet never passed through it. Which kind of appliance is this?",
+    ["An inline intrusion prevention system", "An intrusion detection system", "A Layer 3 switch acting as the default gateway", "A content delivery network"],
+    1,
+    "An IDS watches traffic and raises an alarm. It is often fed by a mirror or a tap, so it sees a copy and cannot drop the original. An IPS is placed in the path, so it can drop the packet before it reaches the victim. The behavior in the question, alert only, is detection.",
+    ["An IPS sits inline and is able to block. This box only receives a copy and only alerts, so it is not preventing.",
+     "Detection without the ability to drop the live packet is an IDS. A mirror port is a common way to feed one.",
+     "A Layer 3 switch routes. Nothing here says this appliance is the gateway or that it forwards packets.",
+     "A CDN caches content near users. It is not a signature-based alarm fed by a mirror port."]))
+
+Q.append(item(P, 7, "1.2", "easy",
+    "Guest laptops and staff laptops currently share one flat network, so a guest's broadcast traffic is heard by staff machines. The technician is told to put a device between them that will stop broadcasts from crossing while still letting approved traffic through. Which device does that job?",
+    ["A hub", "An unmanaged Layer 2 switch with no VLANs", "A router or a Layer 3 boundary", "A media converter"],
+    2,
+    "Broadcasts stay inside a broadcast domain. A hub and a basic switch without VLANs keep everyone in the same one. A router, or a Layer 3 switch doing the routing, is the boundary that stops broadcasts and forwards only the packets that have a reason to cross. That is the device you put between the two groups.",
+    ["A hub floods every frame, including broadcasts, out every port. It makes the problem worse.",
+     "An unmanaged switch still forwards broadcasts to every port in the VLAN. With no VLANs, there is one domain.",
+     "Routing is what splits broadcast domains. Approved traffic can still be routed or filtered across that boundary.",
+     "A media converter changes copper to fiber or similar. It does not create a new broadcast domain."]))
+
+Q.append(item(P, 8, "1.2", "medium",
+    "A database administrator wants the new server to see raw disks and to format them itself. The storage team must not present a file share. Which storage design matches that request?",
+    ["Network-attached storage exporting an SMB share", "A storage area network presenting block storage", "A content delivery network", "A proxy server cache"],
+    1,
+    "NAS is file-level storage. The client mounts a share such as SMB or NFS, and the NAS owns the file system. A SAN presents block devices, over Fibre Channel or iSCSI, so the server sees a disk and puts its own file system on it. A database that wants raw disks is asking for a SAN, not a file share.",
+    ["An SMB share is the classic NAS presentation. The server would see folders, not a disk it can format.",
+     "A SAN hands the server block storage. The operating system formats that disk itself, which is what the administrator asked for.",
+     "A CDN distributes cached content to users. It is not the database server's disk.",
+     "A proxy cache stores web objects for clients. It does not present disks to a database host."]))
+
+Q.append(item(P, 9, "1.2", "medium",
+    "Viewers on another continent are pulling a large training video from a single web server in the headquarters basement, and the company's internet circuit is full. Leadership wants those viewers to fetch the video from a copy that is nearer to them. Which service is built for that?",
+    ["Quality of service on the basement switch", "A content delivery network", "Port address translation", "An intrusion detection system"],
+    1,
+    "A CDN caches content at many locations and sends the viewer to a nearby copy. That takes the repeated download off the origin circuit. QoS can only decide which local traffic waits. NAT does not move the content. An IDS watches for attacks and does not distribute video.",
+    ["QoS prioritizes traffic that is already on the link. It does not place a copy of the video closer to the viewers.",
+     "A CDN exists to serve cached content from a location near the user, which is the request here.",
+     "PAT lets many internal hosts share a public address. It does not cache or relocate the video.",
+     "An IDS alerts on suspicious traffic. It is not a distribution network for content."]))
+
+Q.append(item(P, 10, "1.2", "hard",
+    "During the nightly backup, phones on the same WAN circuit turn choppy, then clear up when the backup finishes. The circuit is genuinely full while the backup runs. Which feature lets the voice traffic go first without pretending the circuit got faster?",
+    ["Quality of service", "A content delivery network", "A larger default TTL", "Replacing the router with a hub"],
+    0,
+    "QoS classifies traffic and gives the preferred class, such as voice, a better place in the queue when the link is congested. It does not create new bandwidth. A CDN would not change a site-to-site backup. TTL only limits how many hops a packet may live. A hub would make the local segment worse, not the WAN.",
+    ["QoS is the queuing and marking tool that prefers voice when a link is full. The backup still runs, but it waits.",
+     "A CDN caches content for users on the internet. It does not schedule a private backup against voice.",
+     "TTL is a hop limit. Raising it does not give voice priority and can hide routing loops for longer.",
+     "A hub repeats every signal and creates one big collision domain. It is not a WAN scheduler."]))
+
+Q.append(item(P, 11, "1.3", "medium",
+    "A company moved a payroll server to a cloud provider. The provider owns the hardware and the hypervisor. The company's administrators still patch the guest operating system, size the virtual disk, and restore the guest from backup. Which cloud service model is this?",
+    ["Software as a service", "Platform as a service", "Infrastructure as a service", "A content delivery network"],
+    2,
+    "In IaaS you rent infrastructure, typically virtual machines, and you still operate the guest OS. PaaS gives you a place to run an application without managing that OS. SaaS gives you the finished application, such as web mail, and you do not patch a server at all. Patching the guest is the clue that this is IaaS.",
+    ["SaaS is the finished application. You would not patch the payroll server's operating system yourself.",
+     "PaaS manages the runtime and the operating system for you. The customer brings the application, not a guest they patch.",
+     "IaaS is the virtual machine model. The provider runs the hardware, and the customer runs the guest OS.",
+     "A CDN caches and distributes content. It is not the service model that describes this virtual server."]))
+
+Q.append(item(P, 12, "1.3", "easy",
+    "An online store adds web servers automatically on the Friday before a holiday and removes them the following Monday so the company is not paying for idle capacity. Which cloud characteristic is that?",
+    ["Multitenancy", "Elasticity", "A screened subnet", "A static default route"],
+    1,
+    "Elasticity is the ability to grow and shrink as demand changes, often automatically, and to pay for what you used. Multitenancy means several customers share the provider's infrastructure. A screened subnet is a security zone. A static route is a routing entry. The Friday-to-Monday change is elasticity.",
+    ["Multitenancy is shared infrastructure among customers. It does not describe adding and removing servers with demand.",
+     "Elasticity is capacity that expands and contracts with the load, which matches the holiday surge and the Monday scale-in.",
+     "A screened subnet is a place to put a public-facing system. It is not an autoscaling behavior.",
+     "A static route sends packets toward a next hop. It has nothing to do with creating servers for a weekend."]))
+
+Q.append(item(P, 13, "1.3", "medium",
+    "Private cloud subnets must be able to download patches from the internet, but those instances must not accept connections that start from the internet. Which cloud building block fits?",
+    ["An internet gateway with public addresses on every instance", "A NAT gateway for outbound traffic", "A site-to-site VPN that disables outbound access", "Turning off the virtual private cloud"],
+    1,
+    "A NAT gateway lets private instances open outbound connections and hides them from unsolicited inbound connections. Putting a public address on every instance, attached through an internet gateway, makes those instances reachable if a security rule also allows it. A VPN is for private connectivity back to a company, not for general patch downloads. You still need the VPC.",
+    ["Public addresses are how instances become directly reachable from the internet. That is the opposite of the request.",
+     "A NAT gateway is the outbound path for private subnets. Return traffic for sessions they started is allowed, and new inbound sessions are not.",
+     "A VPN connects trusted networks. It is not the feature that gives private instances a one-way path to public patch servers.",
+     "Removing the VPC removes the network entirely. The instances would not download anything."]))
+
+Q.append(item(P, 14, "1.3", "hard",
+    "A cloud administrator allows TCP 443 inbound on a subnet filter and is surprised that servers still cannot answer clients. A second filter, attached to each instance, is stateful and already allows the same port. The subnet filter does not create an entry for the return traffic. Which statement explains the failure?",
+    ["The instance filter is a stateless security list and is blocking the return", "The subnet filter is acting like a stateless security list and needs an explicit outbound allow", "NAT64 is rewriting the HTTP port to 22", "The virtual private cloud does not support TCP"],
+    1,
+    "Cloud security groups are the stateful, instance-level filters: allow the request and the return traffic is tracked. Security lists are commonly subnet-level and stateless, so a rule that lets the request in does not automatically let the reply out. The symptom matches a stateless subnet list that never permitted the return packets. The instance group is already stateful and is not the broken piece.",
+    ["The question says the instance filter is stateful and already allows the port. It is not the stateless list.",
+     "A stateless subnet list evaluates each direction on its own. Inbound 443 without an outbound rule for the reply drops the conversation.",
+     "NAT64 translates between IPv6 and IPv4. Nothing in the symptom describes an address-family translation or a change to port 22.",
+     "TCP is supported. The packets are being filtered, not rejected because the cloud lacks TCP."]))
+
+Q.append(item(P, 15, "1.4", "easy",
+    "A firewall request asks for the port that administrators use for encrypted remote command-line access to network gear. Which port should be permitted?",
+    ["22", "23", "69", "3389"],
+    0,
+    "SSH is the encrypted remote shell, and it uses TCP 22. Telnet uses 23 and is clear text, so it is the port you remove, not the one you open for administration. TFTP is UDP 69 and is a simple file transfer with no login. RDP is 3389 and is a graphical desktop, not the command line on a switch.",
+    ["TCP 22 is SSH. It encrypts the session and is the usual management access for routers, switches, and Linux hosts.",
+     "TCP 23 is Telnet. The login and the commands would cross the network in the clear.",
+     "UDP 69 is TFTP, used to move a config or an image, not to give an administrator a shell.",
+     "TCP 3389 is Remote Desktop Protocol. It is a Windows graphical session, not SSH."]))
+
+Q.append(item(P, 16, "1.4", "medium",
+    "A technician was asked to allow secure file transfers to a Linux host. The firewall change opened TCP 20 and 21. Users still cannot connect with their SSH keys, and anyone who does use the open ports is offered a clear-text FTP login. What was misunderstood?",
+    ["Secure file transfer with SSH keys is SFTP on port 22, not FTP on 20 and 21", "SFTP is SNMP on port 161", "FTP's data port should have been 443", "Secure file transfer is SIP on port 5061"],
+    0,
+    "SFTP is the SSH file transfer subsystem. It uses port 22 and the same keys as SSH. FTP uses port 21 for commands and port 20 for active-mode data, and it does not encrypt the login. Opening 20 and 21 exposed the insecure protocol and never opened the one the users actually run.",
+    ["SFTP rides on SSH, so the port is 22. Ports 20 and 21 are FTP, which is a different and unencrypted protocol.",
+     "SNMP is for monitoring, on 161 and 162. It does not transfer an administrator's files or use SSH keys.",
+     "Port 443 is HTTPS. FTP does not move its data channel to 443 just because someone wants encryption.",
+     "SIP is voice signaling, on 5060 and 5061. It is not a file transfer."]))
+
+Q.append(item(P, 17, "1.4", "medium",
+    "Network devices must send their logs to a central collector. The collector is listening, but no events arrive. A firewall between the devices and the collector allows SNMP and blocks everything else. Which port is the missing one for classic syslog?",
+    ["UDP 161", "UDP 162", "UDP 514", "TCP 389"],
+    2,
+    "Syslog collectors traditionally listen on UDP 514. SNMP queries use 161 and traps use 162, so allowing SNMP does not allow syslog. LDAP is 389 and is a directory protocol, not a logging transport. The devices are sending logs into a closed port.",
+    ["UDP 161 is the SNMP agent port a manager polls. It is not syslog.",
+     "UDP 162 is where an SNMP manager listens for traps. That is still SNMP, not syslog.",
+     "UDP 514 is the traditional syslog port. The collector will not see events until that port is permitted.",
+     "TCP 389 is LDAP. Directory lookups do not carry device logs."]))
+
+Q.append(item(P, 18, "1.4", "hard",
+    "Two sites are connected with a GRE tunnel. A packet capture on the internet path still shows the original payload in the clear, even though the tunnel is up and routes pass through it. Which addition would actually encrypt that payload?",
+    ["Increase the GRE TTL", "Encapsulate the GRE traffic with IPsec ESP", "Change GRE to use port 23", "Replace GRE with TFTP"],
+    1,
+    "GRE encapsulates one packet inside another so that routing can carry it across an intermediate network. Encapsulation is not encryption. IPsec's ESP provides the encryption, and it is commonly wrapped around GRE when the tunnel has to cross an untrusted network. AH would authenticate without encrypting the payload, so ESP is the piece that hides the contents.",
+    ["TTL only limits hop count. It does not scramble the payload.",
+     "ESP is the IPsec protocol that encrypts. Wrapping the GRE tunnel in ESP is the standard way to make that tunnel private.",
+     "Port 23 is Telnet, which is clear text. GRE is an IP protocol, not a Telnet session.",
+     "TFTP is an unencrypted file transfer on UDP 69. It is not a substitute for a tunnel cipher."]))
+
+Q.append(item(P, 19, "1.4", "medium",
+    "A junior administrator has to permit two services that establish a connection and retransmit lost segments. The other two services on the list are connectionless. Which two should be permitted? (Choose two.)",
+    ["SSH", "HTTPS", "DHCP", "TFTP"],
+    [0, 1],
+    "SSH and HTTPS run over TCP. TCP sets up a session and resends what was lost. DHCP and TFTP run over UDP, which does not create a connection and does not retransmit on the application's behalf. The question is about the transport, not about whether the service is important.",
+    ["SSH uses TCP 22. It has a handshake and reliable delivery.",
+     "HTTPS uses TCP 443. The TLS session sits on top of that TCP connection.",
+     "DHCP uses UDP 67 and 68. It is connectionless, which is why a client can ask for an address before it has one.",
+     "TFTP uses UDP 69. The protocol itself is simple and connectionless, which is why devices can use it early in boot."]))
+
+Q.append(item(P, 20, "1.4", "easy",
+    "Several DNS servers in different cities are configured with the same IPv4 address. Routers deliver a query to whichever of those servers is closest. Which traffic type is that?",
+    ["Broadcast", "Anycast", "A private multicast group that floods every LAN", "Unicast to a single fixed host with no shared address"],
+    1,
+    "Anycast advertises the same address from more than one place and lets routing deliver the packet to the nearest instance. That is a common design for DNS. Broadcast would hit every host on a local subnet. Multicast hits hosts that joined a group, not the nearest of several identical servers. Plain unicast is one address on one host.",
+    ["A broadcast is delivered to every host in the broadcast domain. These queries are not flooding a LAN.",
+     "Anycast is the same address announced in several places, with routing choosing the nearest server.",
+     "Multicast delivers to group members. It is not how identical DNS servers in different cities share one address.",
+     "Unicast is one-to-one. The whole point of this design is that more than one server holds the address."]))
+
+Q.append(item(P, 21, "1.5", "medium",
+    "A new link must run 12 kilometers between two buildings and carry 10 Gbps. The installers are about to pull multimode fiber and order short-reach optics. What should they change?",
+    ["Use single-mode fiber and long-reach optics", "Use Category 5e and expect 10 Gbps at that distance", "Use a straight-through serial cable", "Use twinaxial copper for the 12 kilometer path"],
+    0,
+    "Single-mode fiber has a tiny core and is the choice for long distances, including a run of many kilometers. Multimode and short-reach optics are for short data-center lengths and will not reliably light a 12 kilometer path. Copper Ethernet is limited to about 100 meters. Twinax is a short, in-rack copper cable.",
+    ["Single-mode fiber with the matching long-reach transceiver is the correct medium for a 12 kilometer 10 Gbps link.",
+     "Category 5e is a 1 Gbps copper cable at 100 meters. It cannot carry 10 Gbps for 12 kilometers.",
+     "A serial cable is a short management or legacy connection. It is not a 10 Gbps campus link.",
+     "Twinaxial direct-attach copper is for a few meters inside a rack, not for a path between buildings."]))
+
+Q.append(item(P, 22, "1.5", "easy",
+    "A fiber patch cord will not seat in an older patch panel. The panel's ports are round, bayonet-style connectors that you push in and twist to lock. Which connector is on the panel?",
+    ["LC", "ST", "RJ45", "F-type"],
+    1,
+    "The ST connector is the round bayonet fiber connector. LC is the small square latch used on modern SFPs. SC is a larger square push-pull connector, not a twist lock. RJ45 and F-type are copper connectors, for Ethernet and coax.",
+    ["LC is a small square connector with a latch. It does not twist into a bayonet.",
+     "ST is the straight-tip bayonet. You line up the key, push, and turn.",
+     "RJ45 is the eight-position copper plug used for twisted-pair Ethernet.",
+     "An F-type connector is the threaded coax connector used for cable television and cable modems."]))
+
+Q.append(item(P, 23, "1.5", "medium",
+    "A work area is 90 meters of permanent link away from the closet, and the new access switches are 10 Gbps. The designer wants the run to train at 10 Gbps for the full channel, including patch cords. Which copper category is the right choice?",
+    ["Category 5e", "Category 6 for a guaranteed 100 meter 10 Gbps channel", "Category 6a", "Category 3"],
+    2,
+    "Category 6a is specified for 10 Gbps out to 100 meters. Category 6 can do 10 Gbps only on shorter channels, about 55 meters, so a 90 meter permanent link plus patch cords is too long. Category 5e is a 1 Gbps cable. Category 3 is old voice-grade cabling and is not in this conversation.",
+    ["Category 5e supports 1 Gbps at 100 meters. It is not a 10 Gbps choice at 90 meters.",
+     "Category 6's 10 Gbps distance is much shorter than 100 meters. A 90 meter link is past that guarantee.",
+     "Category 6a is the twisted-pair standard that carries 10 Gbps for the full 100 meter channel.",
+     "Category 3 was used for voice and very old Ethernet. It cannot carry 10 Gbps."]))
+
+Q.append(item(P, 24, "1.5", "easy",
+    "The space above a drop ceiling is used as the air return for the building's HVAC. A contractor wants to lay a standard PVC Ethernet cable there because it is cheaper. What is the problem?",
+    ["PVC cable is required in air-handling spaces because it produces less smoke", "The air-handling space requires plenum-rated cable", "Only coax is legal above a ceiling", "Plenum cable is only used outdoors and would be the wrong pick"],
+    1,
+    "When a ceiling space moves return air, it is a plenum. Cable in that space has to be plenum rated so that a fire does not fill the air system with the dense, toxic smoke that ordinary PVC jackets produce. The cheaper PVC cable is the one that does not belong there. This is a code and life-safety issue, not a matter of taste.",
+    ["Ordinary PVC jackets are exactly what you do not want in a plenum. They are not the low-smoke choice.",
+     "Plenum-rated cable is required in spaces used for air handling. The PVC run should not be pulled there.",
+     "Coax is not the substitute for Ethernet in a plenum, and it has the same jacket question.",
+     "Plenum cable is an indoor rating for air spaces. Outdoor cable is a different requirement, such as a UV or water-resistant jacket."]))
+
+Q.append(item(P, 25, "1.5", "hard",
+    "Two top-of-rack switches in the same cabinet need a 10 Gbps link of about 2 meters. The team wants the lowest cost and the least clutter. Fiber jumpers and optical modules are available but expensive. What is the sensible interconnect?",
+    ["A single-mode 40 kilometer optic", "A twinaxial direct-attach copper cable", "Category 5e, because 10 Gbps is fine on it at 2 meters for a standards-based design", "An F-type coax patch"],
+    1,
+    "A direct-attach copper cable, the twinax assembly with modules on both ends, is made for short in-rack links. It avoids buying two optics and a fiber jumper. A long-reach single-mode optic is the wrong tool and the wrong budget. Category 5e is not the 10 Gbps standard even if a short piece might link in a lab. F-type coax is a cable-modem connector, not a switch uplink.",
+    ["A 40 kilometer optic is for a long fiber span. It costs more and solves a problem this rack does not have.",
+     "Twinax DAC is the short, inexpensive 10 Gbps copper assembly used between devices in the same rack.",
+     "Category 5e is specified for 1 Gbps. A standards-based 10 Gbps design does not call for it, even for 2 meters.",
+     "F-type connectors terminate coax for RF. They are not how you link two 10 Gbps switch ports."]))
+
+Q.append(item(P, 26, "1.6", "easy",
+    "Every computer on a floor runs back to a single access switch, and no computer is cabled directly to another computer. One access-port failure darkens only that desk. Which topology is this?",
+    ["Full mesh", "Bus", "Star", "Ring"],
+    2,
+    "A star, also called hub-and-spoke when you are talking about sites, connects every node to a central device. Losing one edge link drops one node. A full mesh would connect nodes to each other. A bus is a shared cable. A ring connects each node to the next in a loop. The wiring-closet pattern is a star.",
+    ["A full mesh gives every node a link to every other node. That is not one cable back to a closet.",
+     "A bus puts everyone on one shared medium. One break can affect the whole segment, and this floor is not wired that way.",
+     "A star centers on the switch. Each desk is a spoke, so one port failure stays local, while the switch itself is the shared risk.",
+     "A ring connects neighbors in a circle. There is no central switch in that description."]))
+
+Q.append(item(P, 27, "1.6", "medium",
+    "A data center design connects every leaf switch to every spine switch and tells the team not to cable leaves directly to each other. Server-to-server traffic should cross the same small number of hops no matter which racks are talking. Which architecture is this?",
+    ["Spine and leaf", "A three-tier core, distribution, and access design with no leaves", "A single collapsed ring", "A bus"],
+    0,
+    "Spine-and-leaf is the data-center fabric where leaves attach up to spines and east-west traffic takes a predictable path, usually leaf to spine to leaf. You do not daisy-chain the leaves. A three-tier campus design has a core, a distribution layer, and access, which is a different shape. A ring or a bus would not give this even hop count.",
+    ["Spine and leaf is built for east-west traffic. Every leaf uplink hits the spines, so paths stay short and even.",
+     "Three-tier campus networks are core, distribution, and access. They are not described as leaves that all attach to spines.",
+     "A ring does not connect every leaf to every spine, and it does not keep a constant two-hop server path.",
+     "A bus is a shared line. It is not a data-center fabric."]))
+
+Q.append(item(P, 28, "1.6", "hard",
+    "A designer insists on a full mesh between six branch routers so that any branch can reach any other branch without a hop through headquarters. How many WAN links does that full mesh require?",
+    ["6 links", "12 links", "15 links", "36 links"],
+    2,
+    "A full mesh needs a link for every pair. The count is n times n minus 1, divided by 2, because each link joins two routers and should be counted once. For six routers that is 6 times 5 divided by 2, which is 15. Six would be a star or a ring, not a full mesh. Thirty-six counts each pair twice and then some.",
+    ["Six links could be a star of five plus an extra, or a ring. It does not connect every pair among six routers.",
+     "Twelve is not the pair count. It would leave some branches without a direct path.",
+     "Fifteen is every unique pair among six routers. That is the full mesh.",
+     "Thirty-six is what you get if you forget that a link between A and B is the same link as the one between B and A, and then overshoot."]))
+
+Q.append(item(P, 29, "1.7", "easy",
+    "Which address is a public IPv4 address that could be routed on the internet, assuming it was assigned to the organization?",
+    ["10.15.8.2", "172.31.9.4", "192.168.50.10", "172.32.9.4"],
+    3,
+    "The private ranges are 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. The 172.16 block runs only through 172.31.255.255. 172.32.9.4 is outside that block, so it is not RFC 1918 space. The other three addresses sit inside the three private ranges and must be translated before they can be used as public sources.",
+    ["10.15.8.2 is inside 10.0.0.0/8, which is private.",
+     "172.31.9.4 is the top of the private 172.16.0.0/12 range. 172.31 is still private. 172.32 is the first public octet after it.",
+     "192.168.50.10 is inside 192.168.0.0/16, which is private.",
+     "172.32.9.4 is just past the private range, so it is a public address when it has been assigned."]))
+
+Q.append(item(P, 30, "1.7", "medium",
+    "A laptop shows the address 169.254.23.10 with a mask of 255.255.0.0 and no default gateway. It can talk to one other laptop that also has a 169.254 address on the same switch, and it cannot reach anything else. What does that address mean?",
+    ["The laptop was statically assigned a public address", "DHCP did not answer, so the host assigned itself a link-local address", "The address is an RFC 1918 private address from the 192.168 range", "The host is using a multicast address and should be able to route worldwide"],
+    1,
+    "169.254.0.0/16 is Automatic Private IP Addressing. A host uses it when it is set for DHCP and no server offers a lease. There is no gateway, so the host can only reach other link-local hosts on the same LAN. It is not one of the RFC 1918 ranges, and it is not routed on the internet.",
+    ["A static public address would be configured on purpose and would normally include a gateway if it needed to leave the LAN.",
+     "APIPA is the self-assigned 169.254 address a host uses after DHCP fails. That matches the mask, the missing gateway, and the limited reach.",
+     "192.168.0.0/16 is private RFC 1918 space. 169.254 is a different, link-local range.",
+     "Multicast addresses begin at 224.0.0.0. 169.254 is not multicast, and it is not routed."]))
+
+Q.append(item(P, 31, "1.7", "hard",
+    "A host is addressed 192.168.10.77/26. Which statement about its subnet is correct?",
+    ["The network address is 192.168.10.64 and the broadcast address is 192.168.10.127", "The network address is 192.168.10.0 and the broadcast address is 192.168.10.255", "The network address is 192.168.10.77 and there is no broadcast", "The host is in 192.168.10.128/26"],
+    0,
+    "A /26 has a block size of 64 in the last octet. The subnets of 192.168.10.0 are .0, .64, .128, and .192. The address .77 falls in the .64 block, which runs through .127. The network address is .64, the first usable host is .65, the last usable host is .126, and the broadcast is .127.",
+    ["77 sits between 64 and 127, so the /26 network is 192.168.10.64 and the broadcast is 192.168.10.127.",
+     "That description is the whole /24. The mask is /26, so the host is not in a 256-address block.",
+     "77 is a host address inside the subnet, not the subnet address. A /26 still has a broadcast address.",
+     "192.168.10.128/26 covers .128 through .191. 77 is below that range."]))
+
+Q.append(item(P, 32, "1.7", "medium",
+    "Each branch needs at least 500 usable IPv4 addresses, and the address plan should not hand the branch a larger block than necessary. Which prefix meets that with the least waste?",
+    ["/24", "/23", "/22", "/30"],
+    1,
+    "Usable hosts are two less than the size of the block, because one address is the network and one is the broadcast. A /24 has 254 usable hosts, which is short. A /23 has 510, which clears 500 with a little room. A /22 has 1,022 and wastes more. A /30 has two usable hosts and is a point-to-point size.",
+    ["/24 provides 254 usable addresses. The branch asked for 500, so this block is too small.",
+     "/23 provides 510 usable addresses. It is the smallest prefix in the list that satisfies 500.",
+     "/22 provides 1,022 usable addresses. It works, but it spends about twice the space the branch needs.",
+     "/30 provides two usable addresses. It is appropriate between two routers, not for a branch full of users."]))
+
+Q.append(item(P, 33, "1.7", "hard",
+    "A technician is writing a /23 summary and needs the address that can actually be used as the subnet address. Which of the following is a valid network address when the mask is /23?",
+    ["10.1.5.0/23", "10.1.4.0/23", "10.1.4.1/23", "10.1.5.255/23"],
+    1,
+    "A /23 covers 512 addresses, which is two /24s, and it must start on an even number in the third octet. 10.1.4.0/23 runs from 10.1.4.0 through 10.1.5.255. 10.1.5.0 is a host address inside that block, not the start of its own /23. The .1 address is a host. 10.1.5.255 is the broadcast of 10.1.4.0/23.",
+    ["10.1.5.0 is in the middle of the 10.1.4.0/23 block. It cannot be the network address of a /23.",
+     "10.1.4.0 is on an even boundary and is the network address for the /23 that also includes 10.1.5.0/24.",
+     "10.1.4.1 is the first usable host of 10.1.4.0/23, not the network address.",
+     "10.1.5.255 is the broadcast address of 10.1.4.0/23. Hosts do not use it as an interface address."]))
+
+Q.append(item(P, 34, "1.8", "medium",
+    "A data center needs far more than 4,094 isolated Layer 2 segments, and those segments have to be carried across an IP underlay between buildings. The team does not want to stretch a pile of traditional VLANs across every trunk. Which technology matches?",
+    ["VXLAN", "Using the native VLAN for every tenant", "Replacing the underlay with hubs", "TFTP"],
+    0,
+    "A VLAN ID is 12 bits, so classic Ethernet stops at 4,094 usable VLANs. VXLAN encapsulates a Layer 2 frame in UDP and uses a 24-bit network identifier, which is about 16 million segments, and it rides on a Layer 3 underlay. That is the data-center interconnect tool. Putting everyone in the native VLAN removes isolation. Hubs and TFTP do not create overlay segments.",
+    ["VXLAN is the overlay that carries many Layer 2 segments across a routed underlay, with a VNI much larger than a VLAN ID.",
+     "The native VLAN is one untagged VLAN on a trunk. Using it for every tenant removes the separation you were trying to create.",
+     "Hubs collapse everyone into one collision domain. They do not scale a data center and they do not cross a routed underlay cleanly.",
+     "TFTP copies files. It does not encapsulate tenant Ethernet frames."]))
+
+Q.append(item(P, 35, "1.8", "medium",
+    "A company has MPLS, a broadband circuit, and an LTE backup at each branch. The new design should pick a path per application, send bulk backups over broadband, keep voice on the better path, and apply that policy from a central controller. Which technology is this?",
+    ["A single static route with the same next hop for every application", "SD-WAN", "A hub with no routing", "Port address translation"],
+    1,
+    "SD-WAN is the software-defined wide-area design. It is transport agnostic, application aware, and driven by central policy, which is exactly the mix of MPLS, broadband, and LTE with different applications on different paths. A single static route cannot tell voice from a backup. PAT only translates addresses.",
+    ["One static route treats every packet the same. It cannot put voice on MPLS and backups on broadband.",
+     "SD-WAN measures the transports and applies application policy from a controller. Multiple underlays are the point.",
+     "A hub does not choose a WAN path and does not understand applications.",
+     "PAT lets many hosts share a public address. It does not steer applications onto different circuits."]))
+
+Q.append(item(P, 36, "1.8", "hard",
+    "A security architect says the office LAN should no longer be treated as trusted just because a laptop plugged in. Every request for an internal application must be authenticated and authorized, and each user should reach only the applications they need. Which idea is that?",
+    ["Zero trust", "A single flat VLAN with no passwords, because the building has a lock", "Enabling Telnet so logins are easier to troubleshoot", "Disabling logging so denied requests are not stored"],
+    0,
+    "Zero trust assumes the network location is not a credential. Users and devices are authenticated, requests are authorized, and access stays at least privilege. A flat VLAN with no passwords is the old assumption that the office is safe. Telnet would expose logins. Turning off logs hides the evidence you need.",
+    ["Zero trust is policy-based authentication and authorization for each request, with least privilege, instead of trusting a subnet.",
+     "A locked building does not prove that a person on the LAN should reach payroll. That is the assumption zero trust drops.",
+     "Telnet sends credentials in clear text. It is the opposite of a careful access design.",
+     "Logging denials is part of seeing whether the policy works. Turning logs off does not implement least privilege."]))
+
+Q.append(item(P, 37, "1.8", "medium",
+    "An engineer fixes a production firewall at 2 a.m. by typing a change that is not in the automation repository. The next deployment overwrites it, and the outage returns. The team wants the running network to match reviewed code. What should they adopt?",
+    ["Infrastructure as code, with the change committed and reviewed before it is deployed", "A policy that production may only be changed from memory and never written down", "Disabling version control so files cannot conflict", "Replacing the firewall with a hub"],
+    0,
+    "Infrastructure as code describes the network in files, keeps those files in version control, and deploys from them. A midnight hand change is configuration drift. The durable fix is to put the needed change in the source, review it, and deploy that, so the next run does not wipe it out. Avoiding documentation makes the next outage harder. A hub is not a firewall.",
+    ["IaC keeps the reviewed definition in source control and deploys from it, so a one-off typed change is not the only copy of the design.",
+     "Undocumented memory is how the drift happened. The next person cannot review or rebuild what was never written down.",
+     "Version control is what shows who changed the file and lets you roll it back. Removing it hides conflicts instead of resolving them.",
+     "A hub does not enforce security policy and does not solve drift."]))
+
+Q.append(item(P, 38, "1.8", "hard",
+    "An IPv6-only client must reach a server that can speak only IPv4. The server cannot be upgraded this quarter, and the client has no IPv4 stack. Which transition method lets the client open that session?",
+    ["NAT64", "APIPA", "Turning the server's IPv4 address into a VLAN ID", "TFTP"],
+    0,
+    "NAT64, together with DNS64 in a full design, lets an IPv6 client reach an IPv4 destination by translating the protocols. Dual stack would also work if the client or the server could run both, but the question says neither side can. APIPA is an IPv4 link-local behavior when DHCP fails. A VLAN ID is not an IP translation. TFTP copies files.",
+    ["NAT64 translates between IPv6 clients and IPv4 servers, which is the constraint in this scenario.",
+     "APIPA assigns 169.254 addresses when IPv4 DHCP fails. It does not connect an IPv6-only host to an IPv4 server.",
+     "VLAN IDs mark Ethernet frames. They are not a substitute for IP translation.",
+     "TFTP is a file-transfer protocol. It does not translate address families."]))
+
+if __name__ == "__main__":
+    from common import dump
+    dump("n10-009", {"q-d1.json": Q})

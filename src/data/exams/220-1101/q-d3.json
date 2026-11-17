@@ -1,0 +1,746 @@
+[
+  {
+    "id": "c1-045",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A new office run will sit in an air-return ceiling and must carry 1 Gbps Ethernet for 80 meters. The cheapest cable on the cart is a PVC-jacket Category 5e. What is wrong with using it there?",
+    "choices": [
+      "The air-return space needs plenum-rated cable, even though Category 5e can carry the speed",
+      "Category 5e cannot carry 1 Gbps at any length",
+      "Plenum cable is only for outdoors",
+      "PVC is required in plenums because it smokes less"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Category 5e is electrically fine for 1 Gbps at 80 meters. The jacket is the problem. An air-return ceiling is a plenum, and the cable there must be plenum rated so a fire does not fill the ventilation system with thick smoke. Ordinary PVC is the wrong jacket. Plenum is an indoor air-space rating, not an outdoor rating.",
+    "choiceNotes": [
+      "Speed is fine. The plenum rating is the missing piece, because this ceiling moves building air.",
+      "Category 5e does carry 1 Gbps to 100 meters. The speed is not why this pull is wrong.",
+      "Outdoor cable is a different jacket problem. Plenum is specifically for indoor air-handling spaces.",
+      "PVC is the higher-smoke jacket. It is what you avoid in a plenum, not what you require."
+    ]
+  },
+  {
+    "id": "c1-046",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Both ends of a cable were terminated to the T568B color order, and the wire map passes. A coworker says one end should have been T568A or the link will not carry Ethernet. What is true?",
+    "choices": [
+      "Both ends the same, either A or B, makes a straight-through cable. B on both ends is correct",
+      "Ethernet requires A on one end and B on the other for every PC-to-switch cable",
+      "T568B is only legal for telephone pairs",
+      "A straight-through cable uses different colors on pins 4 and 5 at each end"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A straight-through cable uses the same standard on both ends. T568B on both ends is the common choice in the United States, and T568A on both ends is also straight-through. A on one end and B on the other is a crossover, which modern NICs with auto-MDIX rarely need. Pins 4 and 5 are the blue pair in both standards.",
+    "choiceNotes": [
+      "Matching ends are straight-through. This cable is built correctly for a PC-to-switch run.",
+      "A-to-B is a crossover. It is not the requirement for a normal switch link.",
+      "T568B is an Ethernet pinout. Telephone-only wiring is a different, simpler use of the cable.",
+      "The blue pair stays on pins 4 and 5 in both A and B. You do not swap it to make a straight-through cable."
+    ]
+  },
+  {
+    "id": "c1-047",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A monitor has a VGA connector, and the new laptop only has HDMI and USB-C. The picture must stay analog all the way into that old monitor. Which statement is accurate?",
+    "choices": [
+      "VGA is the analog video connector. An adapter from HDMI or USB-C must actively convert to analog",
+      "VGA and HDMI are the same signal, so a passive pin adapter always works",
+      "DisplayPort is the analog standard and VGA is digital",
+      "DVI-D carries analog and is identical to VGA"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "VGA is analog. HDMI and DisplayPort and USB-C video are digital. A cheap passive pin swap does not turn digital into analog. You need an active converter. DVI-D is digital only. DVI-A and DVI-I are the DVI flavors that can carry analog, which is a different connector from DVI-D.",
+    "choiceNotes": [
+      "The laptop's digital output needs an active conversion to feed an analog VGA monitor. A passive adapter is the usual disappointment.",
+      "HDMI is digital and VGA is analog. They are not the same signal with different shells.",
+      "DisplayPort is digital. VGA is the analog one. The names are reversed in that choice.",
+      "DVI-D is digital only. It does not carry the analog pins that a VGA monitor needs."
+    ]
+  },
+  {
+    "id": "c1-048",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician is choosing a connector for an internal power lead to an older drive that is not SATA. The plug is a four-pin white connector from the power supply. What is that connector called?",
+    "choices": [
+      "Molex",
+      "Lightning",
+      "RJ11",
+      "LC"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The four-pin peripheral power connector is Molex. SATA power is the newer flat connector. Lightning is an Apple data and charge port. RJ11 is a telephone plug. LC is a fiber connector. None of those power an internal legacy drive.",
+    "choiceNotes": [
+      "Molex is the four-pin drive power connector. That is the white plug on older power supplies.",
+      "Lightning is a phone and tablet connector. It does not power an internal hard drive.",
+      "RJ11 is the small telephone modular plug. It is not a power connector.",
+      "LC is a small fiber-optic connector. It carries light, not drive power."
+    ]
+  },
+  {
+    "id": "c1-049",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A run next to a bank of large motors shows CRC errors on unshielded cable. Fiber is available, and so is shielded twisted pair. Which choice is immune to the motors' electrical noise?",
+    "choices": [
+      "Fiber",
+      "Unshielded twisted pair pulled even closer to the motors",
+      "A longer VGA cable used as Ethernet",
+      "Coax with an F connector pretending to be a switch uplink"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Fiber carries light, so magnetic and electrical noise from the motors does not couple into the signal. Shielded copper can help if it is grounded correctly, but it is not immune. More unshielded cable closer to the motors is worse. VGA and F-type coax are the wrong media for an Ethernet uplink between switches.",
+    "choiceNotes": [
+      "Fiber is the immune choice. Use it through the motor room instead of hoping the copper improves.",
+      "Moving unshielded pairs closer to the noise source increases the errors.",
+      "VGA is an analog video cable. It is not an Ethernet uplink.",
+      "F-type coax is for RF and cable modems. It is not how these switches should be linked."
+    ]
+  },
+  {
+    "id": "c1-050",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A desktop will not POST after a memory upgrade. The new module is DDR5 and the board's slots are DDR4. The technician is about to push harder. What is the correct stop?",
+    "choices": [
+      "DDR4 and DDR5 are keyed differently and are not interchangeable. Do not force the module",
+      "DDR5 is backward compatible if you remove the notch with a file",
+      "DDR4 boards accept DDR5 at a lower voltage automatically",
+      "The module is SODIMM and every desktop uses SODIMM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Each DDR generation has a different notch and pinout so you cannot plug the wrong one in. Forcing it breaks the slot and the module. Filing the notch defeats the safety and still lands the pins in the wrong places. Desktops use DIMMs. SODIMMs are the laptop modules. Get DDR4 for this board.",
+    "choiceNotes": [
+      "The keying is intentional. Stop, and install the generation the board was built for.",
+      "Cutting a notch does not remap the pins or the voltage. It destroys the module and can destroy the board.",
+      "The board does not negotiate a DDR5 module down to DDR4. The generations do not mix.",
+      "This is a desktop. Even a DDR4 SODIMM would be the wrong form factor. The generation is already wrong."
+    ]
+  },
+  {
+    "id": "c1-051",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A board supports dual channel. Two identical DDR4 modules are installed in the two slots next to each other, and the firmware reports single-channel mode. The manual colors one slot in each channel. What should change?",
+    "choices": [
+      "Move one module into the matching slot so the pair occupies both channels",
+      "Install a third module of a different size and speed",
+      "Enable the modules in Device Manager after Windows boots, because the firmware cannot see RAM",
+      "Replace the modules with ECC sticks the board does not support"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Dual channel needs the modules in the slots the manual pairs, often one of each color, not the two slots that happen to be adjacent. Adjacent slots are often the same channel, which is why the firmware fell back to single channel. The PC still works. It is just not using the width you paid for. Mixed random modules and unsupported ECC are not the fix.",
+    "choiceNotes": [
+      "Follow the color or the manual. The pair has to sit on both channels before the firmware will report dual channel.",
+      "A mismatched third module makes the population harder, not cleaner.",
+      "If the firmware sees the RAM and reports a mode, Windows is not hiding it. Device Manager is the wrong tool.",
+      "ECC that the board does not support will be rejected or will run without ECC. It does not fix slot placement."
+    ]
+  },
+  {
+    "id": "c1-052",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A workstation manual says the memory controller supports ECC only with registered ECC modules, and this gaming board does not. A user wants ECC sticks from a server for 'fewer crashes.' What is the likely result?",
+    "choices": [
+      "The gaming board may refuse the registered ECC modules or ignore the ECC function",
+      "ECC modules are required for every Windows install",
+      "Registered ECC is slower DDR and always fits a laptop SODIMM slot",
+      "ECC removes the need for a supported CPU and motherboard"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "ECC corrects single-bit memory errors, and registered modules add a buffer the memory controller must understand. A board and CPU that do not support them will not boot, or will not actually correct errors. ECC is not a Windows requirement, it is not a laptop SODIMM by default, and it does not bypass the compatibility list.",
+    "choiceNotes": [
+      "Check the board's memory support list. Server ECC is often the wrong electrical type for a consumer board.",
+      "Windows does not require ECC. Most desktops run non-ECC memory for their whole lives.",
+      "Registered ECC DIMMs are a server form, not a way to fill a laptop slot, and they are not just 'slower DDR.'",
+      "The memory controller has to support ECC. The stick does not create that support."
+    ]
+  },
+  {
+    "id": "c1-053",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A heavy application is using the page file constantly, the disk is busy, and the PC has 8 GB of RAM while the application vendor requires 32 GB. Adding a larger page file stops the crashes but the machine stays slow. What is the right fix?",
+    "choices": [
+      "Install more physical RAM. The page file is disk, and it is only a safety net",
+      "Delete the page file and add no RAM",
+      "More virtual memory is faster than real RAM",
+      "Replace the CMOS battery so the page file moves into the CPU cache"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Virtual memory is the page file on disk. It prevents some crashes by giving Windows somewhere to put idle pages, and it is much slower than DRAM. This workload needs 32 GB and has 8 GB, so the disk is thrashing. Add RAM. Deleting the page file removes the safety net. The CMOS battery does not relocate the page file.",
+    "choiceNotes": [
+      "The vendor's 32 GB requirement is physical memory. The page file is why it is slow, not why it should stay slow.",
+      "No page file plus too little RAM turns a slow machine into a crashing one.",
+      "Disk is not faster than DRAM. A bigger page file does not outrun real memory.",
+      "The CMOS battery keeps firmware settings and the clock. It is not a memory upgrade."
+    ]
+  },
+  {
+    "id": "c1-054",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician is explaining drive types to a user who wants the fastest general-purpose internal drive. Which pairing is accurate?",
+    "choices": [
+      "NVMe over PCIe is faster than a SATA SSD, which is faster than a 5400 rpm hard drive",
+      "A 5400 rpm hard drive is faster than NVMe",
+      "M.2 and NVMe mean the same thing, so every M.2 drive is NVMe",
+      "mSATA and M.2 share one connector"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "NVMe is the fast protocol that rides on PCIe. A SATA SSD is limited by SATA. A spinning 5400 rpm drive is slower than both for general use. M.2 is a form factor: an M.2 drive can be SATA or NVMe, so the names are not synonyms. mSATA is an older connector and does not mate with M.2.",
+    "choiceNotes": [
+      "That order matches the protocols and the mechanics. NVMe, then SATA SSD, then a slow spinner.",
+      "A 5400 rpm drive is the low-power spinning option. It is not faster than NVMe.",
+      "M.2 describes the stick shape. You still have to read whether the slot and the drive speak NVMe or SATA.",
+      "mSATA is a different small SATA connector. It does not plug into an M.2 slot."
+    ]
+  },
+  {
+    "id": "c1-055",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A motherboard manual says the M.2 slot shares lanes with SATA port 1. After an NVMe drive is installed, the SSD on SATA port 1 disappears. The data cable is seated. What happened?",
+    "choices": [
+      "The M.2 drive disabled that SATA port, which the manual warned about",
+      "NVMe erased the SATA drive's data by being installed",
+      "SATA port 1 only works if the M.2 slot is occupied",
+      "The drive disappeared because RAID 5 needs three disks"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Many boards steal the lanes or the port from a SATA connector when an M.2 device is populated. The SATA drive is still fine. Move its cable to a port the manual says stays active. Installing NVMe does not wipe another drive. The port did not require the M.2 device. RAID 5 is a different configuration and was not described.",
+    "choiceNotes": [
+      "Shared lanes are the documented behavior. Use a different SATA port and the drive should reappear.",
+      "The SATA drive was not erased by the presence of another slot. It lost its port.",
+      "The manual says the opposite: occupying M.2 turns that SATA port off.",
+      "Nothing in the symptom is a RAID array. One missing port is the lane-sharing rule."
+    ]
+  },
+  {
+    "id": "c1-056",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user wants the family photos on two disks so that one disk can fail and the photos remain. They also want as much speed as a stripe would give, and they have only two drive bays. Which RAID level fits, and which common wish does it not grant?",
+    "choices": [
+      "RAID 1 mirrors the disks. It survives one failure. It does not give RAID 0 write speed and a full two-disk capacity",
+      "RAID 0, because a stripe survives a single disk failure",
+      "RAID 5, because it can be built on two disks",
+      "RAID 10, because it needs only two disks"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RAID 1 is the two-disk mirror. Capacity is one disk, reads can be quick, and either disk can fail. RAID 0 stripes and dies when either disk dies, so it is the wrong place for the only copy of family photos. RAID 5 needs at least three disks. RAID 10 needs at least four. With two bays, the redundancy choice is the mirror.",
+    "choiceNotes": [
+      "RAID 1 is the fit. Say out loud that they get one disk of space, not two, so the expectation is honest.",
+      "RAID 0 has no redundancy. One failure loses the stripe, which is the photos.",
+      "RAID 5 parity needs three or more disks. Two bays cannot build it.",
+      "RAID 10 is a stripe of mirrors and wants four disks. Two bays are not enough."
+    ]
+  },
+  {
+    "id": "c1-057",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A four-bay server holds a database that needs both speed and the ability to lose one disk. The admin is comparing RAID 5 and RAID 10. Which trade is accurate?",
+    "choices": [
+      "RAID 10 uses half the raw capacity and generally writes faster than RAID 5. RAID 5 keeps more usable capacity and survives one failure",
+      "RAID 5 survives two disk failures and uses two disks",
+      "RAID 10 can be built on three disks and keeps 75 percent capacity",
+      "RAID 0 and RAID 5 are the same layout"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RAID 10 mirrors pairs and stripes across those pairs. With four disks you get two disks of usable space, and a write does not have the parity read-modify-write penalty of RAID 5. RAID 5 on four disks keeps three disks of space and survives one failure. It does not survive two. RAID 10 is not a three-disk layout. RAID 0 has no parity.",
+    "choiceNotes": [
+      "That is the real trade: RAID 10 spends capacity to avoid parity writes. RAID 5 spends write performance to keep more capacity.",
+      "RAID 5 survives one failure, not two. Two-disk survival is RAID 6, which is not the A+ set, or a lucky RAID 10 pair.",
+      "RAID 10 wants four disks here. Three disks do not make a stripe of mirrors with 75 percent usable space.",
+      "RAID 0 is a stripe with no parity. RAID 5 is a stripe with parity. They are not the same."
+    ]
+  },
+  {
+    "id": "c1-058",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A camera card must move files larger than 4 GB onto both Windows and macOS without extra software. Which file system avoids the 4 GB file limit and is writable on both?",
+    "choices": [
+      "exFAT",
+      "FAT32",
+      "NTFS, which macOS can always write without help",
+      "ext4, which Windows mounts natively"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "FAT32 stops at about 4 GB per file, so a long video fails. exFAT removes that limit and is the exchange format both operating systems write. NTFS is native to Windows. macOS can read it and often cannot write it without extra software. ext4 is a Linux file system and is not a native Windows volume.",
+    "choiceNotes": [
+      "exFAT is the cross-platform choice for large files. Format the card with it and both computers can write.",
+      "FAT32 is compatible and too small per file. A video over 4 GB will not copy.",
+      "Treat NTFS as Windows-native. Do not promise a stock Mac can write it.",
+      "ext4 is not a file system Windows understands out of the box. The card would look unreadable."
+    ]
+  },
+  {
+    "id": "c1-059",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An ITX motherboard is being installed in an ATX case. The board lines up with only some of the standoffs, and four extra standoffs sit under empty areas of the board. What should the technician do?",
+    "choices": [
+      "Remove the extra standoffs so they cannot short the board, and confirm the form factor still mounts safely",
+      "Add more standoffs under the board until every hole in the case is filled",
+      "Force an ATX board into the ITX tray by drilling the traces",
+      "Skip standoffs and let the board rest on the metal tray"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Standoffs must match the board's holes. An extra standoff under a trace or a solder point can short the board the moment you power it. ITX is smaller than ATX. It can mount in many ATX cases if the right standoffs are the only ones present. No standoffs at all lets the solder side touch the case. Drilling the board destroys it.",
+    "choiceNotes": [
+      "Extra standoffs are a short. Take them out, use the holes the ITX board actually has, and then seat the board.",
+      "Filling every case hole puts metal where the board did not ask for it. That is the short.",
+      "You do not drill a motherboard to change its form factor. Use a case and a board that match, or the correct subset of standoffs.",
+      "The tray is conductive. Standoffs are what keep the solder from becoming a short."
+    ]
+  },
+  {
+    "id": "c1-060",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A builder bent a pin in an LGA socket by dropping the CPU in at an angle. On a different AMD AM4 build, the pins are on the processor instead. Which statement is accurate?",
+    "choices": [
+      "Intel LGA puts the pins in the socket. AM4 puts the pins on the CPU. Either way, do not force a bent pin",
+      "Both designs put the pins on the motherboard and the CPU is a pad grid",
+      "AM4 is LGA and Intel desktop chips of that era are PGA",
+      "Bent pins can be ignored because the socket only uses half of them"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "LGA means the lands are on the CPU and the pins are in the socket. That is the Intel desktop pattern and also AMD AM5. AM4 is PGA, so the pins are on the chip and a bend is on the chip. Forcing either one breaks the contact. You do not get to ignore pins. If you are not practiced at straightening them, stop and replace the damaged part.",
+    "choiceNotes": [
+      "That is the pin location difference. Treat a bent pin as damage, not as something the socket will work around.",
+      "Only LGA puts the pins in the socket. AM4 is the design with pins on the processor.",
+      "The labels are reversed. AM4 is pin-grid, and the Intel desktop sockets people mean by LGA have pins in the socket.",
+      "Every pin that the design uses matters. A bent one is an open or a short, not a spare."
+    ]
+  },
+  {
+    "id": "c1-061",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A new PC boots, fans spin, and then it shuts off within a few seconds. The cooler still has the plastic film on its cold plate, and there is no thermal paste. What is the fault?",
+    "choices": [
+      "The CPU is overheating because the cooler is not actually touching it",
+      "The plastic film is required and should stay on",
+      "The shutdown proves the SSD is the wrong form factor",
+      "Windows Update caused a shutdown before Windows was installed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The cold plate has to meet the CPU heat spreader with a thin layer of paste. A plastic shipping film prevents that contact, so the CPU hits its thermal limit and the firmware shuts the PC off to save the chip. Remove the film, apply a small amount of paste, and reseat the cooler evenly. The SSD and Windows are not in this story. The film is trash, not a part.",
+    "choiceNotes": [
+      "No contact, no paste, immediate thermal shutdown. Remove the film and install the cooler properly.",
+      "The film is packaging. Leaving it on is the reason the cooler cannot do its job.",
+      "An SSD form-factor problem would show up as a missing drive, not as a thermal shutdown at first power-on.",
+      "Windows is not installed yet in this build story. The firmware is protecting the CPU."
+    ]
+  },
+  {
+    "id": "c1-062",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Task Manager on a four-core CPU shows eight logical processors. The user thinks the shop sold an eight-core chip. What is the accurate explanation?",
+    "choices": [
+      "The chip has four cores and multithreading presents eight logical processors",
+      "Logical processors are always separate physical sockets",
+      "Eight logical processors means the board has eight CPUs installed",
+      "Multithreading doubles the RAM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A core is a physical processor. Multithreading, such as Intel Hyper-Threading or AMD SMT, lets one core present two logical processors to the OS. Four cores therefore show as eight. That is not eight sockets and it does not double the memory. Software that licenses physical cores should not be told this is an eight-core part.",
+    "choiceNotes": [
+      "Four physical cores with two threads each is eight logical processors. The chip was described honestly.",
+      "Logical processors are scheduling targets. They are not extra sockets on the board.",
+      "A normal desktop has one CPU package. Eight logical processors do not mean eight packages.",
+      "Threads do not add DIMMs. Memory size is a separate specification."
+    ]
+  },
+  {
+    "id": "c1-063",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A hypervisor says hardware virtualization is disabled, and a Windows Pro feature that needs it will not install. The CPU supports the feature. Where is the setting?",
+    "choices": [
+      "In the firmware, enable VT-x or AMD-V",
+      "In the printer preferences",
+      "On the VGA jumpers",
+      "In the DHCP scope"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Intel VT-x and AMD-V are firmware switches. A CPU can support them while the firmware still has them turned off, which is how a hypervisor ends up refusing to start. Printer preferences, display jumpers, and DHCP do not enable the virtualization bit. After you enable it, a full power cycle is sometimes required before the OS sees it.",
+    "choiceNotes": [
+      "The firmware setup is where VT-x or AMD-V is enabled. That matches a capable CPU and a hypervisor that still says disabled.",
+      "Printer preferences do not change CPU features.",
+      "VGA jumpers are an ancient display configuration. They are not the virtualization switch.",
+      "A DHCP scope hands out addresses. It cannot toggle a CPU feature."
+    ]
+  },
+  {
+    "id": "c1-064",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "BitLocker is being planned for a fleet. The laptops have a TPM, and the desktops in a lab do not. Secure Boot is also available in the firmware. Which statement keeps the three ideas separate?",
+    "choices": [
+      "The TPM stores measurements and can hold BitLocker keys. Secure Boot checks signatures at startup. A password is neither of those",
+      "Secure Boot encrypts the disk",
+      "The TPM is a network firewall",
+      "BitLocker works only on FAT32 and does not use the TPM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The TPM is a small secure chip used for measured boot and for protecting keys. Secure Boot refuses a bootloader whose signature is not trusted. BitLocker is the disk encryption that can seal its key to the TPM. A firmware password is just a password. Mixing the three names up is how a fleet gets a control that does not actually encrypt anything.",
+    "choiceNotes": [
+      "TPM, Secure Boot, and a password are three different controls. BitLocker can use the TPM. Secure Boot does not encrypt the volume.",
+      "Secure Boot authenticates the boot path. BitLocker is what encrypts the disk.",
+      "A TPM is not a firewall and it does not filter packets.",
+      "BitLocker encrypts NTFS volumes. FAT32 is not its file system, and the TPM is a supported key protector."
+    ]
+  },
+  {
+    "id": "c1-065",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A gaming PC shuts off only when the graphics card is under load. The supply is a no-name 300 watt unit and the card's requirement plus the CPU already exceeds that before you add drives. What is the likely cause?",
+    "choices": [
+      "The power supply wattage is too small for the load",
+      "The card needs a longer HDMI cable",
+      "The shutdown is a DNS timeout",
+      "300 watts is more than any single GPU can draw, so the supply is not the cause"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Idle does not reveal a supply that is too small. The moment the CPU and the GPU both ask for their design power, a 300 watt unit browns out and the PC resets or dies. Add the draw and leave headroom, then replace the supply with one that meets it. HDMI length and DNS do not power a GPU. Modern cards can draw more than 300 watts by themselves.",
+    "choiceNotes": [
+      "The symptom follows the load, and the arithmetic says the supply is undersized. Replace it with a correctly sized unit.",
+      "A longer display cable does not make a power supply hold the rail.",
+      "DNS does not reset a PC when the GPU gets busy.",
+      "High-end GPUs can exceed 300 watts on their own. The premise that no card can is false."
+    ]
+  },
+  {
+    "id": "c1-066",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A builder is short one PCIe power cable and takes a modular cable from a different brand's supply. The pinout looks similar. What is the risk?",
+    "choices": [
+      "Modular cables are not universal. The other brand's pinout can destroy the card or the supply",
+      "All modular cables use one standard pinout, so brand never matters",
+      "The cable only affects the wall voltage selector",
+      "A wrong modular cable is safe because the connector is keyed against every mistake"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The connector shape is not a promise about which pin is 12 volts and which is ground. Vendors have shipped modular cables with different pinouts. Using another brand's cable is a known way to kill a GPU or a drive. Use the cables that shipped with this supply, or a cable the supply vendor explicitly lists for this model.",
+    "choiceNotes": [
+      "Do not mix modular cables across brands. The similar plug can still be wired differently, and the damage is immediate.",
+      "There is no single safe pinout shared by every modular supply. Brand and model matter.",
+      "The wall-voltage selector is a separate switch on some old supplies. A PCIe cable does not set it.",
+      "Keying stops some wrong plugs and does not stop a same-shape cable with a different pinout."
+    ]
+  },
+  {
+    "id": "c1-067",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A desktop will not power on. The 24-pin motherboard connector is seated, and the 8-pin CPU power connector near the socket is dangling. Fans twitch and the board never POSTs. What is missing?",
+    "choices": [
+      "The CPU power connector",
+      "A second HDMI cable",
+      "The VGA jumper from a 1990s board",
+      "A USB flash drive"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The main 24-pin connector feeds the board, and the 4-pin or 8-pin connector beside the socket feeds the CPU. Leave that one off and the board can light up, twitch the fans, and never POST. Seat the CPU power connector. Display cables, ancient jumpers, and a USB stick do not feed the socket.",
+    "choiceNotes": [
+      "The dangling 8-pin lead is CPU power. Plug it in before you replace the motherboard.",
+      "HDMI carries video. It does not power the CPU.",
+      "Modern boards do not use a VGA jumper to start the CPU. The missing piece is the power plug.",
+      "A flash drive is storage. It is not the CPU power rail."
+    ]
+  },
+  {
+    "id": "c1-068",
+    "domain": "3",
+    "objective": "3.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A new laser printer grinds on first power-up and will not pull paper. Bright orange tabs are still fitted on the cartridge and inside the paper path, exactly where the manual shows shipping locks. What is the first fix?",
+    "choices": [
+      "Remove every shipping lock and piece of packing tape",
+      "Replace the formatter board",
+      "Change the IP address",
+      "Install a duplex unit before removing the locks"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Shipping locks and tape hold moving parts still during transit. Leaving them in is the classic first-day grind. Take them all out, install the cartridge properly, and then power the printer. A formatter, an IP address, and a duplex unit are not the first guess while the orange tabs are still visible.",
+    "choiceNotes": [
+      "The locks are still installed. Remove them before you diagnose motors or boards.",
+      "The formatter is the printer's controller. A grinding new unit with the locks still in does not need that part yet.",
+      "The printer has not even fed a page. Addressing is not the grind.",
+      "A duplex unit is optional equipment. It does not replace removing the shipping hardware."
+    ]
+  },
+  {
+    "id": "c1-069",
+    "domain": "3",
+    "objective": "3.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "One Windows PC prints a page of nonsense characters to a shared laser printer. Two other PCs print the same document correctly. The nonsense PC was set up with a driver the user downloaded for a different model. What should be replaced?",
+    "choices": [
+      "The incorrect driver on that one PC",
+      "The printer's fuser, because one PC is affected",
+      "The building's DHCP server",
+      "The toner, because the other PCs are lucky"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Garbled text from a single computer is a driver or spooler problem on that computer. A bad fuser or empty toner would affect every sender. DHCP did not rewrite the page. Install the driver that matches this model and this operating system, and remove the mismatched one.",
+    "choiceNotes": [
+      "One PC, wrong driver, garbage page. Fix that driver. The printer has already proved it can print.",
+      "A fuser fault marks every page, from every PC. It would not spare two computers.",
+      "DHCP hands out addresses. It does not choose a printer language.",
+      "Toner does not behave differently per sending PC. The other pages are not luck."
+    ]
+  },
+  {
+    "id": "c1-070",
+    "domain": "3",
+    "objective": "3.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Pay stubs are sitting in the output tray of a hallway printer where anyone can read them. The printer can hold a job until the user enters a PIN or badges in. Which feature should be turned on?",
+    "choices": [
+      "Secure print, or badge release",
+      "Economy mode",
+      "A public open tray with no hold",
+      "APIPA"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Secure print and badge release keep the page in the printer until the person who owns it is standing there. That is the control for pay stubs in a hallway. Economy mode saves toner and does not provide privacy. An open tray is the current problem. APIPA is an IP addressing failure.",
+    "choiceNotes": [
+      "Hold the job until the user authenticates at the printer. That is secure print or badging.",
+      "Economy mode thins the toner. The stub is still readable by whoever walks past.",
+      "Leaving the tray open is how the stubs are exposed. It is not a feature to enable.",
+      "APIPA is a 169.254 address. It does not hold a print job."
+    ]
+  },
+  {
+    "id": "c1-071",
+    "domain": "3",
+    "objective": "3.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Scan-to-folder worked until the file server's service account password was changed last night. Scan-to-email still works. What should be updated?",
+    "choices": [
+      "The saved credential the scanner uses for the SMB share",
+      "The fuser temperature",
+      "The printer's IPv6 SLAAC address as the only possible cause",
+      "The display language"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Scan-to-folder is an SMB connection with a username and a password stored on the device. When that password changes, the scan fails and email, which uses a different path, keeps working. Update the stored credential. The fuser, SLAAC, and the panel language do not authenticate to a file share.",
+    "choiceNotes": [
+      "The scanner is logging into the share with the old password. Put the new credential on the device.",
+      "The fuser melts toner. It does not log into a file server, and email still scanning proves the device is up.",
+      "IPv6 addressing would break more than one protocol if it were the outage. Email still works.",
+      "The panel language does not store the SMB password."
+    ]
+  },
+  {
+    "id": "c1-072",
+    "domain": "3",
+    "objective": "3.7",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Toner rubs off a laser page when you touch it. Text is dark enough, and the image is in the right place. Which part is not doing its job?",
+    "choices": [
+      "The fuser",
+      "The formatter, because the page is blank",
+      "The scanner glass",
+      "The Ethernet cable"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The fuser melts and presses the toner into the paper. If the image is present and smears, the toner never fused. A formatter problem would garble or drop the job. The scanner glass matters for copies, not for a computer print that smears. The cable delivered the job, because there is an image.",
+    "choiceNotes": [
+      "The fuser is heat and pressure at the end of the path. Smear means that stage failed.",
+      "The page is not blank. The formatter got an image onto the drum and onto the paper.",
+      "Scanner glass affects copies and scans. A smeared computer print has already passed the drum.",
+      "The cable is not a heat source. The job arrived."
+    ]
+  },
+  {
+    "id": "c1-073",
+    "domain": "3",
+    "objective": "3.7",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Every laser page has a dark vertical line in the same place, including pages from every tray and every PC. Cleaning the glass is not relevant because nobody is copying. What is the usual cause?",
+    "choices": [
+      "A scratched or dirty imaging drum",
+      "A wrong printer driver on one PC",
+      "Economy mode",
+      "A DHCP reservation"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A line that repeats in the same horizontal position, on every page, from every source, is on the drum or another roller that touches every page. Many lasers put the drum in the toner cartridge, so replacing that cartridge is the practical test. A driver would not spare no PC. Economy mode fades the page. DHCP does not scratch a line.",
+    "choiceNotes": [
+      "The drum is the common cause of a consistent vertical line. Replace the cartridge or the drum.",
+      "Every PC prints the line, so it is not one workstation's driver.",
+      "Economy mode lightens the whole page. It does not draw one dark line.",
+      "A reservation fixes an address. It does not mark the paper."
+    ]
+  },
+  {
+    "id": "c1-074",
+    "domain": "3",
+    "objective": "3.7",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An inkjet page has bands of missing color. The vendor utility has a head-cleaning cycle. What is the first maintenance step?",
+    "choices": [
+      "Run the cleaning cycle, then print a nozzle check",
+      "Replace the fuser",
+      "Degauss the print head",
+      "Install a tractor feed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Inkjet heads clog. The cleaning cycle purges them, and a nozzle check shows whether the bands are gone. If a couple of cleanings fail, replace the cartridge or the head, depending on whether the head is built into the cartridge. Lasers have fusers. Degaussing is for old magnetic displays and drives. Tractor feed belongs to impact printers.",
+    "choiceNotes": [
+      "Clean, then verify with the nozzle pattern. That is the inkjet maintenance order.",
+      "There is no fuser in an inkjet. That part is in a laser printer.",
+      "Degaussing is not inkjet maintenance and will not clear a nozzle.",
+      "Tractor feed pulls continuous forms through an impact printer. It is the wrong technology."
+    ]
+  },
+  {
+    "id": "c1-075",
+    "domain": "3",
+    "objective": "3.7",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A thermal receipt printer suddenly prints blank pages. The paper is ordinary copy paper that was loaded when the special rolls ran out. What is the requirement?",
+    "choices": [
+      "Thermal printers need heat-sensitive paper. Ordinary paper has nothing to darken",
+      "Thermal printers use a ribbon and cannot use coated paper",
+      "The receipt printer needs a laser fuser",
+      "Copy paper is required, and thermal paper is the mistake"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A thermal head heats spots on coated paper, and those spots darken. Plain copy paper has no coating, so the head writes invisibly. Do not look for a ribbon. That is the impact printer. There is no fuser. And do not store the real thermal rolls in a hot place, or they darken in the box.",
+    "choiceNotes": [
+      "Put the correct thermal paper back in. Plain paper will not mark.",
+      "Impact printers use ribbons. Direct thermal receipts do not.",
+      "A fuser is a laser part. A receipt printer does not have one.",
+      "Copy paper is why the page is blank. Thermal paper is the supply this printer needs."
+    ]
+  }
+]

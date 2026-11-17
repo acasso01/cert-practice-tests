@@ -1,0 +1,722 @@
+[
+  {
+    "id": "n10-070",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A new technician can describe every VLAN from memory but cannot find which switch port feeds the loading-dock camera. The last engineer left no drawings. Which document answers the port question?",
+    "choices": [
+      "A physical network diagram or cable map",
+      "A list of Wi-Fi passwords only",
+      "The company's holiday calendar",
+      "A routing-protocol white paper with no local ports"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A physical diagram, a cable map, or a rack drawing shows how jacks, patch panels, and switch ports connect. That is the document you open when you need the port for a camera. A password list, a calendar, and a generic protocol paper do not trace a local cable.",
+    "choiceNotes": [
+      "Physical diagrams and cable maps exist so the next person can find the port without toning every drop.",
+      "Wi-Fi passwords do not identify a switch port on a camera run.",
+      "The holiday calendar has no topology and no port numbers.",
+      "A protocol overview does not document this building's patch."
+    ]
+  },
+  {
+    "id": "n10-071",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The provider's contracted repair window says a down internet circuit will be restored within four hours, and the monthly uptime target is 99.9 percent. Which document holds those numbers?",
+    "choices": [
+      "A service-level agreement",
+      "A cable test printout from a single jack",
+      "An ARP cache",
+      "A DHCP reservation list"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A service-level agreement is the contract that states what the provider owes: response, restoration, and availability. You use it when you decide whether a four-hour outage is a missed commitment. A cable test, an ARP entry, and a DHCP reservation are local operational details, not the provider contract.",
+    "choiceNotes": [
+      "The SLA is where the four-hour restore and the 99.9 percent target are written down and can be enforced.",
+      "A cable test shows one run's wire map. It is not a provider commitment.",
+      "An ARP cache is a momentary address table on a host or router. It expires and it is not a contract.",
+      "DHCP reservations tie MACs to addresses. They do not define a carrier's repair window."
+    ]
+  },
+  {
+    "id": "n10-072",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A firewall model in the data center is past the vendor's end-of-support date. It still passes traffic, but the vendor will not provide security fixes. What is the lifecycle problem?",
+    "choices": [
+      "The platform is end of support, so it should be replaced or isolated on a planned schedule",
+      "End of support means the hardware has already stopped forwarding",
+      "End of life and end of support mean the device is still fully patched by the vendor",
+      "The correct response is to publish the firewall's admin password while you wait"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "End of support means you no longer get fixes. The box can keep forwarding while it accumulates known holes. The operational response is a planned replacement, or a documented isolation if replacement slips, plus a change window. End of life is the sales cutoff and often comes first. Neither term means the device has already failed, and neither term means patches are still coming.",
+    "choiceNotes": [
+      "An unsupported firewall keeps moving packets and stops receiving fixes. Plan the replacement instead of pretending the lack of patches is safe.",
+      "End of support is a vendor status, not a link-down event. The risk is unpatched vulnerabilities, not an instant outage.",
+      "End of support means the opposite: the vendor is done fixing it.",
+      "Publishing the admin password increases exposure on a device that will not be patched."
+    ]
+  },
+  {
+    "id": "n10-073",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Before a firewall policy change goes into production, the team records the request, the reason, the window, and who approved it. Which process is that?",
+    "choices": [
+      "Change management",
+      "Disabling logging to keep the change quiet",
+      "A wireless site survey",
+      "APIPA assignment"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Change management tracks a request from the idea through approval, the window, and the result. That record is what lets you answer what changed when something breaks at 9 a.m. A site survey maps radio coverage. APIPA is an address a host gives itself. Turning off logs hides the change instead of tracking it.",
+    "choiceNotes": [
+      "Change management is the request, the approval, and the record of what is about to be different in production.",
+      "Quiet logs make the incident harder. Tracking a change includes being able to see it afterward.",
+      "A wireless survey measures signal. It is not the approval process for a firewall policy.",
+      "APIPA is a 169.254 address. It is not a process for approving changes."
+    ]
+  },
+  {
+    "id": "n10-074",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "After a failed experiment, an engineer wants the branch router put back exactly as it was on Monday morning. A copy of Monday's configuration is stored and labeled as the known-good baseline. What is that copy called in operations?",
+    "choices": [
+      "The golden, or baseline, configuration",
+      "A packet capture of a single ping",
+      "The ARP table",
+      "A captive portal"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The golden configuration is the approved baseline you can restore when an experiment goes bad. It is different from the running configuration, which may already contain the failed change, and from a random backup that nobody has checked. A ping capture, an ARP table, and a captive portal are not a restorable device configuration.",
+    "choiceNotes": [
+      "The baseline configuration is the known-good copy you restore. That is the point of keeping one from Monday morning.",
+      "One ping capture shows a moment of traffic. It cannot rebuild a router.",
+      "The ARP table is learned dynamically and is not the device's configuration.",
+      "A captive portal is a guest login page. It is not a router baseline."
+    ]
+  },
+  {
+    "id": "n10-075",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A wireless design was approved from a predictive model. Users now complain about a dead spot in a stairwell that the model showed as covered. Which document or activity should be produced next to see the real signal, rather than the prediction?",
+    "choices": [
+      "A post-install site survey and heat map",
+      "A longer DHCP lease",
+      "Disabling the SSIDs so the model looks correct",
+      "Replacing the survey with a syslog server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A predictive design is a hypothesis. A validation survey walks the floor with a measuring tool and produces a heat map of what the radios actually do. Stairwells and elevators are exactly where models lie. DHCP leases, turning off the network, and a syslog server do not measure signal.",
+    "choiceNotes": [
+      "A real survey and heat map show the stairwell as it is, which is the evidence you need before adding or moving an access point.",
+      "DHCP leases hand out addresses. They do not map radio coverage.",
+      "Turning the SSID off hides the service. It does not fix the dead spot or test the model.",
+      "Syslog collects events. It is not a floor plan of signal strength."
+    ]
+  },
+  {
+    "id": "n10-076",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A monitoring server polls devices every five minutes. When a WAN link drops, the router should tell the server immediately instead of waiting for the next poll. Which SNMP behavior is that immediate message?",
+    "choices": [
+      "A trap",
+      "A community string",
+      "A MIB file by itself",
+      "An ICMP redirect"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An SNMP trap is an unsolicited message from the device to the manager. Polling is the manager asking on a schedule. A link-down event is a classic trap, because five minutes is a long time to wait. The community string is a credential on older SNMP, and the MIB is the dictionary of objects. Neither one is the alert.",
+    "choiceNotes": [
+      "A trap is the device pushing an event. That is how the manager hears about the link before the next poll.",
+      "A community string is the shared secret on SNMPv1 and v2c. It authenticates a query. It is not the event.",
+      "A MIB describes OIDs. It does not, by itself, send a message when a link drops.",
+      "An ICMP redirect is a router telling a host about a better first hop. It is not an SNMP alert."
+    ]
+  },
+  {
+    "id": "n10-077",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The network team still uses SNMP version 2c with the community string 'public' and allows queries from any address. A security review flags it. What is the substantive fix?",
+    "choices": [
+      "Move to SNMPv3 with authentication and encryption, and limit which managers can query",
+      "Rename the community string to 'private' and leave it readable on the wire",
+      "Disable all monitoring so the string cannot leak",
+      "Publish the community string in DNS TXT records so it is easy to find"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SNMPv2c sends the community string in clear text and uses it as a shared password. Anyone who can sniff or guess it can read, and often write, the device. SNMPv3 can authenticate and encrypt, and the management plane should still be limited to the monitoring servers. Renaming the string to another well-known word does not encrypt it. Stopping monitoring blinds the team.",
+    "choiceNotes": [
+      "SNMPv3 with auth and privacy, plus an ACL for the managers, replaces a clear-text community that the whole internet can try.",
+      "'private' is the other famous default. It is still clear text in v2c and it is the first word an attacker will try for write access.",
+      "You can secure monitoring without turning it off. Losing visibility is its own incident.",
+      "Putting the secret in DNS advertises it. The string should not be public at all."
+    ]
+  },
+  {
+    "id": "n10-078",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A capacity report needs to show which hosts talk to which servers, on which ports, and how many bytes they moved over the day. The team does not want a full copy of every packet. Which data source fits?",
+    "choices": [
+      "Flow data such as NetFlow or IPFIX",
+      "A continuous full packet capture of every WAN byte",
+      "A cable certifier",
+      "An STP root election"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Flow records summarize conversations: addresses, ports, bytes, and timing. They are the right weight for a daily capacity report. A full packet capture stores payloads and gets huge, and it is what you reach for when you need the actual contents. A certifier tests copper. Spanning Tree elects a root bridge. Neither one counts conversations.",
+    "choiceNotes": [
+      "Flow data is the conversation summary. It answers who talked, on which ports, and how much, without storing every payload.",
+      "Full packet capture is the heavy tool for contents and timing of individual frames. It is more than a capacity report needs and it raises privacy questions.",
+      "A certifier measures a cable against a category standard. It does not see IP conversations.",
+      "The root bridge election is a Layer 2 loop-prevention event. It is not a traffic matrix."
+    ]
+  },
+  {
+    "id": "n10-079",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "An incident responder needs the actual TLS handshake and the HTTP headers from a web server's uplink, not just byte counts. The switch can copy that port's frames to a laptop. What is the switch feature, and what kind of tool reads the copy?",
+    "choices": [
+      "Port mirroring to a protocol analyzer",
+      "SNMPv2c polling of ifInOctets only",
+      "A heat map",
+      "DHCP snooping"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Port mirroring, often called SPAN, copies frames from a chosen port to a monitor port. A protocol analyzer on that laptop decodes the handshake and the headers. Interface counters only tell you how many bytes passed. A heat map is a wireless survey. DHCP snooping is a switch protection feature, not a capture.",
+    "choiceNotes": [
+      "Mirroring plus an analyzer is how you see the handshake. The copy goes to the laptop, and the analyzer decodes it.",
+      "Octet counters are volume. They cannot reconstruct a TLS handshake or HTTP headers.",
+      "A heat map shows radio signal on a floor plan. It does not decode packets.",
+      "DHCP snooping filters DHCP messages. It does not copy a web server's traffic to an analyzer."
+    ]
+  },
+  {
+    "id": "n10-080",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The operations team wants one place to search last night's firewall denies, VPN logins, and server authentication failures together. Devices already send syslog. Which platform is the search and correlation layer on top of that collection?",
+    "choices": [
+      "A SIEM",
+      "A single access-point antenna",
+      "An unmanaged hub",
+      "A patch panel"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Syslog is how many devices ship log lines to a collector. A SIEM is where those lines from firewalls, VPN gateways, and servers are stored, searched, and correlated. An antenna, a hub, and a patch panel do not index logs. You can have syslog without a SIEM, but the cross-device hunt described here is the SIEM's job.",
+    "choiceNotes": [
+      "A SIEM is the system that aggregates and correlates security events from many sources, which is the search the team wants.",
+      "An antenna radiates Wi-Fi. It does not index firewall denies.",
+      "A hub repeats Ethernet frames. It is not a log platform.",
+      "A patch panel terminates cables. It does not search authentication failures."
+    ]
+  },
+  {
+    "id": "n10-081",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Alerts fire every afternoon because a link hits 80 percent utilization. That same link has hit 80 percent every weekday afternoon for a year, and nobody has said the application is slow. What did the alerting lack?",
+    "choices": [
+      "A baseline that distinguishes a normal busy hour from a real anomaly",
+      "A second alert at 70 percent",
+      "Fewer monitoring samples, so the peak would be invisible",
+      "Replacement of the link with a hub"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A threshold without a baseline treats the normal busy hour as an incident. The team should have learned the usual daily shape and alerted on a departure from it, or the alert should have been tied to user pain. Lowering the threshold makes more noise. Sampling less often hides the peak instead of explaining it. A hub does not add capacity.",
+    "choiceNotes": [
+      "A baseline is the record of normal. Once you have it, an 80 percent weekday afternoon is not a page, and a 80 percent Saturday at 3 a.m. might be.",
+      "Alerting earlier just creates more tickets for the same normal peak.",
+      "Coarser sampling hides data. It does not define what normal means.",
+      "A hub would make the segment worse and would not teach the monitoring system what a normal day looks like."
+    ]
+  },
+  {
+    "id": "n10-082",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The inventory system creates a ticket automatically when a discovery scan finds a switch that is not in the asset list. No person copies the alert by hand. Which integration style is that?",
+    "choices": [
+      "An API between the discovery platform and the ticketing system",
+      "A quarterly paper spreadsheet walked between buildings",
+      "A native VLAN mismatch",
+      "Telnet from the switch to the ticket queue"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An API lets one system create an object in another system as soon as the event happens. That is how discovery opens a ticket without a person in the middle. A paper spreadsheet is the manual process this design replaces. A native VLAN mismatch is a trunk bug. Telnet is an insecure management protocol, not a ticketing integration.",
+    "choiceNotes": [
+      "The API is the machine-to-machine call that opens the ticket when discovery finds an unknown switch.",
+      "Walking a spreadsheet around is the delay and the errors that the integration is supposed to remove.",
+      "A native VLAN mismatch drops or misdirects untagged frames. It does not open tickets.",
+      "Telnet is clear-text remote access. Ticket systems are not driven by typing Telnet into a switch."
+    ]
+  },
+  {
+    "id": "n10-083",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Leadership says the business can recreate no more than 15 minutes of sales data after a disaster. Backups currently run nightly. Which metric is failing, and what does it mean?",
+    "choices": [
+      "The recovery point objective, because a nightly backup can lose a day of data",
+      "The recovery time objective, because 15 minutes is about how fast the building must reopen",
+      "Mean time between failures, because the servers are rebooting every 15 minutes",
+      "The cable length limit"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RPO is how much data you can afford to lose, measured in time. Fifteen minutes means the last good copy must be no older than that, so a nightly backup misses the target by hours. RTO is how long you can be down, which this sentence does not set. MTBF is the average time between failures of a component. Cable length is a physical limit.",
+    "choiceNotes": [
+      "RPO is the data-loss budget. Nightly backups cannot satisfy a 15-minute RPO.",
+      "RTO is the downtime budget. The sentence is about lost transactions, not about how fast the doors reopen.",
+      "MTBF describes reliability of a component over a long period. It is not a backup interval.",
+      "The 100 meter copper limit has nothing to do with how much sales data a backup may lose."
+    ]
+  },
+  {
+    "id": "n10-084",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An online service must be answering users again within 30 minutes of a site failure. The recovery site has empty racks, power, and cooling, but no hardware and no recent data. Why does that site fail the requirement?",
+    "choices": [
+      "It is a cold site, and a cold site cannot be ready in 30 minutes",
+      "It is a hot site, so it is already serving users",
+      "It is active-active, so both sites are live",
+      "Empty racks are a warm site with current replicas"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A cold site is space and power without the systems you need. You still have to ship hardware, load systems, and restore data, which is far longer than 30 minutes. A hot site is ready to take over quickly. A warm site has hardware and some data, but it is not current enough to call hot. Active-active means both sites are already in service. The 30-minute number is an RTO, and a cold site will not meet it.",
+    "choiceNotes": [
+      "Cold means you start from a room. Thirty minutes is not enough time to install gear and restore data.",
+      "A hot site is stocked and current so failover is short. Empty racks are not a hot site.",
+      "Active-active means both sites are serving traffic now. This site is empty.",
+      "A warm site at least has equipment in place. Empty racks are the cold end of the scale."
+    ]
+  },
+  {
+    "id": "n10-085",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Two data centers both serve the same application at the same time, and either one can carry the full load if the other disappears. Which availability design is that?",
+    "choices": [
+      "Active-active",
+      "Active-passive",
+      "A cold site",
+      "A single uplink with no alternate"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Active-active puts both sites in service and sizes them so one can absorb the other site's users. Active-passive keeps a standby that is not serving until failover. A cold site is an empty room. One uplink is a single point of failure, not a two-site design.",
+    "choiceNotes": [
+      "Active-active is both sites live, with enough capacity that one site can stand alone.",
+      "Active-passive waits. The standby is not serving users during normal operation.",
+      "A cold site has no running copy of the application. It cannot be serving traffic.",
+      "A single uplink is the opposite of a design that survives a site failure."
+    ]
+  },
+  {
+    "id": "n10-086",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A team reviews the disaster plan in a conference room, talks through a fiber cut, and writes down who would call the provider. They do not move any traffic. What kind of exercise is that, and what does it not prove?",
+    "choices": [
+      "A tabletop exercise, which does not prove the failover commands actually work",
+      "A full failover test, because talking through it moves production",
+      "A cable certification",
+      "An RPO measurement"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A tabletop walks the people and the plan without touching production. It finds missing phone numbers and muddy ownership. It does not prove that the backup circuit comes up or that the database replica is usable. That takes a validation test. A certifier tests cable. RPO is a data-loss target, not a meeting.",
+    "choiceNotes": [
+      "A tabletop rehearses decisions. It leaves the network where it was, so it cannot prove the technical failover.",
+      "No traffic moved, so this was not a failover test. Calling it one would leave the company surprised during a real cut.",
+      "Cable certification measures a copper or fiber run against a standard. It is not a planning meeting.",
+      "RPO is how much data you can lose. A conversation does not measure it."
+    ]
+  },
+  {
+    "id": "n10-087",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A storage array's published mean time between failures is very high, and its mean time to repair after a real failure is eight hours. Which reading of those two numbers is correct?",
+    "choices": [
+      "The array fails rarely, but when it does, expect about eight hours to restore service",
+      "The array fails every eight hours",
+      "MTBF is the repair time and MTTR is the time between failures",
+      "Neither number matters if a golden configuration exists"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "MTBF is the average operating time between failures, so a high number means failures are uncommon. MTTR is the average time to repair, so eight hours is the downtime you plan for when a failure does happen. Swapping the definitions is a common miss. A golden configuration helps you rebuild a device, but it does not change what the two reliability numbers mean.",
+    "choiceNotes": [
+      "High MTBF means infrequent failure. An eight-hour MTTR means the repair itself is most of a business day. You plan around both.",
+      "Eight hours is the repair figure, not the interval between failures. A high MTBF says the opposite of failing all day.",
+      "MTBF is between failures and MTTR is the repair. Reversing them produces the wrong capacity and spare-parts plan.",
+      "A baseline configuration is useful, and it still does not redefine reliability statistics."
+    ]
+  },
+  {
+    "id": "n10-088",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Clients on a new VLAN receive 169.254 addresses. The DHCP server is on a different VLAN and works for every older subnet. The router for the new VLAN has no command that forwards the clients' broadcasts toward that server. What is missing?",
+    "choices": [
+      "A DHCP relay, also called an IP helper, plus a scope for the new subnet",
+      "A second DHCP server using the same scope on the same VLAN with no coordination",
+      "An SNMP trap",
+      "A /31 mask on every client"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "DHCP discover messages are broadcasts, and routers do not forward broadcasts. A relay on the new VLAN's gateway unicasts those requests to the server. The server also needs a scope that matches the new subnet, or it has nothing to offer. A second uncoordinated server causes duplicates. SNMP is monitoring. A /31 is a special point-to-point mask, not a client default.",
+    "choiceNotes": [
+      "The relay is what crosses the routing boundary, and the scope is what makes the server answer for that subnet. Both pieces belong in the fix.",
+      "Two servers handing out one pool without coordination create duplicate addresses. That is not the missing forwarder.",
+      "An SNMP trap reports an event. It does not give a client an address.",
+      "A /31 is not how you address a VLAN full of clients, and it would not replace a relay."
+    ]
+  },
+  {
+    "id": "n10-089",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A printer is given 192.168.5.20 by a reservation. The DHCP scope is 192.168.5.10 through 192.168.5.200, and the reservation is the only thing that should hand out .20. What else belongs in the scope so a dynamic client never gets the printer's address if the reservation is ever removed?",
+    "choices": [
+      "An exclusion for 192.168.5.20",
+      "A shorter lease and no exclusion",
+      "A second reservation for the same address to a random laptop",
+      "Deleting the gateway option"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A reservation binds the printer's MAC to .20, but an exclusion also tells the server that .20 is not part of the general pool. If someone deletes the reservation later, the exclusion still stops a laptop from taking the printer's address. A second reservation for the same address is a conflict. Removing the gateway option breaks everyone.",
+    "choiceNotes": [
+      "The exclusion keeps .20 out of dynamic assignment. That is the belt next to the reservation's suspenders.",
+      "A shorter lease returns addresses faster. It does not stop the server from offering .20 once the reservation is gone.",
+      "Two reservations for one address are a configuration error, not a protection.",
+      "The gateway option is how clients learn their router. Removing it is an outage."
+    ]
+  },
+  {
+    "id": "n10-090",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "IPv6 hosts on a LAN have only fe80:: addresses. They can reach neighbors on the same link and nothing else. Router advertisements are not seen on the LAN. What is the likely gap?",
+    "choices": [
+      "The router is not advertising a prefix, so SLAAC cannot build a global address",
+      "The hosts need an IPv4 APIPA address to make IPv6 routable",
+      "fe80:: addresses are globally routable and the symptom is impossible",
+      "TFTP must assign IPv6 addresses"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SLAAC builds a routable address from a prefix in a router advertisement plus an interface identifier. A link-local fe80:: address is created by the host itself and is only valid on the link. If no advertisement arrives, the host never learns a prefix and cannot leave the LAN. APIPA is an IPv4 behavior. TFTP does not hand out IPv6 prefixes.",
+    "choiceNotes": [
+      "No router advertisement means no prefix, so SLAAC has nothing to combine with the interface ID. That leaves only link-local addresses.",
+      "APIPA does not make an IPv6 address routable. It is an IPv4 fallback when DHCP fails.",
+      "fe80::/10 is link-local by definition. It is not forwarded by routers as a source of global traffic.",
+      "TFTP copies files. IPv6 addressing comes from SLAAC, DHCPv6, or static configuration."
+    ]
+  },
+  {
+    "id": "n10-091",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Users can open a website by its IPv4 address and cannot open it by name. Other offices resolve the name correctly. Which record, on the internal DNS server this office actually uses, should be checked first?",
+    "choices": [
+      "The A record",
+      "The AAAA record, because IPv4 clients require it",
+      "The MX record",
+      "The DHCP lease time"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An A record maps a name to an IPv4 address. If the IP works and the name does not, resolution is the broken step, and the A record or the server the clients actually query is the first place to look. AAAA is the IPv6 record. MX is for mail delivery. DHCP leases are not name resolution.",
+    "choiceNotes": [
+      "The A record is the name-to-IPv4 mapping. A wrong or missing A record produces this symptom for IPv4 clients.",
+      "AAAA maps a name to IPv6. IPv4 clients do not require an AAAA record to open an IPv4 site.",
+      "MX records tell senders where to deliver mail. They are not what a browser looks up for a website.",
+      "A DHCP lease timer affects addressing, not the name that already fails while the IP address works."
+    ]
+  },
+  {
+    "id": "n10-092",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A security team wants DNS answers that can be validated against signatures so a forged response is detectable. They do not need the query itself hidden from the local network. Which technology matches the goal?",
+    "choices": [
+      "DNSSEC",
+      "DNS over HTTPS, which encrypts but does not sign the zone data",
+      "Changing the hosts file on one PC",
+      "Extending the DHCP lease"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "DNSSEC signs DNS data so a resolver can tell that an answer really came from the zone and was not altered. It does not encrypt the query. DNS over HTTPS and DNS over TLS encrypt the transport, which hides the question from a local observer, but encryption is not the signature on the zone. A hosts file overrides one computer. A DHCP lease does not sign anything.",
+    "choiceNotes": [
+      "DNSSEC is the signature system. It is the right tool when the goal is detecting a forged or altered answer.",
+      "DoH encrypts the lookup between the client and a resolver. It does not, by itself, prove the zone data was signed by the owner.",
+      "A hosts file is a local override. It does not authenticate the world's DNS answers.",
+      "Lease time controls how long an address is kept. It is unrelated to DNS integrity."
+    ]
+  },
+  {
+    "id": "n10-093",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Only one workstation sends www.example.com to the wrong internal server. Every other workstation resolves it correctly, and the DNS servers' A record is right. Where should the technician look on the broken workstation?",
+    "choices": [
+      "The local hosts file",
+      "The company's SPF record",
+      "The root hints of a public resolver",
+      "The fiber between the cities"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Windows and other systems check the hosts file before DNS. A leftover line can pin a name to a lab address on that one PC while everyone else uses DNS. SPF is a mail-authorization TXT record. Root hints and the metro fiber would affect more than one correctly behaving workstation, or would affect DNS itself, which the question says is correct.",
+    "choiceNotes": [
+      "The hosts file is a per-computer override. One bad line explains one broken workstation and a correct DNS server.",
+      "SPF lists servers allowed to send mail for a domain. Browsers do not use it to find a website.",
+      "Root hints matter to a recursive resolver for names it does not know. They are not a one-PC exception when DNS is otherwise right.",
+      "A fiber cut would not leave every other workstation healthy while a single hosts file is wrong."
+    ]
+  },
+  {
+    "id": "n10-094",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Authentication failures and log timestamps disagree by six minutes between a branch and headquarters. Kerberos and the log correlation both assume clocks are close. Which service should the branch devices use so they share one time source?",
+    "choices": [
+      "NTP, preferably an internal server that itself syncs upstream",
+      "TFTP",
+      "A different random public time server on every switch, with no internal source",
+      "SMTP"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "NTP distributes time. The usual design is a small set of internal NTP servers that sync upstream, and every router, switch, and server points at those. Six minutes is enough to break Kerberos and to make two logs look unrelated. TFTP moves files. Pointing every device at a different public server with no control is how the skew happened. SMTP delivers mail.",
+    "choiceNotes": [
+      "NTP is the time protocol. An internal pair of servers gives the branch and headquarters the same clock.",
+      "TFTP is a file transfer. It does not discipline a clock.",
+      "Uncoordinated public servers are a common way to end up minutes apart. The devices need one hierarchy.",
+      "SMTP moves email. It is not a time service."
+    ]
+  },
+  {
+    "id": "n10-095",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Remote laptops must reach file servers, and company policy says their web browsing also has to pass through the headquarters filters. A proposal uses a VPN that sends only the file-server subnets through the tunnel and lets everything else go directly to the internet. What is wrong with the proposal?",
+    "choices": [
+      "That is split tunneling, and it exempts web traffic from the headquarters filters",
+      "That is a full tunnel, so browsing already flows through headquarters",
+      "Split tunneling encrypts the browsing with IPsec even though it leaves the laptop directly",
+      "The proposal is a site-to-site VPN and needs no client"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Split tunneling sends only selected networks through the VPN. The rest, including general web browsing, uses the laptop's local internet and never sees the headquarters proxy or filter. A full tunnel sends all traffic into the VPN, which is what the policy requires. Direct browsing is not encrypted by the VPN. A site-to-site VPN joins two gateways and is not this laptop design.",
+    "choiceNotes": [
+      "Split tunnel is the mode that leaves browsing on the local internet. It fails a policy that says browsing must be inspected at headquarters.",
+      "A full tunnel would send the browsing through headquarters. The proposal does the opposite.",
+      "Traffic that does not enter the tunnel is not encrypted by the tunnel. Local browsing stays on the local path.",
+      "Site-to-site is gateway to gateway. These are remote laptops, so this is a client VPN question."
+    ]
+  },
+  {
+    "id": "n10-096",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A partner needs to reach one internal web app for a week and cannot install software on the partner's laptop. Which remote-access style fits?",
+    "choices": [
+      "A clientless VPN presented in the browser",
+      "A site-to-site VPN between the partner's entire company and yours, with no limits",
+      "Telnet",
+      "A hub in the partner's lobby"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A clientless VPN is a browser portal. The partner authenticates and reaches the published app without an installed client. A full site-to-site tunnel would connect networks more broadly than this one-app, one-week need. Telnet is clear text and is not an application portal. A hub does not provide secure remote access.",
+    "choiceNotes": [
+      "Clientless SSL VPN is built for a browser and a published application, which matches a partner who cannot install software.",
+      "Site-to-site connectivity between companies is a much larger trust decision than one app for a week.",
+      "Telnet exposes the session. It is not a partner-access design.",
+      "A hub repeats local frames. It does not authenticate a remote partner."
+    ]
+  },
+  {
+    "id": "n10-097",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The WAN is down, so the usual management addresses of the routers are unreachable. A technician is standing in the closet with a laptop and a console cable. Which access method still works?",
+    "choices": [
+      "The serial or USB console port",
+      "SSH to the WAN address",
+      "The in-band web interface over the failed WAN",
+      "SNMP polling from headquarters"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The console is local and out of band. It does not need the WAN, an IP address, or a working routing table. SSH, the web interface, and SNMP all ride the network that just failed, so they are in-band and unreachable from headquarters until the WAN returns. This is why consoles and out-of-band modems exist.",
+    "choiceNotes": [
+      "The console port is the local management path. A laptop and a console cable are exactly the tools for it.",
+      "SSH to the WAN address needs the WAN. That path is the one that is down.",
+      "The in-band web page uses the same failed network. It will not load from anywhere that depends on that path.",
+      "SNMP from headquarters is in-band monitoring. It cannot cross a down WAN."
+    ]
+  },
+  {
+    "id": "n10-098",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Administrators currently SSH from the internet directly to every server. The new standard says they must first sign in to one hardened host, and only that host may SSH onward. What is that hardened host called?",
+    "choices": [
+      "A jump box",
+      "A default gateway for user PCs",
+      "An anycast DNS server",
+      "A DHCP relay"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A jump host, or jump box, is a bastion you log into first. The servers accept SSH only from that host, so you can harden, patch, and log one door instead of every server's internet-facing SSH. It is not the users' default gateway, not a DNS design, and not a DHCP forwarder.",
+    "choiceNotes": [
+      "A jump box is the single hardened hop in front of administrative access. Servers no longer listen for SSH from the whole internet.",
+      "A default gateway forwards user traffic off a LAN. It is not an administrative bastion.",
+      "Anycast DNS serves name lookups from the nearest instance. It does not broker SSH.",
+      "A DHCP relay forwards address requests. It does not gate administrator logins."
+    ]
+  },
+  {
+    "id": "n10-099",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A script that updates switch configurations authenticates to the controller with an API token. The script was committed to a public repository with the token still in the file. What has to happen to that token?",
+    "choices": [
+      "Revoke it, remove it from the repository history, and store a new token in a secret store",
+      "Leave it, because a public repository is a good backup for secrets",
+      "Rename the file and keep the same token",
+      "Convert the token to Telnet"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A token in a public repository is a published password. Deleting the latest file is not enough, because the old commit still contains it. Revoke the token so the leaked copy stops working, clean the history, and put the replacement in a secret store the pipeline can read at runtime. Telnet would make management access worse.",
+    "choiceNotes": [
+      "Revoke first so the leaked credential dies, then get it out of history and stop putting secrets in the repository.",
+      "A public repository is the worst backup for a secret, because anyone can read it and fork it.",
+      "Renaming the file leaves the token valid and leaves it in the commit history.",
+      "Telnet is clear-text administration. It is not a place to store or replace an API token."
+    ]
+  }
+]

@@ -1,0 +1,378 @@
+from common import item
+
+P = "n10"
+Q = []
+
+Q.append(item(P, 122, "5.1", "easy",
+    "A user says the network is down. The technician has not asked what the user was doing, whether anyone else is affected, or what changed this morning. The user wants the switch replaced immediately. What should the technician do first?",
+    ["Identify the problem by gathering symptoms and asking what changed", "Replace the switch before anyone forgets", "Document the replacement of a switch that has not been touched", "Implement a plan that has not been written"],
+    0,
+    "The Network+ method starts by identifying the problem: gather information, question the user, find out the scope, and ask what changed. Replacing hardware is an implementation step, and it comes after a theory and a plan. Documentation is continuous, but writing up a replacement you have not done is not the first move. You cannot plan a fix you have not defined.",
+    ["Identification is step one. The symptoms and the recent change are still unknown, so that is the work to do first.",
+     "Replacing the switch skips the theory and the plan. It can also take down people who were not broken.",
+     "Documentation records what you actually found and did. It is not a substitute for finding out what is wrong.",
+     "The plan comes after you have a cause worth acting on. There is no plan yet."]))
+
+Q.append(item(P, 123, "5.1", "medium",
+    "Ping to the default gateway works. Ping to the file server's IP works. The user's application still cannot open files by the server's name, and the technician has already confirmed the failure. A theory is now required. Which theory belongs next, and which troubleshooting step is that?",
+    ["The name is failing while IP works, so the theory is DNS. That theory comes after the problem is identified", "Replace the NIC, because a successful ping proves the NIC is dead", "Skip to documentation and close the ticket", "Assume a fiber cut on a path that just answered ping"],
+    0,
+    "Once the symptoms are clear, the next step is a theory of probable cause. IP reachability to the server rules out a dead NIC and a cut path. The remaining difference is the name, so DNS is the reasonable theory to test. Documentation comes after you verify the real fix. A fiber cut would have failed the ping.",
+    ["The theory step is where DNS belongs. You test it next, for example by querying the name and comparing it with the IP that already works.",
+     "A successful ping means the NIC, the cable, and the path carried packets. Replacing the NIC ignores the evidence.",
+     "Closing the ticket leaves the user unable to open files. Documentation does not come before a fix.",
+     "The server answered. A cut fiber on that path is not a serious theory."]))
+
+Q.append(item(P, 124, "5.1", "medium",
+    "A technician theorized that a user's drop was bad, replaced the patch cord, and the user still cannot connect. What does the method say to do with a theory that just failed?",
+    ["Establish a new theory or escalate", "Keep replacing the same cord until the theory feels true", "Disable Spanning Tree", "Skip verification and document that the cord was the cause"],
+    0,
+    "If the test does not confirm the theory, you do not force the theory. You form a new one, or you escalate if you are outside your knowledge or authority. Repeating the same disproven action wastes the window. Spanning Tree is unrelated. Documenting the wrong cause teaches the next person the wrong lesson.",
+    ["A failed test means a new theory or an escalation. That is the explicit branch in the troubleshooting method.",
+     "The cord was already replaced and the symptom remained. Another copy of the same action is not a new theory.",
+     "Spanning Tree did not appear in the evidence. Turning it off would create a different outage.",
+     "You document the real cause after you know it. The cord was tested and was not the cause."]))
+
+Q.append(item(P, 125, "5.1", "hard",
+    "The cause is confirmed: one access port is in the wrong VLAN. Several other people use that switch. The technician is about to move the port. Which step includes thinking about who else the change could affect, before the change is made?",
+    ["Establish a plan of action and identify potential effects", "Skip the plan and implement during the busiest hour", "Verify full system functionality before changing anything", "Replace the router so the VLAN change is unnecessary"],
+    0,
+    "After the cause is known, you plan the fix and name the side effects. Moving one access port should be low risk, but the plan is where you notice if that port is actually a trunk, if the user still needs the old VLAN, or if you should do it after they save their work. Verification happens after the change. Replacing the router does not fix a wrong access VLAN.",
+    ["The plan is the step that asks what else this change touches. Then you implement, then you verify.",
+     "Implementing with no plan is how a one-port fix becomes a switch outage in the middle of the day.",
+     "Verification is real, and it comes after the solution, not before you have done it.",
+     "The router is not the failed component. Replacing it adds risk and does not correct the port's VLAN."]))
+
+Q.append(item(P, 126, "5.1", "medium",
+    "A fix was applied and the user's own application works. The method is not finished. What still has to happen before the ticket is a complete troubleshooting record?",
+    ["Verify the whole function the user needs, consider a preventive step, and document", "Turn off the logs so the incident cannot recur in the report", "Leave the temporary workaround in place and skip notes", "Immediately start a second unrelated change"],
+    0,
+    "Verification means the full job works, not just one ping. If the cause could recur, prevention belongs here, such as labeling the port or fixing the standard. Documentation records the symptoms, the cause, and the change so the next person does not start over. Unrelated changes during the same window make the next failure impossible to attribute.",
+    ["Verify, prevent, and document are the end of the method. A single lucky click is not the whole check.",
+     "Logs are how the next incident gets solved. Disabling them is not prevention.",
+     "An undocumented workaround becomes the next mystery. The record is part of being done.",
+     "Scope creep hides the result. Finish this problem before you start another."]))
+
+Q.append(item(P, 127, "5.1", "hard",
+    "A user cannot reach a web application. The technician can ping the server, so Layer 3 works, and then tests the TCP port. This choice to start in the middle, instead of at the cable or at the application, is which approach inside the theory step?",
+    ["Divide and conquer", "Top to bottom only, which would have started at the application and never pinged", "Replacing every OSI layer at once", "Documenting before any test"],
+    0,
+    "Divide and conquer starts in the middle. Ping is the usual middle test. If it works, you look above Layer 3. If it fails, you look at Layers 1 through 3. Top to bottom would start with the application. Bottom to top would start with the cable. Doing both directions at once is not a method, and documentation is not a test.",
+    ["Divide and conquer is the middle-out approach. A successful ping correctly sends the technician upward, toward the port and the application.",
+     "Top to bottom starts at Layer 7. The technician did not do that, because the first test was ping.",
+     "There is no step that says to replace every layer. The method narrows the cause.",
+     "Documentation records the work. It is not the name of the OSI test strategy."]))
+
+Q.append(item(P, 128, "5.2", "medium",
+    "A fiber link between two switches stays dark. One end has a single-mode optic and the other end has a multimode optic, and the jumper is multimode. What is the fault?",
+    ["The transceivers and the fiber type do not match", "The VLAN is untagged, which keeps fiber dark", "Spanning Tree is blocking light", "The DNS server is down"],
+    0,
+    "Single-mode and multimode optics are not interchangeable, and the fiber has to match the optic. A multimode jumper on a single-mode optic, or the reverse, will not make a reliable link. VLANs and Spanning Tree matter after the link has light. DNS does not bring up a switch-to-switch fiber.",
+    ["Match the optic to the fiber. One single-mode end and one multimode end is a mismatch, and the dark link is the expected result.",
+     "A VLAN mismatch causes odd forwarding on a link that is already up. It does not extinguish the optical link.",
+     "Spanning Tree may block a port that is up. It does not stop the lasers from seeing each other.",
+     "DNS resolves names. The link light does not depend on it."]))
+
+Q.append(item(P, 129, "5.2", "medium",
+    "A new copper run shows CRC errors and the tester says the pairs are untwisted for several centimeters at the jack. What kind of damage does that untwist create?",
+    ["Crosstalk", "A wrong default gateway", "An expired certificate", "A BGP session flap"],
+    0,
+    "Crosstalk is energy leaking between pairs. The twist is what limits it, so a long untwisted section at the connector raises near-end crosstalk and shows up as errors. Re-terminate the jack and keep the twist as close to the contact as the standard allows. Gateways, certificates, and BGP do not change the twist in a jack.",
+    ["Crosstalk is the pair-to-pair interference that extra untwist produces. Re-terminating is the fix.",
+     "A wrong gateway is an IP setting. It does not create CRC errors from a badly punched jack.",
+     "A certificate secures an application. It is not a cable measurement.",
+     "BGP is an exterior routing session. It does not untwist pairs."]))
+
+Q.append(item(P, 130, "5.2", "easy",
+    "A 150 meter Category 6a run was pulled for a single Ethernet channel with no intermediate switch. The link is unstable. Attenuation is the suspected reason. Why is attenuation the right word?",
+    ["The signal weakens over a copper distance that is past the channel limit", "Attenuation means the MAC address table is full", "Attenuation means two VLANs share a subnet on purpose", "Attenuation is a DNS cache problem"],
+    0,
+    "Attenuation is loss of signal strength over distance or through bad connections. Twisted-pair Ethernet is specified to about 100 meters for a channel. One hundred fifty meters is simply too far, so the signal arrives too weak. The category does not repeal that limit. MAC tables, VLAN design, and DNS are not signal loss.",
+    ["Past 100 meters the copper signal has attenuated below what Ethernet can use reliably. Shorten the channel or use fiber.",
+     "A full MAC table makes a switch flood frames. It is not called attenuation.",
+     "Sharing a subnet across VLANs is a design error. It is not signal loss.",
+     "DNS cache has nothing to do with the strength of an electrical signal on a pair."]))
+
+Q.append(item(P, 131, "5.2", "hard",
+    "One fiber jumper is known to be good, but the link stays down until the technician swaps the two strands at one end. Then the link comes up. What was wrong?",
+    ["Transmit and receive were landed on the same direction at both ends", "The IP subnet was a /32", "Spanning Tree required a crossed copper cable", "The native VLAN had to be crossed"],
+    0,
+    "Fiber needs the transmitter at one end to land on the receiver at the other. If both ends are patched straight in a situation that needed a roll, each transmitter faces the other transmitter and neither receiver sees light. Swapping the pair at one end is the usual fix. A /32, Spanning Tree, and the native VLAN do not decide which strand carries light.",
+    ["TX has to meet RX. The swap worked because the two strands were lined up transmitter to transmitter.",
+     "A /32 is an address mask. It cannot keep an optical link from seeing light, and it would not be fixed by rolling a pair.",
+     "Spanning Tree does not require a crossed fiber, and this link was dark rather than blocked.",
+     "The native VLAN is an untagged VLAN number. Crossing it does not aim a laser at a receiver."]))
+
+Q.append(item(P, 132, "5.2", "medium",
+    "A switch port is error-disabled immediately after a second computer is plugged into a small switch that a user hid under a desk. The port is configured for a single MAC. What does the status mean?",
+    ["Port security shut the port after a violation", "The port is administratively shut by a technician who typed shutdown", "The port is suspended because an LACP bundle disagrees", "The port is forwarding normally"],
+    0,
+    "Error-disabled means the switch turned the port off because a protection feature fired. Port security, with a maximum of one MAC, does that when the hidden switch presents another address. Administratively down would mean someone configured shutdown. Suspended is a common port-channel state when the bundle does not agree. The port is not forwarding.",
+    ["A MAC-limit violation error-disables the port. Remove the extra switch, then restore the port. Do not turn the protection off as the fix.",
+     "Administrative shutdown is a configured 'shutdown' state. The story here is a violation, not a person shutting the port in the config.",
+     "Suspended fits a link-aggregation mismatch. Nothing in the story describes a port channel.",
+     "An error-disabled port is not forwarding. That is why the user lost connectivity."]))
+
+Q.append(item(P, 133, "5.2", "medium",
+    "An interface shows giants and the connected server was recently set to a 9000-byte MTU. The switch port is still at 1500. Small frames pass. Which conclusion fits?",
+    ["The server is sending jumbo frames into a port that is not configured for them", "Giants mean the cable is unplugged", "Giants mean the default gateway is wrong", "Giants are normal on a healthy 1500-byte port"],
+    0,
+    "A giant is a frame larger than the interface allows. A server at 9000 bytes and a switch at 1500 bytes produce exactly that counter, while pings and other small frames still look fine. Match the MTU on the path or put the server back to 1500. An unplugged cable and a bad gateway do not increment giants.",
+    ["The size mismatch is the definition of a giant on this port. Align the MTU before you blame the application.",
+     "An unplugged cable shows the line down. It does not count oversized frames.",
+     "A wrong gateway fails off-subnet traffic. It does not create oversized Ethernet frames.",
+     "Giants are an error counter. They are not a sign of a healthy default MTU."]))
+
+Q.append(item(P, 134, "5.2", "easy",
+    "A new access point will not power on from a switch port. Older phones on the same switch still power on. The switch log says the power budget is exhausted. What should be checked before the access point is replaced?",
+    ["The remaining PoE budget and whether this port can supply the standard the AP needs", "The DNS A record for the AP", "The BGP ASN", "The SMTP banner"],
+    0,
+    "PoE has a finite budget on the switch. Phones that draw a little can leave the switch with nothing left for an access point that needs more, or the port may only offer 802.3af when the AP needs 802.3at or 802.3bt. Check the budget and the standard, move the AP, add power, or use an injector. DNS, BGP, and SMTP do not feed a powerless radio.",
+    ["The log already names the budget. Confirm the watts and the PoE standard before you condemn the access point.",
+     "An A record does not power a device. The AP has not even booted.",
+     "A BGP autonomous system number is an exterior-routing setting. It does not deliver watts.",
+     "An SMTP banner is a mail greeting. It is unrelated to PoE."]))
+
+Q.append(item(P, 135, "5.2", "hard",
+    "A link that used to pass traffic now shows input errors and the optical power meter at the receiver is far below the optic's minimum. Cleaning the jumper and the bulkhead restores the level. What was the fault?",
+    ["Dirty fiber end faces were attenuating the signal", "A dirty connector changes the VLAN ID", "Low optical power means the DHCP scope is full", "Cleaning fiber fixes a wrong subnet mask"],
+    0,
+    "Dirty connectors are the most common reason a fiber link loses power. The meter shows the loss, and cleaning both end faces is the first physical fix before anyone orders a new optic or pulls a new strand. Dirt does not rewrite VLANs, DHCP, or masks. If cleaning had not restored the level, the next checks would be the patch, the bend radius, and then a tool that can locate a break.",
+    ["Contamination on the end face scatters light. The power reading and the recovery after cleaning confirm it.",
+     "A VLAN ID is a tag in a frame. Dirt on a connector cannot renumber it.",
+     "A full DHCP scope produces APIPA or failed leases. It does not lower an optical power reading.",
+     "A subnet mask is an IP setting. Cleaning a connector does not edit it, and a mask does not change received light."]))
+
+Q.append(item(P, 136, "5.3", "medium",
+    "Users on a VLAN get addresses, can ping their gateway, and cannot reach any other network. The gateway's routing table has the connected VLAN and nothing else, and no dynamic protocol is running. What is missing?",
+    ["A default route or another route to the rest of the network", "A new MAC address for every user", "An STP block on the only uplink", "A /32 mask on the users"],
+    0,
+    "If users can ping the gateway, their VLAN, mask, and local gateway setting work. The gateway then has to know where to send everything else. With only a connected route, it drops or fails to forward foreign destinations. Add the right static or dynamic routes. Blocking the only uplink would have stopped the ping to the gateway as well if the gateway were beyond it. A /32 on users would break the LAN itself.",
+    ["The gateway is up and the users reach it. The absent route is why traffic stops there.",
+     "Users already have working MAC learning, because they reached the gateway. New MACs are not the missing feature.",
+     "An STP block on the only path would keep them from reaching the gateway too. They can ping it.",
+     "A /32 would leave each host unable to talk to its neighbors. They are already talking to the gateway."]))
+
+Q.append(item(P, 137, "5.3", "medium",
+    "Two hosts on the same switch are 192.168.1.10/24 and 192.168.1.200/25. The /24 host treats the other as local. The /25 host treats the /24 host as remote and sends packets to its gateway. What is broken?",
+    ["The subnet masks do not agree, so the hosts disagree about what is local", "Both masks are /24 and the story is impossible", "The /25 host is in a different building by definition", "DNS is required for two hosts on the same switch"],
+    0,
+    "192.168.1.200/25 is in the 192.168.1.128/25 range, so that host does not consider .10 local and sends the packet to the gateway. The /24 host considers the whole 192.168.1.0/24 local and ARPs directly. Same switch, asymmetric behavior, flaky sessions. Both hosts need the mask the subnet was actually built with. DNS is not required to forward by IP on a LAN.",
+    ["The masks disagree about whether these two addresses share a subnet. Match them to the real subnet.",
+     "One mask is /24 and the other is /25. They are not the same, which is the whole problem.",
+     "The third octet and the switch are the same. The mask, not the building, is what places .200 in the upper half.",
+     "Two IP hosts on one LAN do not need DNS to talk by address. The failure is the mask."]))
+
+Q.append(item(P, 138, "5.3", "easy",
+    "A PC can reach other devices on its own subnet and cannot reach anything beyond the router. Its configured gateway is an address in a different subnet than its own interface. What is wrong?",
+    ["The default gateway is not in the host's subnet, so the host cannot use it", "The host needs a public address to talk to its own gateway", "The gateway should be the broadcast address", "The host should use 127.0.0.1 as the gateway"],
+    0,
+    "A host delivers the gateway by ARP, which only works if the gateway address is on the host's own subnet. A gateway in some other range is unreachable by definition, even if a router exists somewhere. 127.0.0.1 is the host itself. The broadcast address is not a router. A public address is not required for an internal gateway.",
+    ["The gateway has to live in the same subnet as the host. An address outside that subnet will never be ARPed successfully.",
+     "Internal hosts use private addresses and an internal gateway all the time. Public addressing is not the requirement.",
+     "The broadcast address targets every host. It is not a next hop.",
+     "127.0.0.1 is loopback. Sending the default route there sends traffic back to the same PC."]))
+
+Q.append(item(P, 139, "5.3", "medium",
+    "Two printers were both statically addressed as 10.0.0.40. Users report that printing works, then fails, then works from the other printer. The router shows the ARP entry for 10.0.0.40 flipping between two MACs. What is the fault?",
+    ["A duplicate IP address", "A duplicate default route, which is healthy", "Two hostnames in DNS, which is required", "A /30 mask on a LAN"],
+    0,
+    "Two devices claiming one address fight over ARP. Each one's traffic arrives until the other speaks, which looks intermittent. Change one printer to a free address, preferably a reservation, so the next person does not repeat it. A second default route is a different feature. DNS names are not the ARP symptom. A /30 is the wrong size for a LAN full of printers but is not what the flipping ARP entry proves.",
+    ["The flipping ARP entry is the signature of a duplicate address. Give one printer a different address.",
+     "Two default routes are a routing decision. They do not make one LAN address move between two printer MACs.",
+     "DNS can point a name at an address. The symptom here is two MACs owning the address on the LAN.",
+     "A /30 only has two usable addresses. It is a bad LAN mask, but the evidence given is the duplicate, not the mask."]))
+
+Q.append(item(P, 140, "5.3", "hard",
+    "The DHCP scope for a guest VLAN is exhausted. Existing guests still online keep working until their leases end. New guests get 169.254 addresses. Which action addresses the shortage without handing out the router and the servers' static addresses?",
+    ["Shorten guest leases, expand the pool, and keep exclusions for static devices", "Delete the exclusions so the server can hand out the router's address", "Disable the DHCP server so APIPA becomes the design", "Give every guest a /8"],
+    0,
+    "Exhaustion means the server has no free address to offer. Shorter guest leases recycle addresses faster, and a larger pool helps if the subnet has room. Exclusions must stay so the pool does not collide with the router and servers. Deleting those exclusions creates duplicates. APIPA is the failure mode, not the design. A /8 is an enormous mask and not a guest-VLAN plan.",
+    ["Shorter leases and a bigger pool add capacity. Exclusions keep the static devices out of the dynamic pool.",
+     "If the server offers the router's address, guests and the router fight. That is a duplicate, not a solution.",
+     "Turning DHCP off leaves everyone on APIPA, which is the outage you are already seeing.",
+     "A /8 would swallow a huge portion of the address space and would not be a sane guest subnet."]))
+
+Q.append(item(P, 141, "5.3", "medium",
+    "A closet switch became the Spanning Tree root because every priority was left at the default and that switch has the lowest MAC address. Traffic between access switches now hairpins through the closet. What is the corrective design?",
+    ["Lower the priority value on the core so the core becomes the root", "Disable Spanning Tree on all access switches", "Set the closet priority to 0", "Increase the closet MAC address in the EEPROM with a userspace editor as the approved fix"],
+    0,
+    "Bridge ID is priority plus MAC. Equal priorities make the lowest MAC the root, which is how a closet switch stole the tree. Set the core priority lower so the intended switch wins even with a higher MAC. Disabling Spanning Tree removes loop protection. Priority 0 on the closet keeps the bad root. Hand-editing a MAC is not a design.",
+    ["A lower priority number on the core gives it the better bridge ID. The tree rebuilds with the core as root.",
+     "Turning Spanning Tree off reopens the network to loops. It does not place the root correctly.",
+     "Priority 0 is the strongest claim. It would confirm the closet switch as root.",
+     "Changing a burned-in MAC is not the operational fix and is a good way to create a duplicate later."]))
+
+Q.append(item(P, 142, "5.3", "medium",
+    "A user was moved to a new desk and now receives a facilities DHCP scope. The PC, the cable, and the DHCP server are the same ones that worked at the old desk. Other people at the new desk's neighboring jacks get staff addresses. What is the likely port issue?",
+    ["The new jack's access port is in the wrong VLAN", "The user's MAC was burned by the move", "The DHCP server must be reinstalled", "The PC needs a public IP because it changed desks"],
+    0,
+    "Same PC, same server, different jack, different scope: the jack is in a different VLAN, so it hears a different DHCP domain. Check the access VLAN and the patch. Reinstalling DHCP would risk the people who are already working. A MAC does not burn when a person changes chairs. A public address is not required to receive a staff lease.",
+    ["The access VLAN on the new port is the setting that selects the scope. Neighboring correct jacks make the port the suspect.",
+     "MAC addresses do not wear out in a move. The same MAC worked an hour ago.",
+     "The server is handing out the right scope to the neighboring staff jacks. Reinstalling it is the wrong blast radius.",
+     "A desk move does not require a public address. The staff VLAN already has a private scope."]))
+
+Q.append(item(P, 143, "5.3", "hard",
+    "An ACL on the path permits TCP 443 to a new server and, later in the list, denies that server's subnet. Users still cannot connect, and a test shows the deny is never hit because an earlier permit for a broader destination matches first and that permit does not include this port. The implicit deny at the end drops the flow. What should change?",
+    ["Put a permit for this server and TCP 443 above the broad rule that is catching the traffic", "Add another deny at the bottom and expect it to win", "Remove every permit so the implicit deny becomes an implicit permit", "Disable routing"],
+    0,
+    "First match wins, and the end of the list is an implicit deny. If an earlier line matches the destination and does not permit the needed port, the specific permit below never runs. The needed permit has to be placed where it will be the first match. Another deny at the bottom changes nothing. There is no implicit permit. Disabling routing is an outage.",
+    ["Move or add the specific permit so it is the first line that matches this server and port. Order is the bug.",
+     "A later deny cannot override an earlier match. The bottom of the list is too late.",
+     "Removing permits makes the implicit deny drop even more. It does not flip the implicit rule to a permit.",
+     "The router is already enforcing the policy. Turning routing off removes the path entirely."]))
+
+Q.append(item(P, 144, "5.4", "medium",
+    "A WAN interface shows output drops, and a flow report says one backup job is most of the bytes. Voice calls are choppy only while that job runs. What is the performance problem called, and what is a sane response?",
+    ["Congestion. Schedule the backup or apply QoS so voice is queued ahead of it", "DNS poisoning. Flush the backup server's A record", "A duplex mismatch on a path that shows no CRC errors and a full queue", "Replace the phones before looking at the circuit"],
+    0,
+    "The circuit is full, the queue is dropping packets, and one flow is the reason. That is congestion. Move the backup out of the workday or mark voice so it is served first. QoS does not add bandwidth, and it does make the preferred class wait less. DNS is not indicated. A duplex mismatch would show interface errors, which this stem does not. Replacing phones ignores the flow report.",
+    ["Congestion is a full link. The flow report names the backup, so you change when it runs or you schedule voice ahead of it.",
+     "Nothing here is a false DNS answer. The backup is really moving the bytes.",
+     "Duplex problems create CRC and collision symptoms. A clean interface with a full queue is load, not duplex.",
+     "The phones are suffering the queue. The evidence points at the backup filling the circuit."]))
+
+Q.append(item(P, 145, "5.4", "easy",
+    "A server has a 10 Gbps NIC and is attached to a 1 Gbps access port. File copies never exceed about 1 Gbps. The server CPU is idle. Where is the bottleneck?",
+    ["The 1 Gbps access port", "The server CPU", "DNS", "The MAC address"],
+    0,
+    "Throughput cannot exceed the slowest hop that the traffic actually crosses. The access port is 1 Gbps, so a 10 Gbps NIC has nowhere to go. An idle CPU means the server is not the limit. DNS and the MAC address do not cap a transfer at the link speed. Upgrade the port and the cable path if the copies genuinely need more.",
+    ["The access port is the narrow point. A faster NIC does not outrun a 1 Gbps switch port.",
+     "An idle CPU is evidence against a processor bottleneck. The copies are waiting on the link.",
+     "DNS might slow a connection's setup if the name failed. It does not throttle a working copy to exactly the port speed.",
+     "A MAC address is an identifier, not a speed."]))
+
+Q.append(item(P, 146, "5.4", "medium",
+    "A voice engineer says the one-way delay is stable at 40 milliseconds and a different path swings between 20 and 300 milliseconds. Calls on the second path break up even though a speed test looks fine. Which impairment is the swing?",
+    ["Jitter", "A perfectly stable latency", "An MTU of 1500, which always breaks voice", "A missing A record"],
+    0,
+    "Jitter is variation in delay. Voice needs a steady arrival so the jitter buffer can do its job. A stable 40 milliseconds is often acceptable. A swing from 20 to 300 is not, even if the average throughput looks high, because speed tests do not measure that variation. MTU and DNS are not the impairment named by the swing.",
+    ["Jitter is the delay variation. That is what the 20-to-300 swing is, and it is why the calls break up.",
+     "Stable delay is the first path. The question asks about the path that swings.",
+     "1500 bytes is the normal Ethernet MTU. It is not, by itself, a reason voice fails.",
+     "An A record maps a name to an address. It does not describe delay variation."]))
+
+Q.append(item(P, 147, "5.4", "medium",
+    "A site-to-site ping shows 2 percent loss all day, and TCP file copies are much slower than the circuit size suggests. There is no sign of a full queue. What is the impairment, and why does TCP care?",
+    ["Packet loss. TCP slows down when it has to retransmit", "Zero loss, because 2 percent is below every threshold", "Jitter, which is the same number as loss", "A broadcast storm, which always shows 2 percent and a quiet CPU"],
+    0,
+    "Packet loss is packets that do not arrive. Two percent is enough to make TCP cut its rate and spend time retransmitting, so throughput falls far below the circuit size. Loss and jitter are different measurements. A broadcast storm would show high CPU and flooded switches, which this stem does not claim. Find the drop: a bad link, a policer, or a queue you have not graphed yet.",
+    ["Loss is the missing packets. TCP treats loss as congestion and backs off, which is why the copies look slow.",
+     "Two percent loss is not zero, and TCP notices it. There is no rule that small loss is free.",
+     "Jitter is delay variation. You cannot rename it to loss. They are measured separately.",
+     "A broadcast storm is a specific Layer 2 failure. The stem gives loss without that evidence."]))
+
+Q.append(item(P, 148, "5.4", "easy",
+    "Users near a break-room microwave lose Wi-Fi every day around lunch, only on the 2.4 GHz SSID. The 5 GHz SSID in the same room stays up. What is the likely cause?",
+    ["Interference on 2.4 GHz from the microwave", "A failed single-mode uplink, which would drop both bands", "A DHCP scope that only fails at lunch by design", "WPA3, which cannot operate near kitchens"],
+    0,
+    "Microwaves leak energy in the 2.4 GHz band and can drown a nearby radio for the length of a meal. The 5 GHz radio is a different band and stays up, which points at interference rather than at the uplink, the DHCP server, or the authentication suite. Move the access point, prefer 5 GHz in that room, or accept that the break room is a bad place for a 2.4 GHz radio.",
+    ["2.4 GHz plus a microwave plus a lunch-hour schedule is interference. The healthy 5 GHz radio supports that reading.",
+     "A dead uplink would take every SSID on that access point down, not just 2.4 GHz.",
+     "DHCP does not know when lunch is, and it would not spare one radio.",
+     "WPA3 is an authentication and encryption design. It is not allergic to kitchens."]))
+
+Q.append(item(P, 149, "5.4", "hard",
+    "A corner office has a weak signal on a post-install heat map. An engineer proposes maxing the transmit power on the nearest access point instead of adding or moving one. Why is max power a poor first design?",
+    ["Clients will stick to the loud AP, and neighboring cells will overlap more", "Maximum power always reduces interference", "Clients cannot hear an AP that is louder", "Power has no effect on roaming"],
+    0,
+    "Raising power covers the corner and also shouts into the neighboring cells. Clients associate to the loud access point and may keep it long after the user has walked somewhere with a better radio. The better fix for a real hole is placement, another access point at a sensible power, or both, then another survey. More power is not free coverage.",
+    ["High power creates sticky clients and extra overlap. It treats the heat map by making a new problem next door.",
+     "More power in a shared band increases contention. It does not reduce interference.",
+     "Clients hear a louder AP more easily. That is part of why they stick to it.",
+     "Roaming decisions are heavily about signal. Power is one of the knobs that changes them."]))
+
+Q.append(item(P, 150, "5.4", "medium",
+    "Clients roam poorly between two access points. The SSID matches, but one access point is WPA2-Personal and the other is WPA3-Personal, and the overlap on the floor is a sliver. Which statement is the best troubleshooting conclusion?",
+    ["Roaming needs a shared security configuration and enough overlap for the client to hear the next AP", "Roaming works better when each AP uses a different SSID", "Overlap should be zero so the client drops completely before joining the next AP", "A captive portal on only one of them has no effect"],
+    0,
+    "An extended service set is the same SSID and compatible security on a set of access points. A client will not roam cleanly from WPA2 to WPA3, and it cannot roam to an AP it cannot hear. A little overlap is required. Zero overlap means the session falls off a cliff. Different SSIDs are different networks. A portal on one AP and not the other is another inconsistent policy.",
+    ["Same SSID, compatible security, and a modest overlap are the conditions the client needs in order to move.",
+     "A different SSID is a different network. The client treats it as a new choice, not as roaming.",
+     "Zero overlap leaves a dead stripe. The client has nowhere to go until the old AP is already gone.",
+     "An inconsistent portal is another configuration mismatch. It does affect the user."]))
+
+Q.append(item(P, 151, "5.5", "easy",
+    "A technician can ping a server by IP and cannot resolve its name. Which tool queries DNS directly and shows the answer the server returns?",
+    ["nslookup or dig", "A cable certifier", "show mac-address-table", "A visual fault locator"],
+    0,
+    "nslookup and dig ask a DNS server about a name and show the record that comes back. That is the next test when IP works and the name does not. A certifier tests cable. The MAC table shows which port learned an address. A visual fault locator shines red light down a fiber. None of those answer a DNS query.",
+    ["nslookup and dig are the DNS tools. They will show the A or AAAA record, or the failure, from a chosen server.",
+     "A certifier measures a cable against a category. It does not look up names.",
+     "The MAC address table is a switch forwarding table. It is not DNS.",
+     "A visual fault locator finds a break or a bad connector in fiber by shining light down it."]))
+
+Q.append(item(P, 152, "5.5", "medium",
+    "Traceroute shows low latency for the first three hops, then a jump at hop 4 that stays high through the destination. The destination is reachable. What is the careful reading?",
+    ["The delay is being added at hop 4 or on the link into it, and later hops inherit that delay", "Hop 4 is down, because the destination still answers", "The first three hops are the problem because their times are small", "Traceroute proves the application on port 443 is healthy"],
+    0,
+    "Each hop's time includes the path it took to get there. A jump that starts at hop 4 and remains high means the extra delay was introduced by the time the packet reached hop 4. Later hops are not each adding the same new delay. Stars with later replies can mean a hop simply does not send ICMP time-exceeded messages. And a completed traceroute says nothing about TCP 443.",
+    ["The increase begins at hop 4, so that router or the link to it is where the extra latency enters the path.",
+     "The destination answers, so hop 4 forwarded the packet. High delay is not the same as down.",
+     "Small times on the first hops are the healthy part of the path. They are not the fault.",
+     "Traceroute is usually ICMP or UDP probes. It does not open the application port."]))
+
+Q.append(item(P, 153, "5.5", "medium",
+    "A service that should listen on TCP 443 is not accepting connections. On the server itself, a command shows no process bound to 443, while ping to the server works. Which command family produced that evidence?",
+    ["netstat, or a similar socket listing", "A punch-down tool", "show power", "A toner and probe"],
+    0,
+    "netstat and its newer relatives list sockets. If nothing is listening on 443, the service is not running or is bound to the wrong address, and the network path is not the first suspect. Ping already showed the host is up. A punch-down tool, a PoE reading, and a toner are physical tools and cannot tell you whether a process opened a port.",
+    ["A socket listing shows listeners. No listener on 443 means the service is down locally even though the host answers ping.",
+     "A punch-down tool seats copper pairs into a block. It does not list TCP ports.",
+     "show power reports PoE. It does not report a web server.",
+     "A toner traces a cable. It does not inspect a socket table."]))
+
+Q.append(item(P, 154, "5.5", "easy",
+    "An unlabeled copper run disappears into the ceiling. The technician needs to find which port it lands on in a full patch panel, without unplugging the whole panel first. Which tool fits?",
+    ["A toner and probe", "A protocol analyzer", "dig", "show route"],
+    0,
+    "A toner puts a signal on the copper, and the probe hears it at the far end, so you can pick the right jack out of a panel. Unplug the far end from live gear before you tone if the procedure says so. A protocol analyzer decodes packets. dig is DNS. show route is the routing table. None of those find an unlabeled pair in a ceiling.",
+    ["The toner and probe are the tracing tools for an unlabeled copper run.",
+     "A protocol analyzer needs frames to decode. It does not beep when you point it at a jack.",
+     "dig queries DNS. It does not trace cable.",
+     "show route lists prefixes. It does not identify a patch-panel port."]))
+
+Q.append(item(P, 155, "5.5", "medium",
+    "A fiber jumper may be broken inside the boot. The technician wants to see a red glow at the break or at a bad connector, not a decibel measurement and not a copper wire map. Which tool is that?",
+    ["A visual fault locator", "A cable tester made for copper pairs", "nslookup", "A Wi-Fi analyzer"],
+    0,
+    "A visual fault locator injects visible red light into a fiber. You see it leak at a break, a sharp bend, or a bad connector. It does not measure loss in decibels, and it does not test copper. nslookup is DNS. A Wi-Fi analyzer looks at radios. A copper tester cannot shine light down glass.",
+    ["The visual fault locator is the red-light tool. A glow at the boot confirms the damaged spot.",
+     "A copper tester checks pairs and pinouts. It does not send visible light down fiber.",
+     "nslookup queries DNS names. It is not an optical tool.",
+     "A Wi-Fi analyzer shows channels and signal. It does not inspect a jumper."]))
+
+Q.append(item(P, 156, "5.5", "medium",
+    "A switch port is up, but the user is in the wrong VLAN. The technician wants the command that shows VLAN membership for the port, not the command that shows CRC errors and not the command that shows PoE watts. Which command is that?",
+    ["show vlan", "show interface", "show power", "show route"],
+    0,
+    "show vlan lists the VLANs and the ports that belong to them, which is the membership question. show interface shows state, speed, duplex, and error counters. show power shows the PoE budget and what each port is drawing. show route is the routing table. Using the wrong one of these wastes a trip.",
+    ["show vlan answers which VLAN the port is in. That is the command for this symptom.",
+     "show interface is the counter and status command. Use it for CRC and duplex, not for membership.",
+     "show power is the PoE command. The user has link, and power is not the question.",
+     "show route shows Layer 3 prefixes. It does not list access-port VLANs."]))
+
+Q.append(item(P, 157, "5.5", "hard",
+    "A technician needs the hostname and port of the device on the other end of an uplink. The neighbor supports a vendor-neutral discovery protocol and does not support the Cisco-only one. Which protocol should the technician use?",
+    ["LLDP", "CDP only", "TFTP", "SMTP"],
+    0,
+    "LLDP is the IEEE discovery protocol. It advertises the neighbor's name, port, and capabilities, and it is the vendor-neutral choice. CDP does the same job on Cisco gear and will not help if the neighbor does not speak it. TFTP transfers files. SMTP delivers mail. Neither one discovers the box at the other end of a cable.",
+    ["LLDP is the standard neighbor-discovery protocol. It is the one to enable and read when the neighbor is not speaking CDP.",
+     "CDP is Cisco-specific. The stem says the neighbor does not support it, so waiting for a CDP neighbor will fail.",
+     "TFTP copies a file. It does not name the device on the other end of an uplink.",
+     "SMTP is mail. It is not a link-layer discovery protocol."]))
+
+Q.append(item(P, 158, "5.5", "medium",
+    "During an authorized inventory of a network the team administers, they need a list of live hosts and the services those hosts are offering. A packet capture would be too heavy, and a ping sweep would not show services. Which kind of tool fits?",
+    ["A network scanner such as the one named for this objective", "A visual fault locator", "A punch-down tool", "A UPS"],
+    0,
+    "A network scanner, and Nmap is the one the N10-009 objectives name, probes hosts you are authorized to inventory and reports which ones are up and which ports are open. That is a discovery task, not an excuse to scan networks you do not administer. A visual fault locator, a punch-down tool, and a UPS do not list services. A full capture would show payloads you do not need for an inventory.",
+    ["The scanner is the inventory tool. Used on the network you are responsible for, it answers which hosts and services are up.",
+     "A visual fault locator shines light down fiber. It does not list open ports.",
+     "A punch-down tool terminates copper. It does not discover hosts.",
+     "A UPS supplies battery power. It does not inventory services."]))
+
+if __name__ == "__main__":
+    from common import dump
+    dump("n10-009", {"q-d5.json": Q})
