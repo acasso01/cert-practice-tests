@@ -1,0 +1,458 @@
+[
+  {
+    "id": "c1-001",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A laptop needs more memory. The technician has a desktop DDR4 DIMM from a donor PC and a SODIMM of the same generation. Which module belongs in the laptop?",
+    "choices": [
+      "The SODIMM",
+      "The desktop DIMM, because the pins are the same",
+      "Either one, because laptops accept both sockets",
+      "A DIMM with the heat spreader removed so it fits"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Laptops use SODIMMs, the short modules. A desktop DIMM is longer, has a different pin count, and will not seat in a laptop slot. Forcing it, or cutting a heat spreader to make it fit, damages the machine. Match the generation too: a DDR4 SODIMM is not a DDR5 SODIMM.",
+    "choiceNotes": [
+      "SODIMM is the laptop form factor. That is the module that fits the slot.",
+      "Desktop DIMMs and SODIMMs are not the same length or pinout, even in the same DDR generation.",
+      "A laptop does not have a desktop DIMM socket. There is no either-or.",
+      "Removing a heat spreader does not change the connector. The DIMM still will not fit, and you can damage it."
+    ]
+  },
+  {
+    "id": "c1-002",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "After a laptop screen is replaced, Wi-Fi signal is terrible. The new panel displays a normal image, and the wireless card was not removed. What should be checked in the hinge and bezel area?",
+    "choices": [
+      "The wireless antenna leads that route through the hinge into the lid",
+      "The SODIMM, because the screen uses system memory as an antenna",
+      "The PSU voltage switch",
+      "The desktop PCIe slot"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Laptop Wi-Fi antennas are commonly in the display lid, with thin leads that run through the hinges to the wireless card. A screen replacement that forgets to reconnect those leads leaves the radio transmitting into the chassis. The image working means the panel is fine. There is no desktop power switch or PCIe slot involved.",
+    "choiceNotes": [
+      "The antenna leads are the usual casualty of a lid repair. Re-seat them on the wireless card before you replace the card.",
+      "System memory is not the Wi-Fi antenna. A bad SODIMM would show memory errors, not a weak radio after a screen swap.",
+      "A laptop does not have the red 115/230 switch of an old desktop power supply.",
+      "There is no desktop PCIe slot in this repair. The radio is an internal laptop card."
+    ]
+  },
+  {
+    "id": "c1-003",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user wants the old spinning laptop drive replaced with an SSD and wants the laptop to boot the existing Windows installation. Copying the Documents folder to the new drive did not make it boot. What was missing?",
+    "choices": [
+      "A disk clone or image that includes the boot and system partitions, not just the user files",
+      "Formatting the SSD as FAT16",
+      "Deleting the recovery partition and nothing else",
+      "Enabling Bluetooth during the copy"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A bootable migration has to bring the boot records and the Windows partitions, not only the user's documents. Cloning or imaging the disk does that. A file copy of Documents leaves a blank drive with no bootloader. FAT16 is obsolete and too small. Bluetooth is unrelated. After the clone, do not leave both drives connected in a way that confuses which disk is first in the boot order.",
+    "choiceNotes": [
+      "The boot environment lives outside the Documents folder. Clone or image the whole disk, then confirm the boot order.",
+      "FAT16 is not a Windows system file system for a modern laptop and cannot hold the installation.",
+      "Deleting recovery does not create a bootable copy of Windows on the new drive.",
+      "Bluetooth does not copy boot sectors and does not make a drive bootable."
+    ]
+  },
+  {
+    "id": "c1-004",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A laptop fingerprint reader fails, and the user cannot sign in even though they know the PIN. The reader is the only method configured. What is the practical expectation for a biometric sign-in?",
+    "choices": [
+      "Biometrics should fall back to a PIN or password, and that fallback has to be enrolled",
+      "A failed fingerprint must lock the drive permanently",
+      "Biometrics replace the need for any other factor and have no fallback",
+      "The fingerprint reader stores the Windows installation"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A fingerprint or a face scan is a convenience factor and a second check. It fails closed to something the user knows, usually a PIN or a password. If that fallback was never set, or the user has forgotten it, the reader failing locks them out until the account is recovered. The reader does not contain the operating system, and a failed scan should not destroy the drive.",
+    "choiceNotes": [
+      "Enroll a PIN or password alongside the fingerprint. When the reader fails, that knowledge factor is how the user gets in.",
+      "A failed reader is a hardware problem, not a command to wipe the disk.",
+      "Vendors design biometrics with a fallback because readers get dirty, wet, or damaged.",
+      "The reader stores a template, not the Windows installation. Replacing the reader does not reinstall Windows."
+    ]
+  },
+  {
+    "id": "c1-005",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A technician is about to replace a laptop keyboard. The battery is internal but is reachable, and the AC adapter is still plugged in. What should happen before a screwdriver touches the keyboard screws?",
+    "choices": [
+      "Power the laptop off, unplug the adapter, and disconnect the battery if the service manual allows it",
+      "Leave it running so the keyboard lights show which screws are live",
+      "Only remove the AC adapter and keep the battery connected while prying",
+      "Heat the keyboard with a heat gun before disconnecting power"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Internal work starts with the machine off and the power sources removed. Unplug the adapter and, when the manual shows a connector, disconnect the battery so a slip does not short a live rail. Leaving it running is how a screwdriver becomes a short. Heat is for some glued screens, not a reason to skip power removal on a keyboard.",
+    "choiceNotes": [
+      "Off, unplugged, and battery disconnected when the design allows it. That is the safe start for a keyboard replacement.",
+      "A running laptop plus metal tools is a short waiting to happen. The lights are not worth it.",
+      "The battery can still feed the board after the adapter is out. Disconnect it if the manual gives you that connector.",
+      "A heat gun is the wrong first tool for a screwed-in keyboard and does not replace isolating power."
+    ]
+  },
+  {
+    "id": "c1-006",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An older laptop uses a fluorescent backlight. The screen is very dim, and a flashlight shone on it reveals a faint image. A newer LED-backlit laptop with the same faint-image symptom does not have the part this older unit uses. What is that older part?",
+    "choices": [
+      "The inverter",
+      "The SODIMM",
+      "The Ethernet magnetics",
+      "The CMOS battery"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "CCFL backlights need an inverter to produce the high voltage that lights the lamp. A failed inverter gives you a faint panel and no backlight. LED backlights do not use that inverter, so the same faint image on an LED machine points at the LED circuit or the panel instead. Memory, Ethernet, and the CMOS battery do not light the panel.",
+    "choiceNotes": [
+      "The inverter drives a CCFL backlight. Dim image, visible with a flashlight, on a fluorescent-era laptop is the inverter or the lamp.",
+      "SODIMM is memory. A bad module does not selectively turn the backlight off while leaving a faint image.",
+      "Ethernet magnetics are in the network jack. They do not backlight a panel.",
+      "The CMOS battery keeps firmware settings. It does not power a backlight."
+    ]
+  },
+  {
+    "id": "c1-007",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A designer complains that a laptop screen washes out when several people view it from the sides. A different laptop stays readable from those angles and has better color, at a higher price. Which panel type is the better wide-angle choice?",
+    "choices": [
+      "IPS",
+      "TN",
+      "A CRT salvaged from a desktop",
+      "A panel with the inverter removed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "IPS panels are the ones with wide viewing angles and stronger color. TN panels are cheaper and often faster, and they shift and darken when you leave the center. A CRT is not a laptop panel. Removing an inverter does not improve angles. If the job is color and a shared view, IPS is the specification to ask for.",
+    "choiceNotes": [
+      "IPS holds color and contrast as you move off center. That is the panel the designer is asking for.",
+      "TN is the panel that looks wrong from the side. It is the symptom, not the upgrade.",
+      "A CRT is a tube display. It does not fit a laptop lid and is not a current option.",
+      "An inverter lights an old backlight. Removing it makes the screen dark. It does not change the viewing angle of the liquid crystal."
+    ]
+  },
+  {
+    "id": "c1-008",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A tablet shows a perfect image, but touches land an inch away from the finger and sometimes not at all. The glass is intact. Which component is failing?",
+    "choices": [
+      "The digitizer",
+      "The backlight inverter on a device that has no CCFL",
+      "The CMOS battery",
+      "The SATA cable"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The digitizer is the touch layer. A good image with bad or offset touch is the digitizer or its calibration, not the display panel. There is no fluorescent inverter on a typical tablet, no CMOS battery in the laptop sense doing this job, and no SATA cable driving the touch layer. Recalibrate if the OS offers it, and replace the digitizer if calibration does not hold.",
+    "choiceNotes": [
+      "The digitizer turns touch into coordinates. Offset or dead touch with a healthy picture is that layer.",
+      "A tablet backlight is not a CCFL inverter problem, and the image is already visible, so the light is working.",
+      "A CMOS battery holds firmware time and settings on a PC. It does not map touch coordinates.",
+      "SATA connects storage. It is not the touch sensor."
+    ]
+  },
+  {
+    "id": "c1-009",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A laptop with an OLED panel has a ghost of a toolbar that stayed on screen for months. The ghost is visible on every wallpaper. What is that called, and is it a dead pixel?",
+    "choices": [
+      "Burn-in. It is not the same thing as a single dead pixel",
+      "A dead pixel, because OLED cannot burn in",
+      "Backlight bleed, because OLED uses a CCFL",
+      "A stuck inverter"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "OLED pixels emit their own light and can age unevenly. A static toolbar that remains as a shadow is burn-in. A dead pixel is one dot that stays dark or one color. OLED does not use a CCFL backlight, so there is no inverter and no backlight bleed in the LCD sense. Reduce static content and brightness to slow further burn-in. The existing ghost may not fully disappear.",
+    "choiceNotes": [
+      "Burn-in is the permanent shadow of a static image. That is the toolbar ghost, and it is a known OLED risk.",
+      "A dead pixel is a single element. A toolbar-shaped ghost across the panel is burn-in, and OLED can suffer it.",
+      "OLED has no CCFL backlight. Bleed is an LCD backlight symptom, not this shadow.",
+      "There is no inverter on an OLED panel. The symptom is worn pixels, not a missing high-voltage board."
+    ]
+  },
+  {
+    "id": "c1-010",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A laptop lid is cracked and the image is a black smear, but an external monitor works. The GPU is therefore probably fine. Which statement is the right next conclusion?",
+    "choices": [
+      "The internal panel or its cable is the failed part",
+      "The motherboard video circuit is dead because the lid is cracked",
+      "Replace the power supply before the panel",
+      "The SODIMM is the display"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An external monitor that looks normal means the graphics output is producing a picture. The failure is between that output and the internal panel: the panel itself or the cable that runs through the hinge. A cracked lid makes those two parts the likely ones. Replacing the board or the power supply ignores the test you already ran.",
+    "choiceNotes": [
+      "The external display isolates the fault to the internal panel or its cable. Start there.",
+      "A working external monitor is evidence the graphics circuit is alive. The cracked lid points at the panel path, not at a dead GPU.",
+      "The power supply is not indicated. The laptop is up and driving an external screen.",
+      "Memory is not the display panel. A bad SODIMM would not be proven by a cracked lid and a good external picture."
+    ]
+  },
+  {
+    "id": "c1-011",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A phone must connect to a modern Windows laptop to charge and to transfer photos, and the phone's only port is USB-C. The laptop has USB-C and USB-A. Which cable is the direct fit?",
+    "choices": [
+      "USB-C to USB-C",
+      "Lightning to VGA",
+      "A serial DB9 cable",
+      "RG-6 coax"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "USB-C on both ends is the direct cable. USB-C to USB-A also works if you use the laptop's USB-A port, but the direct match for the ports named as preferred is C to C. Lightning is an Apple connector. DB9 is legacy serial. RG-6 is cable-TV coax. None of those carry this phone's photos.",
+    "choiceNotes": [
+      "USB-C to USB-C connects the two USB-C ports for charge and data, assuming the laptop port supports that role.",
+      "Lightning is not the phone's port, and VGA is a video connector. That cable does not fit either device.",
+      "DB9 serial is an old PC port. It is not how a USB-C phone transfers photos.",
+      "RG-6 carries RF cable signals. It is not a phone cable."
+    ]
+  },
+  {
+    "id": "c1-012",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user wants to move a 2 GB video from a phone to a laptop and suggests NFC because the devices can already tap to pair. What is the right guidance?",
+    "choices": [
+      "NFC is for very short range and tiny exchanges. Use USB or Wi-Fi for a 2 GB file",
+      "NFC is faster than USB 3 for multi-gigabyte video",
+      "NFC requires a 100 meter cable",
+      "NFC is the same thing as a docking station"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "NFC works across a few centimeters and is used for pairing, badges, and payments, not for moving gigabytes. A 2 GB video wants a USB cable or a Wi-Fi transfer. NFC is not faster than USB 3, it does not use a long cable, and it is not a dock.",
+    "choiceNotes": [
+      "NFC is the tap. It is the wrong transport for a large video. Plug in USB or use a wireless file transfer.",
+      "USB 3 moves large files far faster than NFC. NFC was never the bulk-transfer bus.",
+      "NFC is wireless and extremely short. A 100 meter cable is the opposite description.",
+      "A dock is a physical accessory that adds ports and often power. NFC is a radio."
+    ]
+  },
+  {
+    "id": "c1-013",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A laptop on a desk must gain two monitors, Ethernet, and power through one connection to a device that also charges it. A cheaper accessory only breaks out extra USB ports and does not charge the laptop. Which is the fuller device?",
+    "choices": [
+      "A docking station",
+      "A port replicator that the question says does not charge or add video",
+      "A Bluetooth headset",
+      "A microSD card"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A docking station is the fuller accessory: power, video, and network, often through one connector. A port replicator is the simpler breakout of ports and, in this question, does not charge or drive the monitors. A headset and a memory card do not add desktop ports.",
+    "choiceNotes": [
+      "The dock is the device that supplies power, displays, and Ethernet together. That matches what the desk needs.",
+      "The question's simpler accessory is the port replicator. It is not the one that charges and drives two monitors.",
+      "A headset is audio. It does not add monitors or Ethernet.",
+      "A microSD card is storage. It is not a port expander."
+    ]
+  },
+  {
+    "id": "c1-014",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Bluetooth headset is not discovered by a phone. The headset is charged and the phone's Bluetooth radio is on. Which sequence should the user follow?",
+    "choices": [
+      "Put the headset in pairing mode, select it on the phone, enter the PIN if asked, and test audio",
+      "Enable NFC on a monitor and expect the headset to appear",
+      "Install a desktop DIMM in the phone",
+      "Disable the phone radio before pairing"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Bluetooth pairing is: make the accessory discoverable, find it on the phone, confirm the PIN or the prompt, and then play audio to prove the link. Turning the phone radio off makes discovery impossible. NFC is a different radio. A DIMM does not fit a phone and does not pair a headset.",
+    "choiceNotes": [
+      "Pairing mode, selection, PIN, and a real audio test is the complete Bluetooth setup.",
+      "NFC will not discover a Bluetooth headset. The headset has to be in Bluetooth pairing mode.",
+      "A desktop memory module is not a phone part and has nothing to do with a headset.",
+      "The radio has to be on for the phone to see the headset. Turning it off is the opposite of the fix."
+    ]
+  },
+  {
+    "id": "c1-015",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A legacy CDMA phone cannot roam in a city where it used to work. The carrier says the roaming list on the phone is stale. What kind of update is that?",
+    "choices": [
+      "A PRL update",
+      "A BIOS update on a desktop motherboard",
+      "A SATA firmware update",
+      "An inverter replacement"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "CDMA phones used a Preferred Roaming List to decide which towers they may use. When that list is old, roaming fails even though the radio is fine. GSM phones use a SIM and do not depend on a PRL the same way. A desktop BIOS, a disk firmware, and a display inverter are unrelated repairs.",
+    "choiceNotes": [
+      "PRL is the CDMA roaming list. Updating it is the carrier's fix for this legacy phone.",
+      "A desktop BIOS does not store a phone's tower list.",
+      "SATA firmware is for a storage device. It does not update cellular roaming.",
+      "An inverter lights an old laptop backlight. It is not a phone firmware object."
+    ]
+  },
+  {
+    "id": "c1-016",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A company phone must receive corporate email, and the company must be able to require a PIN and remove company data if the phone is lost. Which control plane does that?",
+    "choices": [
+      "Mobile device management",
+      "A local hosts file",
+      "A desktop port replicator",
+      "The laptop inverter"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "MDM enrolls the phone, pushes mail and corporate apps, enforces a PIN, and can remote-wipe company data. That is the tool for a lost phone. A hosts file, a port replicator, and an inverter do not manage mobile policy.",
+    "choiceNotes": [
+      "MDM is how the company configures mail, requires the PIN, and wipes the device if it goes missing.",
+      "A hosts file overrides name resolution on a computer. It does not enroll a phone.",
+      "A port replicator adds laptop ports. It does not manage a handset.",
+      "An inverter is a backlight part. It has no remote-wipe function."
+    ]
+  },
+  {
+    "id": "c1-017",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user tethers a laptop to a phone all day and then is surprised by a huge cellular bill and a hot, empty phone. The laptop was downloading cloud photos. What should change?",
+    "choices": [
+      "Stop bulk sync while on the hotspot, and prefer Wi-Fi for large transfers",
+      "Leave the hotspot on and raise the screen brightness to save power",
+      "Replace the phone's digitizer",
+      "Convert the laptop to a CDMA PRL-only device"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hotspot shares the cellular plan and the battery. Photo libraries are the classic way to burn both. Restrict background sync to Wi-Fi and turn the hotspot off when it is not needed. Brightness does not save cellular data. The digitizer and a PRL update do not move the traffic onto Wi-Fi.",
+    "choiceNotes": [
+      "Large syncs belong on Wi-Fi. The hotspot metered the photos and drained the phone. Limit what is allowed to run over cellular.",
+      "More brightness spends more battery. It does not reduce the cellular download.",
+      "The touch layer is not why the bill is large. The radio was busy.",
+      "A PRL is a legacy roaming list. It does not stop a cloud client from downloading photos."
+    ]
+  },
+  {
+    "id": "c1-018",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A phone shows full cellular bars indoors and still places the user on the wrong street in a map app. GPS is enabled, and the user is between tall buildings. What is the likely limitation?",
+    "choices": [
+      "GPS needs a sky view, so indoors the phone is falling back to a coarser location",
+      "The map requires a desktop DIMM",
+      "Bars of cellular signal are the same measurement as a GPS fix",
+      "The digitizer is the GPS antenna"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "GPS listens to satellites. Indoors, and in urban canyons, that signal is weak, so the phone leans on cellular and Wi-Fi location, which can be a building or two off. Cellular bars mean the tower is strong. They are not a count of GPS satellites. Memory modules and the touch layer are not the GPS receiver.",
+    "choiceNotes": [
+      "Weak satellite visibility explains a wrong indoor position even when cellular looks perfect. Move near a window to test the GPS fix.",
+      "A DIMM is desktop or laptop memory. It is not part of phone location.",
+      "Cellular signal and a GPS fix are different radios. Full bars do not mean several satellites are locked.",
+      "The digitizer senses touch. It is not the satellite antenna."
+    ]
+  },
+  {
+    "id": "c1-019",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user wants contacts, calendar, and mail from a company Microsoft 365 account on a new phone, and does not want personal photos uploading on the cellular plan. What should be configured?",
+    "choices": [
+      "The Microsoft 365 account, syncing mail, contacts, and calendar, with photo sync limited to Wi-Fi or turned off",
+      "Only a Bluetooth pairing to a headset",
+      "A PRL update and nothing else",
+      "An inverter calibration"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Microsoft 365, Google Workspace, and iCloud are the account types the exam expects you to add, and mail, contacts, calendar, and photos are the data types. You can choose which of those sync, and you should keep large photo uploads off the cellular radio. A headset pairing, a PRL, and an inverter do not create the mailbox.",
+    "choiceNotes": [
+      "Add the work account and sync the three data types they asked for. Leave photos off the metered connection.",
+      "Bluetooth audio does not download a mailbox or a calendar.",
+      "A PRL update is a legacy roaming-list refresh. It does not configure Microsoft 365.",
+      "An inverter is a laptop backlight part. It does not sync mail."
+    ]
+  }
+]

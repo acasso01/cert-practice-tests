@@ -1,0 +1,603 @@
+[
+  {
+    "id": "c1-020",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician must allow encrypted web traffic and block the unencrypted web port. Which ports are those?",
+    "choices": [
+      "Allow 443 and block 80",
+      "Allow 80 and block 443",
+      "Allow 25 and block 110",
+      "Allow 3389 and block 53"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "HTTPS is TCP 443 and HTTP is TCP 80. Encrypted web traffic is 443. Port 25 is SMTP and 110 is POP3, which are mail. Port 3389 is Remote Desktop and 53 is DNS. None of those pairs is the web pair.",
+    "choiceNotes": [
+      "443 is HTTPS and 80 is HTTP. Allowing 443 and blocking 80 matches the request.",
+      "That is the reverse. Port 80 is the clear-text web port.",
+      "25 and 110 are mail ports, SMTP and POP3. They are not web.",
+      "3389 is RDP and 53 is DNS. Blocking DNS would break name resolution rather than clear-text web."
+    ]
+  },
+  {
+    "id": "c1-021",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Users need Remote Desktop to a Windows PC. The firewall is wide open except for the RDP port, which is still closed. Which port should be opened?",
+    "choices": [
+      "3389",
+      "53",
+      "25",
+      "143"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RDP listens on TCP 3389. DNS is 53, SMTP is 25, and IMAP is 143. Opening the mail or name ports will not let Remote Desktop complete. Also remember that Windows Home cannot host an incoming RDP session even if the port is open. That edition limit is a Core 2 topic, but the port itself is 3389.",
+    "choiceNotes": [
+      "TCP 3389 is Remote Desktop. That is the port the firewall still has closed.",
+      "Port 53 is DNS. Opening it does not start an RDP session.",
+      "Port 25 is SMTP mail transfer. It is not a desktop session.",
+      "Port 143 is IMAP mail retrieval. It is not RDP."
+    ]
+  },
+  {
+    "id": "c1-022",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A mail client must send mail to a server and download mail with IMAP. Which ports are the send port and the IMAP port on the A+ list?",
+    "choices": [
+      "SMTP 25 to send, IMAP 143 to retrieve",
+      "POP3 110 to send, DNS 53 to retrieve",
+      "RDP 3389 to send, HTTP 80 to retrieve",
+      "DHCP 67 to send, DHCP 68 to retrieve"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SMTP on port 25 is the transfer protocol clients and servers use to send mail in the A+ objective list. IMAP on 143 retrieves and leaves mail on the server. POP3 on 110 also retrieves, but it is not IMAP. DNS, RDP, HTTP, and DHCP are not mail retrieval.",
+    "choiceNotes": [
+      "25 is SMTP and 143 is IMAP. That is the send-and-retrieve pair the question asked for.",
+      "POP3 retrieves mail. It does not send it. DNS resolves names and does not download a mailbox.",
+      "RDP is a remote desktop and HTTP is the web. Neither one is the mail protocol in the question.",
+      "DHCP assigns addresses on 67 and 68. It does not carry email."
+    ]
+  },
+  {
+    "id": "c1-023",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "medium",
+    "select": 2,
+    "stem": "Which two protocols are connection-oriented on the A+ objective list? (Choose two.)",
+    "choices": [
+      "HTTPS",
+      "SSH",
+      "DHCP",
+      "TFTP"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "HTTPS and SSH use TCP, which sets up a connection and recovers lost data. DHCP and TFTP use UDP. They are connectionless, which is why a device can use them before it has a full session. The question is about the transport, not about which service is more important.",
+    "choiceNotes": [
+      "HTTPS is TCP 443. It is connection-oriented.",
+      "SSH is TCP 22. It is connection-oriented.",
+      "DHCP uses UDP. It does not build a TCP session before offering an address.",
+      "TFTP uses UDP 69. It is connectionless file transfer."
+    ]
+  },
+  {
+    "id": "c1-024",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A PC cannot resolve names. Other traffic to numeric addresses works. Which port and protocol are the first suspect?",
+    "choices": [
+      "DNS on port 53",
+      "RDP on port 3389",
+      "IMAP on port 143",
+      "SMTP on port 25"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "DNS is the name service, and it uses port 53. If numbers work and names do not, DNS is the service to test. RDP is remote desktop, IMAP and SMTP are mail. None of those translate a name into an address.",
+    "choiceNotes": [
+      "Port 53 is DNS. That is the lookup that turns a name into an address.",
+      "Port 3389 is Remote Desktop. It assumes you already know where the host is.",
+      "IMAP downloads mail. It is not the general name service.",
+      "SMTP sends mail. A failure there would not, by itself, explain every name failing while IP addresses work."
+    ]
+  },
+  {
+    "id": "c1-025",
+    "domain": "2",
+    "objective": "2.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A small office still has a hub between the modem and four PCs. Every PC sees every frame, and collisions are common. Which replacement separates those collision domains?",
+    "choices": [
+      "A switch",
+      "Another hub",
+      "A longer coax run",
+      "A Bluetooth adapter on one PC"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hub is one collision domain. Every port hears every frame. A switch learns MAC addresses and gives each port its own collision domain, so the four PCs no longer collide with each other. Another hub repeats the problem. Coax and Bluetooth are not the wired fix.",
+    "choiceNotes": [
+      "A switch forwards by MAC address and breaks the hub's single collision domain into one per port.",
+      "Another hub is the same device class that is causing the collisions.",
+      "A longer coax run does not learn MAC addresses and does not replace the hub's behavior.",
+      "One Bluetooth adapter does not re-architect the wired segment."
+    ]
+  },
+  {
+    "id": "c1-026",
+    "domain": "2",
+    "objective": "2.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An IP phone is silent and unpowered. The access switch has no PoE, and a midspan injector is available. Where does the injector go?",
+    "choices": [
+      "Between the switch and the phone, adding power onto the Ethernet run",
+      "Between the monitor and the HDMI port",
+      "Inside the phone's SIM slot",
+      "On the fiber uplink, because PoE is optical"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A PoE injector sits in the copper Ethernet path and adds power so a phone or an access point can run from the cable when the switch cannot supply it. It does not go on HDMI, in a SIM slot, or on fiber. Fiber does not carry 802.3af power to a phone.",
+    "choiceNotes": [
+      "The injector is an in-line power source on the copper drop. That is how you feed a phone from a non-PoE switch.",
+      "HDMI carries video and audio. It is not the phone's Ethernet power path.",
+      "A SIM slot is a cellular identity. It does not accept a PoE injector.",
+      "Standard PoE is an electrical signal on twisted pair, not light on fiber."
+    ]
+  },
+  {
+    "id": "c1-027",
+    "domain": "2",
+    "objective": "2.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Horizontal cables from the wall jacks are punched onto the back of a passive device in the closet. Short patch cords then run from the front of that device to the switch. What is the passive device?",
+    "choices": [
+      "A patch panel",
+      "A router",
+      "A firewall",
+      "An active DHCP server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A patch panel is the passive termination for the permanent runs. You punch the horizontal cable on the back and use short, replaceable patch cords on the front. The router, the firewall, and the DHCP server are active devices. They are not the punch-down field.",
+    "choiceNotes": [
+      "The patch panel is the passive connector field between the in-wall cable and the switch.",
+      "A router forwards between networks. It is not where you punch horizontal cabling.",
+      "A firewall filters traffic. It is not a passive termination block.",
+      "A DHCP server hands out addresses. It does not terminate the building cabling."
+    ]
+  },
+  {
+    "id": "c1-028",
+    "domain": "2",
+    "objective": "2.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A fiber handoff from the provider lands on a small box that presents Ethernet to the customer's router. The Wi-Fi is down, and the box's optical light is dark. What is that box, and why does it matter?",
+    "choices": [
+      "It is the ONT. A dark optical light means the fault may be the provider fiber, not the Wi-Fi router",
+      "It is a hub, so a dark light means the Wi-Fi password is wrong",
+      "It is a SODIMM",
+      "It is a print spooler"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An optical network terminal converts the provider's fiber to Ethernet. If its optical light is out, the router has no internet feed, and replacing the Wi-Fi router will not restore the fiber. Check the ONT and the provider before you reconfigure wireless. A hub, a memory module, and a print spooler do not terminate a fiber handoff.",
+    "choiceNotes": [
+      "The ONT is the fiber handoff. No light means you escalate the circuit, rather than blaming the SSID.",
+      "A hub does not terminate optical service, and a dark optical light is not a password error.",
+      "SODIMM is laptop memory. It is not a provider demarcation.",
+      "The print spooler queues print jobs. It does not convert fiber to Ethernet."
+    ]
+  },
+  {
+    "id": "c1-029",
+    "domain": "2",
+    "objective": "2.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A buyer asks for a Wi-Fi 5 laptop radio and the spec sheet uses the 802.11 letters instead of the marketing name. Which 802.11 description matches Wi-Fi 5?",
+    "choices": [
+      "802.11ac, primarily 5 GHz",
+      "802.11b, 2.4 GHz at 11 Mbps",
+      "802.11a described as 2.4 GHz",
+      "802.11g described as a 6 GHz-only standard"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "802.11ac is Wi-Fi 5 and operates in the 5 GHz band. 802.11b is the old 2.4 GHz standard at 11 Mbps. 802.11a is 5 GHz, not 2.4. 802.11g is 2.4 GHz at 54 Mbps, not a 6 GHz standard. Wi-Fi 6 is 802.11ax.",
+    "choiceNotes": [
+      "802.11ac is Wi-Fi 5. If a question says Wi-Fi 5, it means ac, and the band is 5 GHz.",
+      "802.11b is an early 2.4 GHz standard. It is not Wi-Fi 5.",
+      "802.11a uses 5 GHz. Calling it 2.4 GHz swaps it with b and g.",
+      "802.11g is 2.4 GHz. It is not a 6 GHz-only standard."
+    ]
+  },
+  {
+    "id": "c1-030",
+    "domain": "2",
+    "objective": "2.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Two neighboring access points on 2.4 GHz are set to channels 6 and 7. Users between them are slow. Which change follows the non-overlapping channel plan?",
+    "choices": [
+      "Use channels 1, 6, and 11, and do not place adjacent numbers next to each other",
+      "Set both radios to channel 6 so they cooperate",
+      "Move both to channel 2",
+      "Disable 5 GHz so everything shares 2.4"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Channels 1, 6, and 11 are the non-overlapping set in the 2.4 GHz band. Channels 6 and 7 overlap almost completely, so the two access points fight. Putting both on the same channel also makes them share airtime. Turning off 5 GHz removes the cleaner band. Separate them onto non-overlapping channels.",
+    "choiceNotes": [
+      "1, 6, and 11 are spaced so their main lobes do not sit on top of each other. That is the plan to use.",
+      "One shared channel means both cells contend for the same air. It is not cooperation.",
+      "Channel 2 overlaps channel 1 and is not part of the non-overlapping set.",
+      "Disabling 5 GHz crowds more clients onto the band that is already overlapping."
+    ]
+  },
+  {
+    "id": "c1-031",
+    "domain": "2",
+    "objective": "2.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A badge reader uses a short-range radio at the door, and a headset uses a different radio that works across the room. Which pairing is right?",
+    "choices": [
+      "The badge is NFC or RFID. The headset is Bluetooth",
+      "Both are NFC, and Bluetooth cannot leave the door",
+      "The headset is a fiber optic",
+      "The badge is a DHCP relay"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "NFC and RFID are the close-range technologies used for badges and taps. Bluetooth is the personal-area radio used for headsets, and it works across a room, not just a touch. Fiber is a cable. A DHCP relay forwards address requests. Neither one is a headset.",
+    "choiceNotes": [
+      "Badges tap because NFC or RFID is very short range. A headset that works across the room is Bluetooth.",
+      "Bluetooth is built for room-scale accessories. Calling both NFC ignores the range in the question.",
+      "A headset is not a strand of fiber. Fiber does not speak audio to a laptop by radio.",
+      "A DHCP relay is a router feature. It does not read badges or play audio."
+    ]
+  },
+  {
+    "id": "c1-032",
+    "domain": "2",
+    "objective": "2.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A branch office has no server of its own and gets addresses from a device at headquarters. Clients arrive with 169.254 addresses when the WAN is down. Which server role is missing when that happens?",
+    "choices": [
+      "DHCP",
+      "A print server that is only used for drivers",
+      "A syslog server",
+      "A web server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "169.254 means the client asked for DHCP and nobody answered, so it made up a link-local address. The role that failed to answer is DHCP. Print, syslog, and web services do not hand out the client's own IP configuration. When the WAN is down, a local DHCP server or a relay that can still reach one is what those clients lack.",
+    "choiceNotes": [
+      "DHCP is the role that leases addresses. No answer, then APIPA. That is the role to restore or relay.",
+      "A print server shares printers. It does not assign IP addresses.",
+      "Syslog receives logs. It does not lease addresses to clients.",
+      "A web server hosts pages. It is not the addressing service."
+    ]
+  },
+  {
+    "id": "c1-033",
+    "domain": "2",
+    "objective": "2.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A firewall, an intrusion-prevention feature, and a content filter are sold as one appliance at the edge of a small office. Which exam name fits that combined device?",
+    "choices": [
+      "Unified threat management",
+      "A patch panel",
+      "A hub",
+      "A SODIMM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "UTM is the all-in-one security appliance: firewall, IPS, filtering, and often VPN, in one box. Small offices buy them so they do not run five separate products. A patch panel terminates cable, a hub repeats frames, and a SODIMM is memory. None of those inspect threats.",
+    "choiceNotes": [
+      "UTM is the combined edge appliance. One box, several security jobs, is the definition.",
+      "A patch panel is passive copper termination. It does not filter content.",
+      "A hub repeats electrical signals. It is not a security product.",
+      "SODIMM is laptop RAM. It does not sit at the network edge."
+    ]
+  },
+  {
+    "id": "c1-034",
+    "domain": "2",
+    "objective": "2.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Users authenticate to the wireless network, and a server records who logged in, what they were allowed to do, and the session accounting. Which service is that trio?",
+    "choices": [
+      "AAA",
+      "SMTP",
+      "A cable tester",
+      "APIPA"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "AAA is authentication, authorization, and accounting. Authentication asks who you are, authorization asks what you may do, and accounting records the session. RADIUS is a common way to deliver it. SMTP is mail. A cable tester and APIPA are not identity services.",
+    "choiceNotes": [
+      "AAA is the three-part access service. The wireless login that also logs the session is this role.",
+      "SMTP transfers mail. It does not authorize a wireless session.",
+      "A cable tester checks wiring. It does not keep an account of who connected.",
+      "APIPA is a self-assigned address after DHCP fails. It is not an account database."
+    ]
+  },
+  {
+    "id": "c1-035",
+    "domain": "2",
+    "objective": "2.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A new SOHO PC is set to DHCP and shows 169.254.12.8. The rest of the office is fine, and this PC's cable tests good. What does the address prove?",
+    "choices": [
+      "This PC did not get a DHCP lease",
+      "The PC has a working public address",
+      "The address is inside 192.168.0.0/16",
+      "The PC is the DHCP server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "169.254.0.0/16 is APIPA, the address a Windows PC assigns itself when DHCP does not answer. It is not a public address and it is not RFC 1918. The next checks are the port's VLAN, the DHCP scope, and whether this PC is isolated from the server that everyone else can hear. The PC is a client, not the server.",
+    "choiceNotes": [
+      "APIPA means the lease never arrived. Find out why this one PC cannot hear DHCP.",
+      "169.254 is not routable on the internet and was not assigned by a provider.",
+      "192.168.0.0/16 is a different private range. 169.254 is link-local.",
+      "The PC invented the address because it could not find a server. It is not serving leases."
+    ]
+  },
+  {
+    "id": "c1-036",
+    "domain": "2",
+    "objective": "2.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A printer is statically set to 192.168.1.50. The router's DHCP pool is 192.168.1.10 through 192.168.1.200. Some mornings a laptop cannot browse, and the printer drops off. What is the addressing mistake?",
+    "choices": [
+      "The static address sits inside the DHCP pool, so a laptop can be leased the same address",
+      "Static addresses must always be .1",
+      "The pool is illegal because it includes more than ten addresses",
+      "The printer should use 169.254.1.50 so it never conflicts"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A static address inside the dynamic pool will eventually be handed to someone else. Put the printer outside the pool or create a reservation and an exclusion. There is nothing magic about .1 except that people often use it for the router. A pool of more than ten addresses is normal. 169.254 is what you get when DHCP fails, and it is a bad plan for a printer.",
+    "choiceNotes": [
+      "The overlap is the bug. Exclude .50 or move the printer outside the pool so the server never offers it.",
+      "The router is often .1, but a printer may be any free address outside the dynamic range.",
+      "DHCP pools are supposed to be large enough for the clients. Ten is not a maximum.",
+      "169.254 is an automatic failure address, not a stable printer design, and other devices will not route to it."
+    ]
+  },
+  {
+    "id": "c1-037",
+    "domain": "2",
+    "objective": "2.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A SOHO router is 192.168.0.1/24. A PC is 192.168.0.40/24 with a blank gateway. Local file shares work, and the internet does not. What value belongs in the gateway field?",
+    "choices": [
+      "192.168.0.1",
+      "192.168.0.40",
+      "127.0.0.1",
+      "10.0.0.1"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The default gateway is the router on the PC's own subnet, which is 192.168.0.1. Leaving it blank means the PC has no next hop for anything off the LAN, so local shares still work. The PC's own address is not a gateway. Loopback sends traffic to itself. 10.0.0.1 is a different network and is not on this subnet.",
+    "choiceNotes": [
+      "192.168.0.1 is the router. That is the gateway this PC is missing.",
+      "192.168.0.40 is the PC. Using it as the gateway sends off-net traffic nowhere useful.",
+      "127.0.0.1 is loopback. Internet traffic would never leave the PC.",
+      "10.0.0.1 is not in 192.168.0.0/24, so the PC could not ARP for it even if a router lived there."
+    ]
+  },
+  {
+    "id": "c1-038",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Company mail started landing in spam after a new cloud mail host was added. Web browsing to the company site still works. The DNS change that was forgotten is the one that lists who may send mail. Which record is that?",
+    "choices": [
+      "An SPF record in TXT",
+      "An A record for the website only",
+      "A DHCP reservation",
+      "A VLAN ID"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SPF is a TXT record that names the servers allowed to send mail for the domain. A new mail host that is not in the SPF record looks like a forgery to receivers. The website's A record can be perfect and mail will still fail. DKIM signs messages, and DMARC sets the policy, but the stem describes the list of allowed senders, which is SPF. DHCP and VLANs are not that list.",
+    "choiceNotes": [
+      "SPF is the sender list. Add the new mail host there so receivers accept its mail.",
+      "The A record is why the website still loads. It does not authorize outbound mail.",
+      "A DHCP reservation binds a MAC to an IP. It is not a public mail policy.",
+      "A VLAN ID is a Layer 2 tag. Receivers on the internet do not check it to score spam."
+    ]
+  },
+  {
+    "id": "c1-039",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A printer keeps getting a new address, and the scanning software breaks until someone updates the address. The printer should keep one address without being typed by hand on the printer. What should be created on the DHCP server?",
+    "choices": [
+      "A reservation bound to the printer's MAC address",
+      "A shorter lease and no reservation",
+      "An MX record",
+      "A second identical scope on a rogue server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A reservation ties the printer's MAC to a chosen IP, and the printer can stay on DHCP. A shorter lease makes the address change more often, which is worse. An MX record is for mail. A second DHCP server handing out the same range creates duplicates.",
+    "choiceNotes": [
+      "The reservation is the stable DHCP assignment. The scanner can keep using one address.",
+      "Shorter leases increase churn. They do not pin the printer.",
+      "MX records direct email. They do not reserve a printer address.",
+      "A rogue or overlapping scope is a source of conflicts, not a fix."
+    ]
+  },
+  {
+    "id": "c1-040",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Guests and staff currently share one switch with no segmentation, and guest laptops can see staff discovery traffic. The switch can place ports into separate broadcast domains. What should the technician create?",
+    "choices": [
+      "A VLAN for guests, separate from the staff VLAN",
+      "A single VLAN that includes every port, which they already have",
+      "A DNS MX record for the guest laptops",
+      "A larger hub"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A VLAN is a separate broadcast domain on a switch. Put guests in one VLAN and staff in another, and route between them only if you mean to, with a filter. One VLAN for everyone is the current problem. MX records and a hub do not split broadcast domains.",
+    "choiceNotes": [
+      "A guest VLAN keeps guest broadcasts off the staff ports. That is the segmentation the switch can provide.",
+      "One VLAN for every port is the flat network that is already failing the requirement.",
+      "An MX record routes mail between servers. It does not separate laptop broadcasts.",
+      "A hub is one collision domain and one broadcast domain. It removes segmentation."
+    ]
+  },
+  {
+    "id": "c1-041",
+    "domain": "2",
+    "objective": "2.7",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A remote worker's video calls are usable, but every action in a remote desktop feels delayed by a large fraction of a second. The connection is satellite. Which limitation of satellite explains the delay?",
+    "choices": [
+      "High latency because of the distance the signal travels",
+      "Satellite has no upload path at all",
+      "Satellite is a form of Ethernet over coax inside the house",
+      "Latency means the SSID is hidden"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Satellite has to go up to orbit and back, so the round trip is long even when the speed test shows plenty of megabits. Remote desktops and games feel that latency. Video calls can tolerate it better than a click that needs a response. Satellite does have an upload path. It is not in-house coax, and a hidden SSID is a wireless setting, not orbital delay.",
+    "choiceNotes": [
+      "The distance is the latency. More bandwidth will not make the orbit closer. This link is a poor fit for snappy remote desktops.",
+      "Satellite internet is bidirectional. A missing upload is not the definition of the technology.",
+      "In-house coax is a cable-modem or MoCA problem. Orbital satellite is a different access type.",
+      "Hiding an SSID does not add a quarter second of propagation delay."
+    ]
+  },
+  {
+    "id": "c1-042",
+    "domain": "2",
+    "objective": "2.7",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A study guide asks for one example of a PAN, one of a LAN, and one of a WAN, in that order. Which description matches a PAN, a LAN, and a WAN in that order?",
+    "choices": [
+      "A phone and a headset, an office floor, and circuits between cities",
+      "Circuits between cities, a headset, and one office floor",
+      "A headset, circuits between cities, and a SAN",
+      "One switch port, a headset, and a badge tap"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A PAN is the personal bubble: a phone and a headset. A LAN is the office or the home. A WAN connects sites across a city or farther. Reversing them is the usual trap. A SAN is storage, not the wide-area network, even though the letters look related.",
+    "choiceNotes": [
+      "Personal, local, then wide. The headset, the office, and the inter-city circuits are in the right order.",
+      "That list is WAN, PAN, LAN. It is the right technologies in the wrong order.",
+      "A SAN is a storage network. It does not replace the WAN in this trio.",
+      "A badge tap is NFC, which can be part of a personal area, but the order and the middle item do not match the question."
+    ]
+  },
+  {
+    "id": "c1-043",
+    "domain": "2",
+    "objective": "2.8",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician is terminating RJ45 plugs on patch cords. Which tool crimps the plug onto the pairs?",
+    "choices": [
+      "A crimper",
+      "A punchdown tool",
+      "A toner probe with no crimper",
+      "A loopback plug"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The crimper seats the contacts of an RJ45 or RJ11 plug into the conductors. A punchdown tool seats cable into a jack or a panel, which is the other end of the skill. A toner traces a cable. A loopback plug tests a port. You do not punch a modular plug.",
+    "choiceNotes": [
+      "The crimper is the plug tool. That is what finishes a patch cord.",
+      "A punchdown tool is for keystones and panels, not for the plug on a patch cord.",
+      "A toner finds the other end of a cable. It does not attach a connector.",
+      "A loopback plug is a test adapter. It does not terminate cable."
+    ]
+  },
+  {
+    "id": "c1-044",
+    "domain": "2",
+    "objective": "2.8",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A NIC is suspected bad. The technician unplugs the switch and puts a device in the NIC that connects transmit back to receive. The link comes up and a test passes. What did the loopback result show?",
+    "choices": [
+      "The NIC can send and receive, so the fault is likely the cable or the switch port",
+      "The NIC is dead, because a loopback always fails on a good card",
+      "The DNS server is down",
+      "The loopback proves the WAN provider is up"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A loopback plug folds the NIC's transmit into its receive. If that test passes, the card can frame and see its own signal, so you move on to the cable and the far-end port. A failure would implicate the NIC. The test never left the computer, so it says nothing about DNS or the WAN.",
+    "choiceNotes": [
+      "A passed loopback clears the NIC. Look at the cable, the patch panel, and the switch port next.",
+      "A good card passes a loopback. Failure, not success, would condemn the NIC.",
+      "DNS was not on the path. The plug is local to the NIC.",
+      "The WAN was not involved. Loopback never reached the provider."
+    ]
+  }
+]

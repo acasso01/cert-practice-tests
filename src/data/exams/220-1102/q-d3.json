@@ -1,0 +1,675 @@
+[
+  {
+    "id": "c2-071",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Windows PC shows a blue screen the moment a newly installed webcam driver loads. The PC boots if that driver is disabled. What is the likely cause, and what is a sensible first fix?",
+    "choices": [
+      "The new driver. Roll it back or uninstall it, and boot normally to confirm",
+      "The printer toner",
+      "A depleted laptop battery icon",
+      "The desktop wallpaper"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A blue screen that arrives with a new driver, and disappears when that driver is gone, is the driver. Roll it back in Device Manager or from Safe Mode, then verify a normal boot. Toner, a battery icon, and wallpaper do not load as kernel drivers at startup.",
+    "choiceNotes": [
+      "Roll back the webcam driver and confirm the blue screen is gone. The timing is the evidence.",
+      "Toner is a printer supply. It does not blue-screen a PC when a camera driver loads.",
+      "A battery icon is a status display. It is not a kernel crash.",
+      "Wallpaper is cosmetic and does not crash the kernel at driver load."
+    ]
+  },
+  {
+    "id": "c2-072",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A PC is slow only for one user. A newly created local account on the same PC is fast. The profile folder for the slow user is enormous. What does the method point at?",
+    "choices": [
+      "A bloated or damaged user profile. Rebuild the profile and copy the documents back, not the broken registry hive",
+      "A failed motherboard, because one user is slow",
+      "Replacing the GPU before looking at the profile",
+      "The monitor cable"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "If another account is fast, the hardware and the Windows install are mostly fine. A huge or corrupt profile makes logon and the desktop slow. Create a new profile, move documents, and leave the corrupt NTUSER hive behind. A motherboard, a GPU, and a cable would be slow for every account.",
+    "choiceNotes": [
+      "The profile is the difference between the two accounts. Rebuild it and bring the documents across.",
+      "A bad motherboard would not spare the new account.",
+      "The GPU draws the same desktop for both users. The fast account clears it.",
+      "A monitor cable does not get slower for one user profile."
+    ]
+  },
+  {
+    "id": "c2-073",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Windows reports 'no operating system found' after a BIOS update. The disk still appears in the firmware, and the boot order now lists a USB stick first. What is the first configuration check?",
+    "choices": [
+      "Put the internal disk first in the boot order and remove the stray USB stick",
+      "Replace the CPU",
+      "The message proves the disk is blank, so format it immediately",
+      "Disable the display"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "No OS found often means the firmware is trying to boot the wrong device. A USB stick left plugged in, promoted by a firmware reset, will do it. Set the internal disk first. Do not format a disk that probably still has Windows on it. The CPU and the display are not the boot order.",
+    "choiceNotes": [
+      "Fix the boot order and pull the USB stick. The disk is visible, so start there.",
+      "The CPU is running the firmware menu. It is not why a USB stick is first.",
+      "Formatting would destroy a Windows install that may be intact. The message is about the boot device, not a proven blank disk.",
+      "The display is working, because you can read the error."
+    ]
+  },
+  {
+    "id": "c2-074",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A PC's clock drifts by minutes while it is running and joined to a domain. Kerberos logons then fail. The CMOS battery was just replaced and the problem remains while powered on. What should be fixed?",
+    "choices": [
+      "Windows time synchronization with the domain",
+      "The fuser",
+      "The print ribbon",
+      "The VGA pinout"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A clock that drifts while the PC is on is the time service, not the CMOS battery. Domain members should sync from the domain, which syncs from a reliable source. Kerberos fails when the skew grows past a few minutes. A fuser, a ribbon, and VGA pins do not set the Windows clock.",
+    "choiceNotes": [
+      "Point the time service at the domain and let it correct the skew. The battery is not the running-clock problem.",
+      "A fuser heats toner. It does not discipline a domain clock.",
+      "A ribbon is an impact-printer supply. It does not set the clock on a domain PC.",
+      "VGA pins carry analog color. They do not authenticate Kerberos."
+    ]
+  },
+  {
+    "id": "c2-075",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An application crashes on launch and no other application is affected. The vendor's installer is available. What is a reasonable early repair before reinstalling Windows?",
+    "choices": [
+      "Repair or reinstall that application, and confirm its prerequisites",
+      "Wipe the disk first",
+      "Replace the motherboard because one app crashed",
+      "Disable the firewall permanently"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "One application is one application's files and prerequisites. Repair or reinstall it, and check the version it needs, before you treat the whole OS as dead. Wiping the disk and replacing the board are far past the evidence. Disabling the firewall does not restore a broken executable.",
+    "choiceNotes": [
+      "Reinstall the app and check its requirements. The rest of the PC is a clue that Windows itself is not the first suspect.",
+      "A wipe destroys data and other working applications. It is not the early step.",
+      "The motherboard is running every other program. One crash does not condemn it.",
+      "The firewall is not the broken executable. Turning it off removes protection."
+    ]
+  },
+  {
+    "id": "c2-076",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Low-memory warnings appear whenever a design tool and a browser with many tabs are open. The PC has 8 GB of RAM and the tool requires 16 GB. The page file is already large. What is the durable fix?",
+    "choices": [
+      "Add physical RAM to meet the requirement. The page file only avoids some crashes and stays slow",
+      "Delete the page file and add no RAM",
+      "More virtual memory is faster than DRAM",
+      "Replace the mouse"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The workload needs 16 GB and has 8 GB. Windows uses the page file as a slow overflow, so the warnings may stop while the machine stays painful. Add RAM. Removing the page file makes crashes more likely. Disk is not faster than RAM. The mouse is not memory.",
+    "choiceNotes": [
+      "Install enough RAM for the tool. That is the requirement the warnings are describing.",
+      "No page file plus too little RAM turns warnings into hard failures.",
+      "The page file is disk. Making it larger does not make it as fast as DRAM.",
+      "The mouse does not add gigabytes of memory."
+    ]
+  },
+  {
+    "id": "c2-077",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "USB devices sometimes fail to start, and Device Manager reports a resource warning on the USB controller after several hubs were daisy-chained. What is a sensible first change?",
+    "choices": [
+      "Simplify the hub chain and move high-draw devices to a different controller or a powered hub",
+      "Replace the CPU immediately",
+      "Convert the disk to FAT32",
+      "Disable all USB in the firmware and leave it that way"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "USB controllers have a finite set of resources and a power budget. A long chain of unpowered hubs exhausts both. Use a powered hub and spread devices across controllers before you replace the board. FAT32 and the CPU are unrelated. Disabling USB permanently abandons the devices the user needs.",
+    "choiceNotes": [
+      "Reduce the chain and power the hub. That addresses the controller warning without a new motherboard.",
+      "The CPU is not the USB topology. Do not replace it for a hub chain.",
+      "FAT32 is a file system. Reformatting the disk does not free USB controller resources.",
+      "Turning USB off hides the symptom and removes the keyboard and the devices. It is not the repair."
+    ]
+  },
+  {
+    "id": "c2-078",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A Windows update last night is the only change, and this morning a device that worked yesterday fails. The update is still in the history list. What is the early rollback?",
+    "choices": [
+      "Uninstall that update, or roll back the driver it replaced, and retest",
+      "Format the disk",
+      "Throw away the backup",
+      "Ignore the timing and replace the monitor"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "When the only change is an update and the failure matches it, remove that update or roll back the driver and see if yesterday's behavior returns. Keep the backup. Formatting is not the first response to one bad update. The monitor did not install itself overnight.",
+    "choiceNotes": [
+      "Roll back the update and retest. The history list tells you what arrived.",
+      "Formatting destroys the system to avoid uninstalling one update.",
+      "The backup is what you want if the rollback is not enough. Do not discard it.",
+      "The timing points at the update, not at a monitor that did not change."
+    ]
+  },
+  {
+    "id": "c2-079",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Every HTTPS site warns that the certificate is expired or not yet valid. The PC's clock reads 2016. What is the first check?",
+    "choices": [
+      "Correct the date and time, then reload a site before you blame the certificates",
+      "Install a random certificate from the first warning page",
+      "Disable certificate validation",
+      "Replace the NIC"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Certificates are judged against the clock. A PC stuck in 2016 will call current certificates not-yet-valid or expired. Fix the time, sync it, and retry. Installing a certificate from a warning page and turning validation off are how you teach the browser to trust an attacker. The NIC is passing the pages, because you can see the warning.",
+    "choiceNotes": [
+      "Set the clock. A wrong year makes every valid certificate look wrong.",
+      "Do not install a certificate that a warning page offers you.",
+      "Disabling validation removes the protection for every site after this.",
+      "The NIC delivered the error page. Time, not the adapter, is the first suspect."
+    ]
+  },
+  {
+    "id": "c2-080",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A browser homepage changed, new toolbars appeared, and pop-ups mention a virus that only their cleaner can remove. Windows Security looks normal when opened from the Start menu. What is the likely class of problem?",
+    "choices": [
+      "A browser hijacker or rogue security product. Do not click the pop-up's clean button",
+      "A healthy Windows update",
+      "A normal certificate warning from the bank",
+      "A depleted CMOS battery only"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Unexpected homepage and toolbar changes plus a scareware pop-up are browser hijacking or a rogue antivirus. Open Windows Security yourself. Do not use the button inside the pop-up. Then scan and reset the browser. A real Windows update does not demand a credit card from a pop-up. The CMOS battery does not install toolbars.",
+    "choiceNotes": [
+      "Treat the pop-up as hostile. Use the real Windows Security app and remove the unknown extension or program.",
+      "Windows Update does not rewrite the homepage and sell a cleaner.",
+      "A bank certificate warning is a specific site error. It does not add toolbars.",
+      "The CMOS battery keeps time. It does not sell antivirus."
+    ]
+  },
+  {
+    "id": "c2-081",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Files on a share were renamed and a note demands payment in cryptocurrency for the key. The PC is still on the network. What is the first containment step?",
+    "choices": [
+      "Disconnect that PC from the network so the encryption does not spread, then use the incident process",
+      "Pay immediately from the company card",
+      "Leave it connected and keep opening the files",
+      "Delete the backup so the note is the only copy"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Ransomware on a connected PC can walk shares. Isolate it, then follow the company incident process and restore from a known-good backup if you have one. Paying is not the plan, and it does not guarantee a key. Deleting the backup destroys the recovery. Opening more files just adds them to the damage.",
+    "choiceNotes": [
+      "Unplug it from the network first. Containment comes before curiosity and before payment.",
+      "Payment is not the technician's fix, and the key may never arrive.",
+      "Staying online and opening files gives the malware more to encrypt.",
+      "The backup is the recovery. Deleting it is how a bad day becomes permanent."
+    ]
+  },
+  {
+    "id": "c2-082",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A PC cannot get Windows updates, the disk is not full, and a scan finds a program that blocks the update service. What is the sensible reading?",
+    "choices": [
+      "Malware or a hostile tool is blocking updates. Remove it, then update",
+      "Updates should stay blocked because patches cause change",
+      "A full disk is the cause even though the disk is not full",
+      "The CMOS battery installs updates"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "If the disk has room and a program is stopping the update service, that program is the cause. Some malware does this to stay installed. Remove it with the normal malware process, then let updates run. Refusing patches leaves the hole. The disk is not full. The battery does not download patches.",
+    "choiceNotes": [
+      "Remove the blocker and patch. An update service that a strange program holds down is a security finding.",
+      "Leaving updates off is how the next exploit succeeds. Patches are the point.",
+      "The stem says the disk is not full. Do not invent a full-disk cause.",
+      "The CMOS battery keeps the clock. It does not download or block updates."
+    ]
+  },
+  {
+    "id": "c2-083",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Users are redirected to a search site they did not choose, but only in one browser. Another browser on the same PC goes where it is told. What is the likely scope?",
+    "choices": [
+      "That browser's settings or an extension, not the whole operating system",
+      "A dead disk",
+      "The motherboard",
+      "The printer's fuser"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "One browser means the hijack is in that browser: an extension, a proxy setting, or a changed homepage. Reset that browser and remove unknown extensions. A dead disk, a bad board, and a fuser would not spare the second browser.",
+    "choiceNotes": [
+      "Reset the affected browser and remove the extension. The other browser already cleared the OS.",
+      "A dead disk would not let either browser run.",
+      "The motherboard is running both browsers. It is not the redirect.",
+      "A fuser melts toner in a laser printer. It does not rewrite a browser homepage."
+    ]
+  },
+  {
+    "id": "c2-084",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user reports pop-ups and a slow PC. Nothing has been verified, and nobody has disconnected the PC. What is the first step of the malware-removal best practice?",
+    "choices": [
+      "Investigate and verify the malware symptoms",
+      "Disable System Restore immediately, before you know it is malware",
+      "Educate the user and close the ticket",
+      "Enable System Restore and create a restore point as the first move"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The procedure starts by confirming the symptoms. You do not disable System Restore, wipe the PC, or lecture the user before you know what you are looking at. Education is the last step. Creating a restore point first would snapshot the possible malware.",
+    "choiceNotes": [
+      "Verify first. The pop-ups might be a single bad site, or they might be malware. Look before you change the system.",
+      "Disabling System Restore is step 3, after you have verified and quarantined.",
+      "Education is step 7. Closing the ticket now leaves the PC unexamined.",
+      "A restore point at the start preserves the infection. You create one after the cleanup."
+    ]
+  },
+  {
+    "id": "c2-085",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Malware is confirmed on a laptop, and the laptop is still on the office Wi-Fi. What is the next best-practice step?",
+    "choices": [
+      "Quarantine it by disconnecting it from the network",
+      "Educate the user first while it stays online",
+      "Enable System Restore",
+      "Schedule next month's scan and walk away"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "After you verify the infection, you quarantine so it cannot spread or call home. Disconnect the network. Education, a new restore point, and a future scan are later steps. Leaving it on Wi-Fi while you talk is how the infection continues.",
+    "choiceNotes": [
+      "Quarantine is step 2. Get it off the network before the cleanup conversation.",
+      "Education is last. An online infected laptop is not a teaching aid.",
+      "Enabling System Restore comes after remediation, not while the malware is still running.",
+      "A scheduled scan is step 5. It is not a substitute for isolating the machine now."
+    ]
+  },
+  {
+    "id": "c2-086",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "An infected PC has been removed from the network. System Restore is still enabled. What is the next step, and why does it exist?",
+    "choices": [
+      "Disable System Restore so the cleanup is not undone by a restore point that contains the malware",
+      "Re-enable the network and start a restore point",
+      "Educate the user",
+      "Turn System Restore off only after you have created a fresh infected restore point"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Step 3 disables System Restore on Windows so you do not later roll back onto a point that still includes the malware. You turn it back on and make a clean point after the remediation and the scheduled updates. Education is still later. Putting the PC back on the network now undoes the quarantine.",
+    "choiceNotes": [
+      "Disable System Restore now. Infected restore points are why this step exists.",
+      "The network stays disconnected. A new restore point now would capture the malware.",
+      "Education is the last step, after the machine is actually clean.",
+      "You do not snapshot the infection. The new restore point comes after the cleanup."
+    ]
+  },
+  {
+    "id": "c2-087",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "System Restore is disabled and the PC is quarantined. Which pair of actions is the remediation step?",
+    "choices": [
+      "Update the anti-malware definitions and scan, using Safe Mode or Windows RE if the malware fights you",
+      "Educate the user and create a restore point before any scan",
+      "Rejoin the PC to the network and skip the scan",
+      "Delete System Restore permanently and never scan"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Remediation is update the definitions, then scan and remove, using Safe Mode or the recovery environment when the malware will not let the tools run in a normal boot. Education and the clean restore point come after. Skipping the scan, or never scanning, leaves the infection in place.",
+    "choiceNotes": [
+      "Update, then scan and remove. That is the remediate step, including Safe Mode when you need it.",
+      "Education and the restore point are steps 7 and 6. They follow a successful cleanup.",
+      "Putting it back on the network without a scan undoes the quarantine.",
+      "System Restore should return after the cleanup. Never scanning is not remediation."
+    ]
+  },
+  {
+    "id": "c2-088",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The scan removed the malware, definitions are current, and a recurring scan is scheduled. System Restore is still off. What comes next, before the user-education conversation?",
+    "choices": [
+      "Turn System Restore back on and create a new restore point",
+      "Leave System Restore off forever",
+      "Disable the scheduled scan",
+      "Roll back to a restore point from the day the malware arrived"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Step 6 restores the safety net now that the system is clean: enable System Restore and make a new point. Leaving it off means the next ordinary problem has no rollback. Disabling the scan undoes step 5. Rolling back to an infected point would bring the malware home.",
+    "choiceNotes": [
+      "Enable System Restore and make a clean point. Then educate the user.",
+      "System Restore is a useful recovery tool. It stays off only during the cleanup.",
+      "The scheduled scan is step 5 and should remain.",
+      "The old point may contain the malware. Do not restore it."
+    ]
+  },
+  {
+    "id": "c2-089",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A phone app will not install an update and reports that storage is full. The OS itself is current. What is the first fix?",
+    "choices": [
+      "Free storage by removing unneeded files or apps, then retry the update",
+      "Replace the screen",
+      "Jailbreak the phone",
+      "Disable Wi-Fi and Bluetooth permanently"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A full disk blocks app updates even when the operating system is fine. Delete what is safe to delete, or move photos off, and retry. The screen is displaying the error, so it is working. Jailbreaking removes protections. Radios are not why storage is full.",
+    "choiceNotes": [
+      "Make room and retry. The error already named storage.",
+      "The screen showed the message. It does not need replacement for a full disk.",
+      "Jailbreaking does not free space and it weakens the phone.",
+      "Turning off the radios does not delete files."
+    ]
+  },
+  {
+    "id": "c2-090",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A phone will not rotate in an app that should rotate. Other apps also stay portrait. A lock icon is visible in the control center. What is the cause?",
+    "choices": [
+      "Rotation lock is on",
+      "The battery is swollen, which always disables rotation only",
+      "The SIM is expired",
+      "The wallpaper is too large"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Rotation lock is the setting that freezes orientation. The icon is the clue. Turn it off before you replace a sensor. A swollen battery is a safety issue with different symptoms. The SIM and the wallpaper do not freeze rotation.",
+    "choiceNotes": [
+      "Clear the rotation lock and test again. The icon is telling you the setting is on.",
+      "A swollen battery is dangerous and does not present as a tidy lock icon.",
+      "The SIM identifies the cellular account. It does not lock orientation.",
+      "Wallpaper size does not disable the accelerometer."
+    ]
+  },
+  {
+    "id": "c2-091",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Bluetooth headphones will not pair. The phone's Bluetooth is on, the headphones are charged, and they are not in pairing mode. What is the missing step?",
+    "choices": [
+      "Put the headphones into pairing mode, then select them and confirm the PIN",
+      "Replace the phone's screen first",
+      "Install a desktop DIMM",
+      "Disable Bluetooth before pairing"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A charged headset that is not discoverable will not appear. Pairing mode, then selection, then the PIN or the confirmation, then a test. The screen is working if you can see the Bluetooth page. A DIMM does not fit a phone. Bluetooth has to stay on.",
+    "choiceNotes": [
+      "Enter pairing mode and complete the prompt. Discovery is the missing step.",
+      "The screen is already showing the Bluetooth settings. It is not the failed part.",
+      "Desktop memory is not a phone pairing tool.",
+      "Turning Bluetooth off makes pairing impossible."
+    ]
+  },
+  {
+    "id": "c2-092",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A phone overheats while charging under a pillow. The case is also on. There is no swelling. What should the user change?",
+    "choices": [
+      "Charge it on a hard surface, out of the pillow, and take the case off if the vendor says heat is a problem",
+      "Add another pillow",
+      "Keep charging it in the sun",
+      "Puncture the battery to vent heat"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Phones dump heat through the case and the air. A pillow and a thick case hold that heat, and charging adds more. Move it to a hard surface and let it cool. More insulation and sun make it worse. Puncturing a battery is a fire risk. If the battery later swells, stop using it.",
+    "choiceNotes": [
+      "Give it air and a hard surface. Heat plus a pillow is the problem you can remove immediately.",
+      "Another pillow insulates the phone further and holds even more of the heat in.",
+      "Sun plus charging is more heat, not less.",
+      "Never puncture a battery. Cooling does not involve opening the cell."
+    ]
+  },
+  {
+    "id": "c2-093",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 2,
+    "stem": "NFC payments fail at a terminal. The phone is unlocked, the case is very thick, and NFC is turned off in settings. Which two fixes apply? (Choose two.)",
+    "choices": [
+      "Turn NFC on",
+      "Try without the thick case or with a thinner one",
+      "Disable the lock screen permanently",
+      "Install a random payment APK from a text"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "NFC has to be enabled, and a thick case or a metal plate can keep the antenna too far from the terminal. The phone should also be unlocked. Disabling the lock screen exposes the phone. A texted APK is an untrusted payment app and is not the fix.",
+    "choiceNotes": [
+      "NFC off means the radio is not there to tap. Turn it on.",
+      "A thick case is a common reason a good radio still fails at the terminal. Remove it and retry.",
+      "The lock screen is a security control. Payments can require it. Do not disable it as a fix.",
+      "A texted APK is untrusted software. Use the official wallet."
+    ]
+  },
+  {
+    "id": "c2-094",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A phone starts showing a huge number of ads after a flashlight app was sideloaded. Data use jumps. What is the first application action?",
+    "choices": [
+      "Uninstall the flashlight app, then scan and review permissions",
+      "Buy the product the ads are selling",
+      "Jailbreak so the ads can be hidden",
+      "Give the app accessibility access so it can click the ads for you"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A flashlight does not need to spend the data plan or inject ads. Remove it, scan, and see what else it installed. Buying from the ad pays the attacker. Jailbreak and accessibility make the malware stronger, not weaker.",
+    "choiceNotes": [
+      "Uninstall the sideloaded app first. Then scan and check what permissions remain.",
+      "The ads are the symptom. Paying them rewards the unwanted app.",
+      "Jailbreaking removes protections the cleanup needs.",
+      "Accessibility access is what malicious apps want. Do not grant it."
+    ]
+  },
+  {
+    "id": "c2-095",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A fake 'virus detected' banner appears in the mobile browser and is not the operating system's own security screen. It wants a tap to clean the phone. What should the user do?",
+    "choices": [
+      "Close the tab or the browser and do not tap the banner. Then scan with a trusted tool",
+      "Tap the banner and install what it offers",
+      "Disable the real OS security so the banner is the only protector",
+      "Forward the banner to coworkers"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A banner that is not the OS security UI is a malicious site or adware. Close it. Do not install its cleaner. Run the vendor's own security tools if you need a scan. Disabling real protection and forwarding the link spreads the problem.",
+    "choiceNotes": [
+      "Leave the banner and scan with tools you trust. The tap is the payload's invitation.",
+      "Installing from the banner is how the fake cleaner lands on the phone.",
+      "The real OS security is what you keep. The banner is not a replacement.",
+      "Forwarding shares the malicious page with more people."
+    ]
+  },
+  {
+    "id": "c2-096",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "MDM reports a phone as rooted, and company mail is on it. Policy says rooted devices cannot have mail. What should happen?",
+    "choices": [
+      "Block mail and company apps until the device is restored to a supported state",
+      "Ignore the MDM flag because root is faster",
+      "Email the user's password to the device anyway",
+      "Turn off MDM so the flag disappears"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Root and jailbreak are unsupported states. The policy and the MDM exist to keep company mail off them. Block access until the phone is restored. Ignoring the flag, sending the password, and disabling MDM all defeat the control.",
+    "choiceNotes": [
+      "Follow the policy: no company data on a rooted phone. Restore it or replace it.",
+      "Speed is not a reason to leave company mail on an unsupported OS.",
+      "Sending the password to the rooted device hands it to whatever else is running there.",
+      "Turning MDM off to clear a flag is hiding the finding, not fixing the phone."
+    ]
+  },
+  {
+    "id": "c2-097",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A phone's data-usage warning appears every day, and a new app is the top consumer in the cellular stats. The user does not recognize the app. What is the right investigation?",
+    "choices": [
+      "Treat the unknown high-traffic app as untrusted. Remove it, scan, and change passwords that it could have seen",
+      "Assume high traffic is always the carrier's mistake and keep the app",
+      "Disable the usage display so the warning ends",
+      "Forward the app to coworkers"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An unrecognized app at the top of the cellular list may be leaking data or running a proxy. Remove it and scan. Change passwords that were typed while it was installed. Hiding the warning and sharing the app keep the exposure going. The carrier bill is evidence, not a reason to ignore the app.",
+    "choiceNotes": [
+      "Remove the unknown app and follow up with a scan and password changes. The usage graph is the clue.",
+      "A carrier glitch does not install an app the user does not recognize.",
+      "Hiding the statistic leaves the traffic in place.",
+      "Sharing the app spreads whatever it is doing."
+    ]
+  },
+  {
+    "id": "c2-098",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Personal photos from a phone showed up in a gallery the user did not share. A 'cleanup' app had photo and network permissions. What is the likely path, and what permission change matters?",
+    "choices": [
+      "The app had access to photos and the network, so it could upload them. Remove it and revoke that access",
+      "Photos cannot leave a phone if any app has the photo permission",
+      "The permission is harmless because apps cannot use the network",
+      "The gallery leak means the battery is swollen"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Photo permission plus network permission is enough for an app to upload the camera roll. That matches a leak after a cleanup app. Remove the app, revoke leftover permissions, and check cloud shares. Permissions are not harmless. A swollen battery is a different emergency and does not publish photos.",
+    "choiceNotes": [
+      "Remove the app and take the photo permission back. The combination of photos and network is the path out.",
+      "Photo permission is exactly how an app reads the gallery. It is not a guarantee the photos stay put.",
+      "Network permission is how the upload happens. Apps use it constantly.",
+      "A swollen battery is a fire risk and a separate symptom. It does not upload a gallery."
+    ]
+  }
+]

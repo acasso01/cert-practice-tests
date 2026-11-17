@@ -1,0 +1,339 @@
+[
+  {
+    "id": "c1-076",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A company uses a web mail suite. Employees do not patch a server, and the provider runs the application. Which cloud model is the mail suite?",
+    "choices": [
+      "SaaS",
+      "IaaS",
+      "A private VLAN",
+      "RAID 0"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Software as a service is the finished application. Web mail is the example. Infrastructure as a service would be a virtual machine the company still patches. A VLAN and a RAID level are not service models.",
+    "choiceNotes": [
+      "SaaS is the application you simply use. The provider patches the mail platform.",
+      "IaaS would leave the guest operating system in the company's hands. That is not this mail suite.",
+      "A VLAN is a Layer 2 segment. It is not a cloud service model.",
+      "RAID 0 is disk striping. It is not SaaS."
+    ]
+  },
+  {
+    "id": "c1-077",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Developers deploy an application and do not manage the operating system underneath it. The provider patches that OS and the runtime. The developers still own the application code. Which model is this?",
+    "choices": [
+      "PaaS",
+      "SaaS, because the developers wrote the application",
+      "IaaS, because somebody patched an OS",
+      "A community cloud, regardless of who manages the OS"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Platform as a service gives you a place to run code while the provider keeps the platform and the OS. SaaS would mean the provider also owns the application. IaaS would mean your team patches the guest. Community cloud describes who shares the cloud, not who patches the OS.",
+    "choiceNotes": [
+      "PaaS is the split in the question: you bring the app, they run the platform.",
+      "If the developers own the code, it is not SaaS. SaaS is the provider's application.",
+      "IaaS is the model where your administrators patch the guest. The stem says they do not.",
+      "Community cloud means several organizations share a cloud for a common purpose. It can be IaaS, PaaS, or SaaS."
+    ]
+  },
+  {
+    "id": "c1-078",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "medium",
+    "select": 2,
+    "stem": "A tax office needs ten times the servers in April and almost none in June, and it wants the June bill to shrink with the June load. Which two cloud characteristics are those? (Choose two.)",
+    "choices": [
+      "Rapid elasticity",
+      "Metered utilization",
+      "A single physical RAID 0 as the whole design",
+      "A requirement to buy the peak hardware and keep it all year"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Rapid elasticity is the grow-and-shrink behavior. Metered use is paying for what you consume, so June is cheap. Buying the April hardware and keeping it all year is the opposite of both. RAID 0 is a disk layout and is not a cloud characteristic.",
+    "choiceNotes": [
+      "Elasticity is the April surge and the June release of capacity.",
+      "Metered utilization is why the bill follows the load instead of the peak.",
+      "RAID 0 is striping. It does not scale an application in April.",
+      "Owning the peak hardware all year is the cost the cloud characteristics are supposed to avoid."
+    ]
+  },
+  {
+    "id": "c1-079",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Several hospitals share a cloud built for their compliance needs. It is not the hospital chain's own data center, and it is not the general public region anyone can buy. Which deployment model is it?",
+    "choices": [
+      "Community",
+      "Public, because more than one customer exists",
+      "Private, because hospitals are involved",
+      "Hybrid, because two hospitals means two models"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A community cloud is shared by organizations with a common concern, such as hospitals or universities. Public is the provider's general multi-customer region. Private is dedicated to one organization. Hybrid is a mix of private and public, or on-premises and cloud, not merely 'more than one hospital.'",
+    "choiceNotes": [
+      "Community is the shared, purpose-built cloud. The hospitals are the community.",
+      "Public means the general cloud anyone purchases. A compliance-specific shared cloud is narrower than that.",
+      "Private would be one organization's own environment. Several independent hospitals sharing is community.",
+      "Hybrid is a mix of deployment models. Two customers do not define it."
+    ]
+  },
+  {
+    "id": "c1-080",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Payroll stays on servers in the company basement. The public website runs in a public cloud. A VPN connects the two. What is the deployment called?",
+    "choices": [
+      "Hybrid",
+      "Community only",
+      "Public only, because a VPN is involved",
+      "Private only, because payroll did not move"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Hybrid is the mix: some workloads remain private, some run in the public cloud, and they are connected. Leaving payroll in the basement does not make the whole design private, because the website is public. The VPN is the connection, not a separate deployment model.",
+    "choiceNotes": [
+      "Hybrid is the combination of the basement and the public cloud. The VPN is how they reach each other.",
+      "Community would be several organizations sharing one cloud. This is one company using two places.",
+      "The website is public and payroll is not. Calling the whole design public ignores the basement.",
+      "Calling it private ignores the public website. The mix is the point."
+    ]
+  },
+  {
+    "id": "c1-081",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A desktop folder is set to sync to a cloud drive. A user deletes the folder locally and the cloud copy disappears too. They say the sync was their backup. What did they misunderstand?",
+    "choices": [
+      "Sync keeps copies the same, including deletions. A backup keeps a separate restorable history",
+      "Sync stores an unlimited number of old versions by definition",
+      "A cloud sync cannot delete anything",
+      "RAID 1 on the PC is the same product as the sync client"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "File sync is a mirror of the current folder. Delete it in one place and the deletion propagates. A backup is a separate copy you can restore, preferably with versions and an offsite copy that a delete does not immediately destroy. Some products add version history. You do not assume that unless you have turned it on and tested a restore.",
+    "choiceNotes": [
+      "Sync is not a backup. The delete did what sync is supposed to do. They need a real backup with history.",
+      "Version history is a feature you configure and pay for on some products. It is not the definition of sync.",
+      "Sync can absolutely delete the other copy. That is the incident.",
+      "RAID 1 is a local mirror of disks. It is not the cloud sync client, and it also is not an offsite backup."
+    ]
+  },
+  {
+    "id": "c1-082",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Users can knock over a cup on their desk and not lose the spreadsheet they had open, because the desktop they see is running in the data center. The desk only has a small client. What is that design?",
+    "choices": [
+      "VDI",
+      "A local FAT32 install with no network",
+      "RAID 0 on the desk",
+      "A KVM switch"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Virtual desktop infrastructure runs the desktop on a server, on premises or in the cloud, and the device on the desk displays it. A lost or soaked laptop does not hold the files if the work never lived there. FAT32, local RAID, and a KVM do not move the desktop into the data center.",
+    "choiceNotes": [
+      "VDI is the remote desktop running in the data center. The cup cannot reach the files.",
+      "A local install keeps the files on the desk. That is the risk VDI removes.",
+      "RAID 0 is local striping with no redundancy. It is not a data-center desktop.",
+      "A KVM switches one keyboard and monitor between local PCs. It does not host the desktop elsewhere."
+    ]
+  },
+  {
+    "id": "c1-083",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A cloud design shares physical hosts among customers and relies on the provider to isolate them. A noisy neighbor can still affect performance if the isolation is weak. What is the sharing called?",
+    "choices": [
+      "Shared resources, or multitenancy",
+      "A private dedicated host by definition",
+      "RAID 1",
+      "A loopback plug"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Multitenancy means several customers share the provider's resources. It is one of the reasons cloud can be cheap, and it is why isolation matters. A dedicated host is the opposite product. RAID 1 and a loopback plug are local hardware ideas, not the sharing model.",
+    "choiceNotes": [
+      "Multitenancy is the shared infrastructure. The noisy neighbor is the risk that comes with it.",
+      "A dedicated host is reserved for one customer. The stem describes sharing.",
+      "RAID 1 mirrors two disks. It is not a cloud tenancy model.",
+      "A loopback plug tests a NIC. It does not describe customers sharing a host."
+    ]
+  },
+  {
+    "id": "c1-084",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician wants to open a suspicious attachment without letting it onto the office file shares. A virtual machine with no network adapter is available. What is that VM being used as?",
+    "choices": [
+      "A sandbox",
+      "A production domain controller",
+      "A DHCP server for the floor",
+      "A print server"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A sandbox is an isolated place to try something you do not trust. No network adapter means the attachment cannot walk onto the file shares even if it is malicious. You still do not use that VM for ordinary browsing afterward. It is not your domain controller, your DHCP server, or your print server.",
+    "choiceNotes": [
+      "The isolated VM is a sandbox. That is the purpose that matches the objective.",
+      "A domain controller is production identity. You do not open suspicious attachments on it.",
+      "DHCP is a network service. This VM has no adapter on purpose.",
+      "A print server is production. It is the wrong place for an untrusted file."
+    ]
+  },
+  {
+    "id": "c1-085",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A Type 2 hypervisor on a technician's Windows laptop will not start a VM. The firmware message it quotes says virtualization is disabled. The laptop has enough RAM. What is the first change?",
+    "choices": [
+      "Enable virtualization in the firmware",
+      "Add a second laptop battery and leave the firmware alone",
+      "Format the host as FAT32",
+      "Disable the TPM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Client hypervisors need the CPU's virtualization extensions turned on in firmware, and they need enough RAM and disk. The error already named the firmware switch, and RAM is sufficient, so enable VT-x or AMD-V and power-cycle. FAT32, the battery, and the TPM are not the quoted error.",
+    "choiceNotes": [
+      "Turn the feature on in firmware. The hypervisor told you it is off.",
+      "Another battery does not enable a CPU feature.",
+      "FAT32 is a poor host file system choice and is not why the hypervisor refuses to start.",
+      "The TPM is not the switch the error named. Leave it alone."
+    ]
+  },
+  {
+    "id": "c1-086",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An old accounting app runs only on Windows 7. The shop standard is a current Windows version. The app must keep running for one department, and it must not be reachable from the internet. What is the client-virtualization approach?",
+    "choices": [
+      "Run Windows 7 in a VM that has no path to the internet, and keep the host current",
+      "Put Windows 7 on every PC in the company",
+      "Expose the Windows 7 VM directly on the internet so vendors can help",
+      "Replace the VM with RAID 0"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Client virtualization is how you keep a legacy operating system for one application without installing that unsupported OS on the whole fleet. The VM should be isolated, because Windows 7 no longer gets public security fixes. Putting it on the internet, or on every desk, spreads an unsupported system. RAID is storage, not an operating system.",
+    "choiceNotes": [
+      "One isolated VM is the contained way to keep the legacy app. The host OS can stay current.",
+      "Installing an unsupported OS everywhere maximizes the exposure the VM was meant to avoid.",
+      "An unsupported OS on the internet is the opposite of containment.",
+      "RAID 0 does not run Windows 7 and does not isolate an application."
+    ]
+  },
+  {
+    "id": "c1-087",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A laptop with 8 GB of RAM is asked to run three VMs that each want 4 GB, plus the host OS. The host becomes unusable. What resource ran out?",
+    "choices": [
+      "RAM",
+      "The VGA connector",
+      "The number of USB ports",
+      "The print spooler"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Client virtualization is usually limited by memory. Three guests at 4 GB plus a host do not fit in 8 GB, so the host pages itself to death. Add RAM or run fewer guests. The VGA port, USB count, and the print spooler are not the resource the guests are fighting over.",
+    "choiceNotes": [
+      "Memory is the scarce resource. 8 GB cannot back three 4 GB guests and the host.",
+      "The video connector carries a picture. It does not allocate memory to a guest VM.",
+      "USB ports do not size a virtual machine's RAM, so adding ports would not help.",
+      "The print spooler queues print jobs. It does not fund guest memory."
+    ]
+  },
+  {
+    "id": "c1-088",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A security note says a guest VM is not automatically safe just because it is virtual. The host is unpatched, and the guest has no antivirus. Which statement matches the objective's security caution?",
+    "choices": [
+      "Guests need patches and malware protection, and a VM is not a complete security boundary",
+      "Virtual machines cannot be attacked, so guests need no patches",
+      "The host's patches cover every guest even when guest updates are off",
+      "A snapshot replaces antivirus"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A VM is another computer. It needs the same patching and endpoint protection as a physical one, especially if it can reach a network. The host must be patched too, because a compromise of the host is a compromise of the guests. Snapshots are a convenience for rolling back, and they are not a malware control. They can even preserve the malware.",
+    "choiceNotes": [
+      "Treat the guest as a real system. Isolation helps, and it does not replace patches or antivirus.",
+      "Guests are attacked every day. Virtualization is not invisibility.",
+      "Host patches fix the host. The guest operating system has its own update cycle.",
+      "A snapshot can roll back a test. It does not detect malware, and a snapshot taken after infection keeps the infection."
+    ]
+  },
+  {
+    "id": "c1-089",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A developer needs a Linux tool on a Windows laptop for an afternoon, without repartitioning the disk. Client virtualization is approved. What is the least disruptive approach?",
+    "choices": [
+      "Run a Linux VM on the Windows host",
+      "Wipe Windows and install Linux on the bare hardware",
+      "Boot a second physical laptop the developer does not have",
+      "Convert the file system to ext4 and hope Windows still boots"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A Type 2 hypervisor on the existing Windows install runs Linux for the afternoon and leaves the disk layout alone. Wiping the laptop destroys the workstation. Another physical machine may be fine and is not what they have. Converting the Windows volume to ext4 makes Windows unbootable.",
+    "choiceNotes": [
+      "A VM is the client-side virtualization answer. The Windows install stays, and Linux runs as a guest.",
+      "Reinstalling the host is the opposite of least disruptive.",
+      "A second computer is a different project, and the stem says they are using the laptop they have.",
+      "ext4 is not a Windows system volume. That conversion is a rebuild, not an afternoon tool."
+    ]
+  }
+]
