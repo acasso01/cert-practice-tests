@@ -1,0 +1,746 @@
+[
+  {
+    "id": "sy0-125",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A document says 'employees must protect customer data' and does not say which tool or which clicks. A second document lists the exact backup product and the required settings. A third is a suggested way to organize a clean desk that teams may adapt. Which types are those?",
+    "choices": [
+      "Policy, standard, and guideline",
+      "Guideline, then policy, then a mandatory standard",
+      "Three policies of equal force",
+      "A procedure, a firewall rule, and a CVE"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A policy is the mandatory high-level requirement. A standard is the mandatory specific choice, such as the product and the settings. A guideline is recommended and allows judgment. A procedure would be the click-by-click steps, which none of these is. A CVE is a vulnerability identifier.",
+    "choiceNotes": [
+      "Must-protect is the policy. The named product and settings are the standard. The adaptable clean-desk advice is a guideline.",
+      "The order and the force are wrong. The clean-desk advice is not more mandatory than the policy.",
+      "They do not have equal force. Guidelines can be adapted. Policies cannot be ignored.",
+      "None of the three is a firewall rule or a CVE number."
+    ]
+  },
+  {
+    "id": "sy0-126",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Someone must decide that payroll data is confidential and who may access it. Someone else configures the share to match that decision. Which roles are those?",
+    "choices": [
+      "The data owner decides. The custodian implements",
+      "The custodian decides the classification and the owner only clicks the permissions",
+      "Any user who can read the share is the owner",
+      "The roles are identical"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The owner is accountable for the data: classification, access, and retention decisions. The custodian, often IT, implements the controls the owner asked for. A reader is not the owner. Collapsing the roles means the person who can click also invents the policy, which is how shares drift.",
+    "choiceNotes": [
+      "Owner decides, custodian builds the control. That split is the governance point.",
+      "The custodian should not invent the classification. They carry out the owner's decision.",
+      "Read access is not ownership. Ownership is accountability.",
+      "If the roles were identical, there would be no one to challenge a convenient permission."
+    ]
+  },
+  {
+    "id": "sy0-127",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Under a privacy law like the GDPR model, a company decides why employee data is processed and hires a payroll vendor to process it only on the company's instructions. What are the company and the vendor?",
+    "choices": [
+      "The company is the controller. The vendor is the processor",
+      "The vendor is the controller because it holds the servers",
+      "The employees are the controllers of the company's decision",
+      "Both are data subjects only"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The controller determines the purposes and means. The processor acts for the controller and should not use the data for its own purposes. Holding the servers does not make the vendor the controller. Employees are the data subjects, the people the data is about. Contracts should state this, because breach notice and instructions follow the roles.",
+    "choiceNotes": [
+      "The company chose the purpose. That is the controller. The vendor processes on instruction.",
+      "Physical custody of servers is not the legal role. Purpose is.",
+      "Employees are the subjects. They do not set the company's processing purpose.",
+      "Subjects are the people. The company and the vendor have organizational roles on top of that."
+    ]
+  },
+  {
+    "id": "sy0-128",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A board committee reviews security metrics each quarter and can require funding. The security team reports to that committee rather than only to a single busy executive who skips the meetings. What governance benefit is the committee?",
+    "choices": [
+      "Oversight that does not depend on one person's calendar",
+      "A replacement for all policies",
+      "A technical firewall",
+      "A reason to stop measuring"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Governance needs a body that can hear bad news and assign money. A committee with a mandate is that body. It does not replace the policy library, and it is not a device. Metrics are how it sees. Stopping measurement would blind it.",
+    "choiceNotes": [
+      "The committee is oversight with continuity. One skipped one-on-one is no longer the whole program.",
+      "Policies still have to exist. The committee checks that they are followed and funded.",
+      "A committee reviews metrics and funding. It is not a technical packet filter.",
+      "Metrics are the input. Removing them removes the committee's eyes."
+    ]
+  },
+  {
+    "id": "sy0-129",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A global company lets each region invent its own password rules, logging standards, and incident definitions. A central team wants one set so a traveler and a central investigation see the same control. What is the tension?",
+    "choices": [
+      "Decentralized control versus centralized governance. Central standards help investigations. Local exceptions need an owner",
+      "Central standards are always illegal",
+      "Local rules are always more secure because they differ",
+      "Governance forbids writing standards"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Centralized governance makes one standard and one incident language. Decentralized control can fit local law and local operations, and it also creates gaps a traveler or an attacker can shop between. The mature answer is a central standard with documented local exceptions, not a free-for-all and not a claim that difference itself is security.",
+    "choiceNotes": [
+      "Write the central standard and record any local exception. Difference without an owner is drift.",
+      "Central standards are a normal way to govern. They are not inherently illegal.",
+      "Different is not the same as better. An attacker will use the region with the weak password rule.",
+      "Standards are a core governance artifact. Governance does not forbid them."
+    ]
+  },
+  {
+    "id": "sy0-130",
+    "domain": "5",
+    "objective": "5.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A procedure says 'click here, then here' to revoke a certificate. An engineer follows a personal shortcut that skips the inventory update. The certificate is revoked and the inventory is wrong. What failed?",
+    "choices": [
+      "The procedure was not followed, so the system of record drifted",
+      "The policy was too specific",
+      "Guidelines are mandatory and this shortcut was a guideline",
+      "Procedures should be kept only in one person's memory"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A procedure exists so the full outcome happens, including the inventory, not only the interesting click. Skipping a step because you remember a shortcut is how the next person revives a certificate you thought was dead. Policies stay high level on purpose. Guidelines are not mandatory. Procedures that live only in memory are not procedures.",
+    "choiceNotes": [
+      "Follow the procedure or change it. A private shortcut that skips the inventory is the failure.",
+      "The policy should not be a click-path. The procedure is the specific document, and it was ignored.",
+      "Guidelines may be adapted. This shortcut ignored a mandatory procedure. It was not a guideline.",
+      "Memory is what failed when the inventory was skipped. Write the steps down and use them."
+    ]
+  },
+  {
+    "id": "sy0-131",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A company buys cyber insurance and also trains staff so phishing is less likely to succeed. A third option was to stop offering the online service that creates the risk. Which risk responses are the insurance, the training, and stopping the service?",
+    "choices": [
+      "Transfer, mitigate, and avoid",
+      "Avoid, ignore, and accept",
+      "Mitigate, transfer, and a second transfer",
+      "Accept, accept, and accept"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Transfer shifts impact to another party, which is what insurance does. It does not remove the incident. Mitigate reduces likelihood or impact. Training does that. Avoid means you do not take the activity. Stopping the service is avoidance. Accept would be a conscious decision to live with the risk without those steps.",
+    "choiceNotes": [
+      "Insurance transfers, training mitigates, and not offering the service avoids the risk.",
+      "Ignoring is not a named strategy. Stopping the service is avoidance, not acceptance.",
+      "Training is mitigation, not transfer. Only the insurance transfers.",
+      "Acceptance would be keeping the service, skipping training, and not buying insurance, with eyes open."
+    ]
+  },
+  {
+    "id": "sy0-132",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "An asset is worth $100,000. A single loss is expected to destroy 20 percent of that value. The loss is expected twice a year. What are the single loss expectancy and the annualized loss expectancy?",
+    "choices": [
+      "SLE is $20,000 and ALE is $40,000",
+      "SLE is $40,000 and ALE is $20,000",
+      "SLE is $100,000 and ALE is $20",
+      "SLE is $2,000 and ALE is $200"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Single loss expectancy is asset value times exposure factor. 100,000 times 0.20 is 20,000. Annualized loss expectancy is SLE times annualized rate of occurrence. 20,000 times 2 is 40,000. Swapping SLE and ALE swaps a single event with the year. The other figures drop a zero or multiply the wrong way. These numbers help compare a control's cost with the loss it removes. They are not a moral score.",
+    "choiceNotes": [
+      "20 percent of 100,000 is one event. Two events a year double it. SLE 20,000, ALE 40,000.",
+      "That pair swaps the single event and the annual total.",
+      "SLE is not the whole asset unless the exposure factor is 100 percent. ALE is not 20.",
+      "2,000 would be 2 percent, not 20 percent. The arithmetic does not match the stem."
+    ]
+  },
+  {
+    "id": "sy0-133",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Leadership will tolerate a minor outage of an internal wiki and will not tolerate any outage of the payment service. Analysts score risks as high, medium, or low without dollar values. What are the tolerance statement and the scoring method?",
+    "choices": [
+      "Risk appetite or tolerance is the leadership statement. The scoring described is qualitative",
+      "The scoring is quantitative because it uses the words high and low",
+      "Appetite means the company must accept every high risk",
+      "Qualitative scoring always produces an ALE in dollars"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Appetite or tolerance is how much risk leadership will carry, and it can differ by service. Qualitative scoring uses ranks. Quantitative scoring uses numbers such as ALE. High and low are not dollars. Appetite is not a duty to accept every high risk. It is the line those risks are compared with.",
+    "choiceNotes": [
+      "The wiki-versus-payments line is tolerance. High, medium, and low is qualitative.",
+      "Words like high and low are qualitative. Quantitative would be a calculated loss.",
+      "Appetite is a limit, not an instruction to accept everything above it.",
+      "Dollars are the quantitative output. Qualitative ranks do not produce an ALE by themselves."
+    ]
+  },
+  {
+    "id": "sy0-134",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A register lists each risk, the owner, the current treatment, and the status. A heat map colors likelihood against impact. What are those two artifacts for?",
+    "choices": [
+      "Tracking and communicating risk so owners and leadership see the same picture",
+      "Replacing the need for any treatment",
+      "Encrypting the risks",
+      "A packet capture"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The register is the system of record: who owns the risk and what is being done. The heat map is a communication view so a board can see clusters. Neither one treats the risk by existing. Encryption and packet capture are different controls and different data.",
+    "choiceNotes": [
+      "The register tracks. The map explains. Owners still have to carry out the treatment.",
+      "A list does not mitigate anything until someone acts on a row.",
+      "Risk entries are not a cipher. Encryption is a separate control you might choose as a treatment.",
+      "A packet capture is telemetry. It is not the risk register."
+    ]
+  },
+  {
+    "id": "sy0-135",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A business impact analysis finds that order entry must return within two hours and cannot lose more than 15 minutes of transactions. The security team had been planning a nightly backup and a cold site. What does the analysis force?",
+    "choices": [
+      "A design that can meet a two-hour RTO and a 15-minute RPO. Nightly backups and a cold site do not",
+      "No change, because a BIA is only a technical diagram of routers",
+      "Deletion of the order system",
+      "A longer RPO, because the business asked for a shorter one"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A BIA identifies critical processes and the downtime and data-loss they can stand. Those become RTO and RPO. A nightly backup loses up to a day of transactions. A cold site cannot be ready in two hours. The analysis is not a router diagram and it does not mean you delete the business. You change the recovery design.",
+    "choiceNotes": [
+      "The BIA set the numbers. The current backup and site miss both. Redesign recovery.",
+      "A BIA is a business process study. It is not a picture of router links.",
+      "The point is to keep order entry alive, not to shut it down.",
+      "The business asked for less data loss, not more. You do not 'fix' that by weakening the target."
+    ]
+  },
+  {
+    "id": "sy0-136",
+    "domain": "5",
+    "objective": "5.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A component fails rarely, and the published mean time between failures is very high. When it does fail, repair takes eight hours. Which reading is correct?",
+    "choices": [
+      "High MTBF means infrequent failure. Eight hours is the MTTR, the repair time",
+      "The component fails every eight hours",
+      "MTBF is the repair time",
+      "Neither number affects spare-parts planning"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Mean time between failures is reliability: a high number means failures are uncommon. Mean time to repair is how long restoration takes. Spares, support contracts, and whether you can tolerate eight hours all use the MTTR. Swapping the definitions produces the wrong plan. The eight hours is not the interval between failures.",
+    "choiceNotes": [
+      "Rare failures, slow repair. Plan the spare or the workaround around the eight-hour MTTR.",
+      "Eight hours is the repair, not the time between failures.",
+      "MTBF is between failures. MTTR is the repair. The names are not interchangeable.",
+      "Spares exist because MTTR is long. Ignoring both numbers is how you discover the wait during the outage."
+    ]
+  },
+  {
+    "id": "sy0-137",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A contract says the provider will restore a down service within four hours and will maintain 99.9 percent availability. Which agreement type is that?",
+    "choices": [
+      "A service-level agreement",
+      "A non-disclosure agreement",
+      "A statement of work with no service levels",
+      "A memorandum that creates no measurable duty"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An SLA states measurable service: time to restore, availability, and often credits. An NDA protects confidential information. A statement of work defines tasks and deliverables. It might point at an SLA, but the numbers in the stem are the service level. A vague memorandum that creates no duty is not an SLA.",
+    "choiceNotes": [
+      "Four hours and 99.9 percent are service levels. That is the SLA.",
+      "An NDA stops someone from publishing your secrets. It does not promise uptime.",
+      "A statement of work without levels does not give you a four-hour restore to enforce.",
+      "If there is no measurable duty, you do not have this agreement. The stem has measurements."
+    ]
+  },
+  {
+    "id": "sy0-138",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Two companies want to work together. One document says they intend to explore a partnership and is not the detailed contract. A later document sets the specific tasks, dates, and deliverables for a project. Which pair is that?",
+    "choices": [
+      "A memorandum of understanding, then a statement of work",
+      "An SLA, then a bollard",
+      "A CVE, then a CVSS score",
+      "A hot site, then a cold site"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An MOU records intent. It is often less formal than the contract that follows. A statement of work is the specific project: who does what by when. An SLA would add measurable uptime if a service is involved. CVE and CVSS are vulnerability identifiers and scores. Hot and cold sites are recovery facilities.",
+    "choiceNotes": [
+      "Intent first, then the specific work. That is the MOU and the SOW.",
+      "An SLA measures a service. A bollard is a barrier. They are not this pair of documents.",
+      "CVE and CVSS describe vulnerabilities, not partnerships.",
+      "Hot and cold describe recovery sites, not agreements."
+    ]
+  },
+  {
+    "id": "sy0-139",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A vendor emails a completed security questionnaire and says that is enough. The contract also gives the customer a right to audit. The questionnaire claims full-disk encryption the customer has never seen evidence of. What is the weakness in accepting the questionnaire alone?",
+    "choices": [
+      "A questionnaire is an assertion. The right to audit and actual evidence exist so you do not rely only on the vendor's word",
+      "Questionnaires are always false, so vendors should not be asked",
+      "A right to audit means you must not look",
+      "Encryption claims cannot be evidenced"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Questionnaires are a starting point. They are cheap and they are self-reported. A right to audit, a recent independent report, or configuration evidence is how you check a claim that matters. You do not skip questionnaires. You do not treat them as proof. Encryption can be evidenced with a design, a sample, or an attestation. 'Must not look' reverses the clause.",
+    "choiceNotes": [
+      "Ask for evidence or use the audit right on the claims that carry risk. The form is not the proof.",
+      "Questionnaires are useful. They are just not the last step.",
+      "The right to audit is the right to look. The clause is wasted if you refuse to use it.",
+      "A vendor can show how encryption is deployed. 'Cannot be evidenced' is not true."
+    ]
+  },
+  {
+    "id": "sy0-140",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A monitoring agent update from a widely used vendor includes unauthorized code. Customers who did nothing but accept the normal update are affected. Which risk is this, and where does the assessment belong?",
+    "choices": [
+      "Supply-chain risk, assessed as third-party risk before and during the relationship",
+      "Only the customer's patch-management failure, because they should have rewritten the vendor agent",
+      "A physical tailgating incident",
+      "A risk that ends once the contract is signed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The supplier's build became the customer's incident. That is supply-chain risk, a third-party concern. You assess it with vendor selection, build integrity, the ability to pin or delay updates, and an incident plan. Customers are not expected to rewrite a vendor agent from scratch, and signing the contract does not end the risk. Tailgating is a door.",
+    "choiceNotes": [
+      "Treat vendor updates as a supply chain. Select, monitor, and have a way to stop a bad update.",
+      "Rewriting every agent is not the control. Knowing what you install and being able to respond is.",
+      "Tailgating is a person following someone through a door. It is not a poisoned update.",
+      "Third-party risk continues for the life of the integration. Signature day is the start."
+    ]
+  },
+  {
+    "id": "sy0-141",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Before a partnership is public, each side shares pricing and customer lists so they can decide whether to proceed. Which agreement is the minimum before that sharing?",
+    "choices": [
+      "A non-disclosure agreement",
+      "A service-level agreement for a service that does not exist yet",
+      "A statement of work for a build that has not been agreed",
+      "A CVE entry"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An NDA binds the parties to keep the shared information confidential. You want it before the pricing and the lists move. An SLA measures a live service. A statement of work defines a project you have already decided to do. A CVE is a vulnerability identifier. None of those is the confidentiality promise.",
+    "choiceNotes": [
+      "The NDA is the confidentiality agreement. Sign it before the sensitive exchange.",
+      "There is no service level to measure yet. An SLA does not keep a customer list quiet.",
+      "A statement of work is premature if you are still deciding whether to work together, and it is not the secrecy term.",
+      "A CVE names a vulnerability. It is not a contract between two companies."
+    ]
+  },
+  {
+    "id": "sy0-142",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A retailer stores cardholder data, and a clinic stores patient records. Which obligations match those data types?",
+    "choices": [
+      "PCI DSS for the cards, and a health-privacy regime such as HIPAA for the patient records",
+      "PCI DSS for the patient records and no rule for cards",
+      "Neither can apply if the servers are in a cloud region",
+      "A wireless encryption standard covers both by itself"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "PCI DSS is the card-brand standard for payment data. Health information has its own privacy and security rules. In the United States, HIPAA is the familiar one. Cloud does not erase either duty. The region may itself be a compliance choice. WPA3 protects a wireless network. It is not a substitute for PCI or health-privacy programs.",
+    "choiceNotes": [
+      "Cards point to PCI DSS. Patient records point to the health-privacy law that applies. A company can owe both for different data.",
+      "PCI is about cards, not about clinical notes.",
+      "Putting a server in a cloud region does not cancel PCI or health-privacy duties.",
+      "Wireless encryption is a transport control. It does not replace a card or health program."
+    ]
+  },
+  {
+    "id": "sy0-143",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Before signing with a processor, a company reviews the processor's security reports and asks where the data will live. After signing, the company still patches its own systems, trains staff, and reviews access. Which is due diligence and which is due care?",
+    "choices": [
+      "The pre-contract review is due diligence. The ongoing patching, training, and reviews are due care",
+      "Due care is only the pre-contract review, and due diligence is doing nothing afterward",
+      "Both terms mean buying insurance and stopping",
+      "Due diligence is the breach itself"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Due diligence is the investigation before you commit: reports, locations, contract terms. Due care is the prudent work you keep doing after: patches, training, access reviews, and watching the vendor. Insurance can transfer some impact. It does not replace either phrase. A breach is a failure, not the definition of diligence.",
+    "choiceNotes": [
+      "Look before you sign. Keep acting after you sign. That is diligence, then care.",
+      "Stopping after the signature is how the pre-contract review goes stale. Ongoing work is due care.",
+      "Insurance is transfer. It is not the whole of either duty.",
+      "A breach is the event you were trying to avoid. It is not the name of the research."
+    ]
+  },
+  {
+    "id": "sy0-144",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A company misses a required breach-notification deadline. Regulators fine it, a customer contract imposes damages, and the story is in the news. Which consequences are illustrated?",
+    "choices": [
+      "Regulatory, contractual, and reputational",
+      "Only a longer RPO",
+      "A lower CVSS score",
+      "A successful tabletop and nothing else"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Fines are regulatory or statutory. Contract damages are a commercial consequence. The news cycle is reputation, which then becomes lost business. None of that is an RPO, a vulnerability score, or a successful exercise. The exercise would have been useful before the deadline was missed.",
+    "choiceNotes": [
+      "The fine, the contract, and the headline are three different consequences. Report them that way.",
+      "RPO is a data-loss target. It did not issue the fine.",
+      "CVSS scores a vulnerability. It does not describe this enforcement action.",
+      "A successful tabletop would have been practice. This story is a real miss."
+    ]
+  },
+  {
+    "id": "sy0-145",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A public statement by an independent party says the company's controls operated effectively over a period. Customers asked for it instead of auditing the company themselves. What is that statement?",
+    "choices": [
+      "An attestation",
+      "A vulnerability scan",
+      "A honeypot",
+      "A password salt"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An attestation is a formal statement, often by an auditor, that controls did what they claimed. Customers rely on it so every customer does not run their own audit. A scan, a decoy, and a salt are not that statement. You still read the scope. An attestation of the wrong system is not evidence about the system you use.",
+    "choiceNotes": [
+      "The independent statement is the attestation. Check which systems and which period it covers.",
+      "A scan lists technical findings. It is not the auditor's opinion.",
+      "A honeypot is a decoy. It does not certify a program.",
+      "A salt is mixed into a password hash. It is not an auditor's attestation."
+    ]
+  },
+  {
+    "id": "sy0-146",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Privacy policy says individuals can ask for a copy of their data and can ask for deletion, with exceptions for records the company must keep. A support team deletes a regulated record that a statute requires the company to hold, because the person asked. What did the team miss?",
+    "choices": [
+      "Deletion rights are real and they have exceptions. A required record is not deleted just because a request arrived",
+      "Every request must be honored by deleting everything, including records the law says to keep",
+      "Privacy requests can be ignored entirely",
+      "The statute is less important than the speed of the reply"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Privacy programs include access and deletion, and they also include the limits: legal holds, required retention, and other people's rights. The team should have a process that routes the request to someone who can see those limits. Ignoring all requests is its own violation. Speed does not outrank the statute.",
+    "choiceNotes": [
+      "Honor the request where it applies, and refuse the part that would destroy a record you must keep. Document why.",
+      "Blind deletion of required records creates a second violation while trying to avoid the first.",
+      "Ignoring privacy requests is not compliance. The miss was the opposite: deleting without checking the exception.",
+      "A fast wrong answer is still wrong. The statute sets the exception."
+    ]
+  },
+  {
+    "id": "sy0-147",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "The internal audit team reports to the board and reviews the security program. A customer later sends its own auditors. How do those audits differ?",
+    "choices": [
+      "Internal audit serves the organization. The customer's audit is an external review driven by the relationship",
+      "They are the same because both use checklists",
+      "Internal audit is illegal",
+      "An external audit cannot look at security"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Internal audit is part of governance and should be independent enough to report bad news upward. An external audit is performed by or for an outside party: a customer, a regulator, or a hired firm. Checklists do not make them the same. External reviewers absolutely look at security when the contract or the law says so.",
+    "choiceNotes": [
+      "Who they serve is the difference. Internal serves the board. The customer serves the customer's risk.",
+      "A shared checklist does not make the audiences or the consequences identical.",
+      "Internal audit is a normal governance function. It is not illegal.",
+      "Security is often exactly what the external party came to see."
+    ]
+  },
+  {
+    "id": "sy0-148",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Testers are told they may only attack the staging web application, only during a weekend window, and they must stop and call if they see production data. What is that document?",
+    "choices": [
+      "Rules of engagement",
+      "A CVE",
+      "A honeyfile",
+      "A screensaver policy"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Rules of engagement define scope, timing, and what to do at a boundary. They are what separate a test from an intrusion. A CVE names a flaw. A honeyfile is a decoy. A screensaver policy locks screens. Testers who wander outside the rules create the incident they were hired to simulate under control.",
+    "choiceNotes": [
+      "Scope, time, and the stop condition are the rules of engagement. Get them in writing before the test.",
+      "A CVE is an identifier for a vulnerability, not the contract for a test.",
+      "A honeyfile is a tripwire document. It is not permission to test.",
+      "A screensaver policy does not authorize anyone to attack an application."
+    ]
+  },
+  {
+    "id": "sy0-149",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "One assessment reads public filings, job posts, and certificate transparency logs, and it sends nothing to the company's systems. A second assessment connects to the company's servers to enumerate exposed services. Which is which?",
+    "choices": [
+      "The first is passive reconnaissance. The second is active",
+      "Both are passive because the goal is learning",
+      "The public-only work is active because it takes effort",
+      "Active reconnaissance is impossible to detect and therefore always allowed without permission"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Passive reconnaissance uses information that is already public and does not touch the target's systems. Active reconnaissance sends traffic and can be logged. Effort is not the distinction. Active work is not invisible, and it is not allowed just because it might be missed. You need authorization before you send it.",
+    "choiceNotes": [
+      "Public sources and no packets to the target is passive. Connecting to enumerate is active.",
+      "Learning is the goal of both. The difference is whether you touch the target.",
+      "Effort does not make public reading 'active.' Active means interaction with the systems.",
+      "Active work is often detectable, and detectability is not permission. Get authorization."
+    ]
+  },
+  {
+    "id": "sy0-150",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A manager wants a penetration test to 'just find the holes' and does not want to tell operations the window, because surprise feels more realistic. The last surprise test was mistaken for a real attack and a system was taken offline. What should change?",
+    "choices": [
+      "Authorize the test, inform the people who might page an incident, and keep the rules tight. Realism does not require surprising the incident team",
+      "Skip authorization so the test is more realistic",
+      "Let the testers pick production payment systems during the business day with no limit",
+      "Treat any outage the testers cause as out of scope for discussion"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A test without coordination becomes an incident. The people who would declare an incident need to know a test exists, even if individual system owners stay unaware when the rules say so. Authorization and a window are what keep a realistic test from becoming downtime. Unlimited payment-system testing during the day is how you get the outage again.",
+    "choiceNotes": [
+      "Coordinate with the responders. You can still surprise a control owner if the rules allow it. You do not surprise the people who will pull the plug.",
+      "No authorization is not a test. It is an attack.",
+      "Payment systems and business hours need explicit, usually tighter, rules. 'No limit' is how customers get hurt.",
+      "Outages caused by the test are part of the test's outcome. You discuss them."
+    ]
+  },
+  {
+    "id": "sy0-151",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "An assessment produces a list of missing patches and weak settings. It does not attempt to exploit them. A later engagement uses the agreed exploits to show impact. What is the first engagement?",
+    "choices": [
+      "A vulnerability assessment or scan, not a penetration test",
+      "A penetration test, because a list is impact",
+      "A red-team exercise with no rules",
+      "A cryptographic erase"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A vulnerability assessment identifies and ranks weaknesses. A penetration test goes further and attempts exploitation under rules, to show what the weakness is worth. A list of missing patches is not that demonstration. A no-rules exercise is not an assessment. Cryptographic erase deletes keys.",
+    "choiceNotes": [
+      "Finding and listing is the assessment. Exploitation is the extra step that makes it a penetration test.",
+      "Impact in a penetration test is shown by what an attacker could do, not only by a row in a scanner.",
+      "No rules means it is not a professional test of either kind.",
+      "Cryptographic erase is sanitization, not an assessment."
+    ]
+  },
+  {
+    "id": "sy0-152",
+    "domain": "5",
+    "objective": "5.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "New hires attend security training on day one and never again. Phishing losses continue two years later. What practice is missing?",
+    "choices": [
+      "Recurring training and reinforcement, not a single orientation",
+      "A longer first day and then silence",
+      "Removing the reporting button so people do not create tickets",
+      "A policy that forbids mentioning phishing"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Awareness decays. Recurring training, short refreshers, and a campaign that gives feedback are how the behavior sticks. A longer first day does not cover the two years after. Removing the report button hides incidents. A policy of silence guarantees the losses continue.",
+    "choiceNotes": [
+      "Schedule refreshers and measure whether people report. One orientation does not last two years.",
+      "More hours on day one still leave year two uncovered.",
+      "The report path is how you hear about the phish that got through. Do not remove it.",
+      "Forbidding the topic is how people click and say nothing."
+    ]
+  },
+  {
+    "id": "sy0-153",
+    "domain": "5",
+    "objective": "5.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A simulated phishing message is sent to staff. The goal is to see who reports it and who enters credentials, and then to coach, not to punish the first click. What is this, and what would make it fail as awareness?",
+    "choices": [
+      "A phishing simulation. Punishing the first click, or using it to shame people, teaches them to hide the next real message",
+      "A real attack the security team should not have authorized",
+      "A simulation that should collect passwords and reuse them",
+      "Proof that anyone who clicks must be fired"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Simulations are an awareness control when they are authorized, safe, and followed by coaching. Shame and punishment drive reporting underground, which is worse than a click. Reusing captured passwords would turn the exercise into an incident. A single click is a training moment, not a termination policy, unless there is a separate pattern of willful abuse.",
+    "choiceNotes": [
+      "Coach and measure reporting. If people are afraid to report, the simulation failed even if the click rate fell.",
+      "An authorized simulation is not a real external attack. It still needs rules so it does not become one.",
+      "The exercise must not become a password-collection program. Use a safe landing page.",
+      "Firing on the first click is how you lose reporting. It is not the awareness objective."
+    ]
+  },
+  {
+    "id": "sy0-154",
+    "domain": "5",
+    "objective": "5.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An employee works from a coffee shop with a customer list on the screen and discusses a deal on speakerphone. Which awareness failures are those?",
+    "choices": [
+      "Shoulder surfing and a failure to protect sensitive conversations in a public place",
+      "A correct clean-desk and situational-awareness practice",
+      "A required way to use a VPN",
+      "An approved public disclosure"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Situational awareness in public includes the screen angle, a privacy filter, and not broadcasting customer details. Shoulder surfing is the visual half. The call is the audio half. A VPN does not hide a screen or a voice. This is not an approved disclosure. The training topic is hybrid and remote work, not only office doors.",
+    "choiceNotes": [
+      "The screen and the speakerphone are the exposures. Use a filter, sit with your back to a wall, and take the call privately.",
+      "A clean desk and situational awareness would have prevented this. The behavior is the failure, not the practice.",
+      "A VPN encrypts a network path. It does not cover the laptop screen or the air around a phone.",
+      "A customer list in a cafe is not an approved disclosure."
+    ]
+  },
+  {
+    "id": "sy0-155",
+    "domain": "5",
+    "objective": "5.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Staff are told to report odd requests for wire transfers and unexpected USB drives, even if they think they might be wrong. Why does the program want the false reports?",
+    "choices": [
+      "A missed true incident costs more than a false report. Reporting is the behavior you are training",
+      "False reports should be punished so the queue stays empty",
+      "Only the security team is allowed to notice anything",
+      "Reporting is unnecessary if antivirus is installed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Awareness programs optimize for reporting. Most 'odd' reports will be benign, and that is acceptable because the one that is real arrives early. Punishing false reports trains silence. Antivirus does not see a wire-transfer pretext or a USB drive still in someone's hand. Everyone is a sensor.",
+    "choiceNotes": [
+      "Invite the report. Triage can discard the noise. Silence cannot be triaged.",
+      "Punishment for a good-faith report empties the channel you are trying to fill.",
+      "The people closest to the request are the staff. Security cannot see a conversation it is never told about.",
+      "Antivirus does not read a wire-transfer email as a human social-engineering pretext, and it does not see a drive that was never plugged in."
+    ]
+  }
+]

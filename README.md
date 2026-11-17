@@ -1,6 +1,6 @@
 # Certline
 
-Free, original practice for **CompTIA Network+ (N10-009)** and **CompTIA A+ Core 1 (220-1101)** and **Core 2 (220-1102)**.
+Free, original practice for **CompTIA Network+ (N10-009)**, **A+ Core 1 (220-1101)** and **Core 2 (220-1102)**, and **Security+ (SY0-701)**.
 
 Certline runs entirely in the browser. There is no account and no server. Scores, missed questions, and the current session stay in this browser's storage.
 
@@ -24,7 +24,7 @@ CompTIA reports a scaled score from 100 to 900. This app draws a straight line a
 
 `scaled = 100 + (percent correct × 8)`
 
-Pass marks used here are the published ones: **Network+ 720**, **A+ Core 1 675**, **A+ Core 2 700**. A real exam is scaled statistically, so treat this number as a study signal. The results page says the same thing. The real exams also include performance-based questions, which this site does not simulate.
+Pass marks used here are the published ones: **Network+ 720**, **A+ Core 1 675**, **A+ Core 2 700**, **Security+ 750**. A real exam is scaled statistically, so treat this number as a study signal. The results page says the same thing. The real exams also include performance-based questions, which this site does not simulate.
 
 ## Run it locally
 
@@ -59,7 +59,7 @@ Then reload. No React changes are required. `npm run validate` enforces the shap
 - an explanation and a note for every choice
 - an objective that exists on that exam
 - a `https://www.professormesser.com/` study URL on the exam
-- the minimum bank sizes for the three exams shipped here
+- the minimum bank sizes for the exams shipped here
 
 Study links point at the free course index for that exam. They are not deep links to individual videos.
 

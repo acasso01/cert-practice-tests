@@ -18,7 +18,7 @@ export function Home({ exams, history, missed, onPractice, onExam, onRetry, onHi
         <p className="kicker">Free · no account · stays on this device</p>
         <h1>Practice that explains the miss.</h1>
         <p className="lede">
-          Original Network+ and A+ questions, tagged to the objective, with a reason for every choice.
+          Original Network+, A+, and Security+ questions, tagged to the objective, with a reason for every choice.
           Practice gives feedback immediately. Exam mode waits until you submit.
         </p>
       </section>
