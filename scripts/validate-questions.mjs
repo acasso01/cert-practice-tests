@@ -160,7 +160,45 @@ for (const dir of examDirs) {
       fail(`${dir}: objective ${objectiveId} has fewer than 2 questions.`);
     }
   }
+  const stems = questions.map(({ question }) => ({
+    id: question.id,
+    tokens: stemTokens(question.stem),
+  }));
+  for (let i = 0; i < stems.length; i += 1) {
+    for (let j = i + 1; j < stems.length; j += 1) {
+      const left = stems[i];
+      const right = stems[j];
+      if (left.tokens.length === 0 || right.tokens.length === 0) continue;
+      const similarity = jaccard(left.tokens, right.tokens);
+      if (similarity >= 0.72) {
+        fail(`${dir}: ${left.id} and ${right.id} are near-duplicate stems (${similarity.toFixed(2)}).`);
+      }
+    }
+  }
+
   console.log(`${exam.code}: ${questions.length} questions, ${multi} choose-two.`);
+}
+
+function stemTokens(stem) {
+  return [
+    ...new Set(
+      stem
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/)
+        .filter((word) => word.length > 2),
+    ),
+  ];
+}
+
+function jaccard(left, right) {
+  const rightSet = new Set(right);
+  let shared = 0;
+  for (const word of left) {
+    if (rightSet.has(word)) shared += 1;
+  }
+  const union = new Set([...left, ...right]).size;
+  return union === 0 ? 0 : shared / union;
 }
 
 if (errors.length) {

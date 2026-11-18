@@ -42,15 +42,45 @@ export function allocateByWeight(buckets: Bucket[], count: number): Record<strin
   return result;
 }
 
+/** qid -> last time that question was shown. Missing means never seen. */
+export type SeenAt = Record<string, number>;
+
+function byLeastRecent(list: Question[], seenAt: SeenAt): Question[] {
+  const groups = new Map<number, Question[]>();
+  for (const question of list) {
+    const stamp = seenAt[question.id] ?? 0;
+    const group = groups.get(stamp) ?? [];
+    group.push(question);
+    groups.set(stamp, group);
+  }
+  return [...groups.keys()]
+    .sort((a, b) => a - b)
+    .flatMap((stamp) => shuffle(groups.get(stamp) ?? []));
+}
+
+/** Unseen questions first, then the ones shown longest ago. Ties are shuffled. */
+export function preferUnseen(list: Question[], seenAt: SeenAt): Question[] {
+  const unseen = shuffle(list.filter((question) => seenAt[question.id] == null));
+  const seen = byLeastRecent(
+    list.filter((question) => seenAt[question.id] != null),
+    seenAt,
+  );
+  return [...unseen, ...seen];
+}
+
 export function drawQuestions(
   questions: Question[],
   domains: { id: string; weight: number }[],
   count: number,
   domainIds: string[] | null,
+  seenAt: SeenAt = {},
+  freshOnly = false,
 ): Question[] {
-  const pool = domainIds?.length
+  const filtered = domainIds?.length
     ? questions.filter((question) => domainIds.includes(question.domain))
     : questions;
+  const pool = freshOnly ? filtered.filter((question) => seenAt[question.id] == null) : filtered;
+  if (pool.length === 0) return [];
   if (count >= pool.length) return shuffle(pool);
 
   const activeDomains = domains.filter((domain) => pool.some((question) => question.domain === domain.id));
@@ -66,7 +96,11 @@ export function drawQuestions(
   const picked: Question[] = [];
   for (const domain of activeDomains) {
     const take = allocation[domain.id] ?? 0;
-    picked.push(...shuffle(pool.filter((question) => question.domain === domain.id)).slice(0, take));
+    const ordered = preferUnseen(
+      pool.filter((question) => question.domain === domain.id),
+      seenAt,
+    );
+    picked.push(...ordered.slice(0, take));
   }
   return shuffle(picked);
 }

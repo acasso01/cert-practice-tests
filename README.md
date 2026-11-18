@@ -16,7 +16,9 @@ https://acasso01.github.io/cert-practice-tests/
 - **Download a PDF** of that completed test from the results page. The file is built in the browser.
 - Come back to **history** and a missed-question deck. **Retry missed** builds a new practice set from what you got wrong.
 
-Questions and answer order are shuffled each time you start.
+Questions and answer order are shuffled each time you start. Practice and exams prefer questions this browser has not shown yet, then the ones you saw longest ago. Fresh-questions-only and Reset seen history are on the setup screen.
+
+The banks currently hold 193 Network+ questions, 171 A+ Core 1 questions, 159 A+ Core 2 questions, and 189 Security+ questions. That is larger than the first release and still short of a 400-question bank. New items are original and are checked for near-duplicate stems.
 
 ### Scores
 

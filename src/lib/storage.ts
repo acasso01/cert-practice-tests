@@ -5,6 +5,7 @@ const MISSED_KEY = 'certline.missed.v1';
 const THEME_KEY = 'certline.theme.v1';
 const SESSION_KEY = 'certline.session.v1';
 const RESULT_KEY = 'certline.result.v1';
+const SEEN_KEY = 'certline.seen.v1';
 
 function readJson<T>(storage: Storage, key: string, fallback: T): T {
   try {
@@ -91,4 +92,41 @@ export function saveSession(session: Session | null): void {
 export function loadResultId(): string | null {
   const id = readJson<string | null>(sessionStorage, RESULT_KEY, null);
   return typeof id === 'string' ? id : null;
+}
+
+type SeenBook = Record<string, Record<string, number>>;
+
+function loadSeenBook(): SeenBook {
+  const value = readJson<SeenBook>(localStorage, SEEN_KEY, {});
+  return value && typeof value === 'object' ? value : {};
+}
+
+/** Question ids this browser has already been shown, with the last time each was shown. */
+export function loadSeen(examId: string): Record<string, number> {
+  const book = loadSeenBook()[examId];
+  if (!book || typeof book !== 'object') return {};
+  const clean: Record<string, number> = {};
+  for (const [qid, stamp] of Object.entries(book)) {
+    if (typeof stamp === 'number') clean[qid] = stamp;
+  }
+  return clean;
+}
+
+export function markSeen(examId: string, qids: string[], at = Date.now()): void {
+  if (qids.length === 0) return;
+  const book = loadSeenBook();
+  const current = { ...(book[examId] ?? {}) };
+  for (const qid of qids) current[qid] = at;
+  book[examId] = current;
+  writeJson(localStorage, SEEN_KEY, book);
+}
+
+export function resetSeen(examId?: string): void {
+  if (!examId) {
+    writeJson(localStorage, SEEN_KEY, {});
+    return;
+  }
+  const book = loadSeenBook();
+  delete book[examId];
+  writeJson(localStorage, SEEN_KEY, book);
 }

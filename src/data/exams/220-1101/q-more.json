@@ -1,0 +1,458 @@
+[
+  {
+    "id": "c1-126",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A laptop's keyboard types the wrong characters after a spill, and a USB keyboard works normally. The internal keyboard cable is seated. What should be replaced?",
+    "choices": [
+      "The laptop keyboard",
+      "The CPU, because key codes are decoded there",
+      "The CMOS battery",
+      "The display inverter"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An external keyboard that types correctly shows the operating system and the controller are fine. A spill that leaves the internal keyboard wrong, with the cable seated, means the keyboard matrix itself is damaged. The CPU, the clock battery, and a backlight inverter do not translate one keyboard and not the other.",
+    "choiceNotes": [
+      "Replace the internal keyboard. The USB keyboard already proved the rest of the input path.",
+      "The CPU is running the USB keyboard correctly. It is not decoding one keyboard differently.",
+      "The CMOS battery keeps firmware time. It does not remap a spilled keyboard.",
+      "An inverter lights an old backlight. It has no role in key codes."
+    ]
+  },
+  {
+    "id": "c1-128",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A laptop LCD is bright at the center and dim at the edges, and the dimness follows the panel when an external monitor is perfect. The backlight is LED, not fluorescent. Which part is the wrong first replacement?",
+    "choices": [
+      "An inverter, because this LED panel does not use one",
+      "The LED panel or its backlight circuit",
+      "The display cable, if the image also flickers when the lid moves",
+      "Checking the brightness keys before any parts"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "LED backlights are driven by an LED circuit, not by the high-voltage inverter used for older CCFL lamps. Ordering an inverter for an LED panel wastes the repair. The panel or its backlight circuit is the real hardware path, a flickering hinge points at the cable, and the brightness keys are the free check that should happen first.",
+    "choiceNotes": [
+      "There is no inverter to replace on an LED-backlit laptop. That part belongs to CCFL designs.",
+      "The panel and its LED backlight are the hardware that can look uneven when the external display is fine.",
+      "A cable that flexes at the hinge is a reasonable later check if the image changes as the lid moves.",
+      "Function-key brightness is the first, free test. A stuck low setting can look like a backlight fault."
+    ]
+  },
+  {
+    "id": "c1-130",
+    "domain": "1",
+    "objective": "1.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A phone's hotspot works, but the connected laptop is slow and the phone is hot. The laptop is syncing a photo library over that hotspot. What should change first?",
+    "choices": [
+      "Move the large sync to Wi-Fi and turn the hotspot off when it is not needed",
+      "Replace the phone screen",
+      "Install a desktop DIMM in the phone",
+      "Disable the laptop's USB ports"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hotspot spends the cellular plan and the battery. A photo library is a bulk transfer and should wait for Wi-Fi. The heat is the radio working hard, not a reason to replace the screen. Memory modules and the laptop's USB ports are not the path of that sync.",
+    "choiceNotes": [
+      "Stop the bulk sync on cellular. That is the setting and the habit that fix the bill and the heat.",
+      "The screen is displaying normally. Heat from a hotspot is the radio, not the panel.",
+      "A desktop memory module does not fit a phone and does not move photos.",
+      "USB ports are not how this laptop is reaching the hotspot."
+    ]
+  },
+  {
+    "id": "c1-132",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A mail client can receive mail with IMAP but cannot send. The receive port is open. Which port is the missing send path on the A+ list?",
+    "choices": [
+      "25, SMTP",
+      "143, which is already the receive port",
+      "3389",
+      "53"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SMTP on port 25 is how the A+ objectives describe sending mail. IMAP on 143 is retrieval, and it is already working. RDP is 3389 and DNS is 53. Opening those will not give the client a way to submit mail.",
+    "choiceNotes": [
+      "Port 25 is the SMTP send path that is still closed.",
+      "143 is IMAP. The stem says receive already works, so that port is not the missing one.",
+      "3389 is Remote Desktop. It does not submit mail.",
+      "53 is DNS. Name lookup is not the send protocol."
+    ]
+  },
+  {
+    "id": "c1-133",
+    "domain": "2",
+    "objective": "2.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A small office replaced a hub with a switch. Collisions dropped and each PC no longer sees every other PC's frames. What changed?",
+    "choices": [
+      "Each switch port is its own collision domain",
+      "The switch made one large collision domain",
+      "The switch is a Layer 7 filter",
+      "Broadcasts stopped entirely, which a basic switch does not do"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hub is one collision domain. A switch learns MAC addresses and gives each port its own collision domain, so stations no longer collide with each other. A basic switch still floods broadcasts. It is not an application filter.",
+    "choiceNotes": [
+      "That is the gain from the replacement. Each port is isolated from the others' collisions.",
+      "One big collision domain is what the hub already was.",
+      "A Layer 2 switch is not reading application payloads.",
+      "Broadcasts still go to every port in the VLAN. The collision behavior is what changed."
+    ]
+  },
+  {
+    "id": "c1-134",
+    "domain": "2",
+    "objective": "2.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An older laptop only associates at 54 Mbps on 2.4 GHz and cannot see the 5 GHz SSID. Which standard matches that radio?",
+    "choices": [
+      "802.11g",
+      "802.11ac",
+      "802.11a, because it is 2.4 GHz",
+      "802.11ax on 6 GHz only"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "802.11g is 2.4 GHz at 54 Mbps and has no 5 GHz radio. 802.11ac is Wi-Fi 5 on 5 GHz. 802.11a is 5 GHz, not 2.4. 802.11ax is Wi-Fi 6 and is not a 6 GHz-only standard. The laptop needs a newer radio if it must join the 5 GHz network.",
+    "choiceNotes": [
+      "g is exactly this: 2.4 GHz, 54 Mbps, no 5 GHz.",
+      "ac is a 5 GHz standard. This laptop cannot see 5 GHz at all.",
+      "802.11a is the 5 GHz, 54 Mbps standard. Putting it on 2.4 GHz swaps it with g.",
+      "ax is Wi-Fi 6 on 2.4 and 5 GHz. It is not limited to 6 GHz."
+    ]
+  },
+  {
+    "id": "c1-136",
+    "domain": "2",
+    "objective": "2.5",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "Two office PCs can ping each other. Neither can reach the internet. Both have blank default gateways and otherwise correct DHCP addresses. What should be set?",
+    "choices": [
+      "The router's LAN address as the default gateway",
+      "Each PC's own address as its gateway",
+      "127.0.0.1 as the gateway",
+      "A public DNS server in the gateway field"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Local pings work because those hosts are on-link. Off-link traffic needs a gateway in the same subnet, which is the router's LAN address. A host's own address and loopback send that traffic nowhere useful. A DNS server address is not a next hop.",
+    "choiceNotes": [
+      "The router address belongs in the gateway field. That is the path off the LAN.",
+      "Using the PC as its own gateway loops off-net traffic back to itself.",
+      "127.0.0.1 is loopback. Internet traffic would never leave.",
+      "DNS belongs in the DNS field. The gateway has to be a router."
+    ]
+  },
+  {
+    "id": "c1-137",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A website loads by address and not by name on one PC. Other PCs resolve the name. The DNS servers are correct. Which local file can override DNS on that one PC?",
+    "choices": [
+      "The hosts file",
+      "The print spooler folder",
+      "The font cache",
+      "The BIOS setup"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Windows checks the hosts file before DNS. One bad line sends a name to the wrong address on that PC only. The spooler, fonts, and firmware setup do not override name resolution.",
+    "choiceNotes": [
+      "Check the hosts file for a stale line and remove it.",
+      "The spooler holds print jobs. It does not resolve names.",
+      "The font cache has nothing to do with name resolution. A bad hosts line does.",
+      "Firmware setup does not store per-name overrides for websites."
+    ]
+  },
+  {
+    "id": "c1-139",
+    "domain": "2",
+    "objective": "2.8",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A wall jack was punched down and the pairs are loose. Which tool seats the conductors into the jack?",
+    "choices": [
+      "A punchdown tool",
+      "A crimper, which is for plugs",
+      "A loopback plug",
+      "A flashlight"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Punchdown seats wire into an insulation-displacement contact on a jack or a panel. A crimper attaches a plug. A loopback tests a port. A flashlight only helps you see.",
+    "choiceNotes": [
+      "The punchdown tool is the one for the jack.",
+      "Use a crimper when you are putting an RJ45 plug on a patch cord, not when you are seating a keystone.",
+      "A loopback plug tests a NIC. It does not terminate cable.",
+      "Light does not push a conductor into the contact."
+    ]
+  },
+  {
+    "id": "c1-140",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A run through a return-air ceiling was pulled with ordinary PVC Category 6. The speed is fine. The inspector fails it. Why?",
+    "choices": [
+      "Air-handling space requires plenum-rated cable",
+      "Category 6 cannot carry Ethernet",
+      "PVC is required in plenums",
+      "The inspector is checking the VLAN, not the jacket"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "When the space above the ceiling is an air return, the cable must be plenum rated so a fire does not fill the ventilation system with thick smoke. Category 6 can carry the data. PVC is the jacket that does not belong there. The inspector is looking at the jacket, not a VLAN.",
+    "choiceNotes": [
+      "Replace the run with plenum cable. The air path is the reason.",
+      "Category 6 is a normal Ethernet cable. The failure is the jacket rating.",
+      "PVC is what you avoid in a plenum, not what you require.",
+      "A VLAN is a switch configuration. It is not printed on the cable jacket."
+    ]
+  },
+  {
+    "id": "c1-141",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A desktop board takes DDR4. A technician tries to insert DDR5 and the notch does not line up. What is the correct action?",
+    "choices": [
+      "Stop. The generations are not interchangeable",
+      "File the notch until it fits",
+      "Force it. The board will slow the module down",
+      "Install it in a PCIe slot"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Each DDR generation is keyed so the wrong module cannot seat. Forcing or filing the notch breaks the slot and still lands the pins wrong. DDR5 does not fall back to DDR4. A memory module is not a PCIe card.",
+    "choiceNotes": [
+      "Get DDR4. The notch is a safety feature, not an obstacle.",
+      "Cutting the module defeats the key and can destroy the board.",
+      "The board cannot negotiate a different generation down. Forcing it bends pins.",
+      "PCIe is an expansion slot. Memory does not go there."
+    ]
+  },
+  {
+    "id": "c1-144",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A user has two drive bays and wants the family photos to survive one disk failing. Speed is secondary. Which RAID level fits?",
+    "choices": [
+      "RAID 1",
+      "RAID 0",
+      "RAID 5, which needs three disks",
+      "RAID 10, which needs four disks"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RAID 1 mirrors two disks. Either disk can fail and the photos remain, at the cost of one disk of capacity. RAID 0 dies when either disk dies. RAID 5 needs three disks and RAID 10 needs four. With two bays, the mirror is the redundant choice.",
+    "choiceNotes": [
+      "Mirror the two disks. Tell the user the usable space is one disk, not two.",
+      "A stripe has no redundancy. One failure loses the photos.",
+      "RAID 5 needs at least three disks. Two bays cannot build it.",
+      "RAID 10 needs four disks for a stripe of mirrors. Two bays are not enough."
+    ]
+  },
+  {
+    "id": "c1-154",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A hypervisor says virtualization is disabled. The laptop has enough RAM and the CPU supports the feature. Where is the switch?",
+    "choices": [
+      "Firmware, where VT-x or AMD-V is enabled",
+      "Printer preferences",
+      "The VGA jumper",
+      "The DHCP scope"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Intel VT-x and AMD-V can be supported by the CPU and still be switched off in firmware. Enable the feature and power-cycle. Printer settings, an old display jumper, and DHCP do not toggle it.",
+    "choiceNotes": [
+      "Turn the feature on in firmware. The error already named it.",
+      "Printer preferences do not change CPU features.",
+      "A VGA jumper is not the virtualization switch.",
+      "A DHCP scope hands out addresses. It cannot toggle a CPU feature."
+    ]
+  },
+  {
+    "id": "c1-166",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A PC boots with 16 GB installed, but the firmware and Windows only report 8 GB. The modules are a matched DDR4 pair, and one of them is seated in a slot the manual marks as optional and single-channel only when the primary pair is incomplete. What is the likely cause?",
+    "choices": [
+      "One module is in a slot the board does not populate until the primary slots are filled",
+      "Windows cannot count past 8 GB on any edition",
+      "DDR4 always hides half its capacity until ECC is enabled",
+      "The missing 8 GB is the page file, which should appear as installed RAM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Some boards only enable the second half of the slots when the primary pair is installed in the documented slots. A module in an unpopulated secondary slot can be ignored. Check the manual's slot order before you replace RAM that the firmware is not even training. Windows 10 64-bit is not capped at 8 GB. DDR4 capacity is not hidden by ECC. The page file is disk, not installed RAM.",
+    "choiceNotes": [
+      "Move the module into the slot order the manual lists. The board is ignoring a stick it never trained.",
+      "64-bit Windows 10 Home goes to 128 GB. Eight gigabytes is not an edition ceiling.",
+      "ECC is an error-correction feature. It does not hide half of a DDR4 module.",
+      "The page file never shows up as installed physical memory."
+    ]
+  },
+  {
+    "id": "c1-167",
+    "domain": "3",
+    "objective": "3.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A technician installs a SATA M.2 stick into a slot the manual labels NVMe only. The drive does not appear. A second M.2 slot on the same board is labeled SATA. What is the mismatch?",
+    "choices": [
+      "The protocol does not match the slot. M.2 is the shape, not a promise of NVMe or SATA",
+      "Every M.2 slot speaks both protocols, so the drive is dead",
+      "NVMe drives use the same connector as a 3.5 inch power plug",
+      "SATA M.2 drives only work in a PCIe x16 graphics slot"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "M.2 is a form factor. The electrical protocol is either SATA or NVMe, and a slot may support only one of them. A SATA stick in an NVMe-only slot will not enumerate. Move it to the slot the manual marks for SATA. The graphics slot and a drive power plug are different connectors.",
+    "choiceNotes": [
+      "Move the stick to the SATA-capable M.2 slot. The shape fit, and the protocol did not.",
+      "Slots are often one protocol. Assuming both always work is how this drive stayed invisible.",
+      "A 3.5 inch power plug is Molex or SATA power, not an M.2 edge connector.",
+      "A graphics slot is PCIe x16. It is not where a SATA M.2 stick belongs."
+    ]
+  },
+  {
+    "id": "c1-168",
+    "domain": "3",
+    "objective": "3.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A cooler is rocking on the CPU because one corner screw is tight and the opposite corner is loose. Temperatures climb under a light load and the paste has squeezed out one side. What is the fix?",
+    "choices": [
+      "Loosen all corners and tighten them in a cross pattern so the plate sits flat",
+      "Tighten only the already-tight screw further",
+      "Remove the paste entirely so the metal can touch with no compound",
+      "Set the fan header to 0 RPM"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "An uneven cooler contacts the heat spreader on one edge, squeezes the paste out that side, and leaves the other side dry. Loosen it and tighten in a cross pattern a little at a time. More force on the tight corner bends the plate further. Bare metal without paste transfers heat poorly. Stopping the fan makes the temperatures worse.",
+    "choiceNotes": [
+      "A flat seat is the repair. The cross pattern is how you get there without rocking the plate.",
+      "Tightening the high side increases the rock. Loosen and start over.",
+      "Paste fills the microscopic gaps. A dry joint runs hot.",
+      "A stopped fan removes the airflow the cooler depends on."
+    ]
+  },
+  {
+    "id": "c1-169",
+    "domain": "4",
+    "objective": "4.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Three guest VMs each want 4 GB, and the host has 8 GB total plus its own operating system. The host becomes unusable as soon as the third VM starts. What ran out?",
+    "choices": [
+      "RAM. The guests and the host do not fit in 8 GB",
+      "USB ports",
+      "The VGA connector",
+      "The print spooler"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Client virtualization is usually limited by memory. Three 4 GB guests plus a host cannot live in 8 GB, so the machine pages itself until it is unusable. Add RAM or run fewer guests. USB ports, the video connector, and the spooler are not the resource being exhausted.",
+    "choiceNotes": [
+      "Add memory or reduce the guest count. The arithmetic does not fit.",
+      "USB ports do not provide memory to guest virtual machines. Adding ports will not stop the paging.",
+      "The video connector does not allocate memory to virtual machines.",
+      "The print spooler queues jobs. It does not fund guest memory."
+    ]
+  },
+  {
+    "id": "c1-170",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A RAID 5 array of four disks is degraded. One disk shows a failure LED and the volume is still readable. A colleague wants to pull a second disk to 'test the parity.' What happens if they do?",
+    "choices": [
+      "The array will fail. RAID 5 survives only one missing disk, and a second removal destroys it",
+      "RAID 5 rebuilds faster with two disks missing",
+      "Parity lets RAID 5 lose any three disks",
+      "The volume converts itself to RAID 0 and stays online"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "RAID 5 can rebuild from one failed disk. A second failure, or pulling a healthy member, loses the stripe because there is only one parity block. Replace the failed disk and let the rebuild finish before anyone touches another member. It does not become RAID 0, and it cannot lose three disks.",
+    "choiceNotes": [
+      "Stop them. One failure is the limit. Replace the bad disk and leave the healthy ones alone until the rebuild completes.",
+      "A second missing disk is a failed array, not a faster rebuild.",
+      "One parity disk means one failure, not three.",
+      "Nothing converts the array to a stripe to keep it online. The data is gone if a second disk leaves."
+    ]
+  },
+  {
+    "id": "c1-171",
+    "domain": "5",
+    "objective": "5.4",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A projector image is fuzzy. The cable and the input are correct, and the laptop looks sharp on its own panel. The projector remote has a focus ring that is far off center. What is the first adjustment?",
+    "choices": [
+      "Focus the lens, then set the laptop to the projector's native resolution",
+      "Replace the lamp before touching focus",
+      "Reseat the RAM",
+      "Change the SSID"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A soft image with a known-good source is often focus or a non-native resolution. Use the focus control and match the native resolution before you buy a lamp. RAM and the wireless name do not soften a projector image.",
+    "choiceNotes": [
+      "Focus and native resolution are the free fixes. A lamp is for a dim image, not a blurry one.",
+      "A lamp replacement does not focus the lens.",
+      "Memory has nothing to do with optical focus.",
+      "The SSID is a wireless name. It does not focus a lens."
+    ]
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "sy0-157",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A file is encrypted for the recipients, and a separate hash is published so they can detect a change. Which CIA legs are those?",
+    "choices": [
+      "Confidentiality, then integrity",
+      "Availability, then confidentiality",
+      "Both availability",
+      "The hash encrypts the file, so encryption is unnecessary"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Encryption keeps the wrong people from reading the file. A hash that no longer matches shows the file changed. Availability is whether the file is there when needed. A hash is not encryption.",
+    "choiceNotes": [
+      "Encryption hides the contents. The hash shows they were not modified.",
+      "Availability is uptime. These tools are not both aimed at it.",
+      "Neither control is primarily about the file being online.",
+      "A hash is a one-way fingerprint. It does not hide the file."
+    ]
+  },
+  {
+    "id": "sy0-158",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An emergency firewall change was never ticketed. The only person who knows the new rule is on vacation when it causes an outage. What failed?",
+    "choices": [
+      "The emergency change was not documented or reviewed, so nobody else can own it",
+      "Emergency changes are forbidden even when the business is down",
+      "The failure is that an emergency was allowed to exist",
+      "Leaving the rule undocumented was the correct emergency process"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Emergencies happen. The control is to record and review them afterward so the change can be kept or backed out by someone else. A rule that lives in one person's memory cannot be fixed on vacation. The existence of the emergency is not the failure.",
+    "choiceNotes": [
+      "Write it down and review it. Ownership has to survive one person being out.",
+      "Change management includes an emergency path. It does not pretend outages wait for a monthly meeting.",
+      "The emergency itself is not the process failure. The missing record is.",
+      "An undocumented rule is why the next person could not fix the outage."
+    ]
+  },
+  {
+    "id": "sy0-160",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Someone runs a public exploit against one small website, brags in a forum, and never builds custom malware or keeps long-term access. Which actor fits?",
+    "choices": [
+      "An unskilled attacker",
+      "A nation-state team that stays quiet for months",
+      "An insider who already has a badge",
+      "An organized crew with a payment site and affiliates"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A public tool, a public brag, and no persistence are the unskilled end of the scale. A nation-state hides and stays. An insider already belongs inside. Organized crime runs the attack like a business. None of those match a one-off public exploit.",
+    "choiceNotes": [
+      "Public tools and no follow-through are the unskilled pattern.",
+      "A nation-state does not usually announce a noisy one-day hit on a tiny site.",
+      "An insider does not need a public exploit against the outside website.",
+      "A payment site and affiliates are a criminal business, not a forum brag."
+    ]
+  },
+  {
+    "id": "sy0-165",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "Four hospitals share one cloud built only for their members. Outsiders cannot buy a tenancy in it, and no single hospital owns the whole platform. Which deployment is that?",
+    "choices": [
+      "Community",
+      "Public, open to any customer with a credit card",
+      "Private to one hospital and unused by the other three",
+      "A cold site with no systems installed"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A community cloud is shared by organizations with a common need and is not sold to the general public. A public cloud takes any customer. A private cloud serves one organization. A cold site is empty recovery space, not a running platform for four members.",
+    "choiceNotes": [
+      "Shared by a defined group, and closed to everyone else, is a community deployment.",
+      "A public cloud would let outsiders buy in. This one does not.",
+      "Private means one organization. Four members break that definition.",
+      "A cold site is not where their workloads run day to day."
+    ]
+  },
+  {
+    "id": "sy0-169",
+    "domain": "4",
+    "objective": "4.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A build server refuses an unsigned hotfix. The developer wants the check disabled for speed. What is the control?",
+    "choices": [
+      "Code signing. Sign the hotfix instead of skipping the check",
+      "Code signing proves there are no bugs",
+      "Skipping the check is safe when someone is in a hurry",
+      "The signature encrypts the binary"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A signature shows the binary came from the release key and was not swapped. It does not prove the code is bug-free. The hotfix should be signed. Skipping the check is how a tampered binary lands. Signing is not confidentiality.",
+    "choiceNotes": [
+      "Keep the check and sign the binary. The hurry is not a reason to accept an unsigned file.",
+      "A signature answers who produced it, not whether the logic is correct.",
+      "Disabling the signature check is the hole. Speed does not make an unsigned hotfix trustworthy.",
+      "A signature leaves the bytes readable and verifies them. It does not hide them."
+    ]
+  },
+  {
+    "id": "sy0-179",
+    "domain": "5",
+    "objective": "5.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A vendor's questionnaire claims full-disk encryption, and the contract includes a right to audit. No evidence has been produced. What is weak about accepting the form alone?",
+    "choices": [
+      "A questionnaire is a claim. The audit right exists so you can ask for evidence",
+      "Questionnaires are always false and should never be used",
+      "A right to audit means you must not look",
+      "Encryption cannot be evidenced"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Questionnaires are a cheap starting point and they are self-reported. Evidence or the audit right checks a claim that matters. You do not skip the form, and you do not treat it as proof. The right to audit is the right to look.",
+    "choiceNotes": [
+      "Ask for evidence on the claims that carry risk. The form is not the proof.",
+      "Questionnaires are useful. They are not the last step.",
+      "The audit clause is wasted if you refuse to use it.",
+      "A vendor can show how encryption is deployed."
+    ]
+  },
+  {
+    "id": "sy0-182",
+    "domain": "5",
+    "objective": "5.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Developers keep shipping injection bugs, and reception keeps letting visitors follow them through the door. Everyone watched the same generic annual video. What training change fits?",
+    "choices": [
+      "Role-based training: secure coding for developers and physical social engineering for reception",
+      "A longer copy of the same generic video",
+      "Removing the report button",
+      "A rule that forbids mentioning phishing or tailgating"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "People need the risks of their own job. Developers need secure coding. Reception needs tailgating and pretext. A longer generic video still never names either job. Removing the report path and banning the topic make the failures quieter.",
+    "choiceNotes": [
+      "Match the lesson to the work. That is role-based awareness.",
+      "More of the same video still skips both jobs.",
+      "The report path is how those failures get to the security team.",
+      "Forbidding the topic does not teach either group."
+    ]
+  }
+]
