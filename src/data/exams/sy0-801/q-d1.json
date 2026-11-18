@@ -123,7 +123,7 @@
   {
     "id": "sy0-006",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A file is encrypted so only the intended recipients can read it. A separate hash is published so recipients can tell whether the file changed. A signature on that hash lets them show who sent it. Which leg of the CIA triad does the encryption protect, and which does the hash protect?",
@@ -147,7 +147,7 @@
   {
     "id": "sy0-007",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user denies sending a financial approval. The message has a digital signature that validates with that user's private-key counterpart, the public key in the company directory. What security goal does a valid signature support here?",
@@ -171,7 +171,7 @@
   {
     "id": "sy0-008",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A company still trusts every laptop once it is on the office Wi-Fi. The new design authenticates every request, uses the user's role and device health, and assumes an attacker may already be inside. What is that design called?",
@@ -195,7 +195,7 @@
   {
     "id": "sy0-009",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A gap analysis compares the written security policy with the controls that are actually running. The policy requires full-disk encryption on every laptop. Inventory shows a third of the laptops are not encrypted. What is the gap, and what is it not?",
@@ -219,7 +219,7 @@
   {
     "id": "sy0-010",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A file named 'passwords.xlsx' is left on a file share that no real user should open. Any access creates a high-severity alert. The file contains no real passwords. What is it?",
@@ -243,7 +243,7 @@
   {
     "id": "sy0-011",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "Which pair is a physical preventive control and a physical detective control, in that order?",
@@ -267,7 +267,7 @@
   {
     "id": "sy0-012",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A firewall change is scheduled for Friday at 5 p.m. The request lists the new rule and the engineer, and it says nothing about how to undo the rule if branch offices lose access. What is missing from the change?",
@@ -291,7 +291,7 @@
   {
     "id": "sy0-013",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A new payroll application will not work until its servers are added to a firewall allow list and the service accounts are created. The change ticket covers the app install and not those dependencies. Users will call the app 'down' if they are forgotten. What should the impact analysis include?",
@@ -315,7 +315,7 @@
   {
     "id": "sy0-014",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Maintenance on the VPN concentrator will drop remote users for twenty minutes. The change is approved. Which scheduling choice best limits the security and business impact?",
@@ -339,7 +339,7 @@
   {
     "id": "sy0-015",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "After an emergency change, the engineer who made it is the only person who knows the new rule, and the ticket was never opened. The next week that engineer is out and the rule causes an outage. Which change-management failure is this?",
@@ -363,7 +363,7 @@
   {
     "id": "sy0-016",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A team needs to encrypt large disk volumes quickly and will share one secret key among the servers that must read those volumes. Which type of cryptography fits the bulk encryption?",
@@ -387,7 +387,7 @@
   {
     "id": "sy0-017",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users authenticate with passwords that are stored as hashes. An attacker steals the hash database. The hashes were computed with a unique random value added to each password before hashing. What is that value, and what attack does it slow?",
@@ -411,7 +411,7 @@
   {
     "id": "sy0-018",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "hard",
     "select": 2,
     "stem": "A certificate for www.example.com is revoked on Monday. Clients that only download a certificate revocation list once a week still trust the certificate on Wednesday. A different design has the web server attach a fresh, signed status response so clients do not each query the authority. Which two ideas are those? (Choose two.)",
@@ -436,7 +436,7 @@
   {
     "id": "sy0-019",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A laptop uses a TPM so the full-disk encryption key is released only when the boot measurements match. The company also has a network HSM that stores keys for many servers and never releases the private key to those servers. Which statement is accurate?",

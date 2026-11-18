@@ -7,10 +7,11 @@ const SESSION_KEY = 'certline.session.v1';
 const RESULT_KEY = 'certline.result.v1';
 const SEEN_KEY = 'certline.seen.v1';
 
-/** V14 A+ ids kept in older browsers. History, missed questions, and seen ids move with the exam. */
+/** Retired exam ids kept in older browsers. History, missed questions, and seen ids move with the exam. */
 const EXAM_ID_ALIASES: Record<string, string> = {
   '220-1101': '220-1201',
   '220-1102': '220-1202',
+  'sy0-701': 'sy0-801',
 };
 
 function migrateExamId(id: string): string {

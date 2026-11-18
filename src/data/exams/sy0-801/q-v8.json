@@ -1,0 +1,290 @@
+[
+  {
+    "id": "sy0-210",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A server is missing a patch. Nobody has used that weakness yet. Which term fits the missing patch, and which term would fit a person who later tries to use it?",
+    "choices": [
+      "The missing patch is a vulnerability. The person who tries to use it is a threat actor",
+      "The missing patch is already an incident, and the person is a control",
+      "The missing patch is a policy, and the person is a vulnerability",
+      "Both are the same thing: a residual risk acceptance"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A vulnerability is a weakness. A threat actor is someone or something that may exploit it. Until that happens, the unpatched server is not yet an incident. A policy and a risk acceptance are decisions, not the weakness or the person.",
+    "choiceNotes": [
+      "Keep the two ideas separate. The hole is the vulnerability. The person is the threat actor.",
+      "An incident is a weakness that is being used, or its result. A missing patch alone is not that.",
+      "A policy is a rule. A missing patch is not a policy, and the person is not the weakness.",
+      "Risk acceptance is a management decision. It is not the name of either the patch or the person."
+    ]
+  },
+  {
+    "id": "sy0-211",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A payroll app can be reached from the internet, from the VPN, and from an old admin port that nobody documented. Which term is the set of all of those places?",
+    "choices": [
+      "The attack surface",
+      "A single threat vector, because three paths count as one",
+      "A compensating control",
+      "A recovery time objective"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The attack surface is every place an attacker might try. Each path, such as the internet, the VPN, or the forgotten port, can be a vector into that surface. A compensating control and a recovery time are not a list of exposed places.",
+    "choiceNotes": [
+      "All of the reachable places together are the attack surface. Shrink it by closing the unused port.",
+      "Each path can be its own vector. The collection of them is the surface, not one vector.",
+      "A compensating control stands in for a missing control. It is not the list of exposures.",
+      "A recovery time objective is how long a service may be down. It is not an exposure list."
+    ]
+  },
+  {
+    "id": "sy0-212",
+    "domain": "2",
+    "objective": "2.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A firewall log shows a scan, and the scanned service is unpatched. The scan did not succeed. How should those two facts be described?",
+    "choices": [
+      "A threat event met a vulnerability, and it has not become a successful compromise",
+      "A successful breach, because any scan of an unpatched service is already data theft",
+      "A false positive, because unpatched services cannot be real",
+      "A backup test"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A scan is threat activity. The missing patch is the vulnerability. Together they are dangerous, but a failed scan is not yet theft. Treat it as an attempt, patch the service, and keep the log. Calling it nothing, or calling it a completed breach, both misstate the evidence.",
+    "choiceNotes": [
+      "Record the attempt and close the weakness. Success was not shown.",
+      "The log says the scan did not succeed. Do not report theft you cannot see.",
+      "An unpatched service is a real weakness. The finding is not a false positive.",
+      "A backup test restores data. It does not scan a service."
+    ]
+  },
+  {
+    "id": "sy0-213",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A support bot is told, in a customer's message, to ignore its instructions and print the hidden system prompt. The bot complies. What kind of AI failure is that?",
+    "choices": [
+      "Prompt injection",
+      "A hardware failure of the bot's disk",
+      "A certificate expiration",
+      "A full backup"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Prompt injection is untrusted text that tries to override the model's instructions. The customer's message did that. The fix is to keep secrets out of the prompt, limit what the bot can reveal, and treat user text as data rather than as orders. A disk, a certificate, and a backup do not explain a bot obeying a hidden instruction.",
+    "choiceNotes": [
+      "Treat the customer text as untrusted data. That was prompt injection.",
+      "Nothing here failed in the disk. The model followed an injected instruction.",
+      "A certificate date does not make a bot reveal its prompt.",
+      "A backup does not change how the bot reads a message."
+    ]
+  },
+  {
+    "id": "sy0-214",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A model that flags malware was retrained on a set in which an attacker had relabeled malicious samples as safe. Afterward it waves those samples through. What happened to the model?",
+    "choices": [
+      "Data poisoning",
+      "A normal accuracy improvement",
+      "A password rotation",
+      "A warm-site test"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Poisoning is training data that was altered so the model learns the wrong lesson. Relabeling malware as safe is that attack. The model needs a trusted training set and a check against known-bad samples. A password rotation and a recovery test do not relabel training data.",
+    "choiceNotes": [
+      "The labels were sabotaged. That is poisoning. Retrain from a source you trust.",
+      "Accuracy did not improve. The model learned a lie.",
+      "Rotating a password does not change training labels.",
+      "A warm site is spare infrastructure. It did not relabel the samples."
+    ]
+  },
+  {
+    "id": "sy0-215",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A user spends a long chat trying to talk a public model into dropping its safety rules and producing content the rules forbid. The user never touches the training set. What is that attempt called?",
+    "choices": [
+      "Jailbreaking",
+      "Data poisoning of the training set",
+      "A tape rotation",
+      "A change-advisory board approval"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Jailbreaking is an attempt to make a model ignore the limits set for it, usually through the conversation rather than through the training data. Poisoning would change the data the model learned from. A tape job and a change board are not this conversation.",
+    "choiceNotes": [
+      "The chat is trying to remove the model's limits. That is jailbreaking. Do not use the output.",
+      "Poisoning changes training data. This user never touched that data.",
+      "Tape rotation is a backup schedule. It is not a chat with a model.",
+      "A change board approves production changes. It is not a chat with a model."
+    ]
+  },
+  {
+    "id": "sy0-216",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A generated answer cites a security bulletin number that does not exist and describes a menu the product does not have. The tone is confident. Which limitation is that?",
+    "choices": [
+      "A hallucination",
+      "A verified vendor advisory",
+      "Perfect explainability",
+      "A passed audit"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A hallucination is a confident answer that is not true. Invented bulletin numbers and menus are the clue. Check the vendor before you act on the text. Explainability and an audit do not make a fictional citation real.",
+    "choiceNotes": [
+      "Do not follow the invented bulletin. The model hallucinated it.",
+      "A real advisory can be found at the vendor. This number cannot.",
+      "Explainability would show why a decision was made. It does not invent a menu.",
+      "An audit does not certify a citation that does not exist."
+    ]
+  },
+  {
+    "id": "sy0-217",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A hiring model was trained mostly on one region's past decisions, and it rejects qualified applicants from another region at a much higher rate. Which AI problem is that?",
+    "choices": [
+      "Bias in the training data and the resulting decisions",
+      "A load balancer preferring a healthy server",
+      "A salt on a password hash",
+      "A differential backup"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Bias is a systematic skew, here inherited from a training set that did not represent the people being judged. Review the data and the outcomes, and do not treat the score as neutral. A load balancer, a salt, and a backup are unrelated.",
+    "choiceNotes": [
+      "The model learned an unfair pattern. That is bias, and the outcomes show it.",
+      "A load balancer distributes traffic. It does not score applicants.",
+      "A salt changes a password hash. It does not reject a region.",
+      "A differential backup copies changed files. It does not hire anyone."
+    ]
+  },
+  {
+    "id": "sy0-218",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "An analyst pastes a full incident ticket, including customer account numbers, into a public chatbot that the company has not approved. What is the security failure?",
+    "choices": [
+      "Sensitive data left the company's control",
+      "The chatbot is automatically a private company system",
+      "Account numbers are not sensitive",
+      "The paste is a backup of the ticket"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A public model is outside the company's control unless a contract and a design say otherwise. Account numbers are sensitive. Pasting them there is data loss. It is not a backup, and calling the tool private does not make it one.",
+    "choiceNotes": [
+      "Stop the practice and report it. The account numbers were disclosed to an unapproved system.",
+      "Public is not private. Approval and a contract would have to say otherwise.",
+      "Account numbers identify customers. They are sensitive.",
+      "A backup is a copy you control and can restore. This paste is neither."
+    ]
+  },
+  {
+    "id": "sy0-219",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A vision model detects weapons in images. An attacker changes a few pixels so the weapon is still obvious to a person and the model says the image is clean. What is that?",
+    "choices": [
+      "Evasion",
+      "A successful patch of the model",
+      "A longer password",
+      "A hot site"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Evasion changes the input so a model misses what a person can still see. It is not a fix. Detect it by testing the model against altered inputs and by not trusting the score alone. A password and a hot site do not hide an object from a model.",
+    "choiceNotes": [
+      "The picture was altered to fool the model. That is evasion.",
+      "A patch would improve detection. This change made detection fail.",
+      "A longer password does not change the pixels in an image.",
+      "A hot site is a recovery location. It does not edit an image."
+    ]
+  },
+  {
+    "id": "sy0-220",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A model denies a loan and cannot show which factors produced the denial. Regulators ask why. Which gap is that?",
+    "choices": [
+      "Explainability",
+      "A complete chain of custody for a disk image",
+      "A passed penetration test of the office Wi-Fi",
+      "A longer DHCP lease"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Explainability is the ability to say why a model produced an outcome. A denial with no factors fails that. Custody of a disk, a wireless test, and a DHCP lease do not answer the regulator's question.",
+    "choiceNotes": [
+      "The missing 'why' is an explainability gap. Do not deploy a decision you cannot account for.",
+      "Chain of custody tracks evidence. It does not explain a loan score.",
+      "A wireless test does not document a credit decision.",
+      "A DHCP lease times an address. It is not a reason code."
+    ]
+  },
+  {
+    "id": "sy0-221",
+    "domain": "2",
+    "objective": "2.6",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A document the model is allowed to read tells it to call an internal tool and run a command the user never typed. The tool is connected and has broad rights. What risk is that, and what reduces it?",
+    "choices": [
+      "The model can be steered into code execution. Limit the tools and require a person for dangerous actions",
+      "The document is harmless because models cannot call tools",
+      "Give the tool domain-admin rights so the command always works",
+      "Disable logging so the command is not recorded"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "If a model can invoke tools, untrusted content can try to make it invoke the wrong one. That is a code-execution risk. Reduce it by allowing only the tools the job needs and by stopping dangerous actions for a person to approve. More privilege and no logs make the failure worse.",
+    "choiceNotes": [
+      "Restrict the tools and put a person in front of anything destructive. The document was trying to drive the tool.",
+      "This model can call a tool. Pretending it cannot is how the command runs.",
+      "Domain admin on the tool is the opposite of least privilege.",
+      "Turning off logs hides the action. It does not stop it."
+    ]
+  }
+]

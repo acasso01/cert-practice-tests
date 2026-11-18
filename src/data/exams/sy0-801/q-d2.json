@@ -2,7 +2,7 @@
   {
     "id": "sy0-020",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A well-funded group quietly steals aircraft designs over many months and shows no interest in a ransom. The activity aligns with a government's intelligence goals. Which actor fits best?",
@@ -26,7 +26,7 @@
   {
     "id": "sy0-021",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "An employee with legitimate access copies the customer database onto a personal drive the week after a poor performance review. No external malware is found. Which actor and motivation fit?",
@@ -50,7 +50,7 @@
   {
     "id": "sy0-022",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A criminal group encrypts a hospital's files and demands payment. The operation looks like a business: affiliates, a payment site, and a support chat for victims. What is the best actor and motivation pair?",
@@ -74,7 +74,7 @@
   {
     "id": "sy0-023",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "Marketing buys a cloud design tool on a credit card. IT and security never reviewed it, and customer artwork is now stored there. What is that practice called?",
@@ -98,7 +98,7 @@
   {
     "id": "sy0-024",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "Two incidents look similar in the logs, but the responders disagree about sophistication. One used a single well-known phishing kit against a public webmail portal and gave up after a lockout. The other maintained access for months, moved between internal systems, and avoided noisy tools. Which comparison is fair?",
@@ -122,7 +122,7 @@
   {
     "id": "sy0-025",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "easy",
     "select": 2,
     "stem": "An email pretends to be the CEO and asks finance to wire money today and not to call. A second case is a text message with a link that looks like the bank. What are the two vectors? (Choose two.)",
@@ -147,7 +147,7 @@
   {
     "id": "sy0-026",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Attackers register a domain one letter off from the company's payroll site and host a lookalike login there. Employees who mistype the address enter credentials. What is that technique called?",
@@ -171,7 +171,7 @@
   {
     "id": "sy0-027",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A contractor finds a network device still using the vendor's admin password and an old protocol exposed to the internet. No one sent a phishing email. Which attack surface is this?",
@@ -195,7 +195,7 @@
   {
     "id": "sy0-028",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A software update from a trusted vendor arrives signed and is installed everywhere. The update later turns out to contain an unauthorized backdoor added before the vendor shipped it. Which vector is this?",
@@ -219,7 +219,7 @@
   {
     "id": "sy0-029",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A USB drive labeled 'salary data' is left in the parking lot. The risk is that someone plugs it into a company PC. Which vector is the drive?",
@@ -243,7 +243,7 @@
   {
     "id": "sy0-030",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Attackers compromise a news site that engineers read every morning, and only then deliver a malicious script to those visitors. The company's own website is untouched. What is the technique?",
@@ -267,7 +267,7 @@
   {
     "id": "sy0-031",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A server is missing a patch that the vendor released six weeks ago. A different server is being attacked with a flaw the vendor has never heard of and for which no patch exists. Which is which?",
@@ -291,7 +291,7 @@
   {
     "id": "sy0-032",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A web form builds a database query by gluing the user's typed text into the command. A researcher demonstrates that unexpected input changes which rows come back. No sample payload is needed to classify this. What vulnerability class is it?",
@@ -315,7 +315,7 @@
   {
     "id": "sy0-033",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A guest virtual machine can read memory that belongs to the hypervisor or to another guest. What is that class of failure called?",
@@ -339,7 +339,7 @@
   {
     "id": "sy0-034",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "An application checks a user's role, then later performs the privileged action. Another request can slip in between those two steps and change the role that is actually used. What vulnerability is that timing window?",
@@ -363,7 +363,7 @@
   {
     "id": "sy0-035",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A file server still runs an operating system the vendor stopped patching two years ago. It is on the production network because one old application needs it. What vulnerability category is the operating system itself?",
@@ -387,7 +387,7 @@
   {
     "id": "sy0-036",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A cloud storage bucket is left readable by anyone on the internet. The files were not stolen by malware on a laptop. The configuration simply allowed anonymous access. What is the vulnerability?",
@@ -411,7 +411,7 @@
   {
     "id": "sy0-037",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user account logs in from New York and, four minutes later, from a country on the other side of the world. The user is in a meeting in New York. What indicator is that?",
@@ -435,7 +435,7 @@
   {
     "id": "sy0-038",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "CPU use on a server stays near 100 percent. The process is unknown, outbound connections go to a mining pool, and there is no ransom note. What is the most likely activity?",
@@ -459,7 +459,7 @@
   {
     "id": "sy0-039",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Security logs that used to record administrator logins on a server now have a gap covering the hour of a suspected intrusion. The logging service is running and the disk is not full. What indicator is the gap?",
@@ -483,7 +483,7 @@
   {
     "id": "sy0-040",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A workstation encrypts files and drops a note demanding payment. The same note appears on a file share the workstation had open. What is the activity, and what is the first containment move?",
@@ -507,7 +507,7 @@
   {
     "id": "sy0-041",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users report that an internal website sometimes loads a script that asks for their password, and the page source contains content a customer typed into a review box yesterday. What class of malicious activity is indicated?",
@@ -531,7 +531,7 @@
   {
     "id": "sy0-042",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "Many machines on the internet send traffic to a company's public site at once, and the site becomes unreachable for real customers. A single lab PC doing the same thing yesterday was a smaller event. What are yesterday and today?",
@@ -554,8 +554,8 @@
   },
   {
     "id": "sy0-043",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "Guest Wi-Fi, point-of-sale systems, and the corporate file servers currently share one flat network. A guest laptop can see server broadcasts. Which mitigation is the structural fix?",
@@ -578,8 +578,8 @@
   },
   {
     "id": "sy0-044",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A server must keep running, but a patch for a high-severity flaw will not be approved until next month. Which mitigation is appropriate in the meantime?",
@@ -602,8 +602,8 @@
   },
   {
     "id": "sy0-045",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "An allow list on an application control product permits only signed binaries from the approved directory. A user downloads a 'cleaner' and it will not run. Why is that the intended outcome, compared with a deny list of known bad file names?",
@@ -626,8 +626,8 @@
   },
   {
     "id": "sy0-046",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A workstation is suspected of calling an attacker every few minutes. The incident lead says to isolate it, not to power it off and not to let it keep talking to the office. Which outcome matches that instruction?",
@@ -650,8 +650,8 @@
   },
   {
     "id": "sy0-047",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Which mitigation most directly reduces what a compromised user account can do, even after the attacker has the password?",
@@ -675,7 +675,7 @@
   {
     "id": "sy0-048",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A group defaces the public website and posts a manifesto about an environmental policy. They do not steal the customer database and they do not demand money. Which actor and motivation fit?",
@@ -699,7 +699,7 @@
   {
     "id": "sy0-049",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A caller claims to be the help desk, knows the employee's name from a public staff page, and asks for a one-time code that just arrived by text. What combination is this?",
@@ -723,7 +723,7 @@
   {
     "id": "sy0-050",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A mobile device management report shows phones still running an operating system release with known, patched flaws. The phones are corporate-owned. What vulnerability are they carrying?",
@@ -747,7 +747,7 @@
   {
     "id": "sy0-051",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A decoy administrator password, never used by any real person, is attempted against a VPN every night. What does the attempt tell you, and what should you avoid?",
@@ -770,8 +770,8 @@
   },
   {
     "id": "sy0-052",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "Which mitigation removes a service that is no longer used, instead of leaving it patched 'just in case'?",
@@ -795,7 +795,7 @@
   {
     "id": "sy0-053",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Endpoint software quarantines a file and the user can no longer open it. The file arrived as an email attachment and matches a known malware signature. What did the quarantine accomplish?",

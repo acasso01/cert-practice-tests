@@ -1,6 +1,6 @@
 # Certline
 
-Free, original practice for **CompTIA Network+ (N10-009)**, **A+ Core 1 (220-1201)** and **Core 2 (220-1202)**, and **Security+ (SY0-701)**.
+Free, original practice for **CompTIA Network+ (N10-009)**, **A+ Core 1 (220-1201)** and **Core 2 (220-1202)**, and **Security+ (SY0-801)**.
 
 Certline runs entirely in the browser. There is no account and no server. Scores, missed questions, and the current session stay in this browser's storage.
 
@@ -18,7 +18,7 @@ https://acasso01.github.io/cert-practice-tests/
 
 Questions and answer order are shuffled each time you start. Practice and exams prefer questions this browser has not shown yet, then the ones you saw longest ago. Fresh-questions-only and Reset seen history are on the setup screen.
 
-The banks currently hold 193 Network+ questions, 176 A+ Core 1 (220-1201) questions, 172 A+ Core 2 (220-1202) questions, and 189 Security+ questions. New items are original and are checked for near-duplicate stems. A browser that still has 220-1101 or 220-1102 history keeps those scores under the V15 exams.
+The banks currently hold 193 Network+ questions, 176 A+ Core 1 (220-1201) questions, 172 A+ Core 2 (220-1202) questions, and 201 Security+ (SY0-801) questions. New items are original and are checked for near-duplicate stems. A browser that still has 220-1101, 220-1102, or SY0-701 history keeps those scores under the current exams.
 
 ### Scores
 
@@ -114,4 +114,4 @@ Certline is an independent study tool. It is **not** affiliated with, endorsed b
 
 CompTIA, Network+, A+, and Security+ are trademarks of CompTIA. Professor Messer's name is used only to point at his free public course index for the matching exam. The questions here were written for this project. They are not copied from Professor Messer, Jason Dion, ExamCompass, CompTIA, or any other publisher.
 
-A+ questions follow the V15 objectives, 220-1201 and 220-1202, which launched March 25, 2025. The English 220-1101 and 220-1102 exams retired September 25, 2025. Network+ on this site is N10-009. Security+ on this site is SY0-701, which CompTIA still offers; Security+ V8 (SY0-801) launched November 17, 2026, and the English SY0-701 exam retires June 11, 2027.
+A+ questions follow the V15 objectives, 220-1201 and 220-1202, which launched March 25, 2025. The English 220-1101 and 220-1102 exams retired September 25, 2025. Network+ on this site is N10-009. Security+ questions follow SY0-801 (V8), which launched November 17, 2026. Professor Messer's free Security+ videos are still the SY0-701 course; a free SY0-801 course was not published when this bank was written.

@@ -26,7 +26,7 @@
   {
     "id": "sy0-184",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A directory records who signed in, what they opened, and when. It is not the check of the password and it is not the list of what they are allowed to open. Which part of AAA is the record?",
@@ -50,7 +50,7 @@
   {
     "id": "sy0-185",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A server's long-term private key is stolen today. Sessions recorded last year must stay unreadable. Which property of the key exchange provides that?",
@@ -74,7 +74,7 @@
   {
     "id": "sy0-186",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A group defaces a site and posts a political statement. They do not ask for money and they do not take the customer database. Which actor's usual motivation matches?",
@@ -98,7 +98,7 @@
   {
     "id": "sy0-187",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A text message claims to be the bank and includes a link to a login page. The user did not request a text. What is that message?",
@@ -122,7 +122,7 @@
   {
     "id": "sy0-188",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Customers at one store report fraudulent card charges after using the register. A reader was clipped over the real card slot and has now been removed. What was that device doing?",
@@ -146,7 +146,7 @@
   {
     "id": "sy0-189",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A build still links a library whose maintainer published a fix months ago. The application code around the library was written in-house and is not the buggy part. Where is the vulnerability?",
@@ -170,7 +170,7 @@
   {
     "id": "sy0-190",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "One password is tried against hundreds of accounts, and almost no account hits its lockout threshold. A later review shows the same password on the failures. What pattern is that?",
@@ -193,8 +193,8 @@
   },
   {
     "id": "sy0-191",
-    "domain": "2",
-    "objective": "2.5",
+    "domain": "4",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users can run anything they download, and a new policy says only approved applications may execute. Which control enforces that policy?",
@@ -434,7 +434,7 @@
   {
     "id": "sy0-201",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Receivers must be able to tell that a message body was signed by the company's mail system and not altered. The public key is in DNS. Which control is that?",
@@ -458,7 +458,7 @@
   {
     "id": "sy0-202",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A caller asks the help desk to reset an executive's password. The caller ID shows an external number and the caller cannot answer the callback phrase on the account. What should the analyst do?",
@@ -482,7 +482,7 @@
   {
     "id": "sy0-203",
     "domain": "4",
-    "objective": "4.7",
+    "objective": "4.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "When a high-severity endpoint alert fires, the same isolation steps run every time without waiting for someone to remember them. Which system runs that repeatable response?",
@@ -506,7 +506,7 @@
   {
     "id": "sy0-204",
     "domain": "4",
-    "objective": "4.8",
+    "objective": "4.7",
     "difficulty": "hard",
     "select": 1,
     "stem": "An investigator needs what was in RAM on a running suspect host. The host is about to be powered off and shipped. What must happen first?",
