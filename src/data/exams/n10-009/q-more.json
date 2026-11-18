@@ -1,0 +1,122 @@
+[
+  {
+    "id": "n10-159",
+    "domain": "1",
+    "objective": "1.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A packet arrives at a router with a TTL of 1. The router must forward it toward a remote subnet. What does the router do?",
+    "choices": [
+      "It drops the packet and usually sends ICMP Time Exceeded back to the source",
+      "It forwards the packet and increments the TTL",
+      "It converts the packet into an Ethernet frame and ignores the TTL",
+      "It assigns the packet an APIPA address"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Each router decrements the TTL. At zero the packet is discarded so a routing loop cannot circulate forever, and the router typically returns ICMP Time Exceeded. That message is also how traceroute discovers hops. The router does not increase the TTL, skip it, or invent a link-local address.",
+    "choiceNotes": [
+      "Decrement to zero means drop, then tell the sender with ICMP Time Exceeded.",
+      "Forwarding with a higher TTL would hide loops. Routers decrease the counter.",
+      "The frame is rebuilt on the way out, and the IP TTL is still honored.",
+      "APIPA is a host behavior when DHCP fails. Routers do not stamp it onto transit packets."
+    ]
+  },
+  {
+    "id": "n10-161",
+    "domain": "1",
+    "objective": "1.3",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "The company wants the provider to patch the database engine and manage replicas. Staff still design the schema and write the queries. Which cloud model is that?",
+    "choices": [
+      "Platform as a service",
+      "Infrastructure as a service, where the company still patches the engine",
+      "A colocation cage the company racks itself",
+      "A finished application the company cannot change the schema of"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A managed database is platform as a service: the provider runs the engine and the company keeps the data and the queries. Infrastructure as a service would leave engine patches to the company. A cage is rented space for their own hardware. A finished application they cannot change is software as a service, which is not what the schema owners asked for.",
+    "choiceNotes": [
+      "The provider runs the engine. The company keeps the schema. That split is platform as a service.",
+      "Infrastructure as a service stops below the engine. Patching the database would still be the company's job.",
+      "A cage means they still own the servers and the engine patches.",
+      "A finished application they cannot reshape is software as a service, not a database they design."
+    ]
+  },
+  {
+    "id": "n10-165",
+    "domain": "1",
+    "objective": "1.6",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "Two branch routers are joined by one leased circuit. No other device shares that circuit. What is the topology of the link itself?",
+    "choices": [
+      "Point-to-point",
+      "A star with many spokes",
+      "A full mesh of six routers",
+      "A bus with a terminator at each desk"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A circuit with exactly two endpoints is point-to-point. A star needs a center and several spokes. A full mesh of six would be fifteen links. A bus is a shared medium with many attachments, not a private leased circuit.",
+    "choiceNotes": [
+      "Two endpoints and nobody else on the circuit is point-to-point.",
+      "A star has more than one spoke. This circuit has a single far end.",
+      "Six routers in a full mesh are not two routers on one circuit.",
+      "A bus is shared. This lease is private to the two routers."
+    ]
+  },
+  {
+    "id": "n10-166",
+    "domain": "1",
+    "objective": "1.7",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A planner is writing a /23 for a new site and must pick the network address, not a host or the broadcast. Which address is valid?",
+    "choices": [
+      "10.1.4.0/23",
+      "10.1.5.0/23",
+      "10.1.4.1/23",
+      "10.1.5.255/23"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A /23 covers 512 addresses and must start on an even third octet. 10.1.4.0/23 runs through 10.1.5.255. 10.1.5.0 is a host inside that block, not the network address. .1 is the first host. 10.1.5.255 is the broadcast.",
+    "choiceNotes": [
+      "10.1.4.0 sits on the even boundary and is the network address.",
+      "10.1.5.0 is inside 10.1.4.0/23. It cannot start its own /23.",
+      "10.1.4.1 is the first usable host, not the network address.",
+      "10.1.5.255 is the broadcast of that /23. Hosts do not use it as an interface address."
+    ]
+  },
+  {
+    "id": "n10-184",
+    "domain": "5",
+    "objective": "5.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A workstation reaches other hosts on its own subnet and cannot reach any other subnet. The technician wants the gateway address the host is actually using. Which command shows that, rather than a DNS answer?",
+    "choices": [
+      "ipconfig on Windows, or ip route on the router and the host",
+      "dig, because a name lookup prints the gateway",
+      "A toner and probe",
+      "An optical power meter"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The symptom is local reachability with no path off the subnet, so the configured gateway is the first fact. ipconfig shows the Windows gateway. ip route shows the routing table. dig asks DNS. A toner traces a cable, and a power meter reads fiber. Neither prints a gateway address.",
+    "choiceNotes": [
+      "Read the configured gateway. This failure looks like a wrong or missing one.",
+      "dig returns name records. It does not print the host's gateway.",
+      "A toner finds which jack a cable lands on. It does not show an IP configuration.",
+      "An optical power meter measures light, not a default route."
+    ]
+  }
+]

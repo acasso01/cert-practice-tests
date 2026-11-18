@@ -5,22 +5,37 @@ import { examMinutes } from '../lib/score';
 type Props = {
   exam: Exam;
   initialMode: Mode;
+  seenAt: Record<string, number>;
   onBack: () => void;
-  onStart: (mode: Mode, count: number, domainIds: string[]) => void;
+  onStart: (mode: Mode, count: number, domainIds: string[], freshOnly: boolean) => void;
+  onResetSeen: () => void;
 };
 
 const PRESETS = [10, 25, 50, 90];
 
-export function Setup({ exam, initialMode, onBack, onStart }: Props) {
+export function Setup({ exam, initialMode, seenAt, onBack, onStart, onResetSeen }: Props) {
   const [mode, setMode] = useState<Mode>(initialMode);
   const [preset, setPreset] = useState<number | 'custom'>(mode === 'exam' ? 90 : 10);
   const [custom, setCustom] = useState(15);
   const [domains, setDomains] = useState<string[]>([]);
+  const [freshOnly, setFreshOnly] = useState(false);
 
-  const pool = useMemo(() => {
-    if (domains.length === 0) return exam.questions.length;
-    return exam.questions.filter((question) => domains.includes(question.domain)).length;
-  }, [domains, exam.questions]);
+  const poolQuestions = useMemo(() => {
+    const inDomains =
+      domains.length === 0
+        ? exam.questions
+        : exam.questions.filter((question) => domains.includes(question.domain));
+    return freshOnly ? inDomains.filter((question) => seenAt[question.id] == null) : inDomains;
+  }, [domains, exam.questions, freshOnly, seenAt]);
+
+  const pool = poolQuestions.length;
+  const unseenInFilter = useMemo(() => {
+    const inDomains =
+      domains.length === 0
+        ? exam.questions
+        : exam.questions.filter((question) => domains.includes(question.domain));
+    return inDomains.filter((question) => seenAt[question.id] == null).length;
+  }, [domains, exam.questions, seenAt]);
 
   const requested = preset === 'custom' ? custom : preset;
   const count = Math.max(0, Math.min(requested || 0, pool, mode === 'exam' ? exam.examQuestions : pool));
@@ -49,14 +64,15 @@ export function Setup({ exam, initialMode, onBack, onStart }: Props) {
         {mode === 'practice' ? (
           <p>
             You get the explanation as soon as you answer. Wrong choices are marked too, including why they do not fit.
-            Questions and answer order are shuffled.
+            Questions you have not seen come first, and both the question order and the answer order are shuffled.
           </p>
         ) : (
           <p>
             This simulates the multiple-choice portion: up to {exam.examQuestions} questions and a countdown. A full set
             uses {exam.minutes} minutes. Shorter sets get one minute per question. Nothing is graded until you submit or
-            time runs out. You can flag items and jump around. Unanswered questions count as wrong. The real exam also
-            includes performance-based questions, which this drill does not.
+            time runs out. You can flag items and jump around. Unanswered questions count as wrong. The draw is weighted
+            like the real exam and avoids questions you have already seen until it has to reuse the oldest ones. The
+            real exam also includes performance-based questions, which this drill does not.
           </p>
         )}
         <div className="field">
@@ -105,6 +121,25 @@ export function Setup({ exam, initialMode, onBack, onStart }: Props) {
             Leave this on all domains for a mix that follows the official weights. Filtering builds a focused set.
           </p>
         </div>
+        <div className="field">
+          <span id="seen-label">Questions you have already seen</span>
+          <p className="meta">
+            {unseenInFilter} unseen of {domains.length === 0 ? exam.questions.length : exam.questions.filter((question) => domains.includes(question.domain)).length} in this filter.
+            New sets use unseen questions first, then the ones you saw longest ago.
+          </p>
+          <label className="meta">
+            <input
+              type="checkbox"
+              checked={freshOnly}
+              data-testid="fresh-only"
+              onChange={(event) => setFreshOnly(event.target.checked)}
+            />{' '}
+            Fresh questions only
+          </label>
+          <button type="button" className="ghost" data-testid="reset-seen" onClick={onResetSeen}>
+            Reset seen history
+          </button>
+        </div>
         <p className="meta">
           {count} question{count === 1 ? '' : 's'} ready
           {pool < (preset === 'custom' ? custom : preset) ? ` (only ${pool} match the filter)` : ''}
@@ -115,7 +150,7 @@ export function Setup({ exam, initialMode, onBack, onStart }: Props) {
             className="primary"
             disabled={count < 1}
             data-testid="start-session"
-            onClick={() => onStart(mode, count, domains)}
+            onClick={() => onStart(mode, count, domains, freshOnly)}
           >
             Start {mode === 'exam' ? 'exam' : 'practice'}
           </button>

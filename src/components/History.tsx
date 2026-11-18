@@ -7,6 +7,7 @@ type Props = {
   history: Attempt[];
   onReview: (attemptId: string) => void;
   onClear: () => void;
+  onResetSeen: () => void;
   onHome: () => void;
 };
 
@@ -27,7 +28,7 @@ function Spark({ attempts }: { attempts: Attempt[] }) {
   );
 }
 
-export function HistoryView({ exams, history, onReview, onClear, onHome }: Props) {
+export function HistoryView({ exams, history, onReview, onClear, onResetSeen, onHome }: Props) {
   const [confirm, setConfirm] = useState(false);
   const byExam = exams
     .map((exam) => ({ exam, attempts: history.filter((attempt) => attempt.examId === exam.id) }))
@@ -67,11 +68,16 @@ export function HistoryView({ exams, history, onReview, onClear, onHome }: Props
           ))}
         </div>
       ))}
-      {history.length > 0 && (
-        <button className="ghost" onClick={() => setConfirm(true)}>
-          Clear history
+      <div className="row">
+        {history.length > 0 && (
+          <button className="ghost" onClick={() => setConfirm(true)}>
+            Clear history
+          </button>
+        )}
+        <button className="ghost" data-testid="reset-seen-all" onClick={onResetSeen}>
+          Reset seen history
         </button>
-      )}
+      </div>
       {confirm && (
         <Modal title="Clear every saved attempt?" onClose={() => setConfirm(false)}>
           <p>This removes scores, reviews, and the missed-question list from this browser.</p>

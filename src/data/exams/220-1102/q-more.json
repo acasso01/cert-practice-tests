@@ -1,0 +1,122 @@
+[
+  {
+    "id": "c2-128",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "A technician wants the PC's Windows version and build without opening System Information. Which command opens that small dialog?",
+    "choices": [
+      "winver",
+      "diskpart",
+      "format",
+      "hostname"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "winver opens the About Windows dialog with the version and build. diskpart edits disks. format erases a volume. hostname prints the computer name and not the build.",
+    "choiceNotes": [
+      "winver is the version dialog. Use it when you only need the build.",
+      "diskpart can wipe a disk. It does not show the Windows build.",
+      "format destroys a file system. It is not an inventory command.",
+      "hostname prints the name. It does not show the version."
+    ]
+  },
+  {
+    "id": "c2-129",
+    "domain": "1",
+    "objective": "1.2",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A mapped drive disappears after every reboot. The user runs net use S: \\\\files\\projects during the day and does not persist it. What is missing?",
+    "choices": [
+      "The persistent flag, so the mapping is recreated at logon",
+      "A format of S:",
+      "gpresult, which creates drive maps by itself",
+      "Changing the PC name"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "net use without persistence lasts for the session. Add the persistent option, or put the map in a logon script, if the share should return. Formatting S: would try to erase a network path. gpresult reports policy. The computer name does not store drive maps.",
+    "choiceNotes": [
+      "Persist the mapping or run it from logon. A daytime net use is forgotten at reboot.",
+      "format is destructive and is the wrong tool for a UNC path.",
+      "gpresult shows applied policy. It does not create the map unless a script is already assigned.",
+      "Renaming the PC does not restore a drive letter."
+    ]
+  },
+  {
+    "id": "c2-144",
+    "domain": "3",
+    "objective": "3.1",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "One user signs in to a black desktop and a working pointer. Task Manager shows explorer.exe is not running. A second account on the same PC gets a normal desktop. What restores this session first?",
+    "choices": [
+      "Start explorer.exe from Task Manager",
+      "Reinstall Windows before trying the shell",
+      "Replace the video card",
+      "Disable the firewall and leave the shell stopped"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The desktop shell is a process. If it never started, launching it brings the icons and taskbar back for this logon. Another account working means the display hardware and the Windows install are fine. The firewall does not paint the desktop.",
+    "choiceNotes": [
+      "Start the missing shell. That is the immediate recovery for this session.",
+      "Reinstalling is a last resort after the shell has been tested.",
+      "A bad video card would fail for every account, not only this one.",
+      "The firewall is not the process that draws the desktop."
+    ]
+  },
+  {
+    "id": "c2-145",
+    "domain": "3",
+    "objective": "3.2",
+    "difficulty": "easy",
+    "select": 1,
+    "stem": "SmartScreen blocks an unsigned installer a user downloaded from a personal blog. Policy says software comes from the approved vendor portal. What should the technician do?",
+    "choices": [
+      "Send the user to the approved portal and do not choose Run anyway",
+      "Turn SmartScreen off for the whole company",
+      "Email that installer to every employee",
+      "Disable User Account Control so the blog file runs"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The block is the control working. An unsigned file from a blog is not an approved source. The user should get the package from the portal. Disabling SmartScreen or User Account Control, or mailing the file around, spreads the risk.",
+    "choiceNotes": [
+      "Use the portal. The warning is the reason not to run the blog copy.",
+      "Turning the check off for everyone removes it from later downloads too.",
+      "Emailing the blocked file is how the untrusted package reaches more PCs.",
+      "User Account Control is a separate prompt. Disabling it does not make the blog file approved."
+    ]
+  },
+  {
+    "id": "c2-148",
+    "domain": "3",
+    "objective": "3.5",
+    "difficulty": "medium",
+    "select": 1,
+    "stem": "A managed phone will not join office Wi-Fi. MDM shows the certificate profile failed after that certificate expired. Personal mail still works on cellular. What is the fix?",
+    "choices": [
+      "Renew the certificate and push the Wi-Fi profile again",
+      "Jailbreak the phone so it ignores the profile",
+      "Turn off the screen lock",
+      "Give the user the domain administrator password to type into the Wi-Fi prompt"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "The phone is online on cellular, so this is not a dead radio. The profile failed because the certificate it presents is expired. Renew it and redeploy the profile. Jailbreaking, removing the lock, or handing out a domain password are not Wi-Fi repairs.",
+    "choiceNotes": [
+      "A new certificate and a new profile are what the failed enrollment is asking for.",
+      "Jailbreaking removes management. It does not renew a certificate.",
+      "The screen lock has nothing to do with an expired Wi-Fi certificate.",
+      "A domain administrator password does not belong in a Wi-Fi prompt."
+    ]
+  }
+]

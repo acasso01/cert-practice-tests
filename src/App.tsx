@@ -13,8 +13,11 @@ import {
   clearHistory,
   loadHistory,
   loadMissed,
+  loadSeen,
   loadSession,
   loadTheme,
+  markSeen,
+  resetSeen,
   saveAttempt,
   saveSession,
   saveTheme,
@@ -44,11 +47,20 @@ export function App() {
   const [setupMode, setSetupMode] = useState<Mode>('practice');
   const [resultId, setResultId] = useState<string | null>(null);
   const [missTick, setMissTick] = useState(0);
+  const [seenRevision, setSeenRevision] = useState(0);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     saveTheme(theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (view !== 'quiz' || !session) return;
+    const qid = session.items[session.index]?.qid;
+    if (!qid) return;
+    markSeen(session.examId, [qid]);
+    setSeenRevision((value) => value + 1);
+  }, [view, session]);
 
   useEffect(() => {
     saveSession(session);
@@ -88,12 +100,24 @@ export function App() {
     setView('setup');
   }
 
-  function start(mode: Mode, count: number, domainIds: string[]) {
+  function start(mode: Mode, count: number, domainIds: string[], freshOnly: boolean) {
     const exam = setupExamId ? byId.get(setupExamId) : undefined;
     if (!exam) return;
-    const drawn = drawQuestions(exam.questions, exam.domains, count, domainIds.length ? domainIds : null);
+    const drawn = drawQuestions(
+      exam.questions,
+      exam.domains,
+      count,
+      domainIds.length ? domainIds : null,
+      loadSeen(exam.id),
+      freshOnly,
+    );
+    if (drawn.length === 0) return;
     const minutes = mode === 'exam' ? examMinutes(drawn.length, exam.examQuestions, exam.minutes) : null;
-    setSession(createSession(exam, mode, drawn, minutes));
+    const next = createSession(exam, mode, drawn, minutes);
+    const first = next.items[0]?.qid;
+    if (first) markSeen(exam.id, [first]);
+    setSeenRevision((value) => value + 1);
+    setSession(next);
     setView('quiz');
   }
 
@@ -165,7 +189,18 @@ export function App() {
             />
           )}
           {view === 'setup' && setupExam && (
-            <Setup exam={setupExam} initialMode={setupMode} onBack={() => setView('home')} onStart={start} />
+            <Setup
+              key={`${setupExam.id}-${seenRevision}`}
+              exam={setupExam}
+              initialMode={setupMode}
+              seenAt={loadSeen(setupExam.id)}
+              onBack={() => setView('home')}
+              onStart={start}
+              onResetSeen={() => {
+                resetSeen(setupExam.id);
+                setSeenRevision((value) => value + 1);
+              }}
+            />
           )}
           {view === 'quiz' && activeExam && session && (
             <Quiz
@@ -204,6 +239,10 @@ export function App() {
                 clearHistory();
                 setHistory([]);
                 setMissTick((value) => value + 1);
+              }}
+              onResetSeen={() => {
+                resetSeen();
+                setSeenRevision((value) => value + 1);
               }}
             />
           )}
