@@ -1,0 +1,78 @@
+{
+  "id": "220-1201",
+  "code": "220-1201",
+  "name": "A+ Core 1",
+  "title": "CompTIA A+ Core 1",
+  "summary": "Mobile devices, networking, hardware, printers, virtualization, and hands-on troubleshooting. The published pass mark is 675.",
+  "versionNote": "V15, launched March 25, 2025. The English 220-1101 exam retired September 25, 2025.",
+  "minutes": 90,
+  "examQuestions": 90,
+  "passScaled": 675,
+  "studyUrl": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/",
+  "studyLabel": "Professor Messer's free 220-1201 course",
+  "accent": "#ffb15a",
+  "domains": [
+    {
+      "id": "1",
+      "name": "Mobile Devices",
+      "weight": 13,
+      "objectives": [
+        { "id": "1.1", "name": "Mobile hardware" },
+        { "id": "1.2", "name": "Accessories and connectivity" },
+        { "id": "1.3", "name": "Mobile networks and apps" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Networking",
+      "weight": 23,
+      "objectives": [
+        { "id": "2.1", "name": "Ports and protocols" },
+        { "id": "2.2", "name": "Wireless technologies" },
+        { "id": "2.3", "name": "Networked hosts" },
+        { "id": "2.4", "name": "Network configuration" },
+        { "id": "2.5", "name": "Networking hardware" },
+        { "id": "2.6", "name": "SOHO networks" },
+        { "id": "2.7", "name": "Connection and network types" },
+        { "id": "2.8", "name": "Networking tools" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Hardware",
+      "weight": 25,
+      "objectives": [
+        { "id": "3.1", "name": "Displays" },
+        { "id": "3.2", "name": "Cables and connectors" },
+        { "id": "3.3", "name": "RAM" },
+        { "id": "3.4", "name": "Storage" },
+        { "id": "3.5", "name": "Motherboards and CPUs" },
+        { "id": "3.6", "name": "Power supplies" },
+        { "id": "3.7", "name": "Printer deployment" },
+        { "id": "3.8", "name": "Printer maintenance" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Virtualization and Cloud Computing",
+      "weight": 11,
+      "objectives": [
+        { "id": "4.1", "name": "Virtualization" },
+        { "id": "4.2", "name": "Cloud computing" }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Hardware and Network Troubleshooting",
+      "weight": 28,
+      "objectives": [
+        { "id": "5.1", "name": "Motherboards, RAM, CPUs, and power" },
+        { "id": "5.2", "name": "Drives and RAID" },
+        { "id": "5.3", "name": "Video and displays" },
+        { "id": "5.4", "name": "Mobile devices" },
+        { "id": "5.5", "name": "Networks" },
+        { "id": "5.6", "name": "Printers" }
+      ]
+    }
+  ]
+}

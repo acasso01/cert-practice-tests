@@ -1,0 +1,80 @@
+{
+  "id": "220-1202",
+  "code": "220-1202",
+  "name": "A+ Core 2",
+  "title": "CompTIA A+ Core 2",
+  "summary": "Windows, macOS, Linux, security, malware removal, and the way you treat the person at the desk. The published pass mark is 700.",
+  "versionNote": "V15, launched March 25, 2025. The English 220-1102 exam retired September 25, 2025.",
+  "minutes": 90,
+  "examQuestions": 90,
+  "passScaled": 700,
+  "studyUrl": "https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/220-1202-training-course/",
+  "studyLabel": "Professor Messer's free 220-1202 course",
+  "accent": "#8ecbff",
+  "domains": [
+    {
+      "id": "1",
+      "name": "Operating Systems",
+      "weight": 28,
+      "objectives": [
+        { "id": "1.1", "name": "OS types and filesystems" },
+        { "id": "1.2", "name": "Installation and upgrades" },
+        { "id": "1.3", "name": "Windows editions" },
+        { "id": "1.4", "name": "Windows tools" },
+        { "id": "1.5", "name": "Windows command line" },
+        { "id": "1.6", "name": "Windows settings" },
+        { "id": "1.7", "name": "Windows networking" },
+        { "id": "1.8", "name": "macOS" },
+        { "id": "1.9", "name": "Linux" },
+        { "id": "1.10", "name": "Application installation" },
+        { "id": "1.11", "name": "Cloud productivity tools" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Security",
+      "weight": 28,
+      "objectives": [
+        { "id": "2.1", "name": "Security measures" },
+        { "id": "2.2", "name": "Windows security settings" },
+        { "id": "2.3", "name": "Wireless security" },
+        { "id": "2.4", "name": "Malware" },
+        { "id": "2.5", "name": "Social engineering and threats" },
+        { "id": "2.6", "name": "Malware removal" },
+        { "id": "2.7", "name": "Workstation hardening" },
+        { "id": "2.8", "name": "Mobile security" },
+        { "id": "2.9", "name": "Data destruction" },
+        { "id": "2.10", "name": "SOHO network security" },
+        { "id": "2.11", "name": "Browser security" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Software Troubleshooting",
+      "weight": 23,
+      "objectives": [
+        { "id": "3.1", "name": "Windows issues" },
+        { "id": "3.2", "name": "Mobile OS and apps" },
+        { "id": "3.3", "name": "Mobile security issues" },
+        { "id": "3.4", "name": "PC security issues" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Operational Procedures",
+      "weight": 21,
+      "objectives": [
+        { "id": "4.1", "name": "Documentation and support" },
+        { "id": "4.2", "name": "Change management" },
+        { "id": "4.3", "name": "Backup and recovery" },
+        { "id": "4.4", "name": "Safety" },
+        { "id": "4.5", "name": "Environmental controls" },
+        { "id": "4.6", "name": "Privacy, licensing, and policy" },
+        { "id": "4.7", "name": "Professionalism" },
+        { "id": "4.8", "name": "Scripting" },
+        { "id": "4.9", "name": "Remote access" },
+        { "id": "4.10", "name": "Artificial intelligence" }
+      ]
+    }
+  ]
+}

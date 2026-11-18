@@ -2,7 +2,7 @@
   {
     "id": "c1-045",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A new office run will sit in an air-return ceiling and must carry 1 Gbps Ethernet for 80 meters. The cheapest cable on the cart is a PVC-jacket Category 5e. What is wrong with using it there?",
@@ -26,7 +26,7 @@
   {
     "id": "c1-046",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Both ends of a cable were terminated to the T568B color order, and the wire map passes. A coworker says one end should have been T568A or the link will not carry Ethernet. What is true?",
@@ -50,7 +50,7 @@
   {
     "id": "c1-047",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A monitor has a VGA connector, and the new laptop only has HDMI and USB-C. The picture must stay analog all the way into that old monitor. Which statement is accurate?",
@@ -74,7 +74,7 @@
   {
     "id": "c1-048",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician is choosing a connector for an internal power lead to an older drive that is not SATA. The plug is a four-pin white connector from the power supply. What is that connector called?",
@@ -98,7 +98,7 @@
   {
     "id": "c1-049",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A run next to a bank of large motors shows CRC errors on unshielded cable. Fiber is available, and so is shielded twisted pair. Which choice is immune to the motors' electrical noise?",
@@ -122,7 +122,7 @@
   {
     "id": "c1-050",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A desktop will not POST after a memory upgrade. The new module is DDR5 and the board's slots are DDR4. The technician is about to push harder. What is the correct stop?",
@@ -146,7 +146,7 @@
   {
     "id": "c1-051",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A board supports dual channel. Two identical DDR4 modules are installed in the two slots next to each other, and the firmware reports single-channel mode. The manual colors one slot in each channel. What should change?",
@@ -170,7 +170,7 @@
   {
     "id": "c1-052",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A workstation manual says the memory controller supports ECC only with registered ECC modules, and this gaming board does not. A user wants ECC sticks from a server for 'fewer crashes.' What is the likely result?",
@@ -194,7 +194,7 @@
   {
     "id": "c1-053",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A heavy application is using the page file constantly, the disk is busy, and the PC has 8 GB of RAM while the application vendor requires 32 GB. Adding a larger page file stops the crashes but the machine stays slow. What is the right fix?",
@@ -218,7 +218,7 @@
   {
     "id": "c1-054",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician is explaining drive types to a user who wants the fastest general-purpose internal drive. Which pairing is accurate?",
@@ -242,7 +242,7 @@
   {
     "id": "c1-055",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "A motherboard manual says the M.2 slot shares lanes with SATA port 1. After an NVMe drive is installed, the SSD on SATA port 1 disappears. The data cable is seated. What happened?",
@@ -266,7 +266,7 @@
   {
     "id": "c1-056",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user wants the family photos on two disks so that one disk can fail and the photos remain. They also want as much speed as a stripe would give, and they have only two drive bays. Which RAID level fits, and which common wish does it not grant?",
@@ -290,7 +290,7 @@
   {
     "id": "c1-057",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "A four-bay server holds a database that needs both speed and the ability to lose one disk. The admin is comparing RAID 5 and RAID 10. Which trade is accurate?",
@@ -314,7 +314,7 @@
   {
     "id": "c1-058",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A camera card must move files larger than 4 GB onto both Windows and macOS without extra software. Which file system avoids the 4 GB file limit and is writable on both?",
@@ -338,7 +338,7 @@
   {
     "id": "c1-059",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "An ITX motherboard is being installed in an ATX case. The board lines up with only some of the standoffs, and four extra standoffs sit under empty areas of the board. What should the technician do?",
@@ -362,7 +362,7 @@
   {
     "id": "c1-060",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A builder bent a pin in an LGA socket by dropping the CPU in at an angle. On a different AMD AM4 build, the pins are on the processor instead. Which statement is accurate?",
@@ -386,7 +386,7 @@
   {
     "id": "c1-061",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A new PC boots, fans spin, and then it shuts off within a few seconds. The cooler still has the plastic film on its cold plate, and there is no thermal paste. What is the fault?",
@@ -410,7 +410,7 @@
   {
     "id": "c1-062",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Task Manager on a four-core CPU shows eight logical processors. The user thinks the shop sold an eight-core chip. What is the accurate explanation?",
@@ -434,7 +434,7 @@
   {
     "id": "c1-063",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A hypervisor says hardware virtualization is disabled, and a Windows Pro feature that needs it will not install. The CPU supports the feature. Where is the setting?",
@@ -458,7 +458,7 @@
   {
     "id": "c1-064",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "BitLocker is being planned for a fleet. The laptops have a TPM, and the desktops in a lab do not. Secure Boot is also available in the firmware. Which statement keeps the three ideas separate?",
@@ -482,7 +482,7 @@
   {
     "id": "c1-065",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A gaming PC shuts off only when the graphics card is under load. The supply is a no-name 300 watt unit and the card's requirement plus the CPU already exceeds that before you add drives. What is the likely cause?",
@@ -506,7 +506,7 @@
   {
     "id": "c1-066",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.6",
     "difficulty": "hard",
     "select": 1,
     "stem": "A builder is short one PCIe power cable and takes a modular cable from a different brand's supply. The pinout looks similar. What is the risk?",
@@ -530,7 +530,7 @@
   {
     "id": "c1-067",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A desktop will not power on. The 24-pin motherboard connector is seated, and the 8-pin CPU power connector near the socket is dangling. Fans twitch and the board never POSTs. What is missing?",
@@ -554,7 +554,7 @@
   {
     "id": "c1-068",
     "domain": "3",
-    "objective": "3.6",
+    "objective": "3.7",
     "difficulty": "easy",
     "select": 1,
     "stem": "A new laser printer grinds on first power-up and will not pull paper. Bright orange tabs are still fitted on the cartridge and inside the paper path, exactly where the manual shows shipping locks. What is the first fix?",
@@ -578,7 +578,7 @@
   {
     "id": "c1-069",
     "domain": "3",
-    "objective": "3.6",
+    "objective": "3.7",
     "difficulty": "hard",
     "select": 1,
     "stem": "One Windows PC prints a page of nonsense characters to a shared laser printer. Two other PCs print the same document correctly. The nonsense PC was set up with a driver the user downloaded for a different model. What should be replaced?",
@@ -602,7 +602,7 @@
   {
     "id": "c1-070",
     "domain": "3",
-    "objective": "3.6",
+    "objective": "3.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "Pay stubs are sitting in the output tray of a hallway printer where anyone can read them. The printer can hold a job until the user enters a PIN or badges in. Which feature should be turned on?",
@@ -626,7 +626,7 @@
   {
     "id": "c1-071",
     "domain": "3",
-    "objective": "3.6",
+    "objective": "3.7",
     "difficulty": "hard",
     "select": 1,
     "stem": "Scan-to-folder worked until the file server's service account password was changed last night. Scan-to-email still works. What should be updated?",
@@ -650,7 +650,7 @@
   {
     "id": "c1-072",
     "domain": "3",
-    "objective": "3.7",
+    "objective": "3.8",
     "difficulty": "easy",
     "select": 1,
     "stem": "Toner rubs off a laser page when you touch it. Text is dark enough, and the image is in the right place. Which part is not doing its job?",
@@ -674,7 +674,7 @@
   {
     "id": "c1-073",
     "domain": "3",
-    "objective": "3.7",
+    "objective": "3.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "Every laser page has a dark vertical line in the same place, including pages from every tray and every PC. Cleaning the glass is not relevant because nobody is copying. What is the usual cause?",
@@ -698,7 +698,7 @@
   {
     "id": "c1-074",
     "domain": "3",
-    "objective": "3.7",
+    "objective": "3.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "An inkjet page has bands of missing color. The vendor utility has a head-cleaning cycle. What is the first maintenance step?",
@@ -722,7 +722,7 @@
   {
     "id": "c1-075",
     "domain": "3",
-    "objective": "3.7",
+    "objective": "3.8",
     "difficulty": "easy",
     "select": 1,
     "stem": "A thermal receipt printer suddenly prints blank pages. The paper is ordinary copy paper that was loaded when the special rolls ran out. What is the requirement?",

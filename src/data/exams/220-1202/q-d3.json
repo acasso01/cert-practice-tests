@@ -194,7 +194,7 @@
   {
     "id": "c2-079",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "Every HTTPS site warns that the certificate is expired or not yet valid. The PC's clock reads 2016. What is the first check?",
@@ -218,7 +218,7 @@
   {
     "id": "c2-080",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A browser homepage changed, new toolbars appeared, and pop-ups mention a virus that only their cleaner can remove. Windows Security looks normal when opened from the Start menu. What is the likely class of problem?",
@@ -242,7 +242,7 @@
   {
     "id": "c2-081",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "Files on a share were renamed and a note demands payment in cryptocurrency for the key. The PC is still on the network. What is the first containment step?",
@@ -266,7 +266,7 @@
   {
     "id": "c2-082",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "A PC cannot get Windows updates, the disk is not full, and a scan finds a program that blocks the update service. What is the sensible reading?",
@@ -290,7 +290,7 @@
   {
     "id": "c2-083",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users are redirected to a search site they did not choose, but only in one browser. Another browser on the same PC goes where it is told. What is the likely scope?",
@@ -313,8 +313,8 @@
   },
   {
     "id": "c2-084",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user reports pop-ups and a slow PC. Nothing has been verified, and nobody has disconnected the PC. What is the first step of the malware-removal best practice?",
@@ -337,8 +337,8 @@
   },
   {
     "id": "c2-085",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "Malware is confirmed on a laptop, and the laptop is still on the office Wi-Fi. What is the next best-practice step?",
@@ -361,8 +361,8 @@
   },
   {
     "id": "c2-086",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "hard",
     "select": 1,
     "stem": "An infected PC has been removed from the network. System Restore is still enabled. What is the next step, and why does it exist?",
@@ -385,32 +385,32 @@
   },
   {
     "id": "c2-087",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
-    "stem": "System Restore is disabled and the PC is quarantined. Which pair of actions is the remediation step?",
+    "stem": "A laptop is off the network and System Restore has been disabled. In the current removal procedure, what is the next step, before definitions are updated and before a scan?",
     "choices": [
-      "Update the anti-malware definitions and scan, using Safe Mode or Windows RE if the malware fights you",
-      "Educate the user and create a restore point before any scan",
-      "Rejoin the PC to the network and skip the scan",
-      "Delete System Restore permanently and never scan"
+      "Remediate the infected system",
+      "Educate the user and send the laptop home",
+      "Turn System Restore back on before any cleanup",
+      "Schedule next month's scan and stop"
     ],
     "answer": [
       0
     ],
-    "explanation": "Remediation is update the definitions, then scan and remove, using Safe Mode or the recovery environment when the malware will not let the tools run in a normal boot. Education and the clean restore point come after. Skipping the scan, or never scanning, leaves the infection in place.",
+    "explanation": "After you investigate, quarantine, and disable System Restore, the next step is to remediate the infected system. Updating anti-malware and scanning come after that remediation step. Education and a new restore point are the end of the procedure, not the middle.",
     "choiceNotes": [
-      "Update, then scan and remove. That is the remediate step, including Safe Mode when you need it.",
-      "Education and the restore point are steps 7 and 6. They follow a successful cleanup.",
-      "Putting it back on the network without a scan undoes the quarantine.",
-      "System Restore should return after the cleanup. Never scanning is not remediation."
+      "Remediate next. Updating definitions and scanning are the steps after it.",
+      "Education is the last step, after the machine is clean and restore is back.",
+      "System Restore stays off until cleanup finishes, or a restore can return the malware.",
+      "Scheduling scans comes later. Stopping now leaves the infection in place."
     ]
   },
   {
     "id": "c2-088",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "The scan removed the malware, definitions are current, and a recurring scan is scheduled. System Restore is still off. What comes next, before the user-education conversation?",
@@ -434,7 +434,7 @@
   {
     "id": "c2-089",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone app will not install an update and reports that storage is full. The OS itself is current. What is the first fix?",
@@ -458,7 +458,7 @@
   {
     "id": "c2-090",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone will not rotate in an app that should rotate. Other apps also stay portrait. A lock icon is visible in the control center. What is the cause?",
@@ -482,7 +482,7 @@
   {
     "id": "c2-091",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Bluetooth headphones will not pair. The phone's Bluetooth is on, the headphones are charged, and they are not in pairing mode. What is the missing step?",
@@ -506,7 +506,7 @@
   {
     "id": "c2-092",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone overheats while charging under a pillow. The case is also on. There is no swelling. What should the user change?",
@@ -530,7 +530,7 @@
   {
     "id": "c2-093",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 2,
     "stem": "NFC payments fail at a terminal. The phone is unlocked, the case is very thick, and NFC is turned off in settings. Which two fixes apply? (Choose two.)",
@@ -555,7 +555,7 @@
   {
     "id": "c2-094",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone starts showing a huge number of ads after a flashlight app was sideloaded. Data use jumps. What is the first application action?",
@@ -579,7 +579,7 @@
   {
     "id": "c2-095",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A fake 'virus detected' banner appears in the mobile browser and is not the operating system's own security screen. It wants a tap to clean the phone. What should the user do?",
@@ -603,7 +603,7 @@
   {
     "id": "c2-096",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "MDM reports a phone as rooted, and company mail is on it. Policy says rooted devices cannot have mail. What should happen?",
@@ -627,7 +627,7 @@
   {
     "id": "c2-097",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A phone's data-usage warning appears every day, and a new app is the top consumer in the cellular stats. The user does not recognize the app. What is the right investigation?",
@@ -651,7 +651,7 @@
   {
     "id": "c2-098",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Personal photos from a phone showed up in a gallery the user did not share. A 'cleanup' app had photo and network permissions. What is the likely path, and what permission change matters?",

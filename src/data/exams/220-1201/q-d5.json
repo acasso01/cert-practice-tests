@@ -3,48 +3,48 @@
     "id": "c1-090",
     "domain": "5",
     "objective": "5.1",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "select": 1,
-    "stem": "A user says the PC is 'broken' and asks for a new motherboard. The technician has not asked what happens, when it started, or what changed. Company policy says hardware is replaced only after diagnosis. What comes first?",
+    "stem": "A desktop fans up, stays black, and emits one long repeating beep. The board manual says that pattern means memory. A known-good monitor works on another PC. What do you try before replacing the motherboard?",
     "choices": [
-      "Identify the problem, including what changed, and respect the policy before any replacement",
-      "Order the motherboard because the user used the word broken",
-      "Document a replacement that has not happened",
-      "Install the new board and identify the problem afterward"
+      "Reseat the RAM, then test one known-good module in a supported slot",
+      "Replace the monitor, because a beep always means the panel",
+      "Format the system disk",
+      "Update the printer driver"
     ],
     "answer": [
       0
     ],
-    "explanation": "The A+ method starts by identifying the problem: question the user, find the scope, and ask what changed. It also says to consider policy before you change anything. A motherboard replacement is a late step, after a theory, a test, and a plan. Documentation records the real outcome.",
+    "explanation": "A memory beep with no video is a RAM or seating problem until a known-good module proves otherwise. The monitor already works elsewhere. Formatting the disk and a printer driver do not create POST video.",
     "choiceNotes": [
-      "Identify first, and do not skip the policy that forbids swap-first repairs.",
-      "The word broken is not a diagnosis. Ordering a board skips every earlier step.",
-      "You cannot document a fix you have not performed. Notes come with the work, and the closeout comes at the end.",
-      "Installing first and thinking later is how working parts get replaced and the real fault stays."
+      "Reseat the modules, then test a known-good one. The beep code named memory.",
+      "The monitor already works on another PC, so the beep is not a panel failure.",
+      "Formatting does not run when the PC never finishes POST.",
+      "A printer driver is not part of the power-on memory check."
     ]
   },
   {
     "id": "c1-091",
     "domain": "5",
-    "objective": "5.1",
+    "objective": "5.3",
     "difficulty": "medium",
     "select": 1,
-    "stem": "A theory that the monitor cable is loose was tested by reseating both ends. The image is still missing, and a flashlight test shows no faint panel. What does the method say when the theory fails?",
+    "stem": "A laptop's built-in panel stays black. An external monitor on the same laptop shows a normal desktop, and a flashlight on the built-in panel shows no faint image. The cable to the external display was already reseated. What has failed?",
     "choices": [
-      "Form a new theory or escalate",
-      "Reseat the same cable indefinitely",
-      "Skip to documentation and close the ticket as fixed",
-      "Replace the user's chair"
+      "The internal panel or its backlight",
+      "The external DisplayPort cable, which was just reseated",
+      "The DNS server",
+      "The printer's fuser"
     ],
     "answer": [
       0
     ],
-    "explanation": "A failed test means the theory was wrong or incomplete. Establish a new one, or escalate if you are past your skill or authority. Repeating the same reseat is not a new theory. Closing the ticket leaves the user with a blank screen. The chair was never evidence.",
+    "explanation": "A working external display means the GPU is producing a picture. No faint image under a flashlight means this is not a backlight that is merely dim while the LCD still draws. The internal panel assembly is the failed part. DNS and a fuser do not blank only the built-in panel.",
     "choiceNotes": [
-      "New theory or escalation is the branch after a disproven cause.",
-      "The cable was already reseated. Doing it again does not honor the result of the test.",
-      "The screen is still blank. There is nothing honest to close as fixed.",
-      "The chair does not drive the panel. It is not a theory about this symptom."
+      "Replace the internal panel. The GPU is fine because the external display works.",
+      "The external cable is carrying a good picture. It is not the fault.",
+      "DNS does not control whether a laptop panel lights.",
+      "The fuser is in a printer. It does not drive this panel."
     ]
   },
   {
@@ -53,53 +53,52 @@
     "objective": "5.1",
     "difficulty": "medium",
     "select": 1,
-    "stem": "The cause is a failed stick of RAM. The technician is about to power off, replace it, and then confirm the PC boots and the application runs. In the A+ six-step method, which step combines the plan and the actual replacement?",
+    "stem": "A PC crashes until one of two RAM modules is removed. The remaining module crashes too when it is moved into the slot that had been stable. The other module is stable in either slot. What failed?",
     "choices": [
-      "Establish a plan of action and implement the solution",
-      "Identify the problem, which is already done",
-      "Document findings before the RAM is replaced",
-      "Test a theory that was already confirmed"
+      "The module that crashes in both slots",
+      "Both motherboard slots, because one test failed",
+      "The monitor cable",
+      "The operating system's wallpaper"
     ],
     "answer": [
       0
     ],
-    "explanation": "On the A+ list, step 4 is both the plan and the implementation. You decide the replacement, watch for side effects such as losing the other channel's population, and then do the work. Identification and the theory test are already behind you. Documentation is the last step, after you verify the boot and the application.",
+    "explanation": "A module that fails in either slot is the bad part. The other module works in both slots, so the slots themselves are good. A cable and a wallpaper do not track a single DIMM.",
     "choiceNotes": [
-      "Plan and implement are one A+ step. Do the replacement carefully, then verify, then document.",
-      "Identification already happened. Going back to it does not put the RAM in the slot.",
-      "Documentation is step 6. Writing the closeout before the swap leaves an unfinished repair.",
-      "The theory was confirmed. The next work is the fix, not another test of a loose cable."
+      "Replace the module that fails in every slot. The slots passed with the other module.",
+      "A slot that works with the good module is not the failed part.",
+      "The monitor cable is not inserted into a RAM slot.",
+      "Wallpaper does not crash one memory module and spare the other."
     ]
   },
   {
     "id": "c1-093",
     "domain": "5",
     "objective": "5.1",
-    "difficulty": "easy",
-    "select": 2,
-    "stem": "A RAM replacement fixed the crashes. The user opens the original application and it stays up. The technician updates the ticket with the symptom, the bad module, and the new part number. Which two end steps are those? (Choose two.)",
+    "difficulty": "hard",
+    "select": 1,
+    "stem": "A newly built desktop spins its fans and never beeps or shows video. The power connectors are seated. An extra brass standoff is touching the back of the motherboard where no hole lines up. What is the fault?",
     "choices": [
-      "Verify full system functionality",
-      "Document findings, actions, and outcomes",
-      "Skip verification because the user smiled",
-      "Leave the ticket blank so the next technician can practice"
+      "The extra standoff is shorting the board",
+      "The wallpaper resolution is too high",
+      "The DNS servers are public",
+      "The printer is paused"
     ],
     "answer": [
-      0,
-      1
+      0
     ],
-    "explanation": "Verification is the user actually doing the work that used to crash, not only a successful POST. Documentation is the ticket that tells the next person what the cause was. A smile is not a test. An empty ticket throws away the diagnosis.",
+    "explanation": "A standoff that touches the board where there is no mounting hole can short traces and stop POST. Remove that standoff and test again. Wallpaper, DNS, and a paused printer do not keep a new build from beeping.",
     "choiceNotes": [
-      "Verification is the application staying up. POST alone would have been a weaker test.",
-      "The ticket is the documentation step: symptom, cause, and the action you took.",
-      "A smile does not prove the crashing application is fixed.",
-      "A blank ticket fails the documentation step and makes the next incident start from zero."
+      "Remove the extra standoff. It is shorting the board and blocking POST.",
+      "Wallpaper is an operating-system setting. This PC has not reached the OS.",
+      "DNS is not required for a beep and a firmware screen.",
+      "A paused printer does not short a motherboard."
     ]
   },
   {
     "id": "c1-094",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC beeps and does not display after a RAM upgrade. The modules were pushed in until the side clips almost latched. What is the first hardware check?",
@@ -123,7 +122,7 @@
   {
     "id": "c1-095",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A burning smell comes from a tower, and a wisp of smoke leaves the power supply. What is the first action?",
@@ -147,7 +146,7 @@
   {
     "id": "c1-096",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC loses the date every time it is unplugged. The operating system time is correct until the next power loss. What component should be replaced?",
@@ -171,7 +170,7 @@
   {
     "id": "c1-097",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Capacitors on a motherboard are domed on top and a few are leaking. The PC crashes randomly. What is the reasonable conclusion?",
@@ -195,7 +194,7 @@
   {
     "id": "c1-098",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop sitting on a blanket shuts down when the GPU gets busy. The same laptop on a hard desk, with the vents clear, stays up. What is the cause?",
@@ -219,7 +218,7 @@
   {
     "id": "c1-099",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A desktop randomly reboots only in 3D games. Temperatures are normal, the event log shows kernel power loss, and the supply is well below the GPU's required wattage. Memory tests pass. Which component is the best suspect?",
@@ -243,7 +242,7 @@
   {
     "id": "c1-100",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A mechanical drive starts clicking and the PC no longer sees it consistently. SMART also reports a failing status. What should the technician do before trying heroic repairs on that drive?",
@@ -267,7 +266,7 @@
   {
     "id": "c1-101",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A RAID 5 array is degraded. One disk's LED shows a failure, and the other two are healthy. Users can still read data. What is the correct next action?",
@@ -291,7 +290,7 @@
   {
     "id": "c1-102",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "A two-disk RAID 0 boot volume loses one disk. The user asks for a rebuild. What is the honest answer?",
@@ -315,7 +314,7 @@
   {
     "id": "c1-103",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A new disk appears in the firmware and does not appear in File Explorer. Disk Management says the disk is not initialized. There is no data on it. What should the technician do?",
@@ -339,7 +338,7 @@
   {
     "id": "c1-104",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A 4 TB disk shows about 2 TB in Windows. It was initialized as MBR. The firmware is UEFI. What is the limitation?",
@@ -363,7 +362,7 @@
   {
     "id": "c1-105",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "easy",
     "select": 2,
     "stem": "A projector says no signal. The laptop's own screen works, and the projector input menu is set to HDMI while the cable is on VGA. What are the two checks? (Choose two.)",
@@ -388,7 +387,7 @@
   {
     "id": "c1-106",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A projector runs for ten minutes and shuts off. The filter is packed with dust and the intake is hot. The lamp hour counter is low. What is the likely cause?",
@@ -412,7 +411,7 @@
   {
     "id": "c1-107",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "An external monitor is fine, and the laptop panel shows lines that change when the lid moves. What does that pattern isolate?",
@@ -436,7 +435,7 @@
   {
     "id": "c1-108",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A VGA monitor is missing all of the blue. Wiggling the VGA plug changes the color. What is the likely fault?",
@@ -460,7 +459,7 @@
   {
     "id": "c1-109",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone battery is swollen and the case is splitting. The user wants to finish charging it overnight under a pillow. What is the safe guidance?",
@@ -484,7 +483,7 @@
   {
     "id": "c1-110",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone fell in a sink. The user has already plugged it into a charger because someone said charging dries electronics. What should the technician say?",
@@ -508,7 +507,7 @@
   {
     "id": "c1-111",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone will not charge. A different cable and a different brick work on another phone, and they fail on this one. The port is packed with lint. What is the first physical fix?",
@@ -532,7 +531,7 @@
   {
     "id": "c1-112",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop trackpad cursor drifts across the screen by itself. An external mouse is steady. What is the likely fix?",
@@ -556,7 +555,7 @@
   {
     "id": "c1-113",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone drops from 80 percent to 5 percent in a few minutes and then shuts off, even with the screen dim. Battery health in the settings is marked poor. What should be replaced?",
@@ -724,7 +723,7 @@
   {
     "id": "c1-120",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A PC shows 169.254.5.9 and cannot reach the internet. Other PCs on the same switch are fine. What does the address mean, and what is a reasonable first configuration check?",
@@ -748,7 +747,7 @@
   {
     "id": "c1-121",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "Users can browse by IP address and cannot browse by name. Ping to 8.8.8.8 works. Ping to a name fails. What is the fault?",
@@ -772,7 +771,7 @@
   {
     "id": "c1-122",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop on the conference-room Wi-Fi shows full signal and no internet. A browser immediately asks the user to accept a network policy. What is between the user and the internet?",
@@ -796,7 +795,7 @@
   {
     "id": "c1-123",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A link light on a switch port flaps every few seconds. A known-good PC was moved to this port and the flap followed the port, not the PC. A different patch cord stops the flap. What was at fault?",
@@ -820,7 +819,7 @@
   {
     "id": "c1-124",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Voice calls over the office Wi-Fi break up. A speed test shows plenty of megabits, and the delay swings wildly. Wired desks do not have the problem. What is the impairment, and what is a reasonable change?",
@@ -844,7 +843,7 @@
   {
     "id": "c1-125",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A SOHO user on a satellite link complains that web pages load but every click in a remote desktop feels late. The installer offers a faster plan with the same satellite technology. What should the technician explain?",

@@ -123,7 +123,7 @@
   {
     "id": "c1-025",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A small office still has a hub between the modem and four PCs. Every PC sees every frame, and collisions are common. Which replacement separates those collision domains?",
@@ -147,7 +147,7 @@
   {
     "id": "c1-026",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "An IP phone is silent and unpowered. The access switch has no PoE, and a midspan injector is available. Where does the injector go?",
@@ -171,7 +171,7 @@
   {
     "id": "c1-027",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Horizontal cables from the wall jacks are punched onto the back of a passive device in the closet. Short patch cords then run from the front of that device to the switch. What is the passive device?",
@@ -195,7 +195,7 @@
   {
     "id": "c1-028",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A fiber handoff from the provider lands on a small box that presents Ethernet to the customer's router. The Wi-Fi is down, and the box's optical light is dark. What is that box, and why does it matter?",
@@ -219,7 +219,7 @@
   {
     "id": "c1-029",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A buyer asks for a Wi-Fi 5 laptop radio and the spec sheet uses the 802.11 letters instead of the marketing name. Which 802.11 description matches Wi-Fi 5?",
@@ -243,7 +243,7 @@
   {
     "id": "c1-030",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Two neighboring access points on 2.4 GHz are set to channels 6 and 7. Users between them are slow. Which change follows the non-overlapping channel plan?",
@@ -267,7 +267,7 @@
   {
     "id": "c1-031",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A badge reader uses a short-range radio at the door, and a headset uses a different radio that works across the room. Which pairing is right?",
@@ -291,7 +291,7 @@
   {
     "id": "c1-032",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A branch office has no server of its own and gets addresses from a device at headquarters. Clients arrive with 169.254 addresses when the WAN is down. Which server role is missing when that happens?",
@@ -315,7 +315,7 @@
   {
     "id": "c1-033",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A firewall, an intrusion-prevention feature, and a content filter are sold as one appliance at the edge of a small office. Which exam name fits that combined device?",
@@ -339,7 +339,7 @@
   {
     "id": "c1-034",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users authenticate to the wireless network, and a server records who logged in, what they were allowed to do, and the session accounting. Which service is that trio?",
@@ -363,7 +363,7 @@
   {
     "id": "c1-035",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A new SOHO PC is set to DHCP and shows 169.254.12.8. The rest of the office is fine, and this PC's cable tests good. What does the address prove?",
@@ -387,7 +387,7 @@
   {
     "id": "c1-036",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.6",
     "difficulty": "hard",
     "select": 1,
     "stem": "A printer is statically set to 192.168.1.50. The router's DHCP pool is 192.168.1.10 through 192.168.1.200. Some mornings a laptop cannot browse, and the printer drops off. What is the addressing mistake?",
@@ -411,7 +411,7 @@
   {
     "id": "c1-037",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A SOHO router is 192.168.0.1/24. A PC is 192.168.0.40/24 with a blank gateway. Local file shares work, and the internet does not. What value belongs in the gateway field?",
@@ -435,7 +435,7 @@
   {
     "id": "c1-038",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "Company mail started landing in spam after a new cloud mail host was added. Web browsing to the company site still works. The DNS change that was forgotten is the one that lists who may send mail. Which record is that?",
@@ -459,7 +459,7 @@
   {
     "id": "c1-039",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A printer keeps getting a new address, and the scanning software breaks until someone updates the address. The printer should keep one address without being typed by hand on the printer. What should be created on the DHCP server?",
@@ -483,7 +483,7 @@
   {
     "id": "c1-040",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "Guests and staff currently share one switch with no segmentation, and guest laptops can see staff discovery traffic. The switch can place ports into separate broadcast domains. What should the technician create?",

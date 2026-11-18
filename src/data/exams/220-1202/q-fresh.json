@@ -2,7 +2,7 @@
   {
     "id": "c2-149",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop on battery is capped at a slow clock. Plugged in, the user wants full speed, and the current plan is Power saver. Where is that plan changed?",
@@ -26,7 +26,7 @@
   {
     "id": "c2-150",
     "domain": "1",
-    "objective": "1.5",
+    "objective": "1.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC has missed a month of patches. Windows Update shows updates are paused until a date next month. What should the technician do?",
@@ -50,7 +50,7 @@
   {
     "id": "c2-151",
     "domain": "1",
-    "objective": "1.7",
+    "objective": "1.10",
     "difficulty": "medium",
     "select": 1,
     "stem": "A standard user runs an installer and it fails while writing under Program Files. An administrator account on the same PC can complete the same installer. What is the constraint?",
@@ -74,7 +74,7 @@
   {
     "id": "c2-152",
     "domain": "1",
-    "objective": "1.8",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A Linux server is handed a Windows setup.exe and told to run it natively to install a Windows-only service. What happens?",
@@ -98,7 +98,7 @@
   {
     "id": "c2-153",
     "domain": "1",
-    "objective": "1.9",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user is moving to a new PC. Accounting wants the profile, documents, and application settings moved, not a photograph of the old desktop. Which tool family does that migration?",
@@ -122,7 +122,7 @@
   {
     "id": "c2-154",
     "domain": "1",
-    "objective": "1.10",
+    "objective": "1.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "Spotlight on a Mac cannot find files that are sitting in Documents. Documents is listed under Spotlight privacy exclusions. What should change?",
@@ -146,7 +146,7 @@
   {
     "id": "c2-155",
     "domain": "1",
-    "objective": "1.11",
+    "objective": "1.9",
     "difficulty": "medium",
     "select": 1,
     "stem": "An Ubuntu server needs its packages refreshed from the distribution repositories. The technician types a Windows command and gets 'command not found'. Which tool belongs on this server?",
@@ -170,7 +170,7 @@
   {
     "id": "c2-156",
     "domain": "1",
-    "objective": "1.5",
+    "objective": "1.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user changed the display language and cannot find the control to change it back. Which Windows app area holds language and region?",
@@ -194,7 +194,7 @@
   {
     "id": "c2-157",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Guest wireless must not let one guest open a share on another guest's laptop. The company SSID is a different network. What should be enabled on the guest SSID?",
@@ -218,7 +218,7 @@
   {
     "id": "c2-158",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A console shows the last antivirus definition update was 400 days ago. A scan today reports a clean PC. How much trust does that scan deserve?",
@@ -242,7 +242,7 @@
   {
     "id": "c2-159",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A finance director receives a mail that uses private project names and asks for a same-day wire. The address is one letter off the real vendor. What is that targeted mail?",
@@ -266,7 +266,7 @@
   {
     "id": "c2-160",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.7",
     "difficulty": "easy",
     "select": 1,
     "stem": "Users plug in found USB drives. Policy says the PC must not run content from those drives automatically. Which control matches?",
@@ -290,7 +290,7 @@
   {
     "id": "c2-161",
     "domain": "2",
-    "objective": "2.7",
+    "objective": "2.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A company phone shows the subject lines of new mail on the lock screen. People standing nearby can read them. Which change stops that preview?",
@@ -314,7 +314,7 @@
   {
     "id": "c2-162",
     "domain": "2",
-    "objective": "2.8",
+    "objective": "2.9",
     "difficulty": "hard",
     "select": 1,
     "stem": "A drive failed so badly that a wipe utility cannot see it, and the data on it was confidential. Degaussing is not available. What destruction method still fits?",
@@ -338,7 +338,7 @@
   {
     "id": "c2-163",
     "domain": "2",
-    "objective": "2.9",
+    "objective": "2.10",
     "difficulty": "medium",
     "select": 1,
     "stem": "A small-office router still has WPS enabled, and the PIN is printed on the bottom where visitors sit. What should change?",
@@ -362,7 +362,7 @@
   {
     "id": "c2-164",
     "domain": "2",
-    "objective": "2.10",
+    "objective": "2.11",
     "difficulty": "easy",
     "select": 1,
     "stem": "A browser tab the user did not open says the computer is infected and to call a toll number. No company security tool produced the page. What should the user do?",
@@ -410,7 +410,7 @@
   {
     "id": "c2-166",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "Only the company bank site resolves to a strange address. Other names resolve normally. The hosts file contains a line for that bank pointing at the strange address. What is the cause?",
@@ -433,8 +433,8 @@
   },
   {
     "id": "c2-167",
-    "domain": "3",
-    "objective": "3.3",
+    "domain": "2",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "The malware scan is clean, System Restore is back on, and a new restore point exists. The user is about to take the laptop. Which best-practice step is still left?",
@@ -458,7 +458,7 @@
   {
     "id": "c2-168",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone sits on the vendor logo and reboots to the same logo after an OS update was interrupted. What is the sensible recovery path?",
@@ -482,7 +482,7 @@
   {
     "id": "c2-169",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user installed a configuration profile from a text message so a free app would work. The phone now trusts a strange VPN. What should be removed?",
