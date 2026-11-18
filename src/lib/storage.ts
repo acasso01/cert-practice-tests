@@ -154,6 +154,13 @@ function loadSeenBook(): SeenBook {
   return next;
 }
 
+/** Move retired A+ exam ids forward before any screen reads history or seen questions. */
+export function migrateLegacyExamIds(): void {
+  loadHistory();
+  loadMissedMap();
+  loadSeenBook();
+}
+
 /** Question ids this browser has already been shown, with the last time each was shown. */
 export function loadSeen(examId: string): Record<string, number> {
   const book = loadSeenBook()[examId];

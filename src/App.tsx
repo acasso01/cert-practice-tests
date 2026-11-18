@@ -13,6 +13,7 @@ import {
   clearHistory,
   loadHistory,
   loadMissed,
+  migrateLegacyExamIds,
   loadSeen,
   loadSession,
   loadTheme,
@@ -40,7 +41,10 @@ export function App() {
   const exams = useMemo(() => loadExams(), []);
   const byId = useMemo(() => new Map(exams.map((exam) => [exam.id, exam])), [exams]);
   const [theme, setTheme] = useState<Theme>(() => loadTheme());
-  const [history, setHistory] = useState<Attempt[]>(() => loadHistory());
+  const [history, setHistory] = useState<Attempt[]>(() => {
+    migrateLegacyExamIds();
+    return loadHistory();
+  });
   const [session, setSession] = useState<Session | null>(() => loadSession());
   const [view, setView] = useState<View>(() => (loadSession() ? 'quiz' : 'home'));
   const [setupExamId, setSetupExamId] = useState<string | null>(null);
