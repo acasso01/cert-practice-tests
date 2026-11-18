@@ -10,7 +10,7 @@ const questionModules = import.meta.glob('./exams/*/q*.json', {
   import: 'default',
 }) as Record<string, Question[]>;
 
-const ORDER = ['n10-009', '220-1201', '220-1202', 'sy0-701'];
+const ORDER = ['n10-009', '220-1201', '220-1202', 'sy0-801'];
 
 function questionsFor(folder: string): Question[] {
   return Object.entries(questionModules)

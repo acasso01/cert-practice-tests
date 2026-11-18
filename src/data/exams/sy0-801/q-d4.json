@@ -460,7 +460,7 @@
   {
     "id": "sy0-101",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "Mail from the company is rejected after a new cloud mail host is added. The DNS record that lists who may send still names only the old host. Which record is that?",
@@ -484,7 +484,7 @@
   {
     "id": "sy0-102",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A company wants mail that fails SPF or DKIM alignment to be rejected, and wants reports about those failures. Which policy layer states that?",
@@ -508,7 +508,7 @@
   {
     "id": "sy0-103",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Laptops that fail a health check, missing a required update, are placed on a network where they can reach only the update servers. Healthy laptops reach the office. What capability is that?",
@@ -532,7 +532,7 @@
   {
     "id": "sy0-104",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "Endpoint detection and response software records process trees and can isolate a laptop. A traditional antivirus product on the same fleet mainly matches file signatures. What does EDR add that signature antivirus does not?",
@@ -556,7 +556,7 @@
   {
     "id": "sy0-105",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A proxy blocks a category of sites and also inspects files that users upload for strings that look like customer account numbers. Which two capabilities are those?",
@@ -580,7 +580,7 @@
   {
     "id": "sy0-106",
     "domain": "4",
-    "objective": "4.5",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "File integrity monitoring alerts because a system binary changed hash and no change ticket exists. What is the alert telling you?",
@@ -604,7 +604,7 @@
   {
     "id": "sy0-107",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A terminated employee's account still works the next day, and their laptop is still enrolled. Which identity process failed?",
@@ -628,7 +628,7 @@
   {
     "id": "sy0-108",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Users sign in once to an identity provider and reach several web applications because those applications trust a signed assertion. Which technology is the usual enterprise web assertion?",
@@ -652,7 +652,7 @@
   {
     "id": "sy0-109",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A mobile app asks a user to approve access to their cloud files, and the app then calls the cloud API with a token. The app never learned the user's password. The token is not, by itself, proof of who the user is to a third site. Which protocol family is the delegated access?",
@@ -676,7 +676,7 @@
   {
     "id": "sy0-110",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Administrators use their personal accounts for email and a separate privileged account that has no mailbox and is used only for admin tools. Just-in-time elevation grants the privileged rights for one hour. What practices are those?",
@@ -700,7 +700,7 @@
   {
     "id": "sy0-111",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A service account for a backup job is also used by three people as an interactive login, and the password has not changed in five years. What is wrong?",
@@ -724,7 +724,7 @@
   {
     "id": "sy0-112",
     "domain": "4",
-    "objective": "4.6",
+    "objective": "4.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Every quarter, managers receive a list of who can read the payroll share and must confirm or remove each person. What is that review called, and what does it catch?",
@@ -748,7 +748,7 @@
   {
     "id": "sy0-113",
     "domain": "4",
-    "objective": "4.7",
+    "objective": "4.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A playbook disables an account, isolates the laptop, and opens a ticket when a high-severity detection fires. A person does not have to click through those three steps at 3 a.m. What is the benefit and the tool class?",
@@ -772,7 +772,7 @@
   {
     "id": "sy0-114",
     "domain": "4",
-    "objective": "4.7",
+    "objective": "4.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "All account creation flows through one automation platform. The platform is down, and nobody has a documented manual path. New hires cannot work, and emergency access cannot be granted. What did the design forget?",
@@ -796,7 +796,7 @@
   {
     "id": "sy0-115",
     "domain": "4",
-    "objective": "4.7",
+    "objective": "4.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A pipeline deploys infrastructure only from reviewed templates and refuses a change that would open a management port to the world. What is that refusal?",
@@ -820,7 +820,7 @@
   {
     "id": "sy0-116",
     "domain": "4",
-    "objective": "4.7",
+    "objective": "4.6",
     "difficulty": "hard",
     "select": 1,
     "stem": "An old script has special cases nobody understands. Every new integration copies those cases. Engineers are afraid to replace it. What long-term cost is that?",
@@ -844,7 +844,7 @@
   {
     "id": "sy0-117",
     "domain": "4",
-    "objective": "4.8",
+    "objective": "4.7",
     "difficulty": "easy",
     "select": 1,
     "stem": "A confirmed intrusion is still running on a server that can reach the rest of the data center. The team wants to discuss lessons learned before they disconnect anything. What is out of order?",
@@ -868,7 +868,7 @@
   {
     "id": "sy0-118",
     "domain": "4",
-    "objective": "4.8",
+    "objective": "4.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "Legal says a set of mailboxes must be preserved exactly, and ordinary deletion jobs must skip them, because litigation is reasonably anticipated. What is that hold?",
@@ -892,7 +892,7 @@
   {
     "id": "sy0-119",
     "domain": "4",
-    "objective": "4.8",
+    "objective": "4.7",
     "difficulty": "hard",
     "select": 1,
     "stem": "A laptop is collected for an investigation. The analyst who receives it does not record who had it, when, or how it was stored overnight. A later hearing asks whether the disk image could have been altered. What process failure is that?",
@@ -916,7 +916,7 @@
   {
     "id": "sy0-120",
     "domain": "4",
-    "objective": "4.8",
+    "objective": "4.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "Hunters search for a technique they read about in a threat report. No alert has fired. They find one host using the technique and then open an incident. How is hunting different from waiting on the SIEM?",
@@ -940,7 +940,7 @@
   {
     "id": "sy0-121",
     "domain": "4",
-    "objective": "4.9",
+    "objective": "4.8",
     "difficulty": "easy",
     "select": 1,
     "stem": "An investigator wants to know whether a laptop's local firewall blocked a specific outbound address yesterday. The laptop is on and its firewall log was not cleared. Which source answers the question most directly?",
@@ -964,7 +964,7 @@
   {
     "id": "sy0-122",
     "domain": "4",
-    "objective": "4.9",
+    "objective": "4.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A vulnerability scan from last night and a packet capture from the same hour are both available. The question is whether a particular exploit payload actually crossed the wire, not whether the host is missing a patch. Which source can show the payload?",
@@ -988,7 +988,7 @@
   {
     "id": "sy0-123",
     "domain": "4",
-    "objective": "4.9",
+    "objective": "4.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "Dashboards show green for a server that investigators later find was compromised. The dashboard queried the server's own health agent, which the attacker had stopped. What is the lesson about that data source?",
@@ -1012,7 +1012,7 @@
   {
     "id": "sy0-124",
     "domain": "4",
-    "objective": "4.9",
+    "objective": "4.8",
     "difficulty": "hard",
     "select": 1,
     "stem": "Three sources disagree. The VPN log shows a login. The endpoint agent shows no process start at that minute. NetFlow shows a long session from the VPN address to a file server. Which interpretation is the most careful?",

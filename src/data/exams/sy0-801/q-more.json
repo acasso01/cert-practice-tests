@@ -2,7 +2,7 @@
   {
     "id": "sy0-157",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A file is encrypted for the recipients, and a separate hash is published so they can detect a change. Which CIA legs are those?",
@@ -26,7 +26,7 @@
   {
     "id": "sy0-158",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "An emergency firewall change was never ticketed. The only person who knows the new rule is on vacation when it causes an outage. What failed?",
@@ -50,7 +50,7 @@
   {
     "id": "sy0-160",
     "domain": "2",
-    "objective": "2.1",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "Someone runs a public exploit against one small website, brags in a forum, and never builds custom malware or keeps long-term access. Which actor fits?",
