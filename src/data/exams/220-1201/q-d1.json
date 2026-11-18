@@ -121,8 +121,8 @@
   },
   {
     "id": "c1-006",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "An older laptop uses a fluorescent backlight. The screen is very dim, and a flashlight shone on it reveals a faint image. A newer LED-backlit laptop with the same faint-image symptom does not have the part this older unit uses. What is that older part?",
@@ -145,8 +145,8 @@
   },
   {
     "id": "c1-007",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A designer complains that a laptop screen washes out when several people view it from the sides. A different laptop stays readable from those angles and has better color, at a higher price. Which panel type is the better wide-angle choice?",
@@ -169,8 +169,8 @@
   },
   {
     "id": "c1-008",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A tablet shows a perfect image, but touches land an inch away from the finger and sometimes not at all. The glass is intact. Which component is failing?",
@@ -193,8 +193,8 @@
   },
   {
     "id": "c1-009",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop with an OLED panel has a ghost of a toolbar that stayed on screen for months. The ghost is visible on every wallpaper. What is that called, and is it a dead pixel?",
@@ -217,8 +217,8 @@
   },
   {
     "id": "c1-010",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop lid is cracked and the image is a black smear, but an external monitor works. The GPU is therefore probably fine. Which statement is the right next conclusion?",
@@ -242,7 +242,7 @@
   {
     "id": "c1-011",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone must connect to a modern Windows laptop to charge and to transfer photos, and the phone's only port is USB-C. The laptop has USB-C and USB-A. Which cable is the direct fit?",
@@ -266,7 +266,7 @@
   {
     "id": "c1-012",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user wants to move a 2 GB video from a phone to a laptop and suggests NFC because the devices can already tap to pair. What is the right guidance?",
@@ -290,7 +290,7 @@
   {
     "id": "c1-013",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop on a desk must gain two monitors, Ethernet, and power through one connection to a device that also charges it. A cheaper accessory only breaks out extra USB ports and does not charge the laptop. Which is the fuller device?",
@@ -314,7 +314,7 @@
   {
     "id": "c1-014",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A Bluetooth headset is not discovered by a phone. The headset is charged and the phone's Bluetooth radio is on. Which sequence should the user follow?",
@@ -338,31 +338,31 @@
   {
     "id": "c1-015",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
-    "stem": "A legacy CDMA phone cannot roam in a city where it used to work. The carrier says the roaming list on the phone is stale. What kind of update is that?",
+    "stem": "A phone has no physical SIM tray. The new carrier says service starts when their profile is downloaded onto the phone over Wi-Fi. Which identity is that profile?",
     "choices": [
-      "A PRL update",
-      "A BIOS update on a desktop motherboard",
-      "A SATA firmware update",
-      "An inverter replacement"
+      "An eSIM",
+      "A desktop BIOS update",
+      "A disk firmware package",
+      "A display inverter"
     ],
     "answer": [
       0
     ],
-    "explanation": "CDMA phones used a Preferred Roaming List to decide which towers they may use. When that list is old, roaming fails even though the radio is fine. GSM phones use a SIM and do not depend on a PRL the same way. A desktop BIOS, a disk firmware, and a display inverter are unrelated repairs.",
+    "explanation": "An eSIM is a carrier profile stored on the phone instead of a removable card. Wi-Fi or another connection is how that profile is installed. A BIOS update, disk firmware, and a display inverter do not activate cellular service.",
     "choiceNotes": [
-      "PRL is the CDMA roaming list. Updating it is the carrier's fix for this legacy phone.",
-      "A desktop BIOS does not store a phone's tower list.",
-      "SATA firmware is for a storage device. It does not update cellular roaming.",
-      "An inverter lights an old laptop backlight. It is not a phone firmware object."
+      "Download the carrier profile. That stored profile is the eSIM.",
+      "A BIOS update does not subscribe a phone to a carrier.",
+      "Disk firmware does not provide a cellular identity.",
+      "An inverter lights an old LCD. It does not join a mobile network."
     ]
   },
   {
     "id": "c1-016",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A company phone must receive corporate email, and the company must be able to require a PIN and remove company data if the phone is lost. Which control plane does that?",
@@ -386,7 +386,7 @@
   {
     "id": "c1-017",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user tethers a laptop to a phone all day and then is surprised by a huge cellular bill and a hot, empty phone. The laptop was downloading cloud photos. What should change?",
@@ -410,7 +410,7 @@
   {
     "id": "c1-018",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone shows full cellular bars indoors and still places the user on the wrong street in a map app. GPS is enabled, and the user is between tall buildings. What is the likely limitation?",
@@ -434,7 +434,7 @@
   {
     "id": "c1-019",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user wants contacts, calendar, and mail from a company Microsoft 365 account on a new phone, and does not want personal photos uploading on the cellular plan. What should be configured?",

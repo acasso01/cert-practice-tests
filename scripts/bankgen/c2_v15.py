@@ -1,0 +1,178 @@
+"""New 220-1202 topics: cloud tools, AI, and other V15 additions."""
+
+from common import PROBLEMS, dump, item
+from gate import collisions
+
+P = "c2"
+Q = []
+
+
+def add(*args):
+    Q.append(item(P, *args))
+
+
+add(177, "1.1", "medium",
+    "A file server must survive metadata corruption better than NTFS and is staying on Windows Server. Which filesystem is the Windows candidate for that role?",
+    ["ReFS", "ext4", "APFS", "A FAT32 volume for the whole server"],
+    0,
+    "ReFS is Microsoft's resilient filesystem, aimed at integrity on Windows servers. ext4 is Linux. APFS is Apple. FAT32 lacks the features and the file-size room of a server volume.",
+    ["ReFS is the Windows filesystem built for resilience. That is the candidate.",
+     "ext4 is a Linux filesystem. This server is staying on Windows.",
+     "APFS is the Apple filesystem. Windows Server does not boot from it.",
+     "FAT32 is a compatibility filesystem, not the resilient choice for this server."])
+
+add(178, "1.3", "hard",
+    "A custom Windows 11 image will not install on a PC that boots in legacy mode and has no TPM. The vendor requirements have not been bypassed. Which two platform pieces are missing? (Choose two.)",
+    ["UEFI boot instead of legacy BIOS",
+     "A TPM",
+     "A floppy drive",
+     "A CDMA roaming list"],
+    [0, 1],
+    "Windows 11's stated requirements include UEFI and a TPM. Legacy boot does not satisfy the firmware requirement. A floppy drive and a CDMA list are not Windows 11 installation requirements.",
+    ["Switch the firmware to UEFI. Legacy mode is the first missing piece.",
+     "The TPM is the other requirement this PC does not have.",
+     "A floppy drive is not part of the Windows 11 platform requirements.",
+     "A CDMA roaming list is a retired phone feature, not a Windows 11 requirement."])
+
+add(179, "1.9", "easy",
+    "A Fedora workstation needs a package installed from its distribution repositories. apt is not on the system. Which package tool belongs here?",
+    ["dnf", "diskpart", "winver", "Time Machine"],
+    0,
+    "Fedora and other Red Hat-family systems use dnf. apt is the Debian and Ubuntu tool and is not installed here. diskpart and winver are Windows. Time Machine is macOS.",
+    ["Use dnf. That is the package manager on this Fedora system.",
+     "diskpart edits Windows disks. It does not install Fedora packages.",
+     "winver opens a Windows version dialog. It does not install Fedora packages.",
+     "Time Machine is the macOS backup feature, not a package installer."])
+
+add(180, "1.11", "medium",
+    "Staff edit one spreadsheet at the same time in a browser, and the file is not stored on the office file server. Which kind of tool is that?",
+    ["A cloud collaboration spreadsheet",
+     "A local-only CMOS setup page",
+     "A printer maintenance kit",
+     "A BIOS beep code"],
+    0,
+    "Simultaneous browser editing of one spreadsheet is a cloud collaboration tool. The file lives with the service, not on the office file server. Firmware pages, a printer kit, and beep codes do not host that workbook.",
+    ["The shared browser spreadsheet is the cloud collaboration tool.",
+     "CMOS setup is firmware. It does not store a shared workbook.",
+     "A maintenance kit services a printer. It is not a spreadsheet.",
+     "Beep codes diagnose POST. They are not a document."])
+
+add(181, "1.11", "medium",
+    "A company assigns a cloud mailbox and a storage license to a new hire from the admin console, and the desktop client then shows that mailbox. What was assigned?",
+    ["The cloud identity's license and mailbox",
+     "A local Administrator password taped to the monitor",
+     "A paper visitor log",
+     "An extra standoff in the case"],
+    0,
+    "Cloud productivity suites assign the mailbox and the license to the user's identity. The client only displays what that assignment allows. A taped password, a visitor log, and a motherboard standoff do not provision mail.",
+    ["Assign the license to the user. That is what makes the mailbox appear.",
+     "A password on a monitor is not license assignment.",
+     "A visitor log does not create a mailbox.",
+     "A standoff is hardware. It does not license cloud mail."])
+
+add(182, "2.4", "medium",
+    "An investigation finds malicious code running only in memory. A full disk scan of the files on the volume finds nothing to quarantine. Which malware class fits?",
+    ["Fileless malware",
+     "A boot-sector virus that is sitting in a file the scan would see",
+     "A toner cartridge",
+     "A screensaver timeout"],
+    0,
+    "Fileless malware lives in memory and in legitimate processes, so a file scan of the disk can come back empty. A boot-sector virus has a footprint the right scan is aimed at. Toner and a screensaver are not malware classes.",
+    ["Memory-only code that a file scan misses is the fileless case.",
+     "A boot-sector virus is on the disk. The stem says the file scan found nothing.",
+     "Toner is a printer supply. It is not a malware class.",
+     "A screensaver timer is a lock setting, not malware."])
+
+add(183, "2.5", "easy",
+    "A poster in the lobby uses a QR code that opens a login page for the company VPN. The poster was not printed by IT, and the URL behind the code is a lookalike domain. What is that?",
+    ["QR-code phishing",
+     "A normal certificate renewal",
+     "A RAID rebuild",
+     "A CMOS reset"],
+    0,
+    "A QR code that sends people to a fake login is phishing. The lookalike domain is the tell. Certificate renewal, RAID, and a CMOS reset do not put a rogue code on a lobby poster.",
+    ["Do not use the code. It is QR-code phishing.",
+     "IT did not print the poster, and the domain is wrong. This is not a renewal.",
+     "RAID is disk redundancy. It does not print a lobby poster.",
+     "A CMOS reset does not redirect a QR code."])
+
+add(184, "3.3", "medium",
+    "A banking app on a phone has the bank's name and a slightly wrong icon. It was installed from a link, not from the official store, and it asks for the full card number. What is the likely problem?",
+    ["A spoofed application from an unofficial source",
+     "A normal store update that always asks for the full card number",
+     "A failed screen rotation",
+     "A full disk that only needs a reboot"],
+    0,
+    "A lookalike app from outside the official store that asks for payment data is application spoofing. Remove it and have the user change the password from a trusted device. Rotation and a reboot do not explain the fake icon and the card request.",
+    ["Uninstall it and do not enter the card number. The source and the icon are wrong.",
+     "The official store is not where this copy came from. Treat the request as hostile.",
+     "Rotation does not ask for a card number.",
+     "A full disk does not invent a lookalike banking app."])
+
+add(185, "4.3", "medium",
+    "Monday is a full backup. Each later day, the job builds a new full backup by combining Monday's full with the changes, without making the restore depend on a chain of daily files. What is that later backup called?",
+    ["A synthetic full",
+     "A differential that still requires every weekday file",
+     "A screenshot of the desktop",
+     "A CMOS battery pull"],
+    0,
+    "A synthetic full is assembled from a previous full and later incrementals so the restore is a single full set. It is not a chain you must apply one day at a time. A screenshot and a battery pull are not backup types.",
+    ["The combined full is a synthetic full. Restore from that set.",
+     "A differential restore still starts from the original full and one differential, and this job is building a new full.",
+     "A screenshot of a desktop does not restore a server volume.",
+     "Pulling a battery resets firmware. It is not a backup."])
+
+add(186, "4.6", "hard",
+    "A running PC may hold evidence in memory, and the case requires that evidence. Someone suggests pulling the power cord first so the scene is quiet. What does that destroy?",
+    ["The contents of RAM, which are the most volatile evidence here",
+     "Nothing, because RAM survives without power",
+     "Only the printed asset tag",
+     "The chain-of-custody form in the filing cabinet"],
+    0,
+    "Order of volatility puts memory ahead of disks and paper. Powering off the PC drops RAM. Capture memory first if the case needs it, and keep the custody record. An asset tag and a form in a cabinet are not cleared by the cord.",
+    ["Capture memory before power is removed. That is the volatile evidence.",
+     "RAM does not keep its contents after power is lost.",
+     "An asset tag is a sticker. Unplugging the PC does not erase it.",
+     "The paper form is still in the cabinet. The loss is the memory."])
+
+add(187, "4.8", "easy",
+    "A nightly inventory script is saved as collect.py and starts with a Python interpreter line. Which language is it?",
+    ["Python", "A BIOS macro", "A spreadsheet formula", "A toner part number"],
+    0,
+    "The .py extension and a Python interpreter line mark a Python script. V15 includes Python among the script types. The BIOS, a spreadsheet, and a toner code do not run that nightly inventory.",
+    ["Run it with Python. The extension and the interpreter line agree.",
+     "The BIOS does not execute a .py inventory.",
+     "A spreadsheet formula is not a .py file.",
+     "A toner code does not collect an inventory."])
+
+add(188, "4.10", "medium",
+    "A technician asks a public chatbot to summarize a ticket that includes a customer's home address and account number. The company has not approved that tool for customer data. What is the failure?",
+    ["Customer data was sent to a public model",
+     "The chatbot is required to forget nothing and that is fine",
+     "A public model is always a private system",
+     "Account numbers are not data"],
+    0,
+    "A public model is not a place for customer data unless policy and a proper agreement say so. The address and the account number left the company's control. Calling the tool private, or deciding the numbers are not data, does not undo the disclosure.",
+    ["Stop and report it. Customer data does not belong in an unapproved public model.",
+     "You cannot assume a public chatbot forgets or protects that ticket.",
+     "Public is the opposite of a private company system.",
+     "An account number identifies the customer. It is data and it left the company."])
+
+add(189, "4.10", "medium",
+    "A generated how-to cites a Windows dialog that does not exist and invents a menu path. The rest of the answer sounds confident. Which limitation is that?",
+    ["A hallucination",
+     "A perfect citation of the real dialog",
+     "A TPM requirement",
+     "A differential backup"],
+    0,
+    "A hallucination is a confident answer that is not true. Invented menus are the giveaway. Check the vendor's own documentation before you follow it. A TPM requirement and a backup type are not this error.",
+    ["Do not follow the invented path. The model hallucinated a dialog.",
+     "A dialog that does not exist is not a perfect citation.",
+     "A TPM is a firmware chip. It did not invent the menu path.",
+     "A differential backup is unrelated to a made-up dialog."])
+
+if __name__ == "__main__":
+    found = collisions("220-1202", Q)
+    if PROBLEMS or found:
+        raise SystemExit("\n".join(PROBLEMS + found))
+    dump("220-1202", {"q-v15.json": Q})

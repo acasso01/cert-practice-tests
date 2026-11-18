@@ -99,7 +99,7 @@
   {
     "id": "c2-044",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A small office still uses WEP because 'it was the default.' Which replacement is acceptable, and which statement about WEP is true?",
@@ -123,7 +123,7 @@
   {
     "id": "c2-045",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "Employees each have a directory account. The office wants wireless that disables one person when they leave, without changing a password taped to the router. Which design is that?",
@@ -147,7 +147,7 @@
   {
     "id": "c2-046",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A domain login fails with a clock-related error, and the PC's time is six minutes off from the domain controller. Which authentication system is famously sensitive to that skew?",
@@ -171,7 +171,7 @@
   {
     "id": "c2-047",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user installed a free 'PDF converter' from a pop-up ad. The tool added a browser toolbar and a process that emails the user's keystrokes. The file they wanted never converted. What kind of malware arrived disguised as a useful program?",
@@ -195,7 +195,7 @@
   {
     "id": "c2-048",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC is loud, hot, and slow. Task Manager shows an unknown process using almost all of the CPU, and there is no ransom note. What malware class fits, and what is a reasonable first containment step?",
@@ -219,7 +219,7 @@
   {
     "id": "c2-049",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "Passwords keep being stolen even after a reputable scan finds nothing. The technician finds a small device plugged between the USB keyboard and the PC. What is that device, and what should happen to it?",
@@ -243,7 +243,7 @@
   {
     "id": "c2-050",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "The finance director receives an email that looks like the chief executive, demanding an immediate wire transfer and telling them not to call. What is that targeted email?",
@@ -267,7 +267,7 @@
   {
     "id": "c2-051",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A caller says they are from 'Microsoft support,' quotes the user's name, and wants a remote-control tool installed now. The user did not open a ticket. What is the call, and what should the user do?",
@@ -291,7 +291,7 @@
   {
     "id": "c2-052",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A login page stops accepting a password after five bad tries and locks the account for fifteen minutes. Which attack is that control slowing down?",
@@ -315,7 +315,7 @@
   {
     "id": "c2-053",
     "domain": "2",
-    "objective": "2.4",
+    "objective": "2.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A web form's symptom, described by the developer, is that typed input is being treated as part of a database command, and records changed. No exploit steps are needed to answer. Which threat is that?",
@@ -339,7 +339,7 @@
   {
     "id": "c2-054",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user wants one folder encrypted so that another local account cannot read it, without encrypting the entire drive. The PC is Windows 10 Pro. Which feature is the folder-level one?",
@@ -363,7 +363,7 @@
   {
     "id": "c2-055",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop is lost at an airport. The disk was encrypted with BitLocker, and the key is in the company escrow. Which statement is the accurate reassurance?",
@@ -387,7 +387,7 @@
   {
     "id": "c2-056",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A standard user double-clicks an installer and gets a credential prompt, not a simple yes/no. An administrator on the same PC gets a consent prompt. What is that prompt system?",
@@ -411,7 +411,7 @@
   {
     "id": "c2-057",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "A user copies an EFS-encrypted file to a FAT32 USB stick so they can open it at home on a PC that does not have their certificate. What happens to the encryption, and why?",
@@ -435,7 +435,7 @@
   {
     "id": "c2-058",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.7",
     "difficulty": "easy",
     "select": 1,
     "stem": "A front-desk PC is left signed in over lunch, and anyone in the lobby can use it. Which control locks it after a short idle without relying on the user to remember?",
@@ -459,7 +459,7 @@
   {
     "id": "c2-059",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC still has the Guest account enabled, AutoPlay on, and the local administrator named Administrator with a blank password. Which hardening set is appropriate?",
@@ -483,7 +483,7 @@
   {
     "id": "c2-060",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "A technician sets a firmware supervisor password and leaves the disk unencrypted. A thief removes the drive and attaches it to another PC. What can the thief do, and what control was missing?",
@@ -507,7 +507,7 @@
   {
     "id": "c2-061",
     "domain": "2",
-    "objective": "2.7",
+    "objective": "2.8",
     "difficulty": "easy",
     "select": 1,
     "stem": "A company phone is stolen on a commute. MDM is enrolled. What should happen first, according to a normal lost-device procedure?",
@@ -531,7 +531,7 @@
   {
     "id": "c2-062",
     "domain": "2",
-    "objective": "2.7",
+    "objective": "2.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user sideloads an APK that arrived in a text message. The app then shows ads in other apps and requests accessibility access. What is the risk, and what should the user do?",
@@ -555,7 +555,7 @@
   {
     "id": "c2-063",
     "domain": "2",
-    "objective": "2.7",
+    "objective": "2.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone is jailbroken so a game can be installed from outside the vendor's controls. Company mail is on the same phone. Why does policy usually forbid the jailbreak?",
@@ -579,7 +579,7 @@
   {
     "id": "c2-064",
     "domain": "2",
-    "objective": "2.8",
+    "objective": "2.9",
     "difficulty": "medium",
     "select": 1,
     "stem": "A spinning hard drive from a leased PC must be disposed of so the previous tenant's data cannot be recovered. Degaussing is available. A stack of SSDs is next to it. Which statement is accurate?",
@@ -603,7 +603,7 @@
   {
     "id": "c2-065",
     "domain": "2",
-    "objective": "2.8",
+    "objective": "2.9",
     "difficulty": "easy",
     "select": 1,
     "stem": "A drive is formatted with the normal Windows format and then given to another department. The giver says the old files are gone. What is wrong with that claim?",
@@ -627,7 +627,7 @@
   {
     "id": "c2-066",
     "domain": "2",
-    "objective": "2.9",
+    "objective": "2.10",
     "difficulty": "easy",
     "select": 1,
     "stem": "A new SOHO router still answers to admin/admin. It has not been connected to the modem yet. What is the first configuration change?",
@@ -651,7 +651,7 @@
   {
     "id": "c2-067",
     "domain": "2",
-    "objective": "2.9",
+    "objective": "2.10",
     "difficulty": "medium",
     "select": 1,
     "stem": "A SOHO router has UPnP enabled, and a game console has opened several inbound ports the owner did not intend to publish. What is the cautious change?",
@@ -675,7 +675,7 @@
   {
     "id": "c2-068",
     "domain": "2",
-    "objective": "2.9",
+    "objective": "2.10",
     "difficulty": "hard",
     "select": 1,
     "stem": "A technician hides the SSID, leaves WPA2-Personal with a password of 'password,' and tells the owner the network is now secure because the name is invisible. What is the accurate correction?",
@@ -699,7 +699,7 @@
   {
     "id": "c2-069",
     "domain": "2",
-    "objective": "2.10",
+    "objective": "2.11",
     "difficulty": "medium",
     "select": 1,
     "stem": "A browser warns that a bank's certificate is not trusted and the name does not match. The user is on cafe Wi-Fi. What should they do?",
@@ -723,7 +723,7 @@
   {
     "id": "c2-070",
     "domain": "2",
-    "objective": "2.10",
+    "objective": "2.11",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user believes private-browsing mode hides them from their company proxy and from the websites they visit. What does private mode actually limit?",

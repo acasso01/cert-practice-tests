@@ -25,8 +25,8 @@
   },
   {
     "id": "c1-128",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop LCD is bright at the center and dim at the edges, and the dimness follows the panel when an external monitor is perfect. The backlight is LED, not fluorescent. Which part is the wrong first replacement?",
@@ -50,7 +50,7 @@
   {
     "id": "c1-130",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone's hotspot works, but the connected laptop is slow and the phone is hot. The laptop is syncing a photo library over that hotspot. What should change first?",
@@ -98,7 +98,7 @@
   {
     "id": "c1-133",
     "domain": "2",
-    "objective": "2.2",
+    "objective": "2.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A small office replaced a hub with a switch. Collisions dropped and each PC no longer sees every other PC's frames. What changed?",
@@ -122,7 +122,7 @@
   {
     "id": "c1-134",
     "domain": "2",
-    "objective": "2.3",
+    "objective": "2.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "An older laptop only associates at 54 Mbps on 2.4 GHz and cannot see the 5 GHz SSID. Which standard matches that radio?",
@@ -146,7 +146,7 @@
   {
     "id": "c1-136",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.6",
     "difficulty": "hard",
     "select": 1,
     "stem": "Two office PCs can ping each other. Neither can reach the internet. Both have blank default gateways and otherwise correct DHCP addresses. What should be set?",
@@ -170,7 +170,7 @@
   {
     "id": "c1-137",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A website loads by address and not by name on one PC. Other PCs resolve the name. The DNS servers are correct. Which local file can override DNS on that one PC?",
@@ -218,7 +218,7 @@
   {
     "id": "c1-140",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A run through a return-air ceiling was pulled with ordinary PVC Category 6. The speed is fine. The inspector fails it. Why?",
@@ -242,7 +242,7 @@
   {
     "id": "c1-141",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A desktop board takes DDR4. A technician tries to insert DDR5 and the notch does not line up. What is the correct action?",
@@ -266,7 +266,7 @@
   {
     "id": "c1-144",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user has two drive bays and wants the family photos to survive one disk failing. Speed is secondary. Which RAID level fits?",
@@ -290,7 +290,7 @@
   {
     "id": "c1-154",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A hypervisor says virtualization is disabled. The laptop has enough RAM and the CPU supports the feature. Where is the switch?",
@@ -314,7 +314,7 @@
   {
     "id": "c1-166",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "A PC boots with 16 GB installed, but the firmware and Windows only report 8 GB. The modules are a matched DDR4 pair, and one of them is seated in a slot the manual marks as optional and single-channel only when the primary pair is incomplete. What is the likely cause?",
@@ -338,7 +338,7 @@
   {
     "id": "c1-167",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "A technician installs a SATA M.2 stick into a slot the manual labels NVMe only. The drive does not appear. A second M.2 slot on the same board is labeled SATA. What is the mismatch?",
@@ -362,7 +362,7 @@
   {
     "id": "c1-168",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A cooler is rocking on the CPU because one corner screw is tight and the opposite corner is loose. Temperatures climb under a light load and the paste has squeezed out one side. What is the fix?",
@@ -386,7 +386,7 @@
   {
     "id": "c1-169",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "Three guest VMs each want 4 GB, and the host has 8 GB total plus its own operating system. The host becomes unusable as soon as the third VM starts. What ran out?",
@@ -410,7 +410,7 @@
   {
     "id": "c1-170",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "A RAID 5 array of four disks is degraded. One disk shows a failure LED and the volume is still readable. A colleague wants to pull a second disk to 'test the parity.' What happens if they do?",
@@ -434,7 +434,7 @@
   {
     "id": "c1-171",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A projector image is fuzzy. The cable and the input are correct, and the laptop looks sharp on its own panel. The projector remote has a focus ring that is far off center. What is the first adjustment?",

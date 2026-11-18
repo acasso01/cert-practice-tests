@@ -25,8 +25,8 @@
   },
   {
     "id": "c1-173",
-    "domain": "1",
-    "objective": "1.2",
+    "domain": "3",
+    "objective": "3.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A convertible laptop shows a sharp image, and the image turns the wrong way when the user folds it into a tablet. The panel test pattern is fine. Which sensor is the first suspect?",
@@ -50,7 +50,7 @@
   {
     "id": "c1-174",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A phone is paired to a Bluetooth speaker. Music still comes out of the phone's earpiece. The speaker shows as connected. What should the user change?",
@@ -74,7 +74,7 @@
   {
     "id": "c1-175",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A USB-C cable charges a laptop and never shows a picture on a USB-C monitor. The laptop manual says that port is charge-only and does not support DisplayPort alt mode. What is required?",
@@ -98,7 +98,7 @@
   {
     "id": "c1-176",
     "domain": "2",
-    "objective": "2.5",
+    "objective": "2.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A small-office router still accepts administration from its WAN address with the vendor password. What should change before it stays on the modem?",
@@ -122,7 +122,7 @@
   {
     "id": "c1-177",
     "domain": "2",
-    "objective": "2.6",
+    "objective": "2.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC pings its default gateway and cannot open any name, including a public one. Another PC on the same switch resolves names. This PC's DNS field is 1.2.3.4, which is not a resolver. What is wrong on this PC?",
@@ -194,7 +194,7 @@
   {
     "id": "c1-180",
     "domain": "3",
-    "objective": "3.1",
+    "objective": "3.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A fiber NIC and the patch panel both use small square duplex connectors that click in. Which connector family is that?",
@@ -218,7 +218,7 @@
   {
     "id": "c1-181",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A database server must correct single-bit memory errors without crashing. The quote lists non-ECC unbuffered DIMMs. What should be ordered instead?",
@@ -242,7 +242,7 @@
   {
     "id": "c1-182",
     "domain": "3",
-    "objective": "3.3",
+    "objective": "3.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A camera system must store many terabytes of video and write it continuously. The quote contains only a small NVMe stick meant as a boot device. What should hold the video?",
@@ -266,7 +266,7 @@
   {
     "id": "c1-183",
     "domain": "3",
-    "objective": "3.4",
+    "objective": "3.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A new CPU fits the socket, and the board stays dark at power-on until the firmware is updated from the vendor's site using the old CPU. After the update the new CPU posts. What was missing?",
@@ -290,7 +290,7 @@
   {
     "id": "c1-184",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A server has two hot-swap power supplies on two circuits. One supply fails and the server stays up. What did the second supply provide?",
@@ -314,7 +314,7 @@
   {
     "id": "c1-185",
     "domain": "3",
-    "objective": "3.6",
+    "objective": "3.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "A multifunction printer copies and prints from USB. Scan-to-email fails, and the printer's gateway field is blank while every PC on that subnet has a gateway. What should be set on the printer?",
@@ -338,7 +338,7 @@
   {
     "id": "c1-186",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "One company owns the hosts and does not sell tenancy to outsiders. Employees reach that cloud over the company network. Which deployment is it?",
@@ -362,7 +362,7 @@
   {
     "id": "c1-187",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician runs a guest on a laptop by installing a hypervisor application on Windows. The laptop OS is still what boots. Which hypervisor type is that application?",
@@ -386,7 +386,7 @@
   {
     "id": "c1-188",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A virtual machine should be reachable by other office PCs at an address on the office subnet. It can reach the internet, and office PCs cannot ping it. The virtual NIC is set to NAT. What change fixes the reachability?",
@@ -413,28 +413,28 @@
     "objective": "5.1",
     "difficulty": "medium",
     "select": 1,
-    "stem": "The symptom is written down and nobody has a tested cause yet. In the CompTIA A+ troubleshooting method, what comes next?",
+    "stem": "A desktop shuts down a few minutes into a video export. The exhaust air is hot and the CPU fan is not spinning. The heatsink is still clipped on. What is the fault?",
     "choices": [
-      "Establish a theory of probable cause",
-      "Reimage the PC before any theory",
-      "Document a cause that was never tested",
-      "Order a new motherboard as the first action"
+      "The CPU fan has failed and the processor is overheating",
+      "The wallpaper is the wrong resolution",
+      "DNS is pointing at a public resolver",
+      "The printer is out of magenta toner"
     ],
     "answer": [
       0
     ],
-    "explanation": "A+ troubleshooting goes from identifying the problem to a theory, then a test. Reimaging, writing an untested cause, or buying a board skips the theory.",
+    "explanation": "A dead fan, hot exhaust, and a shutdown under load are an overheating CPU. Restore cooling before you replace the processor. Wallpaper, DNS, and toner do not stop a fan.",
     "choiceNotes": [
-      "The next step is a theory you can test. Identification is already done.",
-      "Reimaging is a late, destructive action, not the step after the symptom is known.",
-      "You cannot document a cause you have not established.",
-      "A motherboard order is not the step that follows a written symptom."
+      "Replace or reconnect the fan and confirm the processor stays within temperature.",
+      "A desktop resolution does not stop the CPU fan from spinning.",
+      "A DNS resolver does not spin the heatsink fan or cool the processor.",
+      "Toner color does not shut a desktop down under a video export."
     ]
   },
   {
     "id": "c1-190",
     "domain": "5",
-    "objective": "5.2",
+    "objective": "5.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A desktop is unstable and a visual inspection shows several capacitors on the motherboard with bulging tops. What is the failed part to plan around?",
@@ -458,7 +458,7 @@
   {
     "id": "c1-191",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "hard",
     "select": 1,
     "stem": "Two disks are in a RAID 0 volume. One disk stops spinning and the array will not mount. What can be rebuilt from the remaining disk?",
@@ -482,7 +482,7 @@
   {
     "id": "c1-192",
     "domain": "5",
-    "objective": "5.4",
+    "objective": "5.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop panel looks normal. The projector says no signal. The projector's input menu is set to HDMI and the cable is on DisplayPort. What is the first change?",
@@ -506,7 +506,7 @@
   {
     "id": "c1-193",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A phone shuts down while charging under a pillow, inside a thick case. On a table with the case off it stays on and charges. What is the practical fix?",
@@ -554,7 +554,7 @@
   {
     "id": "c1-195",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Every lunch period, 2.4 GHz clients near the break room drop, and 5 GHz clients in the same seats stay up. A microwave in that room runs at lunch. What is the likely interference?",
@@ -578,7 +578,7 @@
   {
     "id": "c1-196",
     "domain": "5",
-    "objective": "5.7",
+    "objective": "5.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "Wireless clients associate to the AP and can ping the AP. None of them can reach the internet, and the AP's WAN cable is unplugged. Where is the fault?",
@@ -602,7 +602,7 @@
   {
     "id": "c1-197",
     "domain": "5",
-    "objective": "5.3",
+    "objective": "5.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A new disk is installed and Disk Management shows it as Not Initialized. The system disk is healthy. What is the safe next action?",
@@ -626,7 +626,7 @@
   {
     "id": "c1-198",
     "domain": "5",
-    "objective": "5.5",
+    "objective": "5.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop shuts down under load and the exhaust air is hot. The fan is packed with dust and barely spins. After the dust is cleared the fan spins and the shutdowns stop. What was wrong?",

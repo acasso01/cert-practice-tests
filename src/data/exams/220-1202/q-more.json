@@ -2,7 +2,7 @@
   {
     "id": "c2-128",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician wants the PC's Windows version and build without opening System Information. Which command opens that small dialog?",
@@ -26,7 +26,7 @@
   {
     "id": "c2-129",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A mapped drive disappears after every reboot. The user runs net use S: \\\\files\\projects during the day and does not persist it. What is missing?",
@@ -74,7 +74,7 @@
   {
     "id": "c2-145",
     "domain": "3",
-    "objective": "3.2",
+    "objective": "3.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "SmartScreen blocks an unsigned installer a user downloaded from a personal blog. Policy says software comes from the approved vendor portal. What should the technician do?",
@@ -98,7 +98,7 @@
   {
     "id": "c2-148",
     "domain": "3",
-    "objective": "3.5",
+    "objective": "3.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A managed phone will not join office Wi-Fi. MDM shows the certificate profile failed after that certificate expired. Personal mail still works on cellular. What is the fix?",

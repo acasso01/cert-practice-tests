@@ -2,7 +2,7 @@
   {
     "id": "c2-001",
     "domain": "1",
-    "objective": "1.1",
+    "objective": "1.3",
     "difficulty": "easy",
     "select": 1,
     "stem": "A small office wants laptops that can join the company domain, host Remote Desktop, and use BitLocker. The quote they received is for Windows 10 Home. What is the edition problem?",
@@ -26,7 +26,7 @@
   {
     "id": "c2-002",
     "domain": "1",
-    "objective": "1.1",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A technician on Windows 10 Home tries to run gpedit.msc and the console is not there. A coworker says to download a copy from a random forum. What is the right response?",
@@ -50,7 +50,7 @@
   {
     "id": "c2-003",
     "domain": "1",
-    "objective": "1.1",
+    "objective": "1.3",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user needs to keep installed applications and files while moving from an older Windows 10 build to a current one. They are afraid a reinstall will wipe the desk. Which installation type matches the request?",
@@ -74,7 +74,7 @@
   {
     "id": "c2-004",
     "domain": "1",
-    "objective": "1.1",
+    "objective": "1.3",
     "difficulty": "hard",
     "select": 1,
     "stem": "Which Windows 10 edition difference is real when a machine needs more than 128 GB of RAM and must join a domain?",
@@ -98,7 +98,7 @@
   {
     "id": "c2-005",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "easy",
     "select": 1,
     "stem": "A PC can reach a file server by IP address and cannot map it by name. The technician wants a command that asks DNS about the name. Which command is that?",
@@ -122,7 +122,7 @@
   {
     "id": "c2-006",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "Windows system files are damaged and sfc /scannow reports that it repaired them. The command had to be run from an elevated prompt. What did sfc actually do?",
@@ -146,7 +146,7 @@
   {
     "id": "c2-007",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "A technician needs to copy a large folder tree across a flaky WAN and wants retries and a log, not the old single-file copy command. Which command is built for that?",
@@ -170,7 +170,7 @@
   {
     "id": "c2-008",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "easy",
     "select": 2,
     "stem": "A domain PC has not picked up a new Group Policy. The technician wants the policy applied now and then wants to see what applied. Which two commands, in spirit, do those jobs? (Choose two.)",
@@ -195,7 +195,7 @@
   {
     "id": "c2-009",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "hard",
     "select": 1,
     "stem": "A volume is corrupt and Windows will not complete a repair while the volume is in use. The technician plans chkdsk /f on the next boot. What will that switch do, and what should happen first?",
@@ -219,7 +219,7 @@
   {
     "id": "c2-010",
     "domain": "1",
-    "objective": "1.2",
+    "objective": "1.5",
     "difficulty": "medium",
     "select": 1,
     "stem": "From the Windows Recovery Environment command prompt, a technician needs to see the disks and delete the partitions on the correct one before a clean install. The disk numbers are not obvious. Which tool, used carefully, is that?",
@@ -243,7 +243,7 @@
   {
     "id": "c2-011",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A Windows 10 PC is slow to the desktop, and Task Manager's Startup tab shows a chat client with high impact that the user does not need. Where should it be disabled?",
@@ -267,7 +267,7 @@
   {
     "id": "c2-012",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "An application crashes, and the user can tell you the minute it happened. The technician wants the Windows log that records application errors. Which console is that?",
@@ -291,7 +291,7 @@
   {
     "id": "c2-013",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.4",
     "difficulty": "medium",
     "select": 1,
     "stem": "A technician needs a boot that loads only basic devices so a bad third-party driver can be ruled out. msconfig is open. Which choice is the diagnostic boot?",
@@ -315,7 +315,7 @@
   {
     "id": "c2-014",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.4",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user wants the BIOS version, the amount of RAM, and the model of the PC without opening the case. Which Windows tool gives that inventory?",
@@ -339,7 +339,7 @@
   {
     "id": "c2-015",
     "domain": "1",
-    "objective": "1.3",
+    "objective": "1.4",
     "difficulty": "hard",
     "select": 1,
     "stem": "A domain workstation should get a mapped drive at logon from a script the company already stores in the netlogon share. The drive does not appear. Which Group Policy or profile feature is the usual place that script is assigned?",
@@ -363,7 +363,7 @@
   {
     "id": "c2-016",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user downloaded invoice.pdf.exe and thought it was a PDF. File Explorer was hiding extensions. Where do you turn extensions on?",
@@ -387,7 +387,7 @@
   {
     "id": "c2-017",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "A laptop on battery is set to do nothing when the lid closes, and it cooks in a bag. The user wants the lid to sleep the PC. Where is that setting?",
@@ -411,7 +411,7 @@
   {
     "id": "c2-018",
     "domain": "1",
-    "objective": "1.4",
+    "objective": "1.6",
     "difficulty": "medium",
     "select": 1,
     "stem": "SMB1 is enabled on a Windows 10 PC because an ancient scanner required it years ago. The scanner is gone. Why should SMB1 be turned off, and where can that Windows feature be changed?",
@@ -435,7 +435,7 @@
   {
     "id": "c2-019",
     "domain": "1",
-    "objective": "1.5",
+    "objective": "1.6",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop is set as a metered connection because it uses a phone hotspot. Large Windows updates never download, and the user thinks updates are broken. What is the setting doing?",
@@ -459,7 +459,7 @@
   {
     "id": "c2-020",
     "domain": "1",
-    "objective": "1.5",
+    "objective": "1.6",
     "difficulty": "medium",
     "select": 2,
     "stem": "A user wants a USB drive to stop being offered as a backup target every time it is inserted, and they also want the auto-run behavior that launches programs from media disabled. Which two ideas apply? (Choose two.)",
@@ -484,7 +484,7 @@
   {
     "id": "c2-021",
     "domain": "1",
-    "objective": "1.6",
+    "objective": "1.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "A Windows laptop on the office Wi-Fi cannot see the file server or the printer, and Network and Sharing Center says the profile is Public. The same laptop works when it is docked on Ethernet with a Private profile. What should change on the Wi-Fi?",
@@ -508,7 +508,7 @@
   {
     "id": "c2-022",
     "domain": "1",
-    "objective": "1.6",
+    "objective": "1.7",
     "difficulty": "medium",
     "select": 1,
     "stem": "A PC can ping the default gateway and cannot open any website. Other PCs work. The browser proxy is set to a server that was retired last year. What is the fault?",
@@ -532,7 +532,7 @@
   {
     "id": "c2-023",
     "domain": "1",
-    "objective": "1.6",
+    "objective": "1.7",
     "difficulty": "easy",
     "select": 1,
     "stem": "A user needs the S: drive to point at \\\\files\\projects every time they sign in. Which command creates that mapping?",
@@ -556,7 +556,7 @@
   {
     "id": "c2-024",
     "domain": "1",
-    "objective": "1.6",
+    "objective": "1.7",
     "difficulty": "hard",
     "select": 1,
     "stem": "A user can open a folder from the local console but gets Access Denied over the network. NTFS permissions for the user are Modify. The share permission is Read for Everyone, and the user is not in a group with more share access. Why is the network access read-only or denied beyond the share?",
@@ -580,7 +580,7 @@
   {
     "id": "c2-025",
     "domain": "1",
-    "objective": "1.7",
+    "objective": "1.10",
     "difficulty": "medium",
     "select": 1,
     "stem": "A 64-bit Windows 10 PC must run a 32-bit accounting app, and a different app is 64-bit only. Which statement is true?",
@@ -604,7 +604,7 @@
   {
     "id": "c2-026",
     "domain": "1",
-    "objective": "1.7",
+    "objective": "1.10",
     "difficulty": "easy",
     "select": 1,
     "stem": "Windows setup does not list the NVMe drive because the storage driver is not in the image. The vendor supplied a driver folder on a USB stick. What should the technician do at the disk screen?",
@@ -628,7 +628,7 @@
   {
     "id": "c2-027",
     "domain": "1",
-    "objective": "1.7",
+    "objective": "1.10",
     "difficulty": "medium",
     "select": 2,
     "stem": "An application requires 16 GB of RAM, a 64-bit OS, and a GPU with 4 GB of VRAM. The PC has 8 GB of RAM, a 64-bit OS, and integrated graphics that share system memory. Which requirements fail? (Choose two.)",
@@ -653,7 +653,7 @@
   {
     "id": "c2-028",
     "domain": "1",
-    "objective": "1.8",
+    "objective": "1.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A removable drive must be readable and writable on both Windows and macOS and must hold a single 8 GB file. Which file system fits?",
@@ -677,7 +677,7 @@
   {
     "id": "c2-029",
     "domain": "1",
-    "objective": "1.8",
+    "objective": "1.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A clinic still runs an application on an operating system the vendor stopped patching two years ago. New malware signatures do not exist for it. What lifecycle problem is this?",
@@ -701,7 +701,7 @@
   {
     "id": "c2-030",
     "domain": "1",
-    "objective": "1.8",
+    "objective": "1.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A technician is matching each operating system with the file system it normally uses for its own disk. Which pairing of an OS and a typical file system is accurate?",
@@ -725,7 +725,7 @@
   {
     "id": "c2-031",
     "domain": "1",
-    "objective": "1.9",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Setup shows a 4 TB disk as unusable space beyond 2 TB. The firmware is UEFI. The disk was initialized as MBR during an experiment. What should the technician change before installing?",
@@ -749,7 +749,7 @@
   {
     "id": "c2-032",
     "domain": "1",
-    "objective": "1.9",
+    "objective": "1.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician is about to upgrade a production PC in place. The user has years of files and no backup. What should happen before setup runs?",
@@ -773,7 +773,7 @@
   {
     "id": "c2-033",
     "domain": "1",
-    "objective": "1.9",
+    "objective": "1.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A fleet of identical classroom PCs must get the same Windows image, applications, and settings. Doing it by hand on each PC takes all week. Which deployment method fits?",
@@ -797,7 +797,7 @@
   {
     "id": "c2-034",
     "domain": "1",
-    "objective": "1.10",
+    "objective": "1.8",
     "difficulty": "easy",
     "select": 1,
     "stem": "A Mac user deleted a file yesterday and wants it back from the backup that runs to an external disk every hour. Which Apple feature is that backup?",
@@ -821,7 +821,7 @@
   {
     "id": "c2-035",
     "domain": "1",
-    "objective": "1.10",
+    "objective": "1.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A Mac application is frozen and the rest of the system still responds. The user has not restarted. What is the first Apple-specific way to quit that one app?",
@@ -845,7 +845,7 @@
   {
     "id": "c2-036",
     "domain": "1",
-    "objective": "1.10",
+    "objective": "1.8",
     "difficulty": "medium",
     "select": 1,
     "stem": "A user forgot the Wi-Fi password that the Mac had saved, and the router was reset. Where does macOS keep that saved password?",
@@ -869,7 +869,7 @@
   {
     "id": "c2-037",
     "domain": "1",
-    "objective": "1.11",
+    "objective": "1.9",
     "difficulty": "easy",
     "select": 1,
     "stem": "A Linux script fails with Permission denied. ls -l shows -rw-r--r-- on the script, owned by the user who is trying to run it. What is missing?",
@@ -893,7 +893,7 @@
   {
     "id": "c2-038",
     "domain": "1",
-    "objective": "1.11",
+    "objective": "1.9",
     "difficulty": "medium",
     "select": 1,
     "stem": "A Debian-family Linux PC cannot find a package that the vendor says is in the repositories. The PC has not refreshed its package lists in months. What should run before the install?",
@@ -906,7 +906,7 @@
     "answer": [
       0
     ],
-    "explanation": "apt-get update refreshes the package indexes. apt-get install then uses those indexes. On a stale machine the package looks missing until the update runs. gpupdate is Windows policy. diskpart is a Windows disk tool. Time Machine is macOS. Red Hat systems use dnf or yum instead of apt.",
+    "explanation": "apt-get update refreshes the package indexes. apt-get install then uses those indexes. On a stale machine the package looks missing until the update runs. gpupdate is Windows policy. diskpart is a Windows disk tool. Time Machine is macOS. Red Hat systems use dnf instead of apt.",
     "choiceNotes": [
       "Update the lists, then install. The package can be in the repo and still invisible to a stale index.",
       "gpupdate does not exist as the Linux package-index refresh.",
@@ -917,7 +917,7 @@
   {
     "id": "c2-039",
     "domain": "1",
-    "objective": "1.11",
+    "objective": "1.9",
     "difficulty": "medium",
     "select": 1,
     "stem": "A Linux server must share a folder so Windows users can map it like any other file share. Which service is the usual answer?",

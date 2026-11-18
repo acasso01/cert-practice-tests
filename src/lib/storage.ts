@@ -7,6 +7,16 @@ const SESSION_KEY = 'certline.session.v1';
 const RESULT_KEY = 'certline.result.v1';
 const SEEN_KEY = 'certline.seen.v1';
 
+/** V14 A+ ids kept in older browsers. History, missed questions, and seen ids move with the exam. */
+const EXAM_ID_ALIASES: Record<string, string> = {
+  '220-1101': '220-1201',
+  '220-1102': '220-1202',
+};
+
+function migrateExamId(id: string): string {
+  return EXAM_ID_ALIASES[id] ?? id;
+}
+
 function readJson<T>(storage: Storage, key: string, fallback: T): T {
   try {
     const raw = storage.getItem(key);
@@ -38,7 +48,15 @@ export function saveTheme(theme: Theme): void {
 
 export function loadHistory(): Attempt[] {
   const history = readJson<Attempt[]>(localStorage, HISTORY_KEY, []);
-  return Array.isArray(history) ? history : [];
+  if (!Array.isArray(history)) return [];
+  let changed = false;
+  const migrated = history.map((attempt) => {
+    const examId = migrateExamId(attempt?.examId);
+    if (examId !== attempt?.examId) changed = true;
+    return examId === attempt?.examId ? attempt : { ...attempt, examId };
+  });
+  if (changed) writeJson(localStorage, HISTORY_KEY, migrated);
+  return migrated;
 }
 
 export function saveAttempt(attempt: Attempt): Attempt[] {
@@ -63,7 +81,22 @@ export function clearHistory(): void {
 
 function loadMissedMap(): Record<string, string[]> {
   const value = readJson<Record<string, string[]>>(localStorage, MISSED_KEY, {});
-  return value && typeof value === 'object' ? value : {};
+  if (!value || typeof value !== 'object') return {};
+  return migrateKeyedLists(value, MISSED_KEY);
+}
+
+function migrateKeyedLists(book: Record<string, string[]>, key: string): Record<string, string[]> {
+  let changed = false;
+  const next: Record<string, string[]> = { ...book };
+  for (const [from, to] of Object.entries(EXAM_ID_ALIASES)) {
+    if (!Array.isArray(next[from])) continue;
+    const merged = new Set([...(next[to] ?? []), ...next[from]]);
+    next[to] = [...merged];
+    delete next[from];
+    changed = true;
+  }
+  if (changed) writeJson(localStorage, key, next);
+  return next;
 }
 
 export function loadMissed(examId: string): string[] {
@@ -74,7 +107,11 @@ export function loadMissed(examId: string): string[] {
 export function loadSession(): Session | null {
   const session = readJson<Session | null>(sessionStorage, SESSION_KEY, null);
   if (!session || !session.id || !Array.isArray(session.items)) return null;
-  return session;
+  const examId = migrateExamId(session.examId);
+  if (examId === session.examId) return session;
+  const migrated = { ...session, examId };
+  writeJson(sessionStorage, SESSION_KEY, migrated);
+  return migrated;
 }
 
 export function saveSession(session: Session | null): void {
@@ -98,7 +135,30 @@ type SeenBook = Record<string, Record<string, number>>;
 
 function loadSeenBook(): SeenBook {
   const value = readJson<SeenBook>(localStorage, SEEN_KEY, {});
-  return value && typeof value === 'object' ? value : {};
+  if (!value || typeof value !== 'object') return {};
+  let changed = false;
+  const next: SeenBook = { ...value };
+  for (const [from, to] of Object.entries(EXAM_ID_ALIASES)) {
+    const oldBook = next[from];
+    if (!oldBook || typeof oldBook !== 'object') continue;
+    const merged = { ...(next[to] ?? {}) };
+    for (const [qid, stamp] of Object.entries(oldBook)) {
+      if (typeof stamp !== 'number') continue;
+      merged[qid] = Math.max(merged[qid] ?? 0, stamp);
+    }
+    next[to] = merged;
+    delete next[from];
+    changed = true;
+  }
+  if (changed) writeJson(localStorage, SEEN_KEY, next);
+  return next;
+}
+
+/** Move retired A+ exam ids forward before any screen reads history or seen questions. */
+export function migrateLegacyExamIds(): void {
+  loadHistory();
+  loadMissedMap();
+  loadSeenBook();
 }
 
 /** Question ids this browser has already been shown, with the last time each was shown. */

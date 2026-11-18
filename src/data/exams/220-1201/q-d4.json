@@ -2,7 +2,7 @@
   {
     "id": "c1-076",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "A company uses a web mail suite. Employees do not patch a server, and the provider runs the application. Which cloud model is the mail suite?",
@@ -26,7 +26,7 @@
   {
     "id": "c1-077",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Developers deploy an application and do not manage the operating system underneath it. The provider patches that OS and the runtime. The developers still own the application code. Which model is this?",
@@ -50,12 +50,12 @@
   {
     "id": "c1-078",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 2,
     "stem": "A tax office needs ten times the servers in April and almost none in June, and it wants the June bill to shrink with the June load. Which two cloud characteristics are those? (Choose two.)",
     "choices": [
-      "Rapid elasticity",
+      "Elasticity",
       "Metered utilization",
       "A single physical RAID 0 as the whole design",
       "A requirement to buy the peak hardware and keep it all year"
@@ -64,7 +64,7 @@
       0,
       1
     ],
-    "explanation": "Rapid elasticity is the grow-and-shrink behavior. Metered use is paying for what you consume, so June is cheap. Buying the April hardware and keeping it all year is the opposite of both. RAID 0 is a disk layout and is not a cloud characteristic.",
+    "explanation": "Elasticity is the grow-and-shrink behavior. Metered use is paying for what you consume, so June is cheap. Buying the April hardware and keeping it all year is the opposite of both. RAID 0 is a disk layout and is not a cloud characteristic.",
     "choiceNotes": [
       "Elasticity is the April surge and the June release of capacity.",
       "Metered utilization is why the bill follows the load instead of the peak.",
@@ -75,7 +75,7 @@
   {
     "id": "c1-079",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "Several hospitals share a cloud built for their compliance needs. It is not the hospital chain's own data center, and it is not the general public region anyone can buy. Which deployment model is it?",
@@ -99,7 +99,7 @@
   {
     "id": "c1-080",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "Payroll stays on servers in the company basement. The public website runs in a public cloud. A VPN connects the two. What is the deployment called?",
@@ -123,7 +123,7 @@
   {
     "id": "c1-081",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A desktop folder is set to sync to a cloud drive. A user deletes the folder locally and the cloud copy disappears too. They say the sync was their backup. What did they misunderstand?",
@@ -147,7 +147,7 @@
   {
     "id": "c1-082",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "easy",
     "select": 1,
     "stem": "Users can knock over a cup on their desk and not lose the spreadsheet they had open, because the desktop they see is running in the data center. The desk only has a small client. What is that design?",
@@ -171,7 +171,7 @@
   {
     "id": "c1-083",
     "domain": "4",
-    "objective": "4.1",
+    "objective": "4.2",
     "difficulty": "medium",
     "select": 1,
     "stem": "A cloud design shares physical hosts among customers and relies on the provider to isolate them. A noisy neighbor can still affect performance if the isolation is weak. What is the sharing called?",
@@ -195,7 +195,7 @@
   {
     "id": "c1-084",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A technician wants to open a suspicious attachment without letting it onto the office file shares. A virtual machine with no network adapter is available. What is that VM being used as?",
@@ -219,7 +219,7 @@
   {
     "id": "c1-085",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A Type 2 hypervisor on a technician's Windows laptop will not start a VM. The firmware message it quotes says virtualization is disabled. The laptop has enough RAM. What is the first change?",
@@ -243,7 +243,7 @@
   {
     "id": "c1-086",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "An old accounting app runs only on Windows 7. The shop standard is a current Windows version. The app must keep running for one department, and it must not be reachable from the internet. What is the client-virtualization approach?",
@@ -267,7 +267,7 @@
   {
     "id": "c1-087",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "easy",
     "select": 1,
     "stem": "A laptop with 8 GB of RAM is asked to run three VMs that each want 4 GB, plus the host OS. The host becomes unusable. What resource ran out?",
@@ -291,7 +291,7 @@
   {
     "id": "c1-088",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "hard",
     "select": 1,
     "stem": "A security note says a guest VM is not automatically safe just because it is virtual. The host is unpatched, and the guest has no antivirus. Which statement matches the objective's security caution?",
@@ -315,7 +315,7 @@
   {
     "id": "c1-089",
     "domain": "4",
-    "objective": "4.2",
+    "objective": "4.1",
     "difficulty": "medium",
     "select": 1,
     "stem": "A developer needs a Linux tool on a Windows laptop for an afternoon, without repartitioning the disk. Client virtualization is approved. What is the least disruptive approach?",
